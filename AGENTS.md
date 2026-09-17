@@ -1,6 +1,6 @@
-# Harness lab
+# Reading list product
 
-This repository contains application experiments, not the Harness source of truth.
+This repository develops one product: a reading list. Keep unrelated example applications out. Harness infrastructure is maintained upstream.
 
 - Business work belongs in app/ and task branches.
 - Do not modify files listed in harness-upstream.json during business tasks. Fix Harness bugs in the upstream scaffold repository, then synchronize a committed revision.

@@ -1,19 +1,13 @@
-# Harness 独立实验项目
+# 读书清单
 
-这里验证 [he_skeleton](https://github.com/big91987/he_skeleton) 的自动研发机制，业务任务、代码、反馈和预览都留在这个仓库。
+这个仓库只开发一个产品：中文读书清单。目标是新增书籍、标记已读、筛选、删除及刷新保留。
 
-## 使用
+产品任务：[Issue #1](https://github.com/big91987/reading_list/issues/1)。需求、澄清、反馈、代码分支和预览都通过对应 Issue 关联。后续 Issue 应是这个产品的功能、缺陷或改进，不在这里开发其他示例产品。
 
-1. 所有者用 Issues → New issue → 交给 Agent 做一个网页 发起任务。
-2. 默认先只读澄清，回复 `/harness 你的回答` 后继续。模板选择“直接实施”可以跳过首轮确认。
-3. 同一 Issue 查看执行报告、对应版本预览和截图，再用 `/harness 修改意见` 迭代。
-4. 每个任务有独立分支和 Session。初期一次只发一个命令，等待结果后再发下一个；单 Runner 串行执行。
-5. 查看改动并创建 PR，由人审查合并。没有自动批准或合并。
+## 研发机制
 
-当前适配的是本机 Codex CLI；第一阶段只支持静态 HTML/CSS/JS 和 localStorage。这是验证链路的实验范围，不代表完整后端研发已经支持。预览是公开页面，只放实验数据。
+本项目接入 [he_skeleton](https://github.com/big91987/he_skeleton)，版本记录在 harness-upstream.json。公共机制问题回到上游修复，通过 scripts/sync_project.py 同步；不覆盖本项目业务代码。
 
-## 脚手架版本
+所有者在任务下评论 `/harness 你的要求` 可启动本机 Codex。当前实现阶段使用静态 HTML/CSS/JS 和 localStorage，尚未包含真实后端。等待反馈时 Job 结束，Session 保留。每轮预览有固定地址。
 
-`harness-upstream.json` 记录所用上游提交和受管理文件。修复在上游完成，再运行上游 `scripts/sync_lab.py` 同步。同步不会覆盖 app/。不要在这里私改 Harness 文件。
-
-本仓库的 Issue 才是实验入口。旧的本地待办网页和上游 Issue #2 不属于这里的交付记录。
+脚手架受管理文件不在业务任务中修改，不自动批准或合并 PR。
