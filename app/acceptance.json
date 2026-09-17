@@ -1,0 +1,18 @@
+[
+  {"action":"fill","label":"书名","value":"活着"},
+  {"action":"click","role":"button","name":"加入清单"},
+  {"action":"fill","label":"书名","value":"小王子"},
+  {"action":"click","role":"button","name":"加入清单"},
+  {"action":"click","role":"checkbox","name":"标记《活着》为已读"},
+  {"action":"reload"},
+  {"action":"visible","text":"共 2 本 · 已读 1 本"},
+  {"action":"click","role":"button","name":"未读"},
+  {"action":"visible","text":"小王子"},
+  {"action":"absent","text":"活着"},
+  {"action":"click","role":"button","name":"已读"},
+  {"action":"visible","text":"活着"},
+  {"action":"click","role":"button","name":"全部"},
+  {"action":"click","role":"button","name":"删除《小王子》"},
+  {"action":"absent","text":"小王子"},
+  {"action":"visible","text":"共 1 本 · 已读 1 本"}
+]

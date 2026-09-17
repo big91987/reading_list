@@ -1,1 +1,58 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>实验项目起点</title><h1>此处等待实验任务实现</h1><p>业务代码由本仓库的 Issue 驱动，结果通过对应 Issue 交付。</p></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="一份保存在浏览器中的中文读书清单">
+    <title>我的读书清单</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">READING NOTES · 阅读计划</p>
+        <h1>我的读书清单</h1>
+        <p class="intro">把想读的书放在这里，一页一页，慢慢读完。</p>
+      </header>
+      <section class="book-panel" aria-labelledby="add-heading">
+        <h2 id="add-heading" class="visually-hidden">新增书籍</h2>
+        <form id="book-form" class="add-form" novalidate>
+          <div class="field">
+            <label for="book-title">书名</label>
+            <input id="book-title" name="title" type="text" maxlength="80" autocomplete="off" placeholder="例如：百年孤独" aria-describedby="form-message" required>
+          </div>
+          <button class="primary-button" type="submit">加入清单</button>
+        </form>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        <div class="toolbar">
+          <div class="filters" role="group" aria-label="筛选书籍">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">全部</button>
+            <button class="filter-button" type="button" data-filter="unread" aria-pressed="false">未读</button>
+            <button class="filter-button" type="button" data-filter="read" aria-pressed="false">已读</button>
+          </div>
+          <p id="summary" class="summary" aria-live="polite"></p>
+        </div>
+        <ul id="book-list" class="book-list" aria-label="书籍清单"></ul>
+        <div id="empty-state" class="empty-state" hidden>
+          <span aria-hidden="true">◌</span>
+          <p id="empty-title">清单还是空的</p>
+          <small id="empty-hint">输入一本想读的书，开启阅读旅程。</small>
+        </div>
+      </section>
+    </main>
+    <template id="book-template">
+      <li class="book-item">
+        <label class="check-control">
+          <input class="book-toggle" type="checkbox">
+          <span class="custom-check" aria-hidden="true"></span>
+        </label>
+        <div class="book-info">
+          <p class="book-title"></p>
+          <p class="book-status"></p>
+        </div>
+        <button class="delete-button" type="button"><span aria-hidden="true">×</span></button>
+      </li>
+    </template>
+    <script src="script.js"></script>
+  </body>
+</html>
