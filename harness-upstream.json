@@ -1,11 +1,11 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "6aa618647b77cb8eaf98a8f7802be89257e294e1",
+  "revision": "25e66e8a4e613b955f6d0dd8b63d0299d732f15e",
   "files": {
     "harness/agent.py": "5b0455d5923769bd8b3037c10cb1306bf40cbc51299991e477682495af5056ca",
-    "harness/loop.py": "b7565155e00f8be0c2e168d2b6c79f4d993c934e75405526d6b3f78241597d6c",
+    "harness/loop.py": "a8da3dc075b43119204f92f3335cbee51dee7cff9c500ee7c092b015cf9b3ae6",
     "harness/browser.cjs": "083061f764f87f5bb86c3f39230e58736b816c4fc1962784cdc6b0f7ed969c87",
-    ".github/workflows/harness.yml": "7fe659d6023b063f483c5f484a66ca32bc745154a9502df7f84f826b996c44df",
+    ".github/workflows/harness.yml": "d3f2668bb07f9d9656340866689e1300fa2e77bc1ef8f59cef6b46afc9c1e1df",
     ".github/ISSUE_TEMPLATE/task.yml": "9d10c95e2865cb7fbdc4c9e2f079c82d196f8fa60b1697fe874bb74a951ae292"
   }
 }

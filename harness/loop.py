@@ -132,6 +132,15 @@ def restore_app(repo, sha, target):
         dest.write_bytes(base64.b64decode(blob['content']))
 
 
+def experiment_context(root, branch):
+    if not branch:
+        return root, ''
+    if not branch.startswith('codex/harness-test-'):
+        raise ValueError('Invalid experiment branch')
+    scope = hashlib.sha256(branch.encode()).hexdigest()[:16]
+    return root / 'experiments' / scope, scope
+
+
 def main():
     event = json.loads(Path(os.environ['GITHUB_EVENT_PATH']).read_text())
     task, instruction, event_id = command(event, os.environ['GITHUB_EVENT_NAME'])
@@ -139,6 +148,9 @@ def main():
     if repo != event['repository']['full_name'] or task <= 0:
         raise ValueError('Invalid repository/task')
     root = Path(os.environ['HARNESS_ROOT']).resolve()
+    tools_root = root
+    experiment = os.environ.get('HARNESS_EXPERIMENT', '')
+    root, scope = experiment_context(root, experiment)
     session = root / 'sessions' / str(task)
     session.mkdir(parents=True, exist_ok=True)
     output = Path(os.environ['RUNNER_TEMP']) / 'harness-output'
@@ -147,7 +159,7 @@ def main():
     prefix = f'repos/{repo}'
     def comment(body):
         # Every public response identifies the originating event/run.
-        gh('POST', f'{prefix}/issues/{task}/comments', {'body':body + f'\n\n[执行记录]({run_url}) · `{event_id}`'})
+        gh('POST', f'{prefix}/issues/{task}/comments', {'body':(('实验分支：`' + experiment + '`。继续测试请在 Actions 选择同一分支运行，不使用主线 /harness 评论入口。\n\n') if experiment else '') + body + f'\n\n[执行记录]({run_url}) · `{event_id}`'})
     with (session / 'lock').open('w') as lock:
         fcntl.flock(lock, fcntl.LOCK_EX)
         state_path = session / 'state.json'
@@ -161,11 +173,27 @@ def main():
             atomic(state_path, state)
             comment('已停止后续推进，保留任务工作区和历史。正在执行的 Job 请在 Actions 点击 Cancel。')
             return
+        if instruction.strip().lower() in {'publish', '发布'}:
+            if not state.get('preview') or not (root/'previews'/state['preview']/'index.html').is_file():
+                raise ValueError('No saved preview to publish')
+            summary = next((entry['agent']['summary'] for entry in reversed(state['history']) if 'agent' in entry), '')
+            atomic(output/'result.json', {'task':task,'summary':summary,'preview':state['preview'],
+                                         'pr_url':state['pr_url'],'sha':state['source_sha'],'event_id':event_id})
+            state['status'] = 'preview_pending'
+            state['run_id'] = os.environ['GITHUB_RUN_ID']
+            state['processed'].append(event_id)
+            atomic(state_path, state)
+            with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                f.write('publish=true\ntask='+str(task)+'\n')
+            comment('仅重新发布已保存并检查过的预览，不调用 Agent、不修改业务代码。')
+            return
         issue = gh('GET', f'{prefix}/issues/{task}')
         if issue['state'] == 'closed':
             comment('任务已关闭；请先重新打开，再继续。')
             return
-        base = gh('GET', prefix)['default_branch']
+        base = experiment or gh('GET', prefix)['default_branch']
+        if experiment and 'pull_request' in issue:
+            raise ValueError('Experiments use an Issue; PR branches are not modified')
         source_sha = gh('GET', f'{prefix}/git/ref/heads/{base}')['object']['sha']
         if 'pull_request' in issue:
             pr = gh('GET', f'{prefix}/pulls/{task}')
@@ -177,7 +205,7 @@ def main():
                 raise ValueError('Cannot modify default branch')
             state['pr_url'] = pr['html_url']
         else:
-            branch = f'codex/task-{task}'
+            branch = f'codex/test-{scope}/task-{task}' if scope else f'codex/task-{task}'
             try:
                 head = gh('GET', f'{prefix}/git/ref/heads/{branch}')['object']['sha']
                 if state.get('source_sha') and state['source_sha'] != head:
@@ -237,7 +265,7 @@ def main():
                     prompt += '\nCheck failed: write a nonempty acceptance.json proving the main interaction.'
                     continue
                 browser_env = {'PATH':os.environ['PATH'], 'HOME':os.environ['HOME'],
-                               'NODE_PATH':str(root/'tools/node_modules')}
+                               'NODE_PATH':str(tools_root/'tools/node_modules')}
                 test = subprocess.run(['node', str(SOURCE/'harness/browser.cjs'), str(app), str(evidence), str(plan)],
                     capture_output=True, text=True, env=browser_env, timeout=90)
                 if test.returncode == 0:
@@ -279,7 +307,7 @@ def main():
             with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
                 f.write('publish=true\n')
                 f.write('task=' + str(task) + '\n')
-            comment(result['summary'] + f'\n\n浏览器路径检查通过，已保存任务分支。[查看改动／创建 PR]({state["pr_url"]})。预览正在发布，成功后另附链接和截图。尚未通过人工验收。')
+            comment(result['summary'] + f'\n\n浏览器路径检查通过，已保存任务分支。[查看改动／创建 PR]({state["pr_url"]})。预览交付完成后另附结果（测试分支使用运行附件）。尚未通过人工验收。')
         except Exception as error:
             state['status'] = 'blocked'
             atomic(state_path, state)
