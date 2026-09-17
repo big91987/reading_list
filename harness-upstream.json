@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "ef4b1058f1e879eeb14d5c00036db180e528be43",
+  "revision": "6aa618647b77cb8eaf98a8f7802be89257e294e1",
   "files": {
     "harness/agent.py": "5b0455d5923769bd8b3037c10cb1306bf40cbc51299991e477682495af5056ca",
     "harness/loop.py": "b7565155e00f8be0c2e168d2b6c79f4d993c934e75405526d6b3f78241597d6c",
