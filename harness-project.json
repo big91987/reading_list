@@ -1,0 +1,7 @@
+{
+  "instructions": "本项目是读书清单。沿用现有实现和业务要求；修改前读取现有代码，保留未要求改变的功能。",
+  "verification": {
+    "kind": "static-browser",
+    "root": "app"
+  }
+}

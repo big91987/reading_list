@@ -1,1 +1,65 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>实验项目起点</title><h1>此处等待实验任务实现</h1><p>业务代码由本仓库的 Issue 驱动，结果通过对应 Issue 交付。</p></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4efe6" />
+    <title>页间 · 读书清单</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">READING NOTES · 读有所记</p>
+        <div class="title-row">
+          <div>
+            <h1>页间</h1>
+            <p class="subtitle">把想读的书收进来，也把读完的时光留下。</p>
+          </div>
+          <div class="book-mark" aria-hidden="true"><span>阅</span></div>
+        </div>
+      </header>
+
+      <section class="add-panel" aria-labelledby="add-heading">
+        <div>
+          <p class="section-kicker">添加一本书</p>
+          <h2 id="add-heading">下一本，想读什么？</h2>
+        </div>
+        <form id="book-form" novalidate>
+          <label for="book-title">书名</label>
+          <div class="input-row">
+            <input id="book-title" name="title" type="text" maxlength="80" autocomplete="off" placeholder="例如：长安的荔枝" required />
+            <button class="primary-button" type="submit">新增书籍</button>
+          </div>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="list-panel" aria-labelledby="list-heading">
+        <div class="list-header">
+          <div>
+            <p class="section-kicker">我的书架</p>
+            <h2 id="list-heading">阅读清单</h2>
+          </div>
+          <p id="reading-summary" class="reading-summary" aria-live="polite"></p>
+        </div>
+
+        <div class="filters" role="group" aria-label="筛选书籍">
+          <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" class="filter-button" data-filter="unread" aria-pressed="false">未读</button>
+          <button type="button" class="filter-button" data-filter="read" aria-pressed="false">已读</button>
+        </div>
+
+        <ul id="book-list" class="book-list" aria-label="书籍清单"></ul>
+        <div id="empty-state" class="empty-state" hidden>
+          <span aria-hidden="true">◌</span>
+          <h3 id="empty-title">清单还是空的</h3>
+          <p id="empty-description">从一本真正想读的书开始吧。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>一本一本，慢慢读完。</footer>
+    <script src="app.js"></script>
+  </body>
+</html>
