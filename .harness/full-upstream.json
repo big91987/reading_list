@@ -1,11 +1,12 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "fc273abe4b0713fc871b68cced51d0d364ea2ceb",
+  "revision": "0c3431c771c509a87ff27fad7b3c6bc95139fd5f",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
-    "full_harness/codex.py": "4f0ec23ba1eb0a53037d5899de1c163539d954c9f00851e3060901c037142334",
-    "full_harness/common.py": "c3551a64a11817f1d37085acdb445446849260ae5208645cfab140fc933cd8c9",
-    "full_harness/runner.py": "6da1c0a9fcf6e14f4fe7b56268f423cfb4f9a84ac7979b4184bf68828b2f3df7",
+    "full_harness/codex.py": "842b6b8c9ee62a0b1d034687a7030dbffd11e41ac1abeee82b24dde3f1929831",
+    "full_harness/common.py": "22a13144c370df4fe8e6e2dadeda8fc31b46c28b72e579094580d2d04e1421b8",
+    "full_harness/router.py": "e1510c58eef1a4a159e46880723ffefa4c1b9111580acd381af9f893e3627892",
+    "full_harness/runner.py": "3aa5e5dd6dd40179c2f7bbe494382d27b606f954d7f9348f93c602962155c6b9",
     "full_harness/skills-source.json": "53a0a04bb8a7c3a98bed16b2fe24d5e3c0ca2d5d97e643833d6749cfd47b2843",
     "full_harness/skills/defining-platform-products-cn/SKILL.md": "3e3ef942b44cf383e77fadf6173526f2fad049034892e08ef0ec0cb49b9e9506",
     "full_harness/skills/defining-platform-products-cn/agents/openai.yaml": "b31bbc5d247bbae99422acec6ce3306d2f535914183ac3c5415db437e8c09b77",
@@ -51,6 +52,6 @@
     "full_harness/skills/trellis-before-dev/SKILL.md": "00c9d1c83bc318e91b27a019bc954c2957cfad907ff20d854b596f16cad2c0f3",
     "full_harness/skills/trellis-check/SKILL.md": "dfb0600e95c19c7a83200465b6a92a5514ec9778ba4083efa881bed541cc74a8",
     "full_harness/skills/trellis-update-spec/SKILL.md": "003ce08a3404aeb50998029392c4d4e57b626edf526d3ebd585032bb92dcbb96",
-    "full_harness/stop_hook.py": "61ca81a3e26d8a4918117ff9467a6e97780ab4335120556de6d2a143dc13a80e"
+    "full_harness/stop_hook.py": "949a88617b2b10be8629a846aa25725ddd7239bb27d3627569080fc48d77eff9"
   }
 }
