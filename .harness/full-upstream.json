@@ -1,13 +1,14 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "0c3431c771c509a87ff27fad7b3c6bc95139fd5f",
+  "revision": "03dc643b3c6af18a7c831c1d6953a2c5cff81d2f",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
-    "full_harness/codex.py": "842b6b8c9ee62a0b1d034687a7030dbffd11e41ac1abeee82b24dde3f1929831",
-    "full_harness/common.py": "22a13144c370df4fe8e6e2dadeda8fc31b46c28b72e579094580d2d04e1421b8",
-    "full_harness/router.py": "e1510c58eef1a4a159e46880723ffefa4c1b9111580acd381af9f893e3627892",
-    "full_harness/runner.py": "3aa5e5dd6dd40179c2f7bbe494382d27b606f954d7f9348f93c602962155c6b9",
+    "full_harness/codex.py": "4cfa46e65335e82f9cddb0e7f02bc5c0d7069db0c7324417b73ff4a243728a5e",
+    "full_harness/common.py": "c18f439bb24b65e4ad7459274c60d80612201ce0c04d4f209628d1741e586868",
+    "full_harness/router.py": "974c41634f98f6d6c13528b1214549f4adb9a080cd6052c54a99943910689937",
+    "full_harness/runner.py": "859c13e8f5f035a6d5d9e1626355f43cfa7210f7d62c301c2a929d09ca665b54",
     "full_harness/skills-source.json": "53a0a04bb8a7c3a98bed16b2fe24d5e3c0ca2d5d97e643833d6749cfd47b2843",
+    "full_harness/skills.py": "daf13ef0a2a211f4870b7327a81a3a5c4b227d9db50c3e633523103877c02719",
     "full_harness/skills/defining-platform-products-cn/SKILL.md": "3e3ef942b44cf383e77fadf6173526f2fad049034892e08ef0ec0cb49b9e9506",
     "full_harness/skills/defining-platform-products-cn/agents/openai.yaml": "b31bbc5d247bbae99422acec6ce3306d2f535914183ac3c5415db437e8c09b77",
     "full_harness/skills/defining-platform-products-cn/references/method-basis.md": "d37a2a38a309584631a8360227ec7587b52bddfda22c4a0c8593718ad54354ec",
@@ -52,6 +53,6 @@
     "full_harness/skills/trellis-before-dev/SKILL.md": "00c9d1c83bc318e91b27a019bc954c2957cfad907ff20d854b596f16cad2c0f3",
     "full_harness/skills/trellis-check/SKILL.md": "dfb0600e95c19c7a83200465b6a92a5514ec9778ba4083efa881bed541cc74a8",
     "full_harness/skills/trellis-update-spec/SKILL.md": "003ce08a3404aeb50998029392c4d4e57b626edf526d3ebd585032bb92dcbb96",
-    "full_harness/stop_hook.py": "949a88617b2b10be8629a846aa25725ddd7239bb27d3627569080fc48d77eff9"
+    "full_harness/stop_hook.py": "32da652d2dcea595ceed4e993c2ba002bfc888dfa17acecb89c8cd7866bdadfa"
   }
 }
