@@ -7,3 +7,7 @@ This repository develops one product: a reading list. Keep unrelated example app
 - Only the repository owner may trigger local execution. Never execute fork code on the local runner.
 - Report actual validation evidence. Static browser checks do not establish backend or GPU correctness.
 - Keep credentials and local session histories out of Git.
+
+
+<!-- harness-full-index -->
+Independent full workflow: [docs/harness-full.md](docs/harness-full.md). Owner-managed document and stage paths: `.harness/full.json`.
