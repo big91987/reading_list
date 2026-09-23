@@ -11,3 +11,8 @@ This repository develops one product: a reading list. Keep unrelated example app
 
 <!-- harness-full-index -->
 Independent full workflow: [docs/harness-full.md](docs/harness-full.md). Owner-managed document and stage paths: `.harness/full.json`.
+
+
+## Python quality
+
+After editing product Python code, run `python3 full_harness/quality.py fix`, resolve remaining lint errors, and run `python3 full_harness/quality.py check`. Stop Hook and verification enforce the same shared Ruff rules; functional tests remain required. Install the pinned tool from `full_harness/requirements.txt` in the Runner environment.
