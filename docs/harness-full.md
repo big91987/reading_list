@@ -1,6 +1,6 @@
 # Full development workflow: three stages
 
-The independent `harness-full.yml` profile provides automatic Issue entry and natural conversation. The legacy `harness.yml` remains available through manual workflow dispatch; disable its Issue/comment triggers when adopting this profile to avoid duplicate workflow records.
+The `harness-full.yml` profile is the only development workflow installed in this repository. It provides automatic Issue entry and natural conversation.
 
 ## First use
 

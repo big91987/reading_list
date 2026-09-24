@@ -16,4 +16,4 @@
 
 `.harness/reading-core.json` 是 Owner 固定的既有用户主线回归：添加两本书、标记已读、刷新保留、状态筛选、删除。`.harness/full.json` 使用原有 `harness/browser.cjs` 执行这组真实浏览器动作。它不是所有新功能的完整验收；每个新任务还应补充对应 AC 和验证。
 
-任务 PRD、设计和计划见 `../04-implementation/tasks/<issue>/`，实际验证范围见 `../05-validation/tasks/<issue>/`。完整 Workflow 独立于原 `/harness` 流程，见 `../harness-full.md`。
+任务 PRD、设计和计划见 `../04-implementation/tasks/<issue>/`，实际验证范围见 `../05-validation/tasks/<issue>/`。本项目仅使用完整研发 Workflow，见 `../harness-full.md`。
