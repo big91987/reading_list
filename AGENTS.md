@@ -16,3 +16,8 @@ Independent full workflow: [docs/harness-full.md](docs/harness-full.md). Owner-m
 ## Python quality
 
 After editing product Python code, run `python3 full_harness/quality.py fix`, resolve remaining lint errors, and run `python3 full_harness/quality.py check`. Stop Hook and verification enforce the same shared Ruff rules; functional tests remain required. Install the pinned tool from `full_harness/requirements.txt` in the Runner environment.
+
+
+## Natural Issue entry
+
+Repository write/maintain/admin contributors can open Issues and comment without commands. The hosted permission gate and Python controller both verify access. Comments first enter a read-only conversation; questions do not approve or invalidate a stage. Explicit approval remains bound to the current pending artifact revision. Bots do not trigger execution. The legacy workflow is manual-only.
