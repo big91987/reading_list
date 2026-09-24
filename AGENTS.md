@@ -4,7 +4,7 @@ This repository develops one product: a reading list. Keep unrelated example app
 
 - Follow the task scope and existing project layout; use task branches.
 - Coding tasks must not modify .github/, harness/, harness-project.json or harness-upstream.json. The owner may customize workflows and forms through reviewed project changes. Fix reusable tool bugs upstream, then synchronize a committed revision.
-- Only the repository owner may trigger local execution. Never execute fork code on the local runner.
+- Only contributors with write, maintain or admin permission may trigger local execution. Never execute fork code on the local runner.
 - Report actual validation evidence. Static browser checks do not establish backend or GPU correctness.
 - Keep credentials and local session histories out of Git.
 
@@ -20,4 +20,4 @@ After editing product Python code, run `python3 full_harness/quality.py fix`, re
 
 ## Natural Issue entry
 
-Repository write/maintain/admin contributors can open Issues and comment without commands. The hosted permission gate and Python controller both verify access. Comments first enter a read-only conversation; questions do not approve or invalidate a stage. Explicit approval remains bound to the current pending artifact revision. Bots do not trigger execution. The legacy workflow is manual-only.
+Repository write/maintain/admin contributors can open Issues and comment without commands. The hosted permission gate and Python controller both verify access. Comments first enter a read-only conversation; questions do not approve or invalidate a stage. Explicit approval remains bound to the current pending artifact revision. Bots do not trigger execution. The only installed development workflow is `.github/workflows/harness-full.yml`.
