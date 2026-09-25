@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "5444be21d648f588fb5511c2bf3a4bca42aff5a8",
+  "revision": "b90e73defd3ed0b763144eb2dca17ac2927f99e9",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
     "full_harness/codex.py": "a4040a501f4f95396668212f7741a1f9c53ed9297fde05d29a38bf6eb0109837",
@@ -12,7 +12,7 @@
     "full_harness/requirements.txt": "f2e7d1af6ed2a65d7827d5a948005019dcd1af293c526da8a5aabf16b54f25ef",
     "full_harness/router.py": "479d1330a84d7f932d2c5a9fdebff448cd8c3bf18083111e39ee01100a519bbc",
     "full_harness/ruff.toml": "1a6c894195322458057764bcda3c7984109d6f0317cf57119558356825df4fbc",
-    "full_harness/runner.py": "62c21a07d7f58436f475b5d97ba1fdd7ff2ffe8eeaff82623943c96bb00282e1",
+    "full_harness/runner.py": "707837c9d1a9771cef9df8cd24e56c9357023fc1c511d8cd754e2bd51d6870dd",
     "full_harness/skills-source.json": "53a0a04bb8a7c3a98bed16b2fe24d5e3c0ca2d5d97e643833d6749cfd47b2843",
     "full_harness/skills.py": "e4dca32e00b0bf306f69edb859daba83e69c223e4a7c55fda3332ac4968432cc",
     "full_harness/skills/defining-platform-products-cn/SKILL.md": "3e3ef942b44cf383e77fadf6173526f2fad049034892e08ef0ec0cb49b9e9506",
