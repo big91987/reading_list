@@ -1,18 +1,18 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "748839ef1c31236068a4fc7dc75f586a444e61ee",
+  "revision": "77b95893f17c4794b42586964a5048213975052f",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
     "full_harness/codex.py": "a4040a501f4f95396668212f7741a1f9c53ed9297fde05d29a38bf6eb0109837",
     "full_harness/common.py": "0402190c484c4d7476c4c673411d1df6c0dd13d24c6587536f15dea746cbce5f",
     "full_harness/console.py": "1be36c06eaf9a6a70757a8b1b057494338c953ed5fb7de6ee36d0f1f3afd28bb",
     "full_harness/dialogue.py": "a0ec0d97d11399bd7e5c30112abb9cd6ab849efefe7a902379cb5b97e4224333",
-    "full_harness/progress.py": "9f768410afdb780487ac1cd694a6759083513a992eab4abe83fc7837c5cdcdc7",
+    "full_harness/progress.py": "71103d4a3d8151067445a3ba9e7b3234d52d3d6bbbaaaeeb715363063ec63f46",
     "full_harness/quality.py": "ead80d0adca6098704b77d954504c84ea76ea08dcc4f17ce5a0a3748ab2133d8",
     "full_harness/requirements.txt": "f2e7d1af6ed2a65d7827d5a948005019dcd1af293c526da8a5aabf16b54f25ef",
     "full_harness/router.py": "479d1330a84d7f932d2c5a9fdebff448cd8c3bf18083111e39ee01100a519bbc",
     "full_harness/ruff.toml": "1a6c894195322458057764bcda3c7984109d6f0317cf57119558356825df4fbc",
-    "full_harness/runner.py": "30b0fa83824fbddd2d3eaaae72edb3b192e98ae6f74c4835f304fd219c1b1ba5",
+    "full_harness/runner.py": "3172a99dbeaeec4e50d495db018617634e97c54c33e8d8d770ac60af2e123938",
     "full_harness/skills-source.json": "53a0a04bb8a7c3a98bed16b2fe24d5e3c0ca2d5d97e643833d6749cfd47b2843",
     "full_harness/skills.py": "e4dca32e00b0bf306f69edb859daba83e69c223e4a7c55fda3332ac4968432cc",
     "full_harness/skills/defining-platform-products-cn/SKILL.md": "3e3ef942b44cf383e77fadf6173526f2fad049034892e08ef0ec0cb49b9e9506",
@@ -59,6 +59,7 @@
     "full_harness/skills/trellis-before-dev/SKILL.md": "00c9d1c83bc318e91b27a019bc954c2957cfad907ff20d854b596f16cad2c0f3",
     "full_harness/skills/trellis-check/SKILL.md": "dfb0600e95c19c7a83200465b6a92a5514ec9778ba4083efa881bed541cc74a8",
     "full_harness/skills/trellis-update-spec/SKILL.md": "003ce08a3404aeb50998029392c4d4e57b626edf526d3ebd585032bb92dcbb96",
-    "full_harness/stop_hook.py": "7241db24b180d6d04170498a5823cc8abf3a5b5ea2b7fde63d25ce0e0d551df1"
+    "full_harness/stop_hook.py": "7241db24b180d6d04170498a5823cc8abf3a5b5ea2b7fde63d25ce0e0d551df1",
+    "full_harness/timeline.py": "4ca965489a9b56522a0746bc6eb34d4218065b753f9805f66473479198c3144b"
   }
 }
