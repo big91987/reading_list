@@ -1,13 +1,13 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "b7b4e709a5515077f102610ca2de1bcb70c2f4ca",
+  "revision": "60818a03a677ac20fd2b4ea0e6f97a8f45de36dc",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
     "full_harness/codex.py": "48a30405e04b34a5622cbb049aa0b8a9474e1bc70a52233211768de7cb3bd5de",
     "full_harness/common.py": "95d16033d3d119e97d07255c2e3f5a83e013eaf45db944b649abda2266a4a175",
     "full_harness/console.py": "995ee713c4c0b35f6b0892e9024c391c1cd1551471c25af498e8b66f2d1f46b2",
     "full_harness/dialogue.py": "a26b9492030e2d9cbd2728595f785580a83ed57a04b76a9e1e1995c9ffc18b02",
-    "full_harness/light.py": "e31b2967cc3e0f521ac71d5a029a2da4f03575bb40ce7cd68bdda50978646909",
+    "full_harness/light.py": "f55836cdb39e683fe2727eea06d1a0f618921a0d48334e73cedcab2cacbf6b17",
     "full_harness/light_delivery.py": "aceab2524afe72fc7144dc82ca9ba0d83e174afb259e8186709efe0940aa621e",
     "full_harness/light_hook.py": "b87c2501846828a6b7844bf046cdf8c9841566ec2486abd05c80d10080a6135b",
     "full_harness/progress.py": "517401795e41087ab2070e614bf446b03b94d55136f064deec9fc5bd95d12382",
@@ -63,6 +63,6 @@
     "full_harness/skills/trellis-check/SKILL.md": "dfb0600e95c19c7a83200465b6a92a5514ec9778ba4083efa881bed541cc74a8",
     "full_harness/skills/trellis-update-spec/SKILL.md": "003ce08a3404aeb50998029392c4d4e57b626edf526d3ebd585032bb92dcbb96",
     "full_harness/stop_hook.py": "7241db24b180d6d04170498a5823cc8abf3a5b5ea2b7fde63d25ce0e0d551df1",
-    "full_harness/timeline.py": "205a0e1cce7594764f43702d206c74a62171c0b1fdfe54e30263a3edad7b2c81"
+    "full_harness/timeline.py": "449a735ff45085cf58c1e917de7fc0b27e46de2b3b5a7e3bc8463b0c341d442a"
   }
 }
