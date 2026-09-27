@@ -20,4 +20,6 @@ After editing product Python code, run `python3 full_harness/quality.py fix`, re
 
 ## Natural Issue entry
 
-Repository write/maintain/admin contributors can open Issues and comment without commands. The hosted permission gate and Python controller both verify access. Comments first enter a read-only conversation; questions do not approve or invalidate a stage. Explicit approval remains bound to the current pending artifact revision. Bots do not trigger execution. The only installed development workflow is `.github/workflows/harness-full.yml`.
+The active trial uses `.github/workflows/harness-light.yml`. Each authorized Issue message resumes the same native Codex Session once and directly answers or works. There is no separate intent model. Requirements and design request human confirmation; a clear confirmation can advance the stage within that same execution. All three stage Skills are progressively discoverable. Only development delivery runs the native Stop Hook checks. See [light workflow](docs/harness-light.md).
+
+The previous full workflow file remains available but is disabled in GitHub Actions during this trial; do not enable both for the same Issue events. Fix shared tooling upstream, then synchronize its committed revision.
