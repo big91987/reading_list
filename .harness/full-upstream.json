@@ -1,13 +1,13 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "9ebae1a9984b01d5a3334d6b2a78f9a187b63c99",
+  "revision": "406623e1599a82439c8989a9777f2e09ab42cb28",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
     "full_harness/codex.py": "5f46609108d576e4479ccc1cc69f885a45c25863c9c51b6edebeb6f2d631c282",
     "full_harness/common.py": "0402190c484c4d7476c4c673411d1df6c0dd13d24c6587536f15dea746cbce5f",
     "full_harness/console.py": "1be36c06eaf9a6a70757a8b1b057494338c953ed5fb7de6ee36d0f1f3afd28bb",
     "full_harness/dialogue.py": "a26b9492030e2d9cbd2728595f785580a83ed57a04b76a9e1e1995c9ffc18b02",
-    "full_harness/light.py": "1f1b3945c9846ac8eef309858a8b35ba25c20977ccf0becc0e5ca5c01dc76034",
+    "full_harness/light.py": "85604b6bdeebbb1196ae5fb6b1f397f3ffba8224f0d86dcb18e2c30497d599b1",
     "full_harness/light_delivery.py": "e56789a99f1589515ca1d0f5aa0f6ec80e54e96f5ec27f2a535a471c366aca18",
     "full_harness/light_hook.py": "c63981a25e36111a9ebae9591618d3be8672f65eee12f586f37b0b391048335c",
     "full_harness/progress.py": "517401795e41087ab2070e614bf446b03b94d55136f064deec9fc5bd95d12382",
