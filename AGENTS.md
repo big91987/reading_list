@@ -20,6 +20,6 @@ After editing product Python code, run `python3 full_harness/quality.py fix`, re
 
 ## Natural Issue entry
 
-The active trial uses `.github/workflows/harness-light.yml`. Each authorized Issue message resumes the same native Codex Session once and directly answers or works. There is no separate intent model. Requirements and design request human confirmation; a clear confirmation can advance the stage within that same execution. All three stage Skills are progressively discoverable. Only development delivery runs the native Stop Hook checks. See [light workflow](docs/harness-light.md).
+The active trial uses `.github/workflows/harness-light.yml`. Requirements, design and development are separate Jobs. Each active Job resumes the same native Codex Session and exposes only its own stage Skills progressively. There is no separate intent model. Requirements and design request human confirmation; after clear confirmation, return the adjacent next stage and let its Job resume the Session automatically. Do not reuse one confirmation to approve the next stage’s documents. Only development delivery runs the native Stop Hook checks. See [light workflow](docs/harness-light.md).
 
 The previous full workflow file remains available but is disabled in GitHub Actions during this trial; do not enable both for the same Issue events. Fix shared tooling upstream, then synchronize its committed revision.
