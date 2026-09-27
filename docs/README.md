@@ -14,3 +14,8 @@ Start with [project context](00-global/project.md). Record confirmed current beh
 Task paths are configured in `.harness/full.json`. Existing projects can point it to their existing indexes and stage documents; do not create a second competing source of truth.
 
 See [full workflow](harness-full.md).
+
+
+## 阶段产物入口
+
+遵循 [AGENTS.md](../AGENTS.md) 中的阶段产物与 Skill 约定。任务 PRD/AC 与可预览原型在 `04-implementation/tasks/<issue>/`；HLD、LLD、数据/API 契约与决策记录在 `01-architecture/tasks/<issue>/`；`04-implementation/tasks/<issue>/design/README.md` 索引完整设计集合；验证证据在 `05-validation/tasks/<issue>/`。已有材料保持原路径并在任务索引中引用，旧的单一 design.md 不表示完整交付。
