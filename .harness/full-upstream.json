@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "f92c41608f2f77d0eb69c9e2884d28dbab2e6ba3",
+  "revision": "c1a4e6d2079b07b3de69b1b1d7a0106b2c1abc19",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
     "full_harness/browser.py": "e1a280cb2d35e96d864c7aada9980e1376cdf3c61cf1477b3897133beb1a103d",
