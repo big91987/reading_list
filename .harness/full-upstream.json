@@ -1,13 +1,17 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "84bd00746fd8580c366e9985f64d2873848362f4",
+  "revision": "64839fb30f2b7a1b24acdabf5407ff9930bd0072",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
-    "full_harness/codex.py": "f09d69f817c0a347cbe38183a913a4463e304549f60da49916fa5b64539f7513",
-    "full_harness/common.py": "95d16033d3d119e97d07255c2e3f5a83e013eaf45db944b649abda2266a4a175",
+    "full_harness/browser.py": "e1a280cb2d35e96d864c7aada9980e1376cdf3c61cf1477b3897133beb1a103d",
+    "full_harness/browser/check.cjs": "7a47fb1285b4b4bd07ac89a831d566f3f9486f3bdd21d94d64f73b8e69e5e34a",
+    "full_harness/browser/package-lock.json": "bafef266b6f16922584055fe536677f92578553d09f822560dcbf1233d900a43",
+    "full_harness/browser/package.json": "8f80bb485d033bd0ebfd060f812f0b7e147343406c54046ae5f0ae9057c3d7ad",
+    "full_harness/codex.py": "597c27a3a26e9ca550f30955fa276ab3f1abbd673d5388df810a362a1341f367",
+    "full_harness/common.py": "17326564508cda06da4ed835941be47c0233eef407b9ab25394cc4aa4f5823c2",
     "full_harness/console.py": "995ee713c4c0b35f6b0892e9024c391c1cd1551471c25af498e8b66f2d1f46b2",
     "full_harness/dialogue.py": "a26b9492030e2d9cbd2728595f785580a83ed57a04b76a9e1e1995c9ffc18b02",
-    "full_harness/light.py": "0d448e5f5efc8bc7fe4cf473e49bc0513ea430315a2c9acb25b63fe9b0ad57f2",
+    "full_harness/light.py": "e891e189a44c01fd06394ca8fe803d86636cc285222b6fea9ca10313abff7311",
     "full_harness/light_delivery.py": "8d50b724c6e7ab4413f100ba4eba4465a5eb889cd03ce9f05af9036400d9e36b",
     "full_harness/light_hook.py": "3ea62edbd7a0801366256fbf619c6a324c1064c59aa58ba2dba954ed453a65bd",
     "full_harness/progress.py": "517401795e41087ab2070e614bf446b03b94d55136f064deec9fc5bd95d12382",
@@ -15,7 +19,8 @@
     "full_harness/requirements.txt": "f2e7d1af6ed2a65d7827d5a948005019dcd1af293c526da8a5aabf16b54f25ef",
     "full_harness/router.py": "479d1330a84d7f932d2c5a9fdebff448cd8c3bf18083111e39ee01100a519bbc",
     "full_harness/ruff.toml": "1a6c894195322458057764bcda3c7984109d6f0317cf57119558356825df4fbc",
-    "full_harness/runner.py": "cdf7df3117855b0bec902a207ca5170dd7e34a8cd9572c7d1d4793b3d37baa07",
+    "full_harness/runner.py": "ebf8ae30a23ca35e859ddd599b53df2eaca47b47b799864397433b7f75c75385",
+    "full_harness/screenshots.py": "a9090e7d0cf0dd4538611879676587f648020fc40b9c439e1f154a4ceaf64935",
     "full_harness/skills-source.json": "53a0a04bb8a7c3a98bed16b2fe24d5e3c0ca2d5d97e643833d6749cfd47b2843",
     "full_harness/skills.py": "e4dca32e00b0bf306f69edb859daba83e69c223e4a7c55fda3332ac4968432cc",
     "full_harness/skills/defining-platform-products-cn/SKILL.md": "3e3ef942b44cf383e77fadf6173526f2fad049034892e08ef0ec0cb49b9e9506",
@@ -62,7 +67,7 @@
     "full_harness/skills/trellis-before-dev/SKILL.md": "00c9d1c83bc318e91b27a019bc954c2957cfad907ff20d854b596f16cad2c0f3",
     "full_harness/skills/trellis-check/SKILL.md": "dfb0600e95c19c7a83200465b6a92a5514ec9778ba4083efa881bed541cc74a8",
     "full_harness/skills/trellis-update-spec/SKILL.md": "003ce08a3404aeb50998029392c4d4e57b626edf526d3ebd585032bb92dcbb96",
-    "full_harness/stop_hook.py": "7241db24b180d6d04170498a5823cc8abf3a5b5ea2b7fde63d25ce0e0d551df1",
-    "full_harness/timeline.py": "449a735ff45085cf58c1e917de7fc0b27e46de2b3b5a7e3bc8463b0c341d442a"
+    "full_harness/stop_hook.py": "e27101deeb37c3c02142dac07f2ea3c3a2db8ec7a77ad7ac74fcb046c7f85e94",
+    "full_harness/timeline.py": "860fa02e98c0654d337715d8117805c5732412d0c95ded7d6db52e52feb1c281"
   }
 }

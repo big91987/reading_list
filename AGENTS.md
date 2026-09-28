@@ -50,3 +50,5 @@ Each stage Agent owns its conversation and follows its Skills: decide whether cl
 - 在 `artifacts` 列出供本次审查的真实文件集合（包括原型运行依赖及证据），回复中说明已完成什么、还缺什么、需要用户确认什么。让用户能审查方案及其引用材料，由阶段 Agent 结合对话判断确认范围。普通问答无需重复提交整包。
 - 中途接入时先核对已有 PRD、原型、设计、代码与证据，补齐当前阶段缺口后再申请推进。开发前对照批准原型和契约；实现偏差记录后交用户确认。
 <!-- /harness-stage-deliverables -->
+
+When the owner configures `browser_roots`, design and development have the native `harness_browser.check` tool. Use it for real prototype/product browser checks instead of launching Chromium in the shell sandbox. Write a JSON action plan in the project and pass its path and an allowed application root to the tool. Inspect the returned results and screenshot files; include useful evidence in `artifacts`. A screenshot or a passing smoke plan does not replace the task's functional acceptance criteria. Fix failed checks and rerun the same tool; do not ask the user to supply screenshots because the shell sandbox cannot launch a browser.
