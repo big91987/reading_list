@@ -65,7 +65,7 @@
       "name": "reading-list existing user journeys",
       "argv": [
         "node",
-        "harness/browser.cjs",
+        "{source}/full_harness/browser/check.cjs",
         "app",
         "{evidence}",
         ".harness/reading-core.json"
@@ -75,5 +75,15 @@
   "max_attempts": 3,
   "agent_timeout": 1200,
   "check_timeout": 120,
-  "review_timeout": 480
+  "review_timeout": 480,
+  "browser_roots": [
+    "app",
+    "docs/04-implementation/tasks/{task}/prototype"
+  ],
+  "environment": {
+    "inherit": [
+      "PLAYWRIGHT_BROWSERS_PATH"
+    ],
+    "set": {}
+  }
 }
