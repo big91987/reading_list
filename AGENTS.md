@@ -52,3 +52,14 @@ Each stage Agent owns its conversation and follows its Skills: decide whether cl
 <!-- /harness-stage-deliverables -->
 
 When the owner configures `browser_roots`, design and development have the native `harness_browser.check` tool. Use it for real prototype/product browser checks instead of launching Chromium in the shell sandbox. Write a JSON action plan in the project and pass its path and an allowed application root to the tool. Inspect the returned results and screenshot files; include useful evidence in `artifacts`. A screenshot or a passing smoke plan does not replace the task's functional acceptance criteria. Fix failed checks and rerun the same tool; do not ask the user to supply screenshots because the shell sandbox cannot launch a browser.
+
+<!-- harness-workflow-git -->
+## Git 分支职责（仅限 Harness 托管工作区）
+
+只有框架在本轮执行上下文中明确说明“这是 Harness CI/CD 托管工作区”时，以下约定生效。直接使用这项已知上下文，不读取环境变量或调用工具判断运行模式。没有这项声明时，遵循仓库通常的 Git 规则与用户指令，不限制本地开发中的分支操作；不要仅凭仓库包含 Workflow 文件或正在使用某个 Skill 推断本约定生效。
+
+- 框架在启动阶段 Agent 前创建并检出该 Issue 的任务分支；所有阶段共用这个任务工作区。Agent 直接在当前工作区编辑文件、运行检查，用只读 Git 命令查看分支和差异。
+- 在此模式下，仓库或 Skill 中的一般性“使用任务分支”要求由框架履行。Agent 不主动创建、切换、合并、变基或删除分支，不执行 Git 提交、推送或创建 PR。
+- 框架在研发检查通过后负责远端任务分支的提交、推送和草稿 PR。Agent 完成代码、文档及验证后交还结果；不要把“由 Agent 创建分支／提交／创建 PR”列为产品 AC 或返回完成结果的前置条件，也不把尚未发布描述为已经发布。
+- 如果当前分支与任务归属不符，如实报告具体不一致，由框架修复；不要自己改分支或要求用户在运行环境里操作 Git。
+<!-- /harness-workflow-git -->
