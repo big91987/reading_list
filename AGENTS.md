@@ -63,3 +63,12 @@ When the owner configures `browser_roots`, design and development have the nativ
 - 框架在研发检查通过后负责远端任务分支的提交、推送和草稿 PR。Agent 完成代码、文档及验证后交还结果；不要把“由 Agent 创建分支／提交／创建 PR”列为产品 AC 或返回完成结果的前置条件，也不把尚未发布描述为已经发布。
 - 如果当前分支与任务归属不符，如实报告具体不一致，由框架修复；不要自己改分支或要求用户在运行环境里操作 Git。
 <!-- /harness-workflow-git -->
+
+
+## Agent Platform integration
+
+The current trial is `.github/workflows/agent-platform.yml`. It starts a requirements conversation when the owner opens a product Issue. Other contributors require the owner to dispatch the workflow. The legacy harness workflows remain disabled.
+
+When the invocation identifies an Agent Platform session, communicate in natural language. The old `next_state/message/artifacts` final JSON and folded Issue progress protocol above apply only to the legacy Harness, not this integration. Use the registered `submit_handoff` MCP tool to hand off confirmed requirement/design documents, or completed development evidence. Do not call GitHub directly or simulate a successful tool call in prose. The tool target is registered by the Runner for this workspace and stage. Same-stage replies resume this conversation; downstream stages get separate conversations sharing this task workspace.
+
+Requirements and design must present their deliverables and obtain human confirmation before handoff. Development should implement, check and fix autonomously, then hand back delivery through the tool. The Runner runs final checks and publishes a task branch and draft PR; it does not merge the feature. The platform itself has no software-development state machine.

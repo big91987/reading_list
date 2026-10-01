@@ -1,42 +1,103 @@
-name: Agent Platform requirements
+name: Agent Platform pipeline
 on:
+  issues:
+    types: [opened]
   workflow_dispatch:
     inputs:
       issue:
-        description: Existing product Issue number
+        description: Product Issue number
         type: string
         required: true
-      message:
-        description: Optional message to continue the associated conversation
+      after:
+        description: Completed upstream stage (start begins requirements)
+        type: choice
+        options: [start, requirements, design, development]
+        default: start
+      result_file:
+        description: Runner-local handoff receipt (matched against registration)
         type: string
         default: ''
-      workspace_path:
-        description: Optional prepared project directory on the platform machine (new conversations only)
+      result_sha256:
+        description: Handoff digest supplied by the registered MCP tool
         type: string
         default: ''
 permissions:
-  contents: read
+  contents: write
   issues: write
+  pull-requests: write
 concurrency:
-  group: agent-platform-${{ github.repository }}-${{ inputs.issue }}
+  group: agent-platform-${{ github.repository }}-${{ github.event.issue.number || inputs.issue }}
   cancel-in-progress: false
 jobs:
   requirements:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'issues' || inputs.after == 'start')
     runs-on: [self-hosted, macOS, ARM64, he-full]
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
-      - name: Call local Agent and publish clarification link
+      - name: requirements · persistent Agent conversation
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
-          ISSUE_NUMBER: ${{ inputs.issue }}
-          PLATFORM_MESSAGE: ${{ inputs.message }}
-          PLATFORM_WORKSPACE_PATH: ${{ inputs.workspace_path }}
+          ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          RESULT_SHA256: ${{ inputs.result_sha256 }}
           AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
         run: |
           export PATH="/opt/homebrew/bin:$PATH"
           test -n "$AGENT_PLATFORM_ROOT"
           "$AGENT_PLATFORM_ROOT/.data/runner-venv/bin/python" \
-            "$AGENT_PLATFORM_ROOT/examples/github/requirements.py" \
-            --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json"
+            "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
+            --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage requirements
+  design:
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'requirements')
+    runs-on: [self-hosted, macOS, ARM64, he-full]
+    timeout-minutes: 25
+    steps:
+      - name: design · persistent Agent conversation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          RESULT_SHA256: ${{ inputs.result_sha256 }}
+          AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
+        run: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          test -n "$AGENT_PLATFORM_ROOT"
+          "$AGENT_PLATFORM_ROOT/.data/runner-venv/bin/python" \
+            "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
+            --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage design
+  development:
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'design')
+    runs-on: [self-hosted, macOS, ARM64, he-full]
+    timeout-minutes: 25
+    steps:
+      - name: development · persistent Agent conversation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          RESULT_SHA256: ${{ inputs.result_sha256 }}
+          AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
+        run: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          test -n "$AGENT_PLATFORM_ROOT"
+          "$AGENT_PLATFORM_ROOT/.data/runner-venv/bin/python" \
+            "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
+            --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage development
+  report:
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'development')
+    runs-on: [self-hosted, macOS, ARM64, he-full]
+    timeout-minutes: 25
+    steps:
+      - name: report · persistent Agent conversation
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          RESULT_SHA256: ${{ inputs.result_sha256 }}
+          AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
+        run: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          test -n "$AGENT_PLATFORM_ROOT"
+          "$AGENT_PLATFORM_ROOT/.data/runner-venv/bin/python" \
+            "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
+            --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage report
