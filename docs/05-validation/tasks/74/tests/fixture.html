@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Issue 74 产品集成验证</title>
+    <style>
+      body {
+        font: 16px system-ui;
+        margin: 20px;
+      }
+      iframe {
+        display: block;
+        width: 1280px;
+        height: 844px;
+        border: 0;
+      }
+      pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Issue 74 产品集成验证夹具（非产品入口）</h1>
+    <button id="run" type="button">运行产品集成测试</button>
+    <p id="result" role="status">等待运行</p>
+    <button id="download" type="button" hidden>下载测试报告</button>
+    <button id="sample" type="button">查看样例产品</button>
+    <button id="large" type="button">查看四位数产品</button>
+    <pre id="details"></pre>
+    <iframe id="product" title="原产品测试视图"></iframe>
+    <script src="browser-tests-74.js"></script>
+  </body>
+</html>

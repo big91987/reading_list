@@ -1,0 +1,10 @@
+[
+  { "action": "viewport", "width": 320 },
+  { "action": "click", "role": "button", "name": "查看四位数产品" },
+  { "action": "visible", "text": "全部 2000" },
+  { "action": "visible", "text": "未读 0" },
+  { "action": "visible", "text": "已读 2000" },
+  { "action": "click", "role": "button", "name": "未读 0" },
+  { "action": "visible", "text": "全部 2000" },
+  { "action": "visible", "text": "没有未读的书" }
+]

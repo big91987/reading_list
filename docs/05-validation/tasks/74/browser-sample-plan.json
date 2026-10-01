@@ -1,0 +1,8 @@
+[
+  { "action": "viewport", "width": 1280 },
+  { "action": "click", "role": "button", "name": "查看样例产品" },
+  { "action": "visible", "text": "全部 3" },
+  { "action": "visible", "text": "未读 2" },
+  { "action": "visible", "text": "已读 1" },
+  { "action": "visible", "text": "共 3 本 · 已读 1 本" }
+]

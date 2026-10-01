@@ -1,0 +1,36 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "人类简史"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "月亮与六便士"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《人类简史》为已读"
+    },
+    {
+      "action": "reload"
+    }
+  ],
+  "errors": [],
+  "failure": "locator.click: Timeout 5000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: '已读', exact: true })\n",
+  "downloads": []
+}

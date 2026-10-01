@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "plans": 10,
+  "actions": 273,
+  "integrationCases": 46,
+  "sourceHashesMatch": true,
+  "temporaryFixturesRemoved": true,
+  "protectedOwnerPlanUnchanged": true,
+  "gate": "Registered browser and static evidence complete; independent formal Runner verification pending"
+}

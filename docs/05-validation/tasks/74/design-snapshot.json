@@ -1,0 +1,95 @@
+{
+  "baseline_commit": "bff9bb10eafb548783c8cb7b8adb0cfb9b6f0a8c",
+  "branch": "codex/issue-74-platform",
+  "scope": "Design prototype, not product acceptance",
+  "sha256": {
+    "docs/01-architecture/tasks/74/architecture-decisions.md": "e376f618c0626fc1244a9aaf2d638dab86faf9f5a25a8463f6b33b5e0f75fb48",
+    "docs/01-architecture/tasks/74/contracts.md": "5759317651da9a53752c00d0da05bd97ede0352913dec62275c019863afcadaa",
+    "docs/01-architecture/tasks/74/hld.md": "e8df45769bbf75afab4fdbd9c17066e8ce5aa4ee360a06d06fa9d7d7ed731a6a",
+    "docs/01-architecture/tasks/74/traceability.md": "2eabb633ce1b857a75726e68a76cf64a533ede292c982d2aa92987b8a2cc83c8",
+    "docs/04-implementation/tasks/74/README.md": "6338080dfa90adbc93a3c70045502773756b7734361f00efd49225c802687b2e",
+    "docs/04-implementation/tasks/74/design/README.md": "094abdc746d2c0cf2212233431fb9b198cccb2a81f90662a84aa34ab268cdb0f",
+    "docs/04-implementation/tasks/74/design/g2-review.md": "8a395dbc2de0f1243e686faf833059de4a4e5b9f19f91a874e13315ace82e982",
+    "docs/04-implementation/tasks/74/design/interaction.md": "d719e8c66c05991b57a71fd36af54aca839d1c2092ae9f4e03acbc28b74bf590",
+    "docs/04-implementation/tasks/74/g1-review.md": "d58ecf732a522b7922760099f8c1209e8a46f206bafd584f34ae3858d83ee2d2",
+    "docs/04-implementation/tasks/74/prd.md": "925d2cbd8fb373cf7ccc6a87b0d5897c7b826f0e99a4c5af071e1e45195bef06",
+    "docs/04-implementation/tasks/74/prototype/README.md": "56806a7c45b66bda237a199b06480c3e9b4feb2f13393d0108db5792e62994bc",
+    "docs/04-implementation/tasks/74/prototype/app.js": "da20b32c4ba0846b06afc300ce140d5f70a93973875e30dcc059a7d46107d7f2",
+    "docs/04-implementation/tasks/74/prototype/check-empty.json": "cb136ab02bfa86fc8f7bf88fbed412a63467e3dbe85620d42f6729a30157c2c6",
+    "docs/04-implementation/tasks/74/prototype/check-failure.json": "865cec71e3dbec6ad592c1dd4735f0f80ea788ddb36b1934d898b91aca3c22cf",
+    "docs/04-implementation/tasks/74/prototype/check-flow.json": "01c0ece7e517aec0a32fdf39b23d7da053acb9f402da5821e6a792c1e8f933f7",
+    "docs/04-implementation/tasks/74/prototype/check-keyboard.json": "383a205cff34b264b6fe04d80c11100b847fae880c66024ba22dc2299cb4f5c2",
+    "docs/04-implementation/tasks/74/prototype/check-layout-320.json": "eed84d9778cf6250a0fc0c0e1449c9211ffe7363da4390f0ee72d3600d143afc",
+    "docs/04-implementation/tasks/74/prototype/check-layout-states.json": "e367f80520f1f38605f6c6632c4ac3e5a4d7b2de9d02a369ea26e1d37087e3af",
+    "docs/04-implementation/tasks/74/prototype/check-layout.json": "25f60e5e65a7b0009ad2e4e425916c154800cd61f37526a9e6ca4a33cb887bf8",
+    "docs/04-implementation/tasks/74/prototype/check-states.json": "d3fb84489a165ff4271abf7790d9b75d35f7b8130d98c5550a8f4bcf65d127e5",
+    "docs/04-implementation/tasks/74/prototype/index.html": "d1ece1ecc5de9e87361d221d98fe70abf8d11b627fe05310e9f222ac37a55a2f",
+    "docs/04-implementation/tasks/74/prototype/layout.js": "02b797cd617f3e0d66ee3890d83a5dfaeec2d12aaecc214a5adc3b849b17a870",
+    "docs/04-implementation/tasks/74/prototype/styles.css": "ea4ccb2e61ee132e1e29cc211cde925d5e60407feb78eb15b8c9526c2509b7af",
+    "docs/04-implementation/tasks/74/requirements-decisions.md": "30d42dc0ba1b2aea6dcf5c977446b6f38fa4fb87d860d5471fee5c776a5bf323",
+    "docs/05-validation/tasks/74/design-validation.md": "fe6e6ac27e159a1935d3412c0f16f0c966bd193098aeaf220bc870372ac69b50",
+    "docs/README.md": "2439cfc8ff0b2a46cf532298a584397c8bce2bc5cce03fd9b1b6ca366c12fd9c",
+    "app/index.html": "22b46762eed304c067e5a23d7d6ac4c478387665b140842a099c6dfc4bcbbabc",
+    "app/app.js": "b05d3f07f77f589263c66e14734b10178da7c26be4480c1f1d2c1d2f1b0b0f35",
+    "app/styles.css": "5d98cb928e29fbe50c9d6f83b93227a7b361ca6aa1cd18a10f1ad35c6b6fe4b9"
+  },
+  "final_runs": [
+    {
+      "plan": "docs/04-implementation/tasks/74/prototype/check-flow.json",
+      "result": "docs/05-validation/tasks/74/browser/design-1-9/browser.json"
+    },
+    {
+      "plan": "docs/04-implementation/tasks/74/prototype/check-failure.json",
+      "result": "docs/05-validation/tasks/74/browser/design-1-10/browser.json"
+    },
+    {
+      "plan": "docs/04-implementation/tasks/74/prototype/check-layout.json",
+      "result": "docs/05-validation/tasks/74/browser/design-1-11/browser.json"
+    },
+    {
+      "plan": "docs/04-implementation/tasks/74/prototype/check-keyboard.json",
+      "result": "docs/05-validation/tasks/74/browser/design-1-12/browser.json"
+    },
+    {
+      "plan": "docs/04-implementation/tasks/74/prototype/check-layout-states.json",
+      "result": "docs/05-validation/tasks/74/browser/design-1-13/browser.json"
+    },
+    {
+      "plan": "docs/04-implementation/tasks/74/prototype/check-states.json",
+      "result": "docs/05-validation/tasks/74/browser/design-1-14/browser.json"
+    },
+    {
+      "plan": "docs/04-implementation/tasks/74/prototype/check-empty.json",
+      "result": "docs/05-validation/tasks/74/browser/design-1-15/browser.json"
+    },
+    {
+      "plan": "docs/04-implementation/tasks/74/prototype/check-layout-320.json",
+      "result": "docs/05-validation/tasks/74/browser/design-1-16/browser.json"
+    }
+  ],
+  "sha256_scope": "Original design-review snapshot before A-001 approval; retained as historical evidence. Runtime prototype and browser plans are unchanged.",
+  "approval": {
+    "decision": "A-001",
+    "status": "Accepted",
+    "gate": "G2 HLD READY",
+    "changes": "Approval/status documentation only; no runtime prototype, browser plan, or product code changes",
+    "manual_evidence_policy": "Unobtained real-touch and screen-reader evidence stays explicitly unverified and does not block an inspectable draft PR; do not claim complete acceptance or merge"
+  },
+  "approval_document_sha256": {
+    "docs/01-architecture/tasks/74/architecture-decisions.md": "827a0439f70cc67360fc7f9e68a4b17463662f2ab47893283d19eff0ef184e85",
+    "docs/01-architecture/tasks/74/contracts.md": "054af50e2fb47119ec2bc55af90ae309333edf5d84ee1f04d7e49513e7a5e711",
+    "docs/01-architecture/tasks/74/hld.md": "2ec32efc7f567fd1c3b6961a027077f1f02b1f4550c79dd777368ddb926ac213",
+    "docs/01-architecture/tasks/74/traceability.md": "80d9959302798bf55385d4e0008d3e3252b63e13d2660ca42470c9143130c81c",
+    "docs/04-implementation/tasks/74/README.md": "c8a5d64a6637e6713ee3be5c82bfc2177e8511b93a64c730158e4210a6d3c2ab",
+    "docs/04-implementation/tasks/74/design/README.md": "c5af24bb215843b6e551eb649b264f6205b8f091f8532e1dd3fce3e47cec94d7",
+    "docs/04-implementation/tasks/74/design/g2-review.md": "837d3e6efc7094ad281e9b54e15d7561b57d286be75193ed5e90da0f73158121",
+    "docs/04-implementation/tasks/74/design/interaction.md": "646d79e0ebd450b63c9e440efb2d08caaa2b1c8faeea30b4da05d71667b91647",
+    "docs/04-implementation/tasks/74/g1-review.md": "d58ecf732a522b7922760099f8c1209e8a46f206bafd584f34ae3858d83ee2d2",
+    "docs/04-implementation/tasks/74/prd.md": "925d2cbd8fb373cf7ccc6a87b0d5897c7b826f0e99a4c5af071e1e45195bef06",
+    "docs/04-implementation/tasks/74/prototype/README.md": "36570ff02e89534d406eccd5f4d8f15e2cc2ce950fe8e8f2ad6c305a7ac45e02",
+    "docs/04-implementation/tasks/74/requirements-decisions.md": "30d42dc0ba1b2aea6dcf5c977446b6f38fa4fb87d860d5471fee5c776a5bf323",
+    "docs/05-validation/tasks/74/design-validation.md": "ccfaa9372588f80dd2ae63ae5b1ffcae471098450de312357a11d58e71076fb0",
+    "docs/README.md": "637288a95c427e746027cbee79c6cc3b208cacfd39a2ca391803ee67527c1383",
+    "docs/04-implementation/tasks/74/design/artifacts.md": "b7c444b64d2e86693142699eaadce39415e2fa57478cc57642630bb584eb28c1"
+  }
+}

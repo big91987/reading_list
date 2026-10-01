@@ -1,0 +1,8 @@
+[
+  { "action": "click", "role": "button", "name": "计数布局审查" },
+  { "action": "viewport", "width": 320 },
+  { "action": "visible", "text": "全部 2468" },
+  { "action": "visible", "text": "未读 1234" },
+  { "action": "visible", "text": "已读 1234" },
+  { "action": "viewport", "width": 1280 }
+]

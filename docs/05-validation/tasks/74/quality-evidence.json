@@ -1,0 +1,88 @@
+[
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "--check",
+      "app/app.js"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "--check",
+      "docs/05-validation/tasks/74/tests/browser-tests.js"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "--check",
+      "docs/05-validation/tasks/74/tests/stage-fixture.cjs"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "--check",
+      "docs/05-validation/tasks/74/tests/audit-evidence.cjs"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "<owner-quality>/node_modules/.bin/prettier",
+      "--check",
+      "--config",
+      "<owner-quality>/prettier.json",
+      "app/**/*.{js,html,css}",
+      "docs/05-validation/tasks/74/tests/*.{js,cjs,html}",
+      "docs/05-validation/tasks/74/browser*-plan.json",
+      "tests/browser/core.json"
+    ],
+    "exit_code": 0,
+    "stdout": "Checking formatting...\nAll matched files use Prettier code style!\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "<owner-quality>/node_modules/.bin/eslint",
+      "--no-config-lookup",
+      "--config",
+      "<owner-quality>/eslint.config.mjs",
+      "app/**/*.js"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "docs/05-validation/tasks/74/tests/audit-evidence.cjs"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"passed\": true,\n  \"plans\": 10,\n  \"actions\": 273,\n  \"integrationCases\": 46,\n  \"sourceHashesMatch\": true,\n  \"temporaryFixturesRemoved\": true,\n  \"protectedOwnerPlanUnchanged\": true,\n  \"gate\": \"Registered browser and static evidence complete; independent formal Runner verification pending\"\n}\n",
+    "stderr": ""
+  }
+]

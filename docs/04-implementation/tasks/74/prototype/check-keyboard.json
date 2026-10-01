@@ -1,0 +1,88 @@
+[
+  {
+    "action": "viewport",
+    "width": 1280
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "重置演示数据"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": ""
+  },
+  {
+    "action": "key",
+    "key": "Tab"
+  },
+  {
+    "action": "key",
+    "key": "Tab"
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "key",
+    "key": "Tab"
+  },
+  {
+    "action": "key",
+    "key": "Space"
+  },
+  {
+    "action": "visible",
+    "text": "长安的荔枝"
+  },
+  {
+    "action": "absent",
+    "text": "Dune"
+  },
+  {
+    "action": "key",
+    "key": "Tab"
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "Dune"
+  },
+  {
+    "action": "absent",
+    "text": "长安的荔枝"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  }
+]

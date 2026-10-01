@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "键盘测试书"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": " "
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "请填写书名，不能只输入空格。"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "键盘保存成功"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "已将书名保存为《键盘保存成功》。"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "键盘取消草稿"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "已取消修改。"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "Escape草稿"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "visible",
+      "text": "已取消修改。"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "viewport",
+      "width": 1280
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

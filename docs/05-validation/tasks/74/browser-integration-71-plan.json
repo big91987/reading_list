@@ -1,0 +1,11 @@
+[
+  { "action": "viewport", "width": 1280 },
+  { "action": "click", "role": "button", "name": "运行产品集成测试" },
+  { "action": "visible", "text": "产品集成测试：18/18 通过；页面错误 0" },
+  {
+    "action": "download",
+    "role": "button",
+    "name": "下载测试报告",
+    "filename": "product-integration-71.json"
+  }
+]
