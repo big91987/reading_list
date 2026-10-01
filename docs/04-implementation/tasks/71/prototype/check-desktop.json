@@ -1,0 +1,160 @@
+[
+  {
+    "action": "viewport",
+    "width": 1280
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "重置演示数据"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《长安的荔枝》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "   "
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "请填写书名，不能只输入空格。"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": " dune "
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "清单中已有同名书籍，请换一个书名。"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": " 长安的荔枝（修订版） "
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "长安的荔枝（修订版）"
+  },
+  {
+    "action": "visible",
+    "text": "共 3 本 · 已读 1 本"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "长安的荔枝（修订版）"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《Dune》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "DUNE"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "DUNE"
+  },
+  {
+    "action": "absent",
+    "text": "长安的荔枝（修订版）"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《DUNE》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "不保存的草稿"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "取消"
+  },
+  {
+    "action": "visible",
+    "text": "DUNE"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《长安的荔枝（修订版）》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "dune"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "清单中已有同名书籍，请换一个书名。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "取消"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《长安的荔枝（修订版）》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "桌面编辑预览"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "fixture": "temporary app/index.html, restored after registered check",
+  "product": {
+    "html": "22b46762eed304c067e5a23d7d6ac4c478387665b140842a099c6dfc4bcbbabc",
+    "javascript": "b05d3f07f77f589263c66e14734b10178da7c26be4480c1f1d2c1d2f1b0b0f35",
+    "css": "5d98cb928e29fbe50c9d6f83b93227a7b361ca6aa1cd18a10f1ad35c6b6fe4b9"
+  },
+  "tests": {
+    "html": "9b4bed954b74391bf80444f2bbe42965f244143f9eea32c3f87d507e0a059cc0",
+    "javascript": "1f38f4ddbbc09f4bd3110da7031b92925e4c5e856775e5b274be04afd3534c11"
+  }
+}

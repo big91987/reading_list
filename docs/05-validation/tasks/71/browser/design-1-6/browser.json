@@ -1,0 +1,153 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "不能被新增失败保存"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "Dune"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "清单中已有同名书籍，请换一个书名。"
+    },
+    {
+      "action": "visible",
+      "text": "保存"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "新增测试"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "新增测试"
+    },
+    {
+      "action": "absent",
+      "text": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "不能被标记保存"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《长安的荔枝》为已读"
+    },
+    {
+      "action": "absent",
+      "text": "保存"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "其他书删除时保留草稿"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《Dune》"
+    },
+    {
+      "action": "visible",
+      "text": "保存"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "取消"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《新增测试》"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "absent",
+      "text": "新增测试"
+    },
+    {
+      "action": "visible",
+      "text": "共 2 本 · 已读 1 本"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

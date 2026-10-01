@@ -7,6 +7,7 @@ Read `AGENTS.md`, `docs/README.md` and the current task's PRD, design and execut
 - Inspect current behavior and ownership of the affected code.
 - Follow existing conventions. Record a narrow change boundary for non-trivial tasks.
 - Follow applicable architecture contracts indexed by the project documentation.
+- For the static reading-list frontend, follow [frontend code-specs](../frontend/index.md) and their pre-development checklist.
 
 ## Quality Check
 

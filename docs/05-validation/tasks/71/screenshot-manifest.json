@@ -1,0 +1,85 @@
+{
+  "purpose": "Registered handoff accepts UTF-8 documents. Original PNG evidence remains in the shared workspace; hashes bind the reviewed screenshots to this document snapshot.",
+  "screenshots": [
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-1/mobile.png",
+      "bytes": 123651,
+      "sha256": "cff7c92b5ce2f93a57623a9031f1e16c05793cacc53522715b0bca4c7662242f"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-1/screenshot.png",
+      "bytes": 178400,
+      "sha256": "ca2db40ff25715c1b56333bf3e9c9ad212aed7727388d1e55601504f7f8c931e"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-2/mobile.png",
+      "bytes": 116894,
+      "sha256": "9ff70e67bd37f80ffafe730ce18ef745d923958fd7ec3da9c1690847e1f72183"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-2/screenshot.png",
+      "bytes": 109253,
+      "sha256": "86836cdb08d171b5305670e2ad0dd336c41cfbe622ca09cfe0328b136b95b706"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-3/mobile.png",
+      "bytes": 121570,
+      "sha256": "0cacc9094b1c697ce330e705d032242225d2d690b2b160b9c73896a38c984acd"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-3/screenshot.png",
+      "bytes": 113752,
+      "sha256": "35c99db79f31bd26ce6a5e0c0905dcc90ee5e5dbe87fc5e425682b734ec0b12e"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-4/mobile.png",
+      "bytes": 126740,
+      "sha256": "2bfee822b7b6ac2f5362cf364b2479174bcab9d66be13a4457576fe112f804ab"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-4/screenshot.png",
+      "bytes": 119038,
+      "sha256": "68e3a61ad902a6543a96cadd8e42e7e551f520043968e682e7a745564cfd2b72"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-5/mobile.png",
+      "bytes": 120575,
+      "sha256": "927932b1410f4b5d5be6e4ad5a36b062cc7b4e6a78859277e4b1676175a426f0"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-5/screenshot.png",
+      "bytes": 175012,
+      "sha256": "53ebedb181f8bde5df245809db4cc6d125339d4b7d07823fef11293d93286144"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-6/mobile.png",
+      "bytes": 111811,
+      "sha256": "239b8f2d7648ffc8ae2d5ab72c593c3bd176e8ba7b1e12a6394ac78c232d8cd0"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-6/screenshot.png",
+      "bytes": 104333,
+      "sha256": "622cbd23647d13a3dcf122b939b303c4528d149e9f774983d25a94fe32471549"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-7/mobile.png",
+      "bytes": 128872,
+      "sha256": "b18724b3052141521e77ca24e3de133f5d1a5f9c8ddc69168ad81dd2cc222d7b"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-7/screenshot.png",
+      "bytes": 184029,
+      "sha256": "df8f81b210f61a9068965b36e99e1b0d8fe180db6be857347324149d45666b40"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-8/mobile.png",
+      "bytes": 103321,
+      "sha256": "12a7eff8fb693b06edef0433d0fa91597a765a63f5315f8a577dc848001cf4fa"
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/design-1-8/screenshot.png",
+      "bytes": 95348,
+      "sha256": "6b3c046e86b061da238fdd04b6c5c55f8a30d4073095340d5060072277b6eedc"
+    }
+  ]
+}
