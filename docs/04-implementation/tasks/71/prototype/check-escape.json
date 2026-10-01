@@ -1,0 +1,150 @@
+[
+  {
+    "action": "viewport",
+    "width": 1280
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "重置演示数据"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《Dune》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "Escape 不应保存的草稿"
+  },
+  {
+    "action": "key",
+    "key": "Escape"
+  },
+  {
+    "action": "visible",
+    "text": "Dune"
+  },
+  {
+    "action": "visible",
+    "text": "已取消修改。"
+  },
+  {
+    "action": "absent",
+    "text": "保存"
+  },
+  {
+    "action": "absent",
+    "text": "已将书名保存为《Escape 不应保存的草稿》。"
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "保存"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "   "
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "请填写书名，不能只输入空格。"
+  },
+  {
+    "action": "key",
+    "key": "Escape"
+  },
+  {
+    "action": "visible",
+    "text": "Dune"
+  },
+  {
+    "action": "absent",
+    "text": "保存"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "Dune"
+  },
+  {
+    "action": "visible",
+    "text": "共 3 本 · 已读 1 本"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《Dune》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "写失败后 Escape 取消"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "模拟本地保存失败"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "未能保存，原书名未改变。请重试或取消。"
+  },
+  {
+    "action": "key",
+    "key": "Escape"
+  },
+  {
+    "action": "visible",
+    "text": "Dune"
+  },
+  {
+    "action": "absent",
+    "text": "保存"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "Dune"
+  },
+  {
+    "action": "visible",
+    "text": "共 3 本 · 已读 1 本"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "Dune"
+  }
+]

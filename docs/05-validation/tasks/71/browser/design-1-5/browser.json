@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": ""
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "最多 80 个长度单位 · 保存才会生效"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "键盘保存"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "键盘保存"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "键盘取消草稿"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "键盘保存"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": ""
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "请填写书名，不能只输入空格。"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "键盘修正成功"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "键盘修正成功"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

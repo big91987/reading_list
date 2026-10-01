@@ -1,0 +1,58 @@
+[
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "<platform>/examples/github/quality/node_modules/.bin/prettier",
+      "--check",
+      "--config",
+      "<platform>/examples/github/quality/prettier.json",
+      "app/**/*.{js,html,css}"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "<platform>/examples/github/quality/node_modules/.bin/eslint",
+      "--no-config-lookup",
+      "--config",
+      "<platform>/examples/github/quality/eslint.config.mjs",
+      "app/**/*.js"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "--check",
+      "<workspace>/app/app.js"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "<tooling>/full_harness/browser/check.cjs",
+      "<workspace>/app",
+      "<workspace>/docs/05-validation/tasks/71/delivery-checks/existing",
+      "<workspace>/.harness/reading-core.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "<tooling>/full_harness/browser/check.cjs",
+      "<workspace>/app",
+      "<workspace>/docs/05-validation/tasks/71/delivery-checks/feature",
+      "<workspace>/docs/05-validation/tasks/71/browser-plan.json"
+    ],
+    "exit_code": 0
+  }
+]

@@ -28,23 +28,10 @@
         <form id="book-form" novalidate>
           <label for="book-title">书名</label>
           <div class="input-row">
-            <input
-              id="book-title"
-              name="title"
-              type="text"
-              maxlength="80"
-              autocomplete="off"
-              placeholder="例如：长安的荔枝"
-              required
-            />
+            <input id="book-title" name="title" type="text" maxlength="80" autocomplete="off" placeholder="例如：长安的荔枝" required />
             <button class="primary-button" type="submit">新增书籍</button>
           </div>
-          <p
-            id="form-message"
-            class="form-message"
-            role="status"
-            aria-live="polite"
-          ></p>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
         </form>
       </section>
 
@@ -54,47 +41,17 @@
             <p class="section-kicker">我的书架</p>
             <h2 id="list-heading">阅读清单</h2>
           </div>
-          <p
-            id="reading-summary"
-            class="reading-summary"
-            aria-live="polite"
-          ></p>
+          <p id="reading-summary" class="reading-summary" aria-live="polite"></p>
         </div>
 
         <div class="filters" role="group" aria-label="筛选书籍">
-          <button
-            type="button"
-            class="filter-button is-active"
-            data-filter="all"
-            aria-pressed="true"
-          >
-            全部
-          </button>
-          <button
-            type="button"
-            class="filter-button"
-            data-filter="unread"
-            aria-pressed="false"
-          >
-            未读
-          </button>
-          <button
-            type="button"
-            class="filter-button"
-            data-filter="read"
-            aria-pressed="false"
-          >
-            已读
-          </button>
+          <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" class="filter-button" data-filter="unread" aria-pressed="false">未读</button>
+          <button type="button" class="filter-button" data-filter="read" aria-pressed="false">已读</button>
         </div>
 
         <ul id="book-list" class="book-list" aria-label="书籍清单"></ul>
-        <p
-          id="operation-message"
-          class="form-message"
-          role="status"
-          aria-live="polite"
-        ></p>
+        <p id="operation-message" class="form-message" role="status" aria-live="polite"></p>
         <div id="empty-state" class="empty-state" hidden>
           <span aria-hidden="true">◌</span>
           <h3 id="empty-title">清单还是空的</h3>
@@ -104,6 +61,7 @@
     </main>
 
     <footer>一本一本，慢慢读完。</footer>
+    <section class="prototype-tools" aria-label="原型验证工具"><p>设计原型 · 独立演示数据，不影响正式清单</p><label><input id="fail-write" type="checkbox" />模拟本地保存失败</label><button id="reset-demo" type="button">重置演示数据</button></section>
     <script src="app.js"></script>
   </body>
 </html>

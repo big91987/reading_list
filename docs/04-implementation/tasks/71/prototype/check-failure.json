@@ -1,0 +1,35 @@
+[
+  {
+    "action": "viewport",
+    "width": 1280
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "重置演示数据"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《长安的荔枝》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "可重试的修正"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "模拟本地保存失败"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "未能保存，原书名未改变。请重试或取消。"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "运行产品集成测试"
+    }
+  ],
+  "errors": [],
+  "failure": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for getByText('产品集成测试：18/18 通过；页面错误 0', { exact: true }) to be visible\n",
+  "downloads": []
+}
