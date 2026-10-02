@@ -1,0 +1,18 @@
+[
+  { "action": "fill", "label": "书名", "value": "人类简史" },
+  { "action": "click", "role": "button", "name": "新增书籍" },
+  { "action": "fill", "label": "书名", "value": "月亮与六便士" },
+  { "action": "click", "role": "button", "name": "新增书籍" },
+  { "action": "click", "role": "checkbox", "name": "标记《人类简史》为已读" },
+  { "action": "reload" },
+  { "action": "click", "role": "button", "name": "已读" },
+  { "action": "visible", "text": "人类简史" },
+  { "action": "absent", "text": "月亮与六便士" },
+  { "action": "click", "role": "button", "name": "未读" },
+  { "action": "visible", "text": "月亮与六便士" },
+  { "action": "absent", "text": "人类简史" },
+  { "action": "click", "role": "button", "name": "全部" },
+  { "action": "click", "role": "button", "name": "删除《月亮与六便士》" },
+  { "action": "absent", "text": "月亮与六便士" },
+  { "action": "visible", "text": "人类简史" }
+]

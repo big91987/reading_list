@@ -161,6 +161,7 @@ button {
   background: var(--accent-dark);
 }
 .form-message {
+  overflow-wrap: anywhere;
   min-height: 1.25em;
   margin: 7px 0 0;
   color: var(--accent-dark);
@@ -218,6 +219,38 @@ button {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.undo-panel {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+.undo-panel[hidden] {
+  display: none;
+}
+.undo-copy {
+  flex: 1 1 220px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.undo-copy p {
+  margin: 0;
+}
+.undo-copy .undo-help {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+.undo-copy .edit-error:not(:empty) {
+  margin-top: 8px;
+}
+.undo-panel button {
+  min-height: 44px;
 }
 .book-item {
   display: grid;

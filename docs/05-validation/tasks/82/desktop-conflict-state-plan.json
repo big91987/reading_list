@@ -1,0 +1,51 @@
+[
+  {
+    "action": "viewport",
+    "width": 1280
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "活着"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《活着》为已读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《活着》"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "活着"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《活着》"
+  },
+  {
+    "action": "visible",
+    "text": "无法恢复《活着》：清单中已有同名书籍（可能在其他筛选中）。请先修改现存同名书的书名，再点撤销。"
+  },
+  {
+    "action": "unchanged_storage"
+  }
+]

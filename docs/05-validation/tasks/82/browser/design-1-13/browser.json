@@ -1,0 +1,238 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《活着》"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《活着》"
+    },
+    {
+      "action": "visible",
+      "text": "无法恢复《活着》：清单中已有同名书籍（可能在其他筛选中）。请先修改现存同名书的书名，再点撤销。"
+    },
+    {
+      "action": "visible",
+      "text": "共 3 本 · 已读 0 本"
+    },
+    {
+      "action": "visible",
+      "text": "撤销机会：活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《活着》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "新加的活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《活着》"
+    },
+    {
+      "action": "visible",
+      "text": "当前清单：[{\"title\":\"长安的荔枝\",\"read\":false},{\"title\":\"活着\",\"read\":true},{\"title\":\"Atomic Habits\",\"read\":false},{\"title\":\"新加的活着\",\"read\":false}]"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《Atomic Habits》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "atomic habits"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《Atomic Habits》"
+    },
+    {
+      "action": "visible",
+      "text": "无法恢复《Atomic Habits》：清单中已有同名书籍（可能在其他筛选中）。请先修改现存同名书的书名，再点撤销。"
+    },
+    {
+      "action": "visible",
+      "text": "当前筛选：read"
+    },
+    {
+      "action": "visible",
+      "text": "共 2 本 · 已读 1 本"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《atomic habits》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "另一本"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《Atomic Habits》"
+    },
+    {
+      "action": "visible",
+      "text": "当前清单：[{\"title\":\"另一本\",\"read\":false},{\"title\":\"活着\",\"read\":true},{\"title\":\"Atomic Habits\",\"read\":false}]"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《活着》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《另一本》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "未保存草稿"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《活着》"
+    },
+    {
+      "action": "visible",
+      "text": "编辑草稿：未保存草稿"
+    },
+    {
+      "action": "visible",
+      "text": "焦点：edit-title-0"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "已将书名保存为《未保存草稿》。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《活着》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "不该恢复的草稿"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《活着》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《活着》"
+    },
+    {
+      "action": "visible",
+      "text": "已恢复《活着》。"
+    },
+    {
+      "action": "absent",
+      "text": "不该恢复的草稿"
+    },
+    {
+      "action": "visible",
+      "text": "横向溢出：否"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《活着》"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《活着》"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

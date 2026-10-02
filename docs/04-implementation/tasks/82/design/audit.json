@@ -1,0 +1,559 @@
+{
+  "date": "2026-10-02",
+  "stage": "design",
+  "approval": "accepted_user_authorized_development_handoff",
+  "head": "889ad317193998f93fe096b72959a2d438d18b21",
+  "branch": "codex/issue-82-platform",
+  "artifacts": [
+    "docs/01-architecture/tasks/82/architecture-decisions.md",
+    "docs/01-architecture/tasks/82/contracts.md",
+    "docs/01-architecture/tasks/82/hld.md",
+    "docs/01-architecture/tasks/82/traceability.md",
+    "docs/04-implementation/tasks/82/README.md",
+    "docs/04-implementation/tasks/82/decision-ledger.md",
+    "docs/04-implementation/tasks/82/design/README.md",
+    "docs/04-implementation/tasks/82/design/audit.json",
+    "docs/04-implementation/tasks/82/design/g2-review.md",
+    "docs/04-implementation/tasks/82/design/interaction.md",
+    "docs/04-implementation/tasks/82/g1-review.md",
+    "docs/04-implementation/tasks/82/prd.md",
+    "docs/04-implementation/tasks/82/prototype/README.md",
+    "docs/04-implementation/tasks/82/prototype/app.js",
+    "docs/04-implementation/tasks/82/prototype/check-conflicts.json",
+    "docs/04-implementation/tasks/82/prototype/check-core.json",
+    "docs/04-implementation/tasks/82/prototype/check-empty.json",
+    "docs/04-implementation/tasks/82/prototype/check-failure.json",
+    "docs/04-implementation/tasks/82/prototype/check-keyboard-filter.json",
+    "docs/04-implementation/tasks/82/prototype/check-keyboard.json",
+    "docs/04-implementation/tasks/82/prototype/check-states.json",
+    "docs/04-implementation/tasks/82/prototype/index.html",
+    "docs/04-implementation/tasks/82/prototype/styles.css",
+    "docs/05-validation/tasks/82/browser/design-1-1/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-1/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-1/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-10/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-10/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-10/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-11/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-11/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-11/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-12/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-12/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-12/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-13/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-13/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-13/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-14/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-14/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-14/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-15/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-15/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-15/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-16/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-16/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-16/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-17/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-17/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-17/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-18/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-18/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-18/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-19/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-19/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-19/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-2/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-2/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-2/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-3/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-3/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-3/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-4/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-4/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-4/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-5/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-5/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-5/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-6/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-6/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-6/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-7/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-7/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-7/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-8/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-8/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-8/screenshot.png",
+    "docs/05-validation/tasks/82/browser/design-1-9/browser.json",
+    "docs/05-validation/tasks/82/browser/design-1-9/mobile.png",
+    "docs/05-validation/tasks/82/browser/design-1-9/screenshot.png",
+    "docs/05-validation/tasks/82/design-validation.md",
+    "docs/05-validation/tasks/82/fault-validation-plan.md",
+    "docs/05-validation/tasks/82/product-storage-failure-plan.json",
+    "docs/README.md"
+  ],
+  "hashes_excluding_this_generated_audit": [
+    {
+      "path": "docs/01-architecture/tasks/82/architecture-decisions.md",
+      "sha256": "cedeea20bb94cdafb026200d69889c5fef51ee489e1a419d7386347bdfb438e2"
+    },
+    {
+      "path": "docs/01-architecture/tasks/82/contracts.md",
+      "sha256": "6036efac61ab7e0d64f738222ec54288b9767780666a1f05ce2de782902ec52d"
+    },
+    {
+      "path": "docs/01-architecture/tasks/82/hld.md",
+      "sha256": "1ccc8c07847188cef65ac16748fa884e8ef4f3575654f519f12cae22393ce1b3"
+    },
+    {
+      "path": "docs/01-architecture/tasks/82/traceability.md",
+      "sha256": "d8236b492e51698d7d39b9aeba80577293dd684faf6a238d9a91d12582be91cf"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/README.md",
+      "sha256": "db7a3447cc89441c974753fea5f0d5c8735482f308c89e9a0e3ec6aec21d65f8"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/decision-ledger.md",
+      "sha256": "305febad3d4b8deee970e9c120487f92ef4365e968def43a0420ed69b9f00247"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/design/README.md",
+      "sha256": "887d4f9c6853e652a0e4524ecf6fb9d9e90b9265bc45d739a03dcfe1fed90a57"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/design/g2-review.md",
+      "sha256": "ade37b98166c2d1a998d72b5dc77c56a0b2b15586c26b5c7f17c7564686d0843"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/design/interaction.md",
+      "sha256": "1aeecc0bb2a5b3ba9a5c1837d266a643b761c097c41f9fb52268e1924a02e947"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/g1-review.md",
+      "sha256": "11f28fa28581c86725f090f766ccc147ed3edf881ec7f8cca0c67e1f7c03bfce"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prd.md",
+      "sha256": "0062dfddcaae68dbb4206a248542c7f1a8869ccbde5d9eceeff30588b5b1e7ac"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/README.md",
+      "sha256": "de421e50e6e476f03d2f76301d7f995c95b0383fbdcd4a7afcaca91215c96de6"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/app.js",
+      "sha256": "3375e332bacde751d09326e9bade60493583ec6d2397d37a2e6541f48d51410c"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/check-conflicts.json",
+      "sha256": "552f6f20a2c2900763eb3547053c5295af550fcfe038fa8c03420fee07871976"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/check-core.json",
+      "sha256": "32f9bf840944c11ca7a4da3644d4b9d7058d380b89c1be8b51061e02a120cd1f"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/check-empty.json",
+      "sha256": "8437f03ff2332c4db7bf53d037ca3d6a65e0e780cb18886951729453f8fed70f"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/check-failure.json",
+      "sha256": "12253ea637e95a1810fe02d732bf1551eef01d4caa954a5ce356d61244c975e2"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/check-keyboard-filter.json",
+      "sha256": "3a22548e14e4df5956aa74b8986decbe34ff5925e30e74fba0ac87832a4e5042"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/check-keyboard.json",
+      "sha256": "0536dd3232260781dc5c80d3acce54741c17023bfa83bc76d99b43ab73b6ba37"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/check-states.json",
+      "sha256": "d3790727d42ae9ad237420391dde931e26d1f7bd51262fec36882784a7885db3"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/index.html",
+      "sha256": "d54f876fa1b843482cfd6deef2c4a55859dc0ca11b9080cfd13eeee823b30fd0"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/styles.css",
+      "sha256": "b45d27b01bc268dbf7fb7ef4edf33a08ac27f626c7db5caa197b6a9695b850bf"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-1/browser.json",
+      "sha256": "94fb9905a05830fb53a075d3a039c2a401e913e23ae1982f24f3e125dd81b3e0"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-1/mobile.png",
+      "sha256": "2c139ee13d8e9c5baa0cd7d0a372616d4d59b3d57047230882ec7bd4c98ed076"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-1/screenshot.png",
+      "sha256": "b6e1e25546eb2d1629f475ba57c295e539e3a40013080ab9e425415da3a12d02"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-10/browser.json",
+      "sha256": "5be21851595f003e80c4c76c650408ec65aacfc5943f6a53ef5ebfef40de3071"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-10/mobile.png",
+      "sha256": "0af6dbd9c1e46aaffcf0ed130608e82b1527a55f6e9bd74f26d2d80a1aeabb07"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-10/screenshot.png",
+      "sha256": "295cb15341159c97c7c39e26c8af76bf9f1d412668b2d1b56f3dbec4b932a719"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-11/browser.json",
+      "sha256": "a51da0e6986ed8b5d7af215ccffab4ccc85464ad24637cb2522b709cf7ca6920"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-11/mobile.png",
+      "sha256": "bcad91d754871cfaed98b09953d717e1abc48756a1691c7766c1db0cd8b21ba3"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-11/screenshot.png",
+      "sha256": "e6c1412d5ad146a5e4201d1b346dd690b191e8ffec41af6f4894506a92805de3"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-12/browser.json",
+      "sha256": "ec59b7c15f434bfd19c5470d0dfc902f536fb53e58197f0548cfac67430af0dd"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-12/mobile.png",
+      "sha256": "1d678951c3cef4a82e3fc66e63ca0728b5f9596b76856f6620a8371a3300971c"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-12/screenshot.png",
+      "sha256": "e553f2d63982259b5423788fbda542f65fa5fea771a4784e0baa2af445d6cb5d"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-13/browser.json",
+      "sha256": "e224f3764eedd297f76082147030e3e2152ade23e80c54fba8182c31e3660c17"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-13/mobile.png",
+      "sha256": "75292de8688c162decd8c7b3eeb13c6cace652167d867b5a94515620bfd81035"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-13/screenshot.png",
+      "sha256": "983b215d829625004d22becfe05ca904764617df358c457afd4aa9cbfc03ce84"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-14/browser.json",
+      "sha256": "84a5dcbe70ad6f8b4d9058eadc8419ab79b0db5858f6a79bd41689118da8d08b"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-14/mobile.png",
+      "sha256": "6710c04d88fa7ef59c59d8bb071a9e96c826d65f0c8bdc2990390f4218da9d78"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-14/screenshot.png",
+      "sha256": "38c18cc89592fb66b09f4b1d949aac45b46fd13478d005ae835044057fae30b7"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-15/browser.json",
+      "sha256": "e3375c0a23e0464180acf8ba3bd503026ca90341917e318639ef12c3ee2a70db"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-15/mobile.png",
+      "sha256": "f4df5e75c5d6b80dd9729aa9071fa0654e2abf971b6f470e540384353d61480a"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-15/screenshot.png",
+      "sha256": "47764f25c01bc58ce038b9d83238f1aec8482425df46b65f8037918ceabdd176"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-16/browser.json",
+      "sha256": "5af5d0b1b5c80d630eab868a76ac4e48cd807c924c292c0dd0a79be320a77ff7"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-16/mobile.png",
+      "sha256": "ee554baa5e6e145938741dee030961bfddb234342a5937f603583d23bbf4d47e"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-16/screenshot.png",
+      "sha256": "37955f9f26c6c213fe5e5c96b00a96ee9be5506e375ea0ca63ddc7e4b849de71"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-17/browser.json",
+      "sha256": "5be21851595f003e80c4c76c650408ec65aacfc5943f6a53ef5ebfef40de3071"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-17/mobile.png",
+      "sha256": "0af6dbd9c1e46aaffcf0ed130608e82b1527a55f6e9bd74f26d2d80a1aeabb07"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-17/screenshot.png",
+      "sha256": "295cb15341159c97c7c39e26c8af76bf9f1d412668b2d1b56f3dbec4b932a719"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-18/browser.json",
+      "sha256": "a51da0e6986ed8b5d7af215ccffab4ccc85464ad24637cb2522b709cf7ca6920"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-18/mobile.png",
+      "sha256": "bcad91d754871cfaed98b09953d717e1abc48756a1691c7766c1db0cd8b21ba3"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-18/screenshot.png",
+      "sha256": "e6c1412d5ad146a5e4201d1b346dd690b191e8ffec41af6f4894506a92805de3"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-19/browser.json",
+      "sha256": "3eae2a0af2901fc9cc3d3d5167504c445b440d9b59ab6144951d5efe8f1ec379"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-19/mobile.png",
+      "sha256": "38f63247eb33b44227b05085aff3a9e3a2d2903f8bd3cfa3f65bb43b37561362"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-19/screenshot.png",
+      "sha256": "b9df8b0901a38b6af91fb889cdcac3713bf2c3e23d2fe8a210f269eeebbf07b8"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-2/browser.json",
+      "sha256": "ec59b7c15f434bfd19c5470d0dfc902f536fb53e58197f0548cfac67430af0dd"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-2/mobile.png",
+      "sha256": "1d678951c3cef4a82e3fc66e63ca0728b5f9596b76856f6620a8371a3300971c"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-2/screenshot.png",
+      "sha256": "e553f2d63982259b5423788fbda542f65fa5fea771a4784e0baa2af445d6cb5d"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-3/browser.json",
+      "sha256": "e78b9db2fc5a34715590096d696cbb6564be3984d58930952c220f98fd51346d"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-3/mobile.png",
+      "sha256": "240149ca4ad37faf6fdf4497751c387941c19b23db224c4150b7ccc7a6002082"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-3/screenshot.png",
+      "sha256": "b6a6d99e0cbf5d3dddd144e1c591ad9b44c81d39b584b2b92150d3b7f00190b1"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-4/browser.json",
+      "sha256": "e224f3764eedd297f76082147030e3e2152ade23e80c54fba8182c31e3660c17"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-4/mobile.png",
+      "sha256": "75292de8688c162decd8c7b3eeb13c6cace652167d867b5a94515620bfd81035"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-4/screenshot.png",
+      "sha256": "983b215d829625004d22becfe05ca904764617df358c457afd4aa9cbfc03ce84"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-5/browser.json",
+      "sha256": "84a5dcbe70ad6f8b4d9058eadc8419ab79b0db5858f6a79bd41689118da8d08b"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-5/mobile.png",
+      "sha256": "6710c04d88fa7ef59c59d8bb071a9e96c826d65f0c8bdc2990390f4218da9d78"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-5/screenshot.png",
+      "sha256": "38c18cc89592fb66b09f4b1d949aac45b46fd13478d005ae835044057fae30b7"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-6/browser.json",
+      "sha256": "3c1fcbd05cd88f0268de0eda51926f181bfe80d8223fc524108a51fa26fab1a9"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-6/mobile.png",
+      "sha256": "628c195d91c4e8827e886f5f3fe3590ea842d93fe88b4fd9a115482c808bb930"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-6/screenshot.png",
+      "sha256": "a891ec7ab8f92d9a1136c8f9ce3d9f3277e445b94267fc6dea6bcbebb3d598dd"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-7/browser.json",
+      "sha256": "8c75ba71b612158ed3f6aec838451854c585c7112a8e0a98c3012502bddff385"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-7/mobile.png",
+      "sha256": "1d3700234f2da0421a4586b5911b77505a48a64bfdccad67b31ddc4cd4ae8570"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-7/screenshot.png",
+      "sha256": "25c48657f47eb05678a45f0cf2918140a6350cfccb7d5509eedacf5e31e23b76"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-8/browser.json",
+      "sha256": "e3375c0a23e0464180acf8ba3bd503026ca90341917e318639ef12c3ee2a70db"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-8/mobile.png",
+      "sha256": "f4df5e75c5d6b80dd9729aa9071fa0654e2abf971b6f470e540384353d61480a"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-8/screenshot.png",
+      "sha256": "47764f25c01bc58ce038b9d83238f1aec8482425df46b65f8037918ceabdd176"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-9/browser.json",
+      "sha256": "5af5d0b1b5c80d630eab868a76ac4e48cd807c924c292c0dd0a79be320a77ff7"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-9/mobile.png",
+      "sha256": "ee554baa5e6e145938741dee030961bfddb234342a5937f603583d23bbf4d47e"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-9/screenshot.png",
+      "sha256": "37955f9f26c6c213fe5e5c96b00a96ee9be5506e375ea0ca63ddc7e4b849de71"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/design-validation.md",
+      "sha256": "7646cdd6ef66dfe0e09cc50de20021d1b9436252953f05526a6d38ffa381adf7"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/fault-validation-plan.md",
+      "sha256": "231d061dfdbaf08c08b5e6ff6b18bdf8e7cb338ee4caea3e0f2ec0e9d364f9aa"
+    },
+    {
+      "path": "docs/05-validation/tasks/82/product-storage-failure-plan.json",
+      "sha256": "c1f733e8ef0d57172a1c6586a472d62340b85ce76965d82778585c69acabef6b"
+    },
+    {
+      "path": "docs/README.md",
+      "sha256": "c9110323210a52c40814705bdd1dad6fd8fe0ab6e9964bba046e28f57d5ac326"
+    }
+  ],
+  "prototype_source": [
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/index.html",
+      "sha256": "d54f876fa1b843482cfd6deef2c4a55859dc0ca11b9080cfd13eeee823b30fd0"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/app.js",
+      "sha256": "3375e332bacde751d09326e9bade60493583ec6d2397d37a2e6541f48d51410c"
+    },
+    {
+      "path": "docs/04-implementation/tasks/82/prototype/styles.css",
+      "sha256": "b45d27b01bc268dbf7fb7ef4edf33a08ac27f626c7db5caa197b6a9695b850bf"
+    }
+  ],
+  "checks": {
+    "commandChecks": [
+      {
+        "command": "node --check docs/04-implementation/tasks/82/prototype/app.js",
+        "exit_code": 0
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0
+      },
+      {
+        "command": "git diff --exit-code -- app .github harness harness-project.json harness-upstream.json",
+        "exit_code": 0
+      }
+    ],
+    "brokenLinks": [],
+    "unknownRefs": [],
+    "trailingWhitespace": [],
+    "plans": [
+      {
+        "path": "docs/04-implementation/tasks/82/prototype/check-conflicts.json",
+        "steps": 49
+      },
+      {
+        "path": "docs/04-implementation/tasks/82/prototype/check-core.json",
+        "steps": 45
+      },
+      {
+        "path": "docs/04-implementation/tasks/82/prototype/check-empty.json",
+        "steps": 13
+      },
+      {
+        "path": "docs/04-implementation/tasks/82/prototype/check-failure.json",
+        "steps": 41
+      },
+      {
+        "path": "docs/04-implementation/tasks/82/prototype/check-keyboard-filter.json",
+        "steps": 37
+      },
+      {
+        "path": "docs/04-implementation/tasks/82/prototype/check-keyboard.json",
+        "steps": 60
+      },
+      {
+        "path": "docs/04-implementation/tasks/82/prototype/check-states.json",
+        "steps": 34
+      }
+    ],
+    "final_browser_runs": [
+      {
+        "plan": "docs/04-implementation/tasks/82/prototype/check-core.json",
+        "evidence": "docs/05-validation/tasks/82/browser/design-1-12/browser.json",
+        "passed": true,
+        "steps": 45,
+        "errors": []
+      },
+      {
+        "plan": "docs/04-implementation/tasks/82/prototype/check-conflicts.json",
+        "evidence": "docs/05-validation/tasks/82/browser/design-1-13/browser.json",
+        "passed": true,
+        "steps": 49,
+        "errors": []
+      },
+      {
+        "plan": "docs/04-implementation/tasks/82/prototype/check-failure.json",
+        "evidence": "docs/05-validation/tasks/82/browser/design-1-14/browser.json",
+        "passed": true,
+        "steps": 41,
+        "errors": []
+      },
+      {
+        "plan": "docs/04-implementation/tasks/82/prototype/check-keyboard.json",
+        "evidence": "docs/05-validation/tasks/82/browser/design-1-15/browser.json",
+        "passed": true,
+        "steps": 60,
+        "errors": []
+      },
+      {
+        "plan": "docs/04-implementation/tasks/82/prototype/check-keyboard-filter.json",
+        "evidence": "docs/05-validation/tasks/82/browser/design-1-16/browser.json",
+        "passed": true,
+        "steps": 37,
+        "errors": []
+      },
+      {
+        "plan": "docs/04-implementation/tasks/82/prototype/check-states.json",
+        "evidence": "docs/05-validation/tasks/82/browser/design-1-17/browser.json",
+        "passed": true,
+        "steps": 34,
+        "errors": []
+      },
+      {
+        "plan": "docs/04-implementation/tasks/82/prototype/check-empty.json",
+        "evidence": "docs/05-validation/tasks/82/browser/design-1-18/browser.json",
+        "passed": true,
+        "steps": 13,
+        "errors": []
+      }
+    ],
+    "final_browser_steps": 279,
+    "prototype_source_unchanged": true,
+    "supplemental_browser_run": {
+      "plan": "docs/05-validation/tasks/82/product-storage-failure-plan.json",
+      "root": "docs/04-implementation/tasks/82/prototype",
+      "evidence": "docs/05-validation/tasks/82/browser/design-1-19/browser.json",
+      "passed": true,
+      "steps": 69,
+      "errors": [],
+      "unchanged_storage_assertions": 3
+    },
+    "total_current_passed_plan_steps": 348
+  },
+  "limitations": [
+    "Prototype evidence only; app product acceptance pending development",
+    "Formal storage fault actions/UI/storage snapshots/retry/reload; no extra approval or test-host mechanism",
+    "Internal guard checks separate from real user journeys"
+  ],
+  "revision": "User approved revised design package, focus and draft preservation; formal check storage-failure path only, PRD acceptance scope unchanged"
+}

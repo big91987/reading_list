@@ -1,0 +1,164 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《活着》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": " "
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "请填写书名，不能只输入空格。"
+    },
+    {
+      "action": "visible",
+      "text": "撤销机会：活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "取消"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《长安的荔枝》为已读"
+    },
+    {
+      "action": "visible",
+      "text": "撤销机会：活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "撤销机会：活着"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "Atomic Habits"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "这本书已经在清单里了。"
+    },
+    {
+      "action": "visible",
+      "text": "撤销机会：活着"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": " "
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "请先写下书名。"
+    },
+    {
+      "action": "visible",
+      "text": "撤销机会：活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《活着》"
+    },
+    {
+      "action": "visible",
+      "text": "已恢复《活着》。当前筛选下不可见，可切换筛选查看。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《Atomic Habits》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "这是一本很长很长的书名用来验证窄屏撤销提示能够完整换行并且按钮仍可通过键盘操作不会挤出屏幕"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《这是一本很长很长的书名用来验证窄屏撤销提示能够完整换行并且按钮仍可通过键盘操作不会挤出屏幕》"
+    },
+    {
+      "action": "visible",
+      "text": "横向溢出：否"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《这是一本很长很长的书名用来验证窄屏撤销提示能够完整换行并且按钮仍可通过键盘操作不会挤出屏幕》"
+    },
+    {
+      "action": "visible",
+      "text": "共 3 本 · 已读 2 本"
+    },
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《这是一本很长很长的书名用来验证窄屏撤销提示能够完整换行并且按钮仍可通过键盘操作不会挤出屏幕》"
+    },
+    {
+      "action": "visible",
+      "text": "横向溢出：否"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

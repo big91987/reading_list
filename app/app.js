@@ -10,10 +10,16 @@ const emptyState = document.querySelector("#empty-state");
 const emptyTitle = document.querySelector("#empty-title");
 const emptyDescription = document.querySelector("#empty-description");
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
+const undoPanel = document.querySelector("#undo-panel");
+const undoMessage = document.querySelector("#undo-message");
+const undoButton = document.querySelector("#undo-button");
+const undoErrorMessage = document.querySelector("#undo-error");
 
 let books = loadBooks();
 let currentFilter = "all";
 let editor = null;
+let undoRecord = null;
+let undoError = "";
 
 function loadBooks() {
   try {
@@ -110,24 +116,71 @@ function createBookItem(book) {
   deleteButton.className = "delete-button";
   deleteButton.textContent = "删除";
   deleteButton.setAttribute("aria-label", `删除《${book.title}》`);
-  deleteButton.addEventListener("click", () => {
-    operationMessage.textContent = "";
-    const visibleIndex = getVisibleBooks().indexOf(book);
-    if (!persist(books.filter((candidate) => candidate !== book))) {
-      operationMessage.textContent = "未能删除，请重试。";
-      return;
-    }
-    if (editor?.book === book) editor = null;
-    render();
-    const visible = getVisibleBooks();
-    const next = visible[Math.min(visibleIndex, visible.length - 1)];
-    focusControl(next, editor?.book === next ? "editor" : "edit");
-    operationMessage.textContent = `已删除《${book.title}》。`;
-  });
+  deleteButton.addEventListener("click", () => deleteBook(book));
   actions.append(deleteButton);
   item.append(actions);
   return item;
 }
+
+function deleteBook(book) {
+  const index = books.indexOf(book);
+  if (index < 0) return;
+  operationMessage.textContent = "";
+  const snapshot = { ...book };
+  if (!persist(books.filter((candidate) => candidate !== book))) {
+    operationMessage.textContent = "未能删除，请重试。";
+    return;
+  }
+  undoRecord = { book: snapshot, index };
+  undoError = "";
+  if (editor?.book === book) editor = null;
+  render();
+  undoButton.focus();
+}
+
+function undoLatestDelete() {
+  if (!undoRecord) return;
+  const { book, index } = undoRecord;
+  operationMessage.textContent = "";
+  if (
+    books.some(
+      (entry) =>
+        entry.title.toLocaleLowerCase() === book.title.toLocaleLowerCase(),
+    )
+  ) {
+    undoError = `无法恢复《${book.title}》：清单中已有同名书籍（可能在其他筛选中）。请先修改现存同名书的书名，再点撤销。`;
+    renderUndo();
+    return;
+  }
+  const candidate = [...books];
+  candidate.splice(Math.min(index, candidate.length), 0, book);
+  if (!persist(candidate)) {
+    undoError = "未能保存恢复结果，书籍尚未恢复。撤销机会仍保留，请重试。";
+    renderUndo();
+    return;
+  }
+  undoRecord = null;
+  undoError = "";
+  render();
+  focusControl(editor?.book || book, editor ? "editor" : "edit");
+  operationMessage.textContent = `已恢复《${book.title}》。${getVisibleBooks().includes(book) ? "" : "当前筛选下不可见，可切换筛选查看。"}`;
+}
+
+function renderUndo() {
+  undoPanel.hidden = !undoRecord;
+  undoMessage.textContent = undoRecord
+    ? `已删除《${undoRecord.book.title}》。`
+    : "";
+  if (undoRecord) {
+    undoButton.setAttribute(
+      "aria-label",
+      `撤销删除《${undoRecord.book.title}》`,
+    );
+  }
+  undoErrorMessage.textContent = undoError;
+}
+
+undoButton.addEventListener("click", undoLatestDelete);
 
 function createButton(text, label, action) {
   const button = document.createElement("button");
@@ -288,6 +341,7 @@ function render() {
   list.replaceChildren(...visibleBooks.map(createBookItem));
   summary.innerHTML = `共 ${books.length} 本 · 已读 <strong>${readCount}</strong> 本`;
   renderEmptyState(visibleBooks);
+  renderUndo();
 }
 
 function updateFilterButtons() {
