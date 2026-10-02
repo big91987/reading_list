@@ -2,6 +2,8 @@ name: Agent Platform pipeline
 on:
   issues:
     types: [opened]
+  pull_request:
+    types: [ready_for_review]
   workflow_dispatch:
     inputs:
       issue:
@@ -31,7 +33,7 @@ permissions:
   issues: write
   pull-requests: write
 concurrency:
-  group: agent-platform-${{ github.repository }}-${{ github.event.issue.number || inputs.issue }}
+  group: agent-platform-${{ github.repository }}-${{ github.event.issue.number || inputs.issue || github.event.pull_request.number }}
   cancel-in-progress: false
 jobs:
   requirements:
@@ -116,7 +118,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage qa
   review:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'code_review')
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && ((github.event_name == 'workflow_dispatch' && inputs.after == 'code_review') || (github.event_name == 'pull_request' && github.event.action == 'ready_for_review' && github.event.pull_request.head.repo.full_name == github.repository))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -125,7 +127,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
-          AFTER_STAGE: ${{ inputs.after }}
+          PR_NUMBER: ${{ github.event.pull_request.number || '' }}
+          AFTER_STAGE: code_review
           RESULT_SHA256: ${{ inputs.result_sha256 }}
           RESULT_FILE: ${{ inputs.result_file }}
           AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
