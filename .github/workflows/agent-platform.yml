@@ -14,7 +14,7 @@ on:
         options: [start, requirements, design, development, qa, verify, code_review]
         default: start
       target_stage:
-        description: QA destination (empty means report after acceptance)
+        description: QA destination (must be specified when after=qa)
         type: choice
         options: ['', requirements, design, development, report]
         default: ''
