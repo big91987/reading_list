@@ -1,0 +1,109 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1440
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "添加第一本书"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "流程甲-1440"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "流程乙-1440"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "显示 2 本"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "流程甲-1440"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "这本书已经在清单里了。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "查看全部书籍"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《流程甲-1440》为已读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "流程甲-1440"
+    },
+    {
+      "action": "absent",
+      "text": "流程乙-1440"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "流程乙-1440"
+    },
+    {
+      "action": "absent",
+      "text": "流程甲-1440"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《流程乙-1440》书名"
+    }
+  ],
+  "errors": [],
+  "failure": "locator.fill: Timeout 5000ms exceeded.\nCall log:\n  - waiting for getByLabel('修改《流程乙-1440》的书名', { exact: true })\n",
+  "downloads": []
+}

@@ -1,0 +1,135 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "Dune"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "设计新增甲"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "设计新增乙"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "设计新增甲"
+    },
+    {
+      "action": "visible",
+      "text": "设计新增乙"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《Dune》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《Dune》的书名",
+      "value": "  DUNE 修订  "
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "DUNE 修订"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "DUNE 修订"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《DUNE 修订》为未读"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《DUNE 修订》为已读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《设计新增甲》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《设计新增乙》"
+    },
+    {
+      "action": "absent",
+      "text": "设计新增甲"
+    },
+    {
+      "action": "absent",
+      "text": "设计新增乙"
+    },
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

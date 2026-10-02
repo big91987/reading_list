@@ -1,0 +1,50 @@
+{
+  "product": {
+    "html": "093d3a47e78fbbddf058e1ad17b96b93d85588e22c1a6a173f32aa6785189cf7",
+    "javascript": "2c57f5337b0aab249937836a87260dfe859c89d117dc5e7ab148dba9c47f9249",
+    "css": "9d14bded61f30ba30b9c289a12bef93c7c0bdad301232ed5ccdc177116b3a228"
+  },
+  "purpose": "Final implemented source; fixture original-product hashes equal these bytes",
+  "sources": [
+    {
+      "path": "app/index.html",
+      "sha256": "093d3a47e78fbbddf058e1ad17b96b93d85588e22c1a6a173f32aa6785189cf7"
+    },
+    {
+      "path": "app/app.js",
+      "sha256": "2c57f5337b0aab249937836a87260dfe859c89d117dc5e7ab148dba9c47f9249"
+    },
+    {
+      "path": "app/styles.css",
+      "sha256": "9d14bded61f30ba30b9c289a12bef93c7c0bdad301232ed5ccdc177116b3a228"
+    },
+    {
+      "path": "tests/browser/core.json",
+      "sha256": "9d9c7424b90e7c06e62b870bc2e4b9e671624e26a59a18ce8fcad16ca227c76f"
+    },
+    {
+      "path": "docs/05-validation/tasks/76/tests/README.md",
+      "sha256": "57a27d1ab6b7546e4e2d9b62a35e1ed13ee2820983b86f07e2820c4d66a689de"
+    },
+    {
+      "path": "docs/05-validation/tasks/76/tests/audit-evidence.cjs",
+      "sha256": "0d6d32d76f44128a2fea89f3c81ae010e4d466b9ae5c670b77c1d6ce7875fbd7"
+    },
+    {
+      "path": "docs/05-validation/tasks/76/tests/browser-tests.js",
+      "sha256": "9f8ebccb0b0ce425181d56d16ffe9dc46ca1813969907cc8006856f63013fc93"
+    },
+    {
+      "path": "docs/05-validation/tasks/76/tests/fixture.html",
+      "sha256": "112ef8f3da7f2a361227e8807064b89db23fe9bb61c5d30899c0041292122e13"
+    },
+    {
+      "path": "docs/05-validation/tasks/76/tests/stage-fixture.cjs",
+      "sha256": "7132f74ef0b44370750cb8288402bad544bc733450d1aa6c39c6862c8639b8a2"
+    },
+    {
+      "path": "docs/05-validation/tasks/76/tests/test-boot.js",
+      "sha256": "52f7e64d4e639b346461f62d6ee7e72519abf4f48e8a0cf7bc7b3c899462ff4d"
+    }
+  ]
+}

@@ -1,4 +1,43 @@
 const STORAGE_KEY = "page-between-reading-list";
+const motionPreference = window.matchMedia?.(
+  "(prefers-reduced-motion: reduce)",
+);
+let entranceAnimations = [];
+let initialRender = true;
+let addingComposition = false;
+
+function cancelEntrances() {
+  entranceAnimations.forEach((animation) => animation.cancel?.());
+  entranceAnimations = [];
+}
+
+function animateEntrance(element, distance, duration, delay = 0) {
+  if (motionPreference?.matches || typeof element.animate !== "function")
+    return;
+  try {
+    entranceAnimations.push(
+      element.animate(
+        [
+          {
+            opacity: distance === 8 ? 0.5 : 0.6,
+            transform: `translateY(${distance}px)`,
+          },
+          { opacity: 1, transform: "translateY(0)" },
+        ],
+        {
+          duration,
+          delay,
+          easing: "cubic-bezier(.22,1,.36,1)",
+          fill: "backwards",
+        },
+      ),
+    );
+  } catch {
+    return;
+  }
+}
+
+motionPreference?.addEventListener?.("change", cancelEntrances);
 
 const form = document.querySelector("#book-form");
 const titleInput = document.querySelector("#book-title");
@@ -14,6 +53,23 @@ const filterButtons = [...document.querySelectorAll("[data-filter]")];
 let books = loadBooks();
 let currentFilter = "all";
 let editor = null;
+
+function announce(message, failed = false) {
+  formMessage.textContent = "";
+  operationMessage.setAttribute("role", failed ? "alert" : "status");
+  operationMessage.setAttribute("aria-live", failed ? "assertive" : "polite");
+  operationMessage.style.color = failed ? "var(--error)" : "var(--accent)";
+  operationMessage.textContent = message;
+}
+
+function announceAdd(message, failed = false) {
+  operationMessage.textContent = "";
+  formMessage.setAttribute("role", failed ? "alert" : "status");
+  formMessage.setAttribute("aria-live", failed ? "assertive" : "polite");
+  formMessage.style.color = failed ? "var(--error)" : "var(--accent)";
+  titleInput.setAttribute("aria-invalid", String(failed));
+  formMessage.textContent = message;
+}
 
 function loadBooks() {
   try {
@@ -52,30 +108,43 @@ function createBookItem(book) {
   const item = document.createElement("li");
   item.className = `book-item${book.read ? " is-read" : ""}${editing ? " is-editing" : ""}`;
   item.dataset.rowIndex = index;
+  const art = document.createElement("div");
+  art.className = "book-art";
+  art.setAttribute("aria-hidden", "true");
+  item.append(art);
   const checkLabel = document.createElement("label");
   checkLabel.className = "check-control";
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.checked = book.read;
-  checkbox.setAttribute("aria-label", `标记《${book.title}》为已读`);
+  checkbox.setAttribute(
+    "aria-label",
+    `标记《${book.title}》为${book.read ? "未读" : "已读"}`,
+  );
   checkbox.addEventListener("change", () => {
-    operationMessage.textContent = "";
+    announce("");
     const replacement = { ...book, read: checkbox.checked };
     if (
       !persist(books.map((entry) => (entry === book ? replacement : entry)))
     ) {
       checkbox.checked = book.read;
-      operationMessage.textContent = "未能保存阅读状态，请重试。";
+      announce("未能保存阅读状态，请重试。", true);
       return;
     }
     if (editor?.book === book) editor.book = replacement;
     if (editor && !getVisibleBooks().includes(editor.book)) editor = null;
     render();
     focusControl(replacement, "checkbox");
+    announce(
+      `已将《${book.title}》标记为${replacement.read ? "已读" : "未读"}。`,
+    );
   });
   const checkmark = document.createElement("span");
   checkmark.className = "checkmark";
   checkmark.setAttribute("aria-hidden", "true");
+  checkmark.textContent = book.read
+    ? "已读完 · 可标记未读"
+    : "未读 · 标记为已读";
   checkLabel.append(checkbox, checkmark);
 
   item.append(checkLabel);
@@ -94,8 +163,9 @@ function createBookItem(book) {
       "修改书名",
       `修改《${book.title}》书名`,
       () => {
+        if (!books.includes(book)) return;
         editor = { book, draft: book.title, error: "" };
-        operationMessage.textContent = "";
+        announce("");
         render();
         const input = list.querySelector(".edit-input");
         input.focus();
@@ -111,10 +181,10 @@ function createBookItem(book) {
   deleteButton.textContent = "删除";
   deleteButton.setAttribute("aria-label", `删除《${book.title}》`);
   deleteButton.addEventListener("click", () => {
-    operationMessage.textContent = "";
+    announce("");
     const visibleIndex = getVisibleBooks().indexOf(book);
     if (!persist(books.filter((candidate) => candidate !== book))) {
-      operationMessage.textContent = "未能删除，请重试。";
+      announce("未能删除，请重试。", true);
       return;
     }
     if (editor?.book === book) editor = null;
@@ -122,7 +192,7 @@ function createBookItem(book) {
     const visible = getVisibleBooks();
     const next = visible[Math.min(visibleIndex, visible.length - 1)];
     focusControl(next, editor?.book === next ? "editor" : "edit");
-    operationMessage.textContent = `已删除《${book.title}》。`;
+    announce(`已删除《${book.title}》。`);
   });
   actions.append(deleteButton);
   item.append(actions);
@@ -178,8 +248,10 @@ function createEditor(book, index) {
   label.htmlFor = `edit-title-${index}`;
   label.textContent = "修改书名";
   const input = document.createElement("input");
+  input.type = "text";
   input.id = label.htmlFor;
   input.className = "edit-input";
+  input.setAttribute("aria-label", `修改《${book.title}》的书名`);
   input.value = editor.draft;
   input.autocomplete = "off";
   input.setAttribute(
@@ -226,18 +298,18 @@ function createEditor(book, index) {
     editor = null;
     render();
     focusControl(book, "edit");
-    operationMessage.textContent = "已取消修改。";
+    announce("已取消修改。");
   }
   controls.append(save, createButton("取消", "取消", cancel));
   editForm.addEventListener("submit", (event) => {
     event.preventDefault();
     if (composing) return;
-    operationMessage.textContent = "";
+    announce("");
     if (!books.includes(book)) {
       editor = null;
       render();
       focusControl(null, "edit");
-      operationMessage.textContent = "这本书已不存在。";
+      announce("这本书已不存在。", true);
       return;
     }
     editor.draft = input.value;
@@ -260,7 +332,7 @@ function createEditor(book, index) {
     editor = null;
     render();
     focusControl(replacement, "edit");
-    operationMessage.textContent = `已将书名保存为《${title}》。`;
+    announce(`已将书名保存为《${title}》。`);
   });
   editForm.append(label, input, help, error, controls);
   return editForm;
@@ -282,12 +354,34 @@ function renderEmptyState(visibleBooks) {
   }
 }
 
-function render() {
+function render(transition = "none") {
+  cancelEntrances();
   const visibleBooks = getVisibleBooks();
   const readCount = books.filter((book) => book.read).length;
   list.replaceChildren(...visibleBooks.map(createBookItem));
   summary.innerHTML = `共 ${books.length} 本 · 已读 <strong>${readCount}</strong> 本`;
+  document.querySelector("#total-count").textContent = books.length;
+  document.querySelector("#read-count").textContent = readCount;
+  document.querySelector("#ratio-fill").style.width =
+    `${books.length ? (readCount / books.length) * 100 : 0}%`;
+  document.querySelector("#visible-count").textContent =
+    `显示 ${visibleBooks.length} 本`;
   renderEmptyState(visibleBooks);
+  document.querySelector("#empty-action").textContent = books.length
+    ? "查看全部书籍"
+    : "添加第一本书";
+  if (initialRender || transition !== "none") {
+    const items =
+      transition === "add"
+        ? [...list.children].slice(-1)
+        : [...list.children].slice(0, 12);
+    items.forEach((item, index) =>
+      animateEntrance(item, 6, 220, Math.min(index, 4) * 18),
+    );
+    if (initialRender)
+      animateEntrance(document.querySelector(".intro"), 8, 260);
+  }
+  initialRender = false;
 }
 
 function updateFilterButtons() {
@@ -300,10 +394,16 @@ function updateFilterButtons() {
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  operationMessage.textContent = "";
+  if (addingComposition) return;
+  announceAdd("");
   const title = titleInput.value.trim();
   if (!title) {
-    formMessage.textContent = "请先写下书名。";
+    announceAdd("请先写下书名。", true);
+    titleInput.focus();
+    return;
+  }
+  if (titleInput.value.length > 80) {
+    announceAdd("书名不能超过 80 个长度单位。", true);
     titleInput.focus();
     return;
   }
@@ -312,12 +412,12 @@ form.addEventListener("submit", (event) => {
       (book) => book.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
     )
   ) {
-    formMessage.textContent = "这本书已经在清单里了。";
+    announceAdd("这本书已经在清单里了。", true);
     titleInput.select();
     return;
   }
   if (!persist([...books, { title, read: false }])) {
-    formMessage.textContent = "未能添加，请重试。";
+    announceAdd("未能添加，请重试。", true);
     titleInput.focus();
     return;
   }
@@ -325,19 +425,47 @@ form.addEventListener("submit", (event) => {
   currentFilter = "all";
   updateFilterButtons();
   form.reset();
-  formMessage.textContent = `已添加《${title}》。`;
+  announceAdd(`已添加《${title}》。`);
   titleInput.focus();
-  render();
+  render("add");
+});
+
+titleInput.addEventListener("compositionstart", () => {
+  addingComposition = true;
+});
+titleInput.addEventListener("compositionend", () => {
+  addingComposition = false;
+});
+titleInput.addEventListener("keydown", (event) => {
+  if (
+    event.key === "Enter" &&
+    (event.isComposing || addingComposition || event.keyCode === 229)
+  )
+    event.preventDefault();
+});
+titleInput.addEventListener("input", () => {
+  formMessage.textContent = "";
+  titleInput.setAttribute("aria-invalid", "false");
 });
 
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     editor = null;
-    operationMessage.textContent = "";
+    announce("");
     currentFilter = button.dataset.filter;
     updateFilterButtons();
-    render();
+    render("filter");
   });
+});
+
+document.querySelector("#empty-action").addEventListener("click", () => {
+  if (!books.length) return titleInput.focus();
+  editor = null;
+  announce("");
+  currentFilter = "all";
+  updateFilterButtons();
+  render("filter");
+  filterButtons[0].focus();
 });
 
 render();

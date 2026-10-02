@@ -3,6 +3,7 @@
 ## Pre-Development Checklist
 
 - Read [book-state.md](book-state.md) before changing list writes, editing, rendering or focus restoration.
+- Read [motion.md](motion.md) before changing card entrances, motion cancellation or responsive editing.
 - Read the active task's approved PRD, prototype, HLD/contracts and LLD; this spec does not override them.
 - Use native DOM and the existing static app. Do not add test data or fault controls to the product.
 
@@ -12,3 +13,4 @@
 - Run the unchanged reading-core journey and current feature browser plan through registered check.
 - For state/storage changes, run browser integration fixtures and assert complete persistent and in-memory snapshots on success and failure.
 - Record real browser events separately from synthetic composition and human assistive-technology evidence.
+- Check dynamic text input width and distinguish controlled media callbacks from actual system preference switching.

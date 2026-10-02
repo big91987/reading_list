@@ -1,0 +1,537 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "role": "button",
+      "name": "运行产品集成测试"
+    },
+    {
+      "action": "download",
+      "role": "button",
+      "name": "下载测试报告",
+      "filename": "product-integration-76.json"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [
+    {
+      "filename": "product-integration-76.json",
+      "file": "download-1.json",
+      "contents": {
+        "records": [
+          {
+            "name": "已读与未读保存仅变更目标名称",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              1,
+              5,
+              6
+            ],
+            "passed": true
+          },
+          {
+            "name": "空值和空白错误不写清单，直接修正可保存",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              2
+            ],
+            "passed": true
+          },
+          {
+            "name": "全清单去重包含筛选隐藏项，自身排除",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              3,
+              4,
+              5
+            ],
+            "passed": true
+          },
+          {
+            "name": "80/81 UTF16 边界、不截断、内部空白和符号安全",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              4,
+              11
+            ],
+            "passed": true
+          },
+          {
+            "name": "全部、未读、已读保存保持筛选和其他数据",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              5
+            ],
+            "passed": true
+          },
+          {
+            "name": "旧 fixture 重复、长名与扩展字段不批量改写",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              6
+            ],
+            "passed": true
+          },
+          {
+            "name": "取消、错误后Escape和重新访问丢草稿",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              7,
+              12
+            ],
+            "passed": true
+          },
+          {
+            "name": "换条、切筛选及再次点击当前筛选只保留一个编辑",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              8
+            ],
+            "passed": true
+          },
+          {
+            "name": "改名后删除、编辑目标删除不复活",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              9
+            ],
+            "passed": true
+          },
+          {
+            "name": "删除其他书和标记替换后草稿目标关联稳定",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              9,
+              10
+            ],
+            "passed": true
+          },
+          {
+            "name": "新增失败保留草稿、成功丢草稿并切全部",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              10
+            ],
+            "passed": true
+          },
+          {
+            "name": "标记保留/移出筛选协调与过滤位置正确",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              10
+            ],
+            "passed": true
+          },
+          {
+            "name": "真实Storage写异常：Quota和Security均保留全快照，可恢复重试",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              13
+            ],
+            "passed": true
+          },
+          {
+            "name": "保存失败后Escape、标记失败、删除失败不污染后续写入",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              9,
+              10,
+              12,
+              13
+            ],
+            "passed": true
+          },
+          {
+            "name": "组合输入事件门控与Safari229，不等同系统IME实测",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              12
+            ],
+            "passed": true
+          },
+          {
+            "name": "可访问名称、错误关联、原生表单与焦点语义",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              12
+            ],
+            "passed": true
+          },
+          {
+            "name": "四宽度长名称编辑无横向溢出且操作44px",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              11
+            ],
+            "passed": true
+          },
+          {
+            "name": "历史损坏数据加载不触发覆写且空状态正确",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [
+              6,
+              10
+            ],
+            "passed": true
+          },
+          {
+            "name": "原格式首开零写回，长名与扩展字段原样保留",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [],
+            "passed": true
+          },
+          {
+            "name": "新增80/81、真实新增/状态/删除失败及恢复",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [],
+            "passed": true
+          },
+          {
+            "name": "三个空状态入口及成功/校验失败文字",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [],
+            "passed": true
+          },
+          {
+            "name": "四宽度100本完整管理、布局与触控尺寸",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [],
+            "passed": false,
+            "failure": "44px target primary-button"
+          },
+          {
+            "name": "动画数量时长封顶与真实浏览器受控插值",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [],
+            "passed": true
+          },
+          {
+            "name": "动画运行中同步连续筛选/状态/删除，最后结果唯一",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [],
+            "passed": true
+          },
+          {
+            "name": "动画API缺失/抛错与matchMedia缺失即时业务降级",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [],
+            "passed": true
+          },
+          {
+            "name": "受控偏好change取消/恢复；系统偏好实测能力单独记录",
+            "ac": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              12,
+              14
+            ],
+            "legacy71ac": [],
+            "passed": true
+          }
+        ],
+        "browserErrors": [],
+        "measurements": [
+          {
+            "viewport": 320,
+            "documentWidth": 320,
+            "inputRight": 220,
+            "buttonHeights": [
+              46,
+              44
+            ]
+          },
+          {
+            "viewport": 390,
+            "documentWidth": 390,
+            "inputRight": 220,
+            "buttonHeights": [
+              46,
+              44
+            ]
+          },
+          {
+            "viewport": 768,
+            "documentWidth": 768,
+            "inputRight": 234,
+            "buttonHeights": [
+              46,
+              44
+            ]
+          },
+          {
+            "viewport": 1440,
+            "documentWidth": 1440,
+            "inputRight": 606,
+            "buttonHeights": [
+              46,
+              44
+            ]
+          },
+          {
+            "type": "controlled-frame-not-GPU",
+            "count": 12,
+            "timing": {
+              "delay": 0,
+              "direction": "normal",
+              "duration": 220,
+              "easing": "cubic-bezier(0.22, 1, 0.36, 1)",
+              "endDelay": 0,
+              "fill": "backwards",
+              "iterationStart": 0,
+              "iterations": 1
+            },
+            "opacity": 0.984553
+          },
+          {
+            "type": "synchronous-dom-actions-within-animation",
+            "elapsed": 1.200000286102295,
+            "originalDuration": 220,
+            "final": [
+              {
+                "title": "Dune",
+                "read": true
+              }
+            ]
+          },
+          {
+            "type": "native-system-preference-observed-not-toggled",
+            "matches": false,
+            "limit": "Registered action schema cannot emulate OS preference; controlled change is not system acceptance."
+          }
+        ],
+        "scope": "真实浏览器/产品DOM/实际Storage边界；组合事件合成，未操作系统IME或屏幕阅读器"
+      }
+    }
+  ]
+}

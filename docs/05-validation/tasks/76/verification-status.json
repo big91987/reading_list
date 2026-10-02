@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-02",
+  "format_fix": "passed: configured Prettier and ESLint --fix",
+  "shared_verify": "blocked_by_sandbox",
+  "passed_before_browser": ["git diff --check", "Prettier --check", "ESLint", "node --check app/app.js"],
+  "failure": "listen EPERM: operation not permitted 127.0.0.1",
+  "registered_browser_final": "core, feature, four-width full flows, keyboard, fault and 26 integration groups passed",
+  "runner_required": "Re-run configured verify.py in the authorized Runner environment before publishing a draft PR",
+  "human_pending": ["actual system reduced-motion activation and runtime toggle", "real IME", "screen reader", "real touch device and motion comfort"]
+}

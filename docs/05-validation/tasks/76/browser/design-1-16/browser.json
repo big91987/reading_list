@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "模拟本地保存失败"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《长安的荔枝》的书名",
+      "value": "保留失败草稿"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "未能保存，原书名未改变。请重试或取消。"
+    },
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

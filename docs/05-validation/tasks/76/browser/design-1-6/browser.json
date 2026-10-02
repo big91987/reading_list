@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "演示减少动态效果"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "检查布局与动效"
+    },
+    {
+      "action": "visible",
+      "text": "无页面级横向溢出 · 非必要入场动画已关闭 · 1440 CSS px"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "检查布局与动效"
+    },
+    {
+      "action": "visible",
+      "text": "无页面级横向溢出 · 非必要入场动画已关闭 · 320 CSS px"
+    },
+    {
+      "action": "viewport",
+      "width": 390
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "检查布局与动效"
+    },
+    {
+      "action": "visible",
+      "text": "无页面级横向溢出 · 非必要入场动画已关闭 · 390 CSS px"
+    },
+    {
+      "action": "viewport",
+      "width": 768
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "平板新增"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《平板新增》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《平板新增》的书名",
+      "value": "平板修订"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《平板修订》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "检查布局与动效"
+    },
+    {
+      "action": "visible",
+      "text": "无页面级横向溢出 · 非必要入场动画已关闭 · 768 CSS px"
+    },
+    {
+      "action": "viewport",
+      "width": 1440
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "检查布局与动效"
+    },
+    {
+      "action": "visible",
+      "text": "无页面级横向溢出 · 非必要入场动画已关闭 · 1440 CSS px"
+    },
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

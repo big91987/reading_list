@@ -1,0 +1,86 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "也许你该找个人聊聊"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "Dune"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "当呼吸化为空气"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "悉达多"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "一本用于验证完整自然换行而不是省略号截断的书名：在页间留下时间，慢慢读完每一本书。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《Dune》为已读"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《当呼吸化为空气》为已读"
+    },
+    {
+      "action": "visible",
+      "text": "显示 6 本"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

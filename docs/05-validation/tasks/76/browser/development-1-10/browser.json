@@ -1,0 +1,58 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "click",
+      "role": "textbox",
+      "name": "书名"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "键盘书"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "键盘书"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "键盘书"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    }
+  ],
+  "errors": [],
+  "failure": "Unsupported key",
+  "downloads": []
+}

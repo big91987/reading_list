@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f6f2" />
+  <title>页间 · 现代编辑式书房原型</title>
+  <style>
+:root { color-scheme: light; --paper: #f7f6f2; --ink: #232823; --muted: #656b63; --line: #dedfd6; --accent: #46634e; --error: #9a3430; --ease: cubic-bezier(.22,1,.36,1); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; color: var(--ink); background: var(--paper); }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid #46634e; outline-offset: 4px; }
+[hidden] { display: none !important; }
+.masthead { max-width: 1440px; margin: auto; padding: 26px 48px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 700; color: inherit; text-decoration: none; }
+.brand-symbol { font-size: 29px; color: var(--accent); }
+.brand-en { padding-left: 14px; border-left: 1px solid var(--line); font-size: 10px; letter-spacing: .14em; font-weight: 500; }
+.edition { font-size: 11px; color: var(--muted); letter-spacing: .07em; }
+.page-shell { max-width: 1440px; margin: auto; padding: 56px 48px 60px; display: grid; grid-template-columns: 292px minmax(0, 1fr); gap: 64px; }
+.study { border-right: 1px solid var(--line); padding-right: 30px; }
+.eyebrow, .section-kicker { font-size: 10px; color: var(--muted); letter-spacing: .14em; line-height: 1.7; }
+h1 { font-family: "Songti SC", "STSong", Georgia, serif; font-size: 39px; font-weight: 500; line-height: 1.45; letter-spacing: -.035em; margin: 20px 0 16px; }
+.subtitle { font-size: 14px; color: var(--muted); line-height: 1.9; }
+.overview { margin-top: 36px; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.reading-summary { font-size: 12px; color: var(--muted); }
+.stat-line { display: flex; gap: 52px; margin: 20px 0; }
+.stat-line div { display: flex; flex-direction: column; gap: 6px; }
+.stat-line strong { font-family: Georgia, serif; font-size: 38px; font-weight: 400; }
+.stat-line span, .overview-note { font-size: 11px; color: var(--muted); }
+.ratio { height: 3px; background: #e3e5dc; }
+.ratio span { display: block; height: 100%; background: var(--accent); width: 0; transition: width 180ms var(--ease); }
+.add-panel { margin-top: 28px; }
+.add-panel h2 { font-size: 17px; margin: 8px 0 20px; font-weight: 500; }
+label { font-size: 12px; }
+.input-row { display: grid; gap: 10px; margin-top: 8px; }
+input[type="text"] { width: 100%; min-width: 0; border: 1px solid #b9bdb2; border-radius: 6px; background: #fff; color: var(--ink); padding: 12px; min-height: 44px; }
+input::placeholder { color: #777c72; }
+.primary-button { border: 1px solid var(--ink); background: var(--ink); color: white; border-radius: 6px; padding: 11px 16px; min-height: 44px; transition: background 140ms, transform 140ms; }
+.primary-button span { margin-left: 12px; }
+.primary-button:active { transform: scale(.98); }
+.form-message { min-height: 24px; font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; color: var(--error); margin: 10px 0 0; }
+.local-note { color: var(--muted); font-size: 10px; line-height: 1.7; margin-top: 18px; }
+.list-panel { min-width: 0; }
+.list-header { display: flex; align-items: end; justify-content: space-between; gap: 12px; }
+.list-header h2 { font-family: "Songti SC", "STSong", Georgia, serif; font-size: 38px; font-weight: 500; margin: 8px 0 0; }
+.heading-dot { color: var(--accent); }
+.collection-note { color: var(--muted); font-size: 12px; padding-bottom: 7px; }
+.list-toolbar { display: flex; align-items: center; justify-content: space-between; margin: 30px 0 0; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.filters { display: flex; padding: 4px; gap: 4px; background: #eaece4; border-radius: 8px; }
+.filter-button { border: none; background: transparent; border-radius: 5px; min-height: 44px; padding: 9px 20px; font-size: 13px; color: var(--muted); transition: background 140ms, color 140ms; }
+.filter-button.is-active { background: white; color: var(--ink); box-shadow: 0 1px 3px #23282312; }
+.visible-count { font-size: 11px; color: var(--muted); }
+.operation-message { min-height: 22px; color: var(--accent); font-size: 12px; margin: 12px 0; line-height: 1.7; overflow-wrap: anywhere; }
+.book-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+.book-item { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 18px; display: flex; flex-direction: column; min-width: 0; min-height: 254px; transition: box-shadow 180ms, border-color 180ms, transform 180ms var(--ease); }
+.book-art { background: #f0ede5; border-radius: 5px; height: 88px; margin-bottom: 18px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+.book-art::before { content: ''; height: 58px; width: 42px; border: 1px solid #b7b8a9; border-left: 5px solid #7c8a71; border-radius: 2px 5px 5px 2px; background: #faf8ee; transform: rotate(-8deg); box-shadow: 6px 5px 0 #a2a08d15; }
+.book-art::after { content: '頁'; position: absolute; font-family: serif; color: #6d7964; font-size: 16px; }
+.book-item:nth-child(3n+2) .book-art { background: #e9eee7; }
+.book-item:nth-child(3n) .book-art { background: #efebe7; }
+.book-title { font-size: 17px; font-weight: 600; line-height: 1.65; overflow-wrap: anywhere; margin-bottom: 10px; }
+.check-control { display: flex; align-items: center; gap: 8px; order: 2; min-height: 44px; margin-top: auto; color: var(--muted); }
+.check-control input { appearance: none; width: 18px; height: 18px; border: 1px solid #929b8c; border-radius: 50%; cursor: pointer; flex-shrink: 0; background: white; transition: background 160ms; }
+.check-control input:checked { background: var(--accent); border-color: var(--accent); }
+.check-control input:checked::after { content: '✓'; color: white; font-size: 12px; display: block; text-align: center; }
+.checkmark { font-size: 11px; }
+.book-actions { display: flex; gap: 8px; order: 3; border-top: 1px solid #eeeee8; padding-top: 6px; margin-top: 4px; }
+.text-button, .delete-button { border: 0; padding: 9px 6px; min-height: 44px; background: transparent; color: var(--muted); font-size: 12px; border-radius: 4px; }
+.delete-button { margin-left: auto; }
+.is-read { background: #fcfdfb; }
+.is-read .book-art { opacity: .65; }
+.is-editing { border-color: var(--accent); grid-column: span 2; }
+.is-editing .book-art { display: none; }
+.edit-form { margin-bottom: 12px; }
+.edit-form label { display: block; margin-bottom: 8px; }
+.edit-help, .edit-error { font-size: 11px; line-height: 1.7; margin: 8px 0; }
+.edit-help { color: var(--muted); }
+.edit-error { color: var(--error); min-height: 18px; }
+.edit-controls { display: flex; gap: 12px; align-items: center; }
+.shelf-foot { color: var(--muted); font-size: 10px; line-height: 1.8; padding: 22px 0; }
+.empty-state { text-align: center; padding: 66px 18px; border: 1px dashed #c8cec1; border-radius: 10px; background: #ffffff80; }
+.empty-art { display: block; font-size: 60px; color: #87937f; margin-bottom: 20px; }
+.empty-state h3 { font-weight: 500; font-size: 22px; }
+.empty-state p { color: var(--muted); font-size: 13px; line-height: 1.8; }
+.empty-state button { margin-top: 16px; }
+footer { border-top: 1px solid var(--line); max-width: 1344px; margin: auto; padding: 24px 0; display: flex; justify-content: space-between; color: var(--muted); font-size: 10px; }
+.demo-panel { max-width: 1344px; margin: 12px auto 32px; border: 1px dashed #c8cec1; padding: 16px; border-radius: 8px; color: var(--muted); font-size: 12px; }
+.demo-controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 16px; }
+.demo-controls button { min-height: 44px; border: 1px solid #b9bdb2; border-radius: 4px; padding: 8px; background: white; }
+.demo-controls label { display: flex; align-items: center; min-height: 44px; gap: 6px; }
+.arrive { animation: arrive 260ms var(--ease) both; }
+.book-item.appear { animation: appear 220ms var(--ease) both; animation-delay: var(--delay, 0ms); }
+@keyframes arrive { from { opacity: .5; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes appear { from { opacity: .6; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (hover: hover) and (pointer: fine) { .book-item:hover { transform: translateY(-3px); border-color: #bdc8b6; box-shadow: 0 8px 22px #23282308; } .text-button:hover { color: var(--accent); background: #eff2eb; } .delete-button:hover { color: var(--error); background: #f8eeed; } }
+@media (max-width: 1199px) { .page-shell { gap: 32px; grid-template-columns: 250px minmax(0,1fr); padding: 40px 32px; } .book-list { grid-template-columns: repeat(2,minmax(0,1fr)); } .masthead { padding: 22px 32px; } footer, .demo-panel { margin-left: 32px; margin-right: 32px; } h1 { font-size: 33px; } }
+@media (max-width: 899px) { .page-shell { grid-template-columns: minmax(0,1fr); gap: 32px; } .study { border-right: 0; padding-right: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 32px; } .intro h1 { margin-top: 10px; font-size: 34px; } .overview { margin: 0; border-top: 0; } .add-panel { grid-column: 1 / -1; margin: 0; } .input-row { grid-template-columns: minmax(0,1fr) auto; } .local-note { grid-column: 1 / -1; margin: 0; } .collection-note { display: none; } }
+@media (max-width: 599px) { .masthead { padding: 18px 20px; } .brand-en, .edition { display: none; } .page-shell { padding: 26px 20px; gap: 24px; } .study { gap: 18px; } h1, .intro h1 { font-size: 26px; } .eyebrow { font-size: 8px; letter-spacing: .06em; } .subtitle { font-size: 12px; } .stat-line { gap: 22px; margin: 16px 0; } .stat-line strong { font-size: 29px; } .reading-summary { font-size: 10px; } .overview { padding: 8px 0; } .input-row { grid-template-columns: minmax(0,1fr); } .add-panel h2 { margin-bottom: 12px; } .list-header h2 { font-size: 30px; } .list-toolbar { margin-top: 20px; } .filter-button { padding: 9px 14px; } .book-list { grid-template-columns: minmax(0,1fr); gap: 14px; } .book-item { min-height: 0; padding: 16px; display: grid; grid-template-columns: 64px minmax(0,1fr); column-gap: 14px; } .book-art { grid-column: 1; grid-row: 1 / 3; height: 88px; margin: 0; } .book-title { grid-column: 2; grid-row: 1; margin: 0; font-size: 16px; } .check-control { grid-column: 2; grid-row: 2; margin: 0; } .book-actions { grid-column: 1 / -1; } .is-editing { grid-column: auto; } .edit-form { grid-column: 1 / -1; } .is-editing .check-control { grid-column: 1 / -1; grid-row: auto; } .visible-count { font-size: 10px; } footer { margin: 0 20px; line-height: 1.8; gap: 12px; } .demo-panel { margin: 16px 20px; } .empty-state { padding: 40px 12px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .book-item:hover, .primary-button:active { transform: none; } }
+html.reduced *, html.reduced *::before, html.reduced *::after { animation: none !important; transition: none !important; }
+html.reduced .book-item:hover, html.reduced .primary-button:active { transform: none; }
+
+</style>
+</head>
+<body>
+  <header class="masthead"><a class="brand" href="#main"><span class="brand-symbol" aria-hidden="true">▥</span>页间<span class="brand-en">BETWEEN PAGES</span></a><span class="edition">私人书房 / ISSUE 76 原型</span></header>
+  <main id="main" class="page-shell">
+    <aside class="study" aria-label="书房概览与新增">
+      <div class="intro"><p class="eyebrow">A LITTLE ROOM FOR READING</p><h1>在页间，<br />留一点时间。</h1><p class="subtitle">收下想读的书，<br />也留下读完的时光。</p></div>
+      <div class="overview"><p class="section-kicker">阅读概览</p><p id="reading-summary" class="reading-summary" aria-live="polite"></p><div class="stat-line"><div><strong id="total-count">0</strong><span>书架藏书</span></div><div><strong id="read-count">0</strong><span>已经读完</span></div></div><div class="ratio" aria-hidden="true"><span id="ratio-fill"></span></div><p class="overview-note">一本一本，慢慢读完。</p></div>
+      <section class="add-panel" aria-labelledby="add-heading"><p class="section-kicker">下一段旅程</p><h2 id="add-heading">下一本，想读什么？</h2><form id="book-form" novalidate><label for="book-title">书名</label><div class="input-row"><input id="book-title" name="title" type="text" maxlength="80" autocomplete="off" placeholder="例如：长安的荔枝" required /><button class="primary-button" type="submit">新增书籍 <span aria-hidden="true">↗</span></button></div><p id="form-message" class="form-message" role="status" aria-live="polite"></p></form></section>
+      <p class="local-note">仅保存在当前浏览器 · 没有云同步</p>
+    </aside>
+    <section class="list-panel" aria-labelledby="list-heading"><div class="list-header"><div><p class="eyebrow">THE READING COLLECTION</p><h2 id="list-heading">我的书架<span class="heading-dot" aria-hidden="true">.</span></h2></div><span class="collection-note">让好书，有处安放。</span></div><div class="list-toolbar"><div class="filters" role="group" aria-label="筛选书籍"><button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">全部</button><button type="button" class="filter-button" data-filter="unread" aria-pressed="false">未读</button><button type="button" class="filter-button" data-filter="read" aria-pressed="false">已读</button></div><span id="visible-count" class="visible-count"></span></div><p id="operation-message" class="operation-message" role="status" aria-live="polite"></p><ul id="book-list" class="book-list" aria-label="书籍清单"></ul><div id="empty-state" class="empty-state" hidden><span class="empty-art" aria-hidden="true">▥</span><p class="section-kicker">每一段阅读，都有一个开始</p><h3 id="empty-title">清单还是空的</h3><p id="empty-description">从一本真正想读的书开始吧。</p><button id="empty-action" class="primary-button" type="button">添加第一本书</button></div><p class="shelf-foot">书名与阅读状态是真实管理信息；卡片图形只是装饰，不是真实封面。</p></section>
+  </main>
+  <footer>页间 / 把时间留给阅读 <span>设计审查原型 · 非正式产品</span></footer>
+  <details class="demo-panel"><summary>原型演示工具（不进入正式产品）</summary><div class="demo-controls"><button id="demo-reset" type="button">重置演示数据</button><button id="demo-empty" type="button">空清单</button><button id="demo-single" type="button">单本长书名</button><button id="demo-hundred" type="button">100 本夹具</button><label><input id="demo-failure" type="checkbox" />模拟本地保存失败</label><label><input id="demo-reduced" type="checkbox" />演示减少动态效果</label><button id="demo-inspect" type="button">检查布局与动效</button></div><p id="demo-diagnostics" role="status"></p><p>工具切换会重置原型数据；不读取或写入产品存储键。系统减少动态效果优先于此演示开关。</p></details>
+  <script>
+const STORAGE_KEY = "page-between-reading-list-prototype-76";
+const demoBooks = [
+  { title: "长安的荔枝", read: false },
+  { title: "也许你该找个人聊聊", read: false },
+  { title: "Dune", read: true },
+  { title: "当呼吸化为空气", read: true },
+  { title: "悉达多", read: false },
+  { title: "夜晚的潜水艇", read: false },
+];
+const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+let failWrites = false;
+let initialRender = true;
+
+const form = document.querySelector("#book-form");
+const titleInput = document.querySelector("#book-title");
+const formMessage = document.querySelector("#form-message");
+const list = document.querySelector("#book-list");
+const summary = document.querySelector("#reading-summary");
+const operationMessage = document.querySelector("#operation-message");
+const emptyState = document.querySelector("#empty-state");
+const emptyTitle = document.querySelector("#empty-title");
+const emptyDescription = document.querySelector("#empty-description");
+const filterButtons = [...document.querySelectorAll("[data-filter]")];
+
+let books = loadBooks();
+let currentFilter = "all";
+let editor = null;
+
+function loadBooks() {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    const saved = stored === null ? demoBooks.map((book) => ({ ...book })) : JSON.parse(stored);
+    if (!Array.isArray(saved)) return [];
+    return saved.filter(
+      (book) =>
+        book &&
+        typeof book.title === "string" &&
+        typeof book.read === "boolean",
+    );
+  } catch {
+    return [];
+  }
+}
+
+function persist(candidate) {
+  try {
+    if (failWrites) throw new Error("Prototype write failure");
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(candidate));
+    books = candidate;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function getVisibleBooks() {
+  if (currentFilter === "read") return books.filter((book) => book.read);
+  if (currentFilter === "unread") return books.filter((book) => !book.read);
+  return books;
+}
+
+function createBookItem(book) {
+  const index = books.indexOf(book);
+  const editing = editor?.book === book;
+  const item = document.createElement("li");
+  item.className = `book-item${book.read ? " is-read" : ""}${editing ? " is-editing" : ""}`;
+  item.dataset.rowIndex = index;
+  const art = document.createElement("div");
+  art.className = "book-art";
+  art.setAttribute("aria-hidden", "true");
+  item.append(art);
+  const checkLabel = document.createElement("label");
+  checkLabel.className = "check-control";
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = book.read;
+  checkbox.setAttribute("aria-label", `标记《${book.title}》为${book.read ? "未读" : "已读"}`);
+  checkbox.addEventListener("change", () => {
+    formMessage.textContent = "";
+    operationMessage.textContent = "";
+    const replacement = { ...book, read: checkbox.checked };
+    if (
+      !persist(books.map((entry) => (entry === book ? replacement : entry)))
+    ) {
+      checkbox.checked = book.read;
+      operationMessage.textContent = "未能保存阅读状态，请重试。";
+      operationMessage.style.color = "var(--error)";
+      return;
+    }
+    if (editor?.book === book) editor.book = replacement;
+    if (editor && !getVisibleBooks().includes(editor.book)) editor = null;
+    render();
+    focusControl(replacement, "checkbox");
+    operationMessage.style.color = "var(--accent)";
+    operationMessage.textContent = `已将《${book.title}》标记为${replacement.read ? "已读" : "未读"}。`;
+  });
+  const checkmark = document.createElement("span");
+  checkmark.className = "checkmark";
+  checkmark.setAttribute("aria-hidden", "true");
+  checkmark.textContent = book.read ? "已读完 · 可标记未读" : "未读 · 标记为已读";
+  checkLabel.append(checkbox, checkmark);
+
+  item.append(checkLabel);
+  if (editing) {
+    item.append(createEditor(book, index));
+  } else {
+    const title = document.createElement("span");
+    title.className = "book-title";
+    title.textContent = book.title;
+    item.append(title);
+  }
+  const actions = document.createElement("div");
+  actions.className = "book-actions";
+  if (!editing) {
+    const editButton = createButton(
+      "修改书名",
+      `修改《${book.title}》书名`,
+      () => {
+        formMessage.textContent = "";
+        editor = { book, draft: book.title, error: "" };
+        operationMessage.textContent = "";
+        render();
+        const input = list.querySelector(".edit-input");
+        input.focus();
+        input.select();
+      },
+    );
+    editButton.dataset.editIndex = index;
+    actions.append(editButton);
+  }
+  const deleteButton = document.createElement("button");
+  deleteButton.type = "button";
+  deleteButton.className = "delete-button";
+  deleteButton.textContent = "删除";
+  deleteButton.setAttribute("aria-label", `删除《${book.title}》`);
+  deleteButton.addEventListener("click", () => {
+    formMessage.textContent = "";
+    operationMessage.textContent = "";
+    const visibleIndex = getVisibleBooks().indexOf(book);
+    if (!persist(books.filter((candidate) => candidate !== book))) {
+      operationMessage.textContent = "未能删除，请重试。";
+      operationMessage.style.color = "var(--error)";
+      return;
+    }
+    if (editor?.book === book) editor = null;
+    render();
+    const visible = getVisibleBooks();
+    const next = visible[Math.min(visibleIndex, visible.length - 1)];
+    focusControl(next, editor?.book === next ? "editor" : "edit");
+    operationMessage.textContent = `已删除《${book.title}》。`;
+    operationMessage.style.color = "var(--accent)";
+  });
+  actions.append(deleteButton);
+  item.append(actions);
+  return item;
+}
+
+function createButton(text, label, action) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "text-button";
+  button.textContent = text;
+  button.setAttribute("aria-label", label);
+  button.addEventListener("click", action);
+  return button;
+}
+
+function focusControl(book, kind) {
+  const index = books.indexOf(book);
+  const selector =
+    kind === "checkbox"
+      ? `input[type="checkbox"]`
+      : kind === "editor"
+        ? ".edit-input"
+        : "[data-edit-index]";
+  const control = list.querySelector(`[data-row-index="${index}"] ${selector}`);
+  (
+    control ||
+    filterButtons.find((button) => button.dataset.filter === currentFilter)
+  ).focus();
+}
+
+function validateTitle(rawTitle, target) {
+  const title = rawTitle.trim();
+  if (!title) return "请填写书名，不能只输入空格。";
+  if (rawTitle.length > 80) return "书名不能超过 80 个长度单位，请缩短后保存。";
+  if (
+    books.some(
+      (book) =>
+        book !== target &&
+        book.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
+    )
+  ) {
+    return "清单中已有同名书籍，请换一个书名。";
+  }
+  return "";
+}
+
+function createEditor(book, index) {
+  const editForm = document.createElement("form");
+  editForm.className = "edit-form";
+  editForm.noValidate = true;
+  const label = document.createElement("label");
+  label.htmlFor = `edit-title-${index}`;
+  label.textContent = "修改书名";
+  const input = document.createElement("input");
+  input.id = label.htmlFor;
+  input.setAttribute("aria-label", `修改《${book.title}》的书名`);
+  input.className = "edit-input";
+  input.value = editor.draft;
+  input.autocomplete = "off";
+  input.setAttribute(
+    "aria-describedby",
+    `edit-help-${index} edit-error-${index}`,
+  );
+  input.setAttribute("aria-invalid", String(Boolean(editor.error)));
+  let composing = false;
+  input.addEventListener("compositionstart", () => {
+    composing = true;
+  });
+  input.addEventListener("compositionend", () => {
+    composing = false;
+  });
+  input.addEventListener("input", () => {
+    editor.draft = input.value;
+  });
+  editForm.addEventListener("keydown", (event) => {
+    if (event.isComposing || composing || event.keyCode === 229) {
+      if (event.key === "Enter") event.preventDefault();
+      return;
+    }
+    if (event.key === "Escape") {
+      event.preventDefault();
+      cancel();
+    }
+  });
+  const help = document.createElement("p");
+  help.id = `edit-help-${index}`;
+  help.className = "edit-help";
+  help.textContent = "最多 80 个长度单位 · 保存才会生效";
+  const error = document.createElement("p");
+  error.id = `edit-error-${index}`;
+  error.className = "edit-error";
+  error.setAttribute("role", "alert");
+  error.textContent = editor.error;
+  const controls = document.createElement("div");
+  controls.className = "edit-controls";
+  const save = document.createElement("button");
+  save.type = "submit";
+  save.className = "primary-button";
+  save.textContent = "保存";
+  function cancel() {
+    editor = null;
+    render();
+    focusControl(book, "edit");
+    operationMessage.textContent = "已取消修改。";
+  }
+  controls.append(save, createButton("取消", "取消", cancel));
+  editForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (composing) return;
+    operationMessage.textContent = "";
+    if (!books.includes(book)) {
+      editor = null;
+      render();
+      focusControl(null, "edit");
+      operationMessage.textContent = "这本书已不存在。";
+      return;
+    }
+    editor.draft = input.value;
+    let message = validateTitle(input.value, book);
+    const title = input.value.trim();
+    const replacement = { ...book, title };
+    if (
+      !message &&
+      !persist(books.map((entry) => (entry === book ? replacement : entry)))
+    ) {
+      message = "未能保存，原书名未改变。请重试或取消。";
+    }
+    if (message) {
+      editor.error = message;
+      error.textContent = message;
+      input.setAttribute("aria-invalid", "true");
+      input.focus();
+      return;
+    }
+    editor = null;
+    render();
+    focusControl(replacement, "edit");
+    operationMessage.textContent = `已将书名保存为《${title}》。`;
+  });
+  editForm.append(label, input, help, error, controls);
+  return editForm;
+}
+
+function renderEmptyState(visibleBooks) {
+  const isEmpty = visibleBooks.length === 0;
+  emptyState.hidden = !isEmpty;
+  if (!isEmpty) return;
+  if (books.length === 0) {
+    emptyTitle.textContent = "清单还是空的";
+    emptyDescription.textContent = "从一本真正想读的书开始吧。";
+  } else if (currentFilter === "read") {
+    emptyTitle.textContent = "还没有读完的书";
+    emptyDescription.textContent = "读完一本后，在这里为它打个勾。";
+  } else {
+    emptyTitle.textContent = "没有未读的书";
+    emptyDescription.textContent = "清单里的书都读完了，真不错。";
+  }
+}
+
+function render(transition = "none") {
+  document.getAnimations().forEach((animation) => animation.cancel());
+  const visibleBooks = getVisibleBooks();
+  const readCount = books.filter((book) => book.read).length;
+  list.replaceChildren(...visibleBooks.map(createBookItem));
+  summary.innerHTML = `共 ${books.length} 本 · 已读 <strong>${readCount}</strong> 本`;
+  document.querySelector("#total-count").textContent = books.length;
+  document.querySelector("#read-count").textContent = readCount;
+  document.querySelector("#ratio-fill").style.width = `${books.length ? readCount / books.length * 100 : 0}%`;
+  document.querySelector("#visible-count").textContent = `显示 ${visibleBooks.length} 本`;
+  renderEmptyState(visibleBooks);
+  const emptyAction = document.querySelector("#empty-action");
+  emptyAction.textContent = books.length ? "查看全部书籍" : "添加第一本书";
+  if ((initialRender || transition !== "none") && !motionPreference.matches && !document.documentElement.classList.contains("reduced")) {
+    const animatedItems = transition === "add" ? [...list.children].slice(-1) : [...list.children].slice(0, 12);
+    animatedItems.forEach((item, index) => {
+      item.style.setProperty("--delay", `${Math.min(index, 4) * 18}ms`);
+      item.classList.add("appear");
+    });
+  }
+  initialRender = false;
+}
+
+function updateFilterButtons() {
+  filterButtons.forEach((button) => {
+    const isActive = button.dataset.filter === currentFilter;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+}
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  formMessage.style.color = "var(--error)";
+  operationMessage.textContent = "";
+  const title = titleInput.value.trim();
+  if (!title) {
+    formMessage.textContent = "请先写下书名。";
+    titleInput.focus();
+    return;
+  }
+  if (
+    books.some(
+      (book) => book.title.toLocaleLowerCase() === title.toLocaleLowerCase(),
+    )
+  ) {
+    formMessage.textContent = "这本书已经在清单里了。";
+    titleInput.select();
+    return;
+  }
+  if (!persist([...books, { title, read: false }])) {
+    formMessage.textContent = "未能添加，请重试。";
+    titleInput.focus();
+    return;
+  }
+  editor = null;
+  currentFilter = "all";
+  updateFilterButtons();
+  form.reset();
+  formMessage.style.color = "var(--accent)";
+  formMessage.textContent = `已添加《${title}》。`;
+  titleInput.focus();
+  render("add");
+});
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    formMessage.textContent = "";
+    editor = null;
+    operationMessage.textContent = "";
+    currentFilter = button.dataset.filter;
+    updateFilterButtons();
+    render("filter");
+  });
+});
+
+render();
+
+document.querySelector(".intro").classList.add("arrive");
+document.querySelector("#book-title").addEventListener("input", () => {
+  formMessage.style.color = "var(--error)";
+  formMessage.textContent = "";
+});
+document.querySelector("#empty-action").addEventListener("click", () => {
+  if (!books.length) return titleInput.focus();
+  editor = null;
+  currentFilter = "all";
+  updateFilterButtons();
+  render("filter");
+  filterButtons[0].focus();
+});
+function setFixture(fixture) {
+  failWrites = false;
+  document.querySelector("#demo-failure").checked = false;
+  if (!persist(fixture.map((book) => ({ ...book })))) {
+    operationMessage.textContent = "原型数据初始化失败，请检查浏览器存储权限。";
+    return;
+  }
+  editor = null;
+  currentFilter = "all";
+  form.reset();
+  formMessage.textContent = "";
+  operationMessage.textContent = "";
+  updateFilterButtons();
+  render("filter");
+}
+document.querySelector("#demo-reset").addEventListener("click", () => setFixture(demoBooks));
+document.querySelector("#demo-empty").addEventListener("click", () => setFixture([]));
+document.querySelector("#demo-single").addEventListener("click", () => setFixture([{ title: "一本用于检查历史长书名完整显示与换行的书：" + "在页间留一点时间，慢慢阅读。".repeat(9), read: false }]));
+document.querySelector("#demo-hundred").addEventListener("click", () => setFixture(Array.from({ length: 100 }, (_, index) => ({ title: `阅读夹具 ${String(index + 1).padStart(3, "0")}`, read: index % 3 === 0 }))));
+document.querySelector("#demo-failure").addEventListener("change", (event) => {
+  failWrites = event.target.checked;
+  operationMessage.textContent = failWrites ? "原型：本地写入失败模拟已开启。" : "原型：写入已恢复，可以重试。";
+});
+document.querySelector("#demo-reduced").addEventListener("change", (event) => {
+  document.documentElement.classList.toggle("reduced", event.target.checked);
+  document.getAnimations().forEach((animation) => animation.cancel());
+});
+motionPreference.addEventListener("change", () => {
+  document.getAnimations().forEach((animation) => animation.cancel());
+});
+document.querySelector("#demo-inspect").addEventListener("click", () => {
+  const overflow = document.documentElement.scrollWidth > document.documentElement.clientWidth;
+  const motion = getComputedStyle(list.firstElementChild || document.querySelector(".intro")).animationName;
+  document.querySelector("#demo-diagnostics").textContent = `${overflow ? "存在横向溢出" : "无页面级横向溢出"} · ${motion === "none" ? "非必要入场动画已关闭" : "入场动画样式已启用"} · ${window.innerWidth} CSS px`;
+});
+const motionCheck = document.createElement("button");
+motionCheck.type = "button";
+motionCheck.textContent = "检查动效与打断";
+document.querySelector(".demo-controls").append(motionCheck);
+motionCheck.addEventListener("click", () => {
+  render("filter");
+  const animations = [...list.children].flatMap((item) => item.getAnimations());
+  const first = animations[0];
+  if (!first) {
+    document.querySelector("#demo-diagnostics").textContent = "没有非必要卡片动画：空清单或减少动态效果已生效。";
+    return;
+  }
+  const timing = first.effect.getTiming();
+  first.pause();
+  first.currentTime = timing.delay + Number(timing.duration) / 2;
+  const opacity = Number(getComputedStyle(list.firstElementChild).opacity);
+  const intermediate = opacity > 0.6 && opacity < 1;
+  render();
+  const cancelled = animations.every((animation) => animation.playState === "idle");
+  document.querySelector("#demo-diagnostics").textContent = `卡片入场 ${animations.length} 个 · 中间帧${intermediate ? "有插值" : "未确认插值"} · 打断${cancelled ? "已取消旧动画" : "未取消旧动画"}`;
+});
+
+</script>
+</body>
+</html>

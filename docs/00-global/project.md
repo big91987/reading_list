@@ -10,11 +10,12 @@
 - 数据存于浏览器 localStorage，键为 `page-between-reading-list`；不存在服务端数据库或账号体系。
 - 空书名被拒绝；不区分大小写的重复书名被拒绝。
 - 当前代码没有书名检索功能。新需求必须在 Issue 中定义并保留既有行为。
+- Issue #76 当前工作区已实现批准的现代编辑式书房：侧栏概览/新增、响应式卡片网格、完整书名和常显操作，及有界可取消入场/筛选/新增反馈。存储与管理规则保持不变；[产品验证](../05-validation/tasks/76/validation.md)记录自动通过证据及人工缺口，尚未由Runner发布或合并。
 
 ## 约束与验证
 
 保持当前产品形态和已存在的本地数据格式，除非任务明确要求并说明迁移方案。
 
-`.harness/reading-core.json` 是 Owner 固定的既有用户主线回归：添加两本书、标记已读、刷新保留、状态筛选、删除。`.harness/full.json` 使用原有 `harness/browser.cjs` 执行这组真实浏览器动作。它不是所有新功能的完整验收；每个新任务还应补充对应 AC 和验证。
+`.harness/reading-core.json` 是 Owner 固定的既有用户主线回归：添加两本书、标记已读、刷新保留、状态筛选、删除。产品可维护定位副本 `tests/browser/core.json`，本次与原计划字节一致；不修改受保护配置。它不是所有新功能的完整验收；每个新任务还应补充对应 AC 和验证。
 
-任务 PRD、设计和计划见 `../04-implementation/tasks/<issue>/`，实际验证范围见 `../05-validation/tasks/<issue>/`。本项目仅使用完整研发 Workflow，见 `../harness-full.md`。
+任务 PRD、设计和计划见 `../04-implementation/tasks/<issue>/`，实际验证范围见 `../05-validation/tasks/<issue>/`。当前使用Agent Platform分阶段会话与注册交接，Runner负责复验及草稿PR；旧工作流不启用，见AGENTS.md。
