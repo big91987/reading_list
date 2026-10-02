@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "空清单"
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    },
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

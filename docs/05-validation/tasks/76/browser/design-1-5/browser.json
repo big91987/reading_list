@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "100 本夹具"
+    },
+    {
+      "action": "visible",
+      "text": "显示 100 本"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "显示 66 本"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "显示 34 本"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "演示减少动态效果"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《阅读夹具 002》为已读"
+    },
+    {
+      "action": "absent",
+      "text": "阅读夹具 002"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《阅读夹具 003》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《阅读夹具 004》"
+    },
+    {
+      "action": "visible",
+      "text": "显示 98 本"
+    },
+    {
+      "action": "viewport",
+      "width": 1440
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

@@ -1,0 +1,250 @@
+[
+  {
+    "action": "viewport",
+    "width": 1440
+  },
+  {
+    "action": "visible",
+    "text": "清单还是空的"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "添加第一本书"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "流程甲-1440"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "流程乙-1440"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "visible",
+    "text": "显示 2 本"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "流程甲-1440"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "visible",
+    "text": "这本书已经在清单里了。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "还没有读完的书"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "查看全部书籍"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《流程甲-1440》为已读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "流程甲-1440"
+  },
+  {
+    "action": "absent",
+    "text": "流程乙-1440"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读"
+  },
+  {
+    "action": "visible",
+    "text": "流程乙-1440"
+  },
+  {
+    "action": "absent",
+    "text": "流程甲-1440"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《流程乙-1440》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改《流程乙-1440》的书名",
+    "value": "修订乙-1440"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "修订乙-1440"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《修订乙-1440》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改《修订乙-1440》的书名",
+    "value": " "
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "请填写书名，不能只输入空格。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "取消"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《流程甲-1440》为未读"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "显示 2 本"
+  },
+  {
+    "action": "visible",
+    "text": "修订乙-1440"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《流程甲-1440》"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《修订乙-1440》"
+  },
+  {
+    "action": "visible",
+    "text": "清单还是空的"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "长安的荔枝"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "也许你该找个人聊聊"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "Dune"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "当呼吸化为空气"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "悉达多"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "夜晚的潜水艇"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《Dune》为已读"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《当呼吸化为空气》为已读"
+  },
+  {
+    "action": "visible",
+    "text": "显示 6 本"
+  }
+]

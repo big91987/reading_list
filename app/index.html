@@ -3,107 +3,130 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f4efe6" />
+    <meta name="theme-color" content="#f7f6f2" />
     <title>页间 · 读书清单</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page-shell">
-      <header class="hero">
-        <p class="eyebrow">READING NOTES · 读有所记</p>
-        <div class="title-row">
-          <div>
-            <h1>页间</h1>
-            <p class="subtitle">把想读的书收进来，也把读完的时光留下。</p>
-          </div>
-          <div class="book-mark" aria-hidden="true"><span>阅</span></div>
+    <header class="masthead">
+      <a class="brand" href="#main"
+        ><span class="brand-symbol" aria-hidden="true">▥</span>页间<span
+          class="brand-en"
+          >BETWEEN PAGES</span
+        ></a
+      ><span class="edition">私人书房 / READING LIST</span>
+    </header>
+    <main id="main" class="page-shell">
+      <aside class="study" aria-label="书房概览与新增">
+        <div class="intro">
+          <p class="eyebrow">A LITTLE ROOM FOR READING</p>
+          <h1>在页间，<br />留一点时间。</h1>
+          <p class="subtitle">收下想读的书，<br />也留下读完的时光。</p>
         </div>
-      </header>
-
-      <section class="add-panel" aria-labelledby="add-heading">
-        <div>
-          <p class="section-kicker">添加一本书</p>
-          <h2 id="add-heading">下一本，想读什么？</h2>
-        </div>
-        <form id="book-form" novalidate>
-          <label for="book-title">书名</label>
-          <div class="input-row">
-            <input
-              id="book-title"
-              name="title"
-              type="text"
-              maxlength="80"
-              autocomplete="off"
-              placeholder="例如：长安的荔枝"
-              required
-            />
-            <button class="primary-button" type="submit">新增书籍</button>
-          </div>
-          <p
-            id="form-message"
-            class="form-message"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </form>
-      </section>
-
-      <section class="list-panel" aria-labelledby="list-heading">
-        <div class="list-header">
-          <div>
-            <p class="section-kicker">我的书架</p>
-            <h2 id="list-heading">阅读清单</h2>
-          </div>
+        <div class="overview">
+          <p class="section-kicker">阅读概览</p>
           <p
             id="reading-summary"
             class="reading-summary"
             aria-live="polite"
           ></p>
+          <div class="stat-line">
+            <div><strong id="total-count">0</strong><span>书架藏书</span></div>
+            <div><strong id="read-count">0</strong><span>已经读完</span></div>
+          </div>
+          <div class="ratio" aria-hidden="true">
+            <span id="ratio-fill"></span>
+          </div>
+          <p class="overview-note">一本一本，慢慢读完。</p>
         </div>
-
-        <div class="filters" role="group" aria-label="筛选书籍">
-          <button
-            type="button"
-            class="filter-button is-active"
-            data-filter="all"
-            aria-pressed="true"
-          >
-            全部
-          </button>
-          <button
-            type="button"
-            class="filter-button"
-            data-filter="unread"
-            aria-pressed="false"
-          >
-            未读
-          </button>
-          <button
-            type="button"
-            class="filter-button"
-            data-filter="read"
-            aria-pressed="false"
-          >
-            已读
-          </button>
+        <section class="add-panel" aria-labelledby="add-heading">
+          <p class="section-kicker">下一段旅程</p>
+          <h2 id="add-heading">下一本，想读什么？</h2>
+          <form id="book-form" novalidate>
+            <label for="book-title">书名</label>
+            <div class="input-row">
+              <input
+                id="book-title"
+                name="title"
+                aria-describedby="form-message"
+                type="text"
+                maxlength="80"
+                autocomplete="off"
+                placeholder="例如：长安的荔枝"
+                required
+              /><button class="primary-button" type="submit">
+                新增书籍 <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <p
+              id="form-message"
+              class="form-message"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </section>
+        <p class="local-note">仅保存在当前浏览器 · 没有云同步</p>
+      </aside>
+      <section class="list-panel" aria-labelledby="list-heading">
+        <div class="list-header">
+          <div>
+            <p class="eyebrow">THE READING COLLECTION</p>
+            <h2 id="list-heading">
+              我的书架<span class="heading-dot" aria-hidden="true">.</span>
+            </h2>
+          </div>
+          <span class="collection-note">让好书，有处安放。</span>
         </div>
-
-        <ul id="book-list" class="book-list" aria-label="书籍清单"></ul>
+        <div class="list-toolbar">
+          <div class="filters" role="group" aria-label="筛选书籍">
+            <button
+              type="button"
+              class="filter-button is-active"
+              data-filter="all"
+              aria-pressed="true"
+            >
+              全部</button
+            ><button
+              type="button"
+              class="filter-button"
+              data-filter="unread"
+              aria-pressed="false"
+            >
+              未读</button
+            ><button
+              type="button"
+              class="filter-button"
+              data-filter="read"
+              aria-pressed="false"
+            >
+              已读
+            </button>
+          </div>
+          <span id="visible-count" class="visible-count"></span>
+        </div>
         <p
           id="operation-message"
-          class="form-message"
+          class="operation-message"
           role="status"
           aria-live="polite"
         ></p>
+        <ul id="book-list" class="book-list" aria-label="书籍清单"></ul>
         <div id="empty-state" class="empty-state" hidden>
-          <span aria-hidden="true">◌</span>
+          <span class="empty-art" aria-hidden="true">▥</span>
+          <p class="section-kicker">每一段阅读，都有一个开始</p>
           <h3 id="empty-title">清单还是空的</h3>
           <p id="empty-description">从一本真正想读的书开始吧。</p>
+          <button id="empty-action" class="primary-button" type="button">
+            添加第一本书
+          </button>
         </div>
+        <p class="shelf-foot">
+          书名与阅读状态是真实管理信息；卡片图形只是装饰，不是真实封面。
+        </p>
       </section>
     </main>
-
-    <footer>一本一本，慢慢读完。</footer>
+    <footer>页间 / 把时间留给阅读 <span>仅保存在当前浏览器</span></footer>
     <script src="app.js"></script>
   </body>
 </html>

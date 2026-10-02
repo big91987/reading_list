@@ -1,0 +1,19 @@
+[
+  { "action": "viewport", "width": 1440 },
+  { "action": "fill", "label": "书名", "value": "失败保留新增输入" },
+  { "action": "click", "role": "button", "name": "新增书籍" },
+  { "action": "visible", "text": "未能添加，请重试。" },
+  { "action": "click", "role": "checkbox", "name": "标记《长安的荔枝》为已读" },
+  { "action": "visible", "text": "未能保存阅读状态，请重试。" },
+  { "action": "click", "role": "button", "name": "删除《Dune》" },
+  { "action": "visible", "text": "未能删除，请重试。" },
+  { "action": "visible", "text": "Dune" },
+  { "action": "click", "role": "button", "name": "修改《长安的荔枝》书名" },
+  {
+    "action": "fill",
+    "label": "修改《长安的荔枝》的书名",
+    "value": "存储失败保留的编辑草稿"
+  },
+  { "action": "click", "role": "button", "name": "保存" },
+  { "action": "visible", "text": "未能保存，原书名未改变。请重试或取消。" }
+]

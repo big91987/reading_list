@@ -15,6 +15,7 @@ Task paths are configured in `.harness/full.json`. Existing projects can point i
 
 ## 当前任务
 
+- [Issue #76：书籍清单页 UI 与动效改版](04-implementation/tasks/76/README.md)：A方向、PRD/G1及设计v1/A-001已批准；[研发计划](04-implementation/tasks/76/implement.md)与[产品验证](05-validation/tasks/76/validation.md)已完成实现/自动检查，26组集成、四宽度流程、核心/键盘回归通过，Ready for Review。真实系统偏好/IME/读屏/真机留待人工验收；共享复验shell端口绑定受限，Runner重跑正式门禁再发布草稿PR。交接以注册工具回执为准，不声称已发布/合并。
 - [Issue #71：修改已有书籍的书名](04-implementation/tasks/71/README.md)：需求与设计已获批准；[实施计划](04-implementation/tasks/71/implement.md)与[产品验证](05-validation/tasks/71/validation.md)已形成，产品实现和自动功能证据通过；用户授权立即交接待审查草稿PR/流水线验证，Runner执行正式复验与发布任务分支/草稿PR，AC-12仍Partial/待人工验收，不声称完整验收或合并，执行结果以工具回执为准。
 
 See [full workflow](harness-full.md).

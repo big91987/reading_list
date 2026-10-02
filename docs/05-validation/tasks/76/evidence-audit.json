@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "final_plan_results": [
+    {
+      "plan": "tests/browser/core.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-20/browser.json",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-plan.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-21/browser.json",
+      "actions": 53,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-flow-320.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-22/browser.json",
+      "actions": 38,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-flow-390.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-23/browser.json",
+      "actions": 38,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-flow-768.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-24/browser.json",
+      "actions": 38,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-keyboard-plan.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-25/browser.json",
+      "actions": 33,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-integration-plan.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-18/browser.json",
+      "actions": 4,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-failure-plan.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-19/browser.json",
+      "actions": 13,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-visual-320.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-12/browser.json",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-visual-390.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-13/browser.json",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-visual-768.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-14/browser.json",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/76/browser-visual-1440.json",
+      "report": "docs/05-validation/tasks/76/browser/development-1-15/browser.json",
+      "actions": 16,
+      "passed": true
+    }
+  ],
+  "actions": 297,
+  "integration_groups": 26,
+  "product_hashes_match": true,
+  "core_bytes_unchanged": true,
+  "temporary_files_absent": true,
+  "screenshots": 50,
+  "relative_links_checked": 168,
+  "limits": "Shared verify blocked by sandbox port binding; human acceptance pending as validation.md; visual 12-15 precede editor type/alert-only fixes"
+}

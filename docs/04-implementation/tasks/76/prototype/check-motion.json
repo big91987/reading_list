@@ -1,0 +1,13 @@
+[
+  {"action":"click","text":"原型演示工具（不进入正式产品）"},
+  {"action":"click","role":"button","name":"重置演示数据"},
+  {"action":"click","role":"button","name":"检查动效与打断"},
+  {"action":"visible","text":"卡片入场 6 个 · 中间帧有插值 · 打断已取消旧动画"},
+  {"action":"click","role":"button","name":"100 本夹具"},
+  {"action":"click","role":"button","name":"检查动效与打断"},
+  {"action":"visible","text":"卡片入场 12 个 · 中间帧有插值 · 打断已取消旧动画"},
+  {"action":"click","role":"checkbox","name":"演示减少动态效果"},
+  {"action":"click","role":"button","name":"检查动效与打断"},
+  {"action":"visible","text":"没有非必要卡片动画：空清单或减少动态效果已生效。"},
+  {"action":"click","role":"button","name":"重置演示数据"}
+]

@@ -1,0 +1,9 @@
+[
+  { "action": "click", "role": "button", "name": "运行产品集成测试" },
+  {
+    "action": "download",
+    "role": "button",
+    "name": "下载测试报告",
+    "filename": "product-integration-76.json"
+  }
+]

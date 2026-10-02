@@ -1,0 +1,157 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《长安的荔枝》的书名",
+      "value": "DUNE"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "清单中已有同名书籍，请换一个书名。"
+    },
+    {
+      "action": "fill",
+      "label": "修改《长安的荔枝》的书名",
+      "value": "未保存草稿"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "absent",
+      "text": "未保存草稿"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "模拟本地保存失败"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "失败新增"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "未能添加，请重试。"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《长安的荔枝》为已读"
+    },
+    {
+      "action": "visible",
+      "text": "未能保存阅读状态，请重试。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《长安的荔枝》"
+    },
+    {
+      "action": "visible",
+      "text": "未能删除，请重试。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《长安的荔枝》的书名",
+      "value": "手机修订"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "未能保存，原书名未改变。请重试或取消。"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "模拟本地保存失败"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "手机修订"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "手机修订"
+    },
+    {
+      "action": "viewport",
+      "width": 390
+    },
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《长安的荔枝》的书名",
+      "value": "手机可编辑草稿"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

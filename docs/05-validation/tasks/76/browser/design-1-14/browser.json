@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "text": "原型演示工具（不进入正式产品）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "textbox",
+      "name": "书名"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "键盘新增"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "键盘新增"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "absent",
+      "text": "Dune"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "Dune"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Space"
+    },
+    {
+      "action": "visible",
+      "text": "已将《Dune》标记为未读。"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "fill",
+      "label": "修改《当呼吸化为空气》的书名",
+      "value": "键盘修订"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "键盘修订"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "fill",
+      "label": "修改《键盘修订》的书名",
+      "value": "取消草稿"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "absent",
+      "text": "取消草稿"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "absent",
+      "text": "键盘修订"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《长安的荔枝》的书名",
+      "value": "未保存"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

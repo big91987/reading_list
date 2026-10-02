@@ -1,0 +1,182 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "添加第一本书"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "流程甲-320"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "流程乙-320"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "显示 2 本"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "流程甲-320"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "这本书已经在清单里了。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "查看全部书籍"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《流程甲-320》为已读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "流程甲-320"
+    },
+    {
+      "action": "absent",
+      "text": "流程乙-320"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "流程乙-320"
+    },
+    {
+      "action": "absent",
+      "text": "流程甲-320"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《流程乙-320》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《流程乙-320》的书名",
+      "value": "修订乙-320"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "修订乙-320"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《修订乙-320》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改《修订乙-320》的书名",
+      "value": " "
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "请填写书名，不能只输入空格。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "取消"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《流程甲-320》为未读"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "显示 2 本"
+    },
+    {
+      "action": "visible",
+      "text": "修订乙-320"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《流程甲-320》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《修订乙-320》"
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}
