@@ -11,8 +11,13 @@ on:
       after:
         description: Completed upstream stage (verify starts QA again after confirmed fixes)
         type: choice
-        options: [start, requirements, design, development, qa, review, verify]
+        options: [start, requirements, design, development, qa, verify, code_review]
         default: start
+      target_stage:
+        description: QA destination (empty means report after acceptance)
+        type: choice
+        options: ['', requirements, design, development, report]
+        default: ''
       result_file:
         description: Runner-local handoff receipt (matched against registration)
         type: string
@@ -30,7 +35,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   requirements:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'issues' || inputs.after == 'start')
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'issues' || inputs.after == 'start' || (inputs.after == 'qa' && inputs.target_stage == 'requirements'))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -39,6 +44,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          AFTER_STAGE: ${{ inputs.after }}
           RESULT_SHA256: ${{ inputs.result_sha256 }}
           RESULT_FILE: ${{ inputs.result_file }}
           AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
@@ -49,7 +55,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage requirements
   design:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'requirements')
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && (inputs.after == 'requirements' || (inputs.after == 'qa' && inputs.target_stage == 'design')))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -58,6 +64,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          AFTER_STAGE: ${{ inputs.after }}
           RESULT_SHA256: ${{ inputs.result_sha256 }}
           RESULT_FILE: ${{ inputs.result_file }}
           AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
@@ -68,7 +75,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage design
   development:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'design')
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && (inputs.after == 'design' || (inputs.after == 'qa' && inputs.target_stage == 'development')))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -77,6 +84,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          AFTER_STAGE: ${{ inputs.after }}
           RESULT_SHA256: ${{ inputs.result_sha256 }}
           RESULT_FILE: ${{ inputs.result_file }}
           AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
@@ -97,6 +105,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          AFTER_STAGE: ${{ inputs.after }}
           RESULT_SHA256: ${{ inputs.result_sha256 }}
           RESULT_FILE: ${{ inputs.result_file }}
           AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
@@ -107,7 +116,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage qa
   review:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'qa')
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'code_review')
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -116,6 +125,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          AFTER_STAGE: ${{ inputs.after }}
           RESULT_SHA256: ${{ inputs.result_sha256 }}
           RESULT_FILE: ${{ inputs.result_file }}
           AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
@@ -126,7 +136,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage review
   report:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'review')
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (github.event_name == 'workflow_dispatch' && inputs.after == 'qa' && (inputs.target_stage == '' || inputs.target_stage == 'report'))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -135,6 +145,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           ISSUE_NUMBER: ${{ github.event.issue.number || inputs.issue }}
+          AFTER_STAGE: ${{ inputs.after }}
           RESULT_SHA256: ${{ inputs.result_sha256 }}
           RESULT_FILE: ${{ inputs.result_file }}
           AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
