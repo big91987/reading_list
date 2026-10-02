@@ -1,10 +1,10 @@
 {
   "repository": "https://github.com/big91987/he_skeleton",
-  "revision": "4f36c33fc98885aac85d61989364a7009155d9fb",
+  "revision": "09d1aeb530a99e25f84db0453a45aae306b612d1",
   "files": {
     "full_harness/__init__.py": "86b13c12a7ee5fced29104fd779e5b63ce01ced8faa45124c4c4059106d0a507",
-    "full_harness/browser.py": "e1a280cb2d35e96d864c7aada9980e1376cdf3c61cf1477b3897133beb1a103d",
-    "full_harness/browser/check.cjs": "6b57cec48d762338ac09938b209f9dded89b953d2dc1dd244eb0ed8bbab7a6ff",
+    "full_harness/browser.py": "caaf73bfc68cb625f93497ce2bd6f0b5cfcc45e21f9e5c89d0a7593427b5bdf6",
+    "full_harness/browser/check.cjs": "a419c1fcd527793d811090fa2abe7657f62c880edf30fcf39b87f950d0874512",
     "full_harness/browser/package-lock.json": "bafef266b6f16922584055fe536677f92578553d09f822560dcbf1233d900a43",
     "full_harness/browser/package.json": "8f80bb485d033bd0ebfd060f812f0b7e147343406c54046ae5f0ae9057c3d7ad",
     "full_harness/codex.py": "ceba30368e615a07c99bb1e80c14f708043506092ab97589d02f35fc04921a7e",
