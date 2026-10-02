@@ -15,6 +15,7 @@ Task paths are configured in `.harness/full.json`. Existing projects can point i
 
 ## 当前任务
 
+- [Issue #74：筛选按钮显示书籍数量](04-implementation/tasks/74/README.md)：A-001批准设计已实现；[研发计划](04-implementation/tasks/74/implement.md)及[产品验证](05-validation/tasks/74/validation.md)包含28项计数、18项编辑集成及真实浏览器证据，功能与静态检查通过。用户已授权迁移产品核心计划到tests/browser/core.json，保留原业务动作断言，仅同步三按钮名称；注册浏览器核心/功能通过，Ready for Review，待Runner正式环境独立复验；普通沙箱端口EPERM如实保留，不代表MCP失败；触摸/读屏人工缺口另保留。用户已授权可审查草稿，不重复产品审批，不声称PR已发布/最终验收；交接执行以工具回执为准。
 - [Issue #71：修改已有书籍的书名](04-implementation/tasks/71/README.md)：需求与设计已获批准；[实施计划](04-implementation/tasks/71/implement.md)与[产品验证](05-validation/tasks/71/validation.md)已形成，产品实现和自动功能证据通过；用户授权立即交接待审查草稿PR/流水线验证，Runner执行正式复验与发布任务分支/草稿PR，AC-12仍Partial/待人工验收，不声称完整验收或合并，执行结果以工具回执为准。
 
 See [full workflow](harness-full.md).

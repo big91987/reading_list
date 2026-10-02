@@ -1,0 +1,277 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读 1"
+    },
+    {
+      "action": "visible",
+      "text": "Dune"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《Dune》为已读"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 3"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读 3"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《Dune》为已读"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "计数测试书"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "全部 4"
+    },
+    {
+      "action": "visible",
+      "text": "未读 3"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《计数测试书》"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《Dune》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "Dune 新版"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "Dune 新版"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《Dune》"
+    },
+    {
+      "action": "visible",
+      "text": "全部 2"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "全部 2"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《长安的荔枝》"
+    },
+    {
+      "action": "visible",
+      "text": "全部 1"
+    },
+    {
+      "action": "visible",
+      "text": "未读 1"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "全部 1"
+    },
+    {
+      "action": "visible",
+      "text": "未读 1"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读 0"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    },
+    {
+      "action": "visible",
+      "text": "全部 1"
+    },
+    {
+      "action": "visible",
+      "text": "未读 1"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

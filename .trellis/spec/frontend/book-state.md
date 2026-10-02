@@ -60,3 +60,16 @@ if (!persist(candidate)) {
 ```
 
 The caller must render the approved failure message and retain editor.draft on false; never clear localStorage or perform a second rollback write. Use textContent/value for untrusted title; don't use title as a key or index into the saved array using filtered-row positions.
+
+## 8. Filter-count projection
+
+`render(): void` derives all/read/unread from the successfully loaded or committed full `books`, never from `getVisibleBooks()`. Reuse the summary's readCount and compute unread as `books.length - readCount`. Update each existing button's `.filter-count` textContent; don't replace button nodes, change focus, add a fixed aria-label hiding numbers, store counts or increment counters in command handlers.
+
+```javascript
+const counts = { all: books.length, unread: books.length - readCount, read: readCount };
+button.querySelector(".filter-count").textContent = counts[button.dataset.filter];
+```
+
+Good: changing filters preserves all three counts and the saved JSON. Base: empty effective collection displays three selectable zeros. Bad: a failed Storage.setItem changes counts, or invalid legacy records are counted using the raw saved array length. Existing load/persist error contracts remain unchanged. The reason for one render-time projection is to prevent stale counters and divergent summary values.
+
+Required tests: initial/filtered counts, successful add/delete/bidirectional read with individual reload, invalid input and Storage write failures with full snapshot equality plus recovery retry, legacy invalid subsets, edit/cancel unchanged counts, native keyboard focus/names, 320px four-digit whole-button wrap and no overflow. Physical touch and screen readers require human evidence. Issue74 executable fixtures live under docs/05-validation/tasks/74/tests/ and are temporarily staged then restored; no fault controls belong in the shipped app. Product-owned regression locators live in `tests/browser/core.json`: retain all core business actions/assertions and synchronize only changed accessible names. The Runner prefers this nonempty plan; legacy `.harness/reading-core.json` is fallback and remains protected. Never hide approved count text to satisfy stale tests.

@@ -1,0 +1,234 @@
+[
+  {
+    "action": "viewport",
+    "width": 1280
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "C"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "D"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读 0"
+  },
+  {
+    "action": "visible",
+    "text": "还没有读完的书"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部 2"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《C》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": " "
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "请填写书名，不能只输入空格。"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "key",
+    "key": "Escape"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《C》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "新版C"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "viewport",
+    "width": 375
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《新版C》为已读"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《D》为已读"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 0"
+  },
+  {
+    "action": "visible",
+    "text": "已读 2"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读 0"
+  },
+  {
+    "action": "visible",
+    "text": "没有未读的书"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 0"
+  },
+  {
+    "action": "visible",
+    "text": "已读 2"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部 2"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《新版C》"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《D》"
+  },
+  {
+    "action": "visible",
+    "text": "全部 0"
+  },
+  {
+    "action": "visible",
+    "text": "未读 0"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "全部 0"
+  },
+  {
+    "action": "visible",
+    "text": "未读 0"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "visible",
+    "text": "清单还是空的"
+  }
+]

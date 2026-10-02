@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "查看四位数产品"
+    },
+    {
+      "action": "visible",
+      "text": "全部 2000"
+    },
+    {
+      "action": "visible",
+      "text": "未读 1000"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1000"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读 1000"
+    },
+    {
+      "action": "visible",
+      "text": "全部 2000"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

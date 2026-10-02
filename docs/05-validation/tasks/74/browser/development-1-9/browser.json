@@ -1,0 +1,77 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "键盘筛选书"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "全部 1"
+    },
+    {
+      "action": "visible",
+      "text": "未读 1"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "visible",
+      "text": "键盘筛选书"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Space"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    },
+    {
+      "action": "visible",
+      "text": "全部 1"
+    },
+    {
+      "action": "visible",
+      "text": "未读 1"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    }
+  ],
+  "errors": [],
+  "failure": "Unsupported key",
+  "downloads": []
+}

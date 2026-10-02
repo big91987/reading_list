@@ -1,0 +1,10 @@
+[
+  { "action": "viewport", "width": 1280 },
+  { "action": "click", "role": "button", "name": "重置演示数据" },
+  { "action": "click", "role": "checkbox", "name": "模拟本地保存失败" },
+  { "action": "click", "role": "button", "name": "删除《Dune》" },
+  { "action": "visible", "text": "未能删除，请重试。" },
+  { "action": "visible", "text": "全部 3" },
+  { "action": "visible", "text": "未读 2" },
+  { "action": "visible", "text": "已读 1" }
+]

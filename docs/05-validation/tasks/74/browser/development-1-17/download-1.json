@@ -1,0 +1,382 @@
+{
+  "records": [
+    {
+      "name": "全量筛选/重复渲染/按钮身份",
+      "ac": "AC-01,02,10",
+      "passed": true
+    },
+    {
+      "name": "成功动作逐项刷新",
+      "ac": "AC-03,04,05",
+      "passed": true
+    },
+    {
+      "name": "空集合",
+      "ac": "AC-06",
+      "passed": true
+    },
+    {
+      "name": "仅未读",
+      "ac": "AC-06",
+      "passed": true
+    },
+    {
+      "name": "仅已读",
+      "ac": "AC-06",
+      "passed": true
+    },
+    {
+      "name": "首次无存储",
+      "ac": "AC-05,10",
+      "passed": true
+    },
+    {
+      "name": "损坏JSON",
+      "ac": "AC-05,10",
+      "passed": true
+    },
+    {
+      "name": "非数组",
+      "ac": "AC-05,10",
+      "passed": true
+    },
+    {
+      "name": "部分无效条目",
+      "ac": "AC-05,10",
+      "passed": true
+    },
+    {
+      "name": "历史重复/长标题/未知字段",
+      "ac": "AC-05,10",
+      "passed": true
+    },
+    {
+      "name": "无效新增与编辑不改计数",
+      "ac": "AC-07,08",
+      "passed": true
+    },
+    {
+      "name": "QuotaExceededError/add/恢复重试",
+      "ac": "AC-07,08,10",
+      "passed": true
+    },
+    {
+      "name": "QuotaExceededError/delete/恢复重试",
+      "ac": "AC-07,08,10",
+      "passed": true
+    },
+    {
+      "name": "QuotaExceededError/read/恢复重试",
+      "ac": "AC-07,08,10",
+      "passed": true
+    },
+    {
+      "name": "QuotaExceededError/edit/恢复重试",
+      "ac": "AC-07,08,10",
+      "passed": true
+    },
+    {
+      "name": "SecurityError/add/恢复重试",
+      "ac": "AC-07,08,10",
+      "passed": true
+    },
+    {
+      "name": "SecurityError/delete/恢复重试",
+      "ac": "AC-07,08,10",
+      "passed": true
+    },
+    {
+      "name": "SecurityError/read/恢复重试",
+      "ac": "AC-07,08,10",
+      "passed": true
+    },
+    {
+      "name": "SecurityError/edit/恢复重试",
+      "ac": "AC-07,08,10",
+      "passed": true
+    },
+    {
+      "name": "四位数布局320px",
+      "ac": "AC-09",
+      "passed": true
+    },
+    {
+      "name": "四位数布局375px",
+      "ac": "AC-09",
+      "passed": true
+    },
+    {
+      "name": "四位数布局430px",
+      "ac": "AC-09",
+      "passed": true
+    },
+    {
+      "name": "四位数布局431px",
+      "ac": "AC-09",
+      "passed": true
+    },
+    {
+      "name": "四位数布局640px",
+      "ac": "AC-09",
+      "passed": true
+    },
+    {
+      "name": "四位数布局641px",
+      "ac": "AC-09",
+      "passed": true
+    },
+    {
+      "name": "四位数布局650px",
+      "ac": "AC-09",
+      "passed": true
+    },
+    {
+      "name": "四位数布局651px",
+      "ac": "AC-09",
+      "passed": true
+    },
+    {
+      "name": "四位数布局1280px",
+      "ac": "AC-09",
+      "passed": true
+    }
+  ],
+  "measurements": [
+    {
+      "width": 320,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 35,
+          "right": 158,
+          "top": 670.703125,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 162,
+          "right": 285,
+          "top": 670.703125,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 35,
+          "right": 285,
+          "top": 718.703125,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "width": 375,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 35,
+          "right": 134,
+          "top": 670.703125,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 138,
+          "right": 237,
+          "top": 670.703125,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 241,
+          "right": 340,
+          "top": 670.703125,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 35,
+          "right": 152.328125,
+          "top": 648.703125,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 156.328125,
+          "right": 273.671875,
+          "top": 648.703125,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 277.671875,
+          "right": 395,
+          "top": 648.703125,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "width": 431,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 35,
+          "right": 131.03125,
+          "top": 592.703125,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 135.03125,
+          "right": 231.0625,
+          "top": 592.703125,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 235.0625,
+          "right": 331.09375,
+          "top": 592.703125,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 35,
+          "right": 131.03125,
+          "top": 592.703125,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 135.03125,
+          "right": 231.0625,
+          "top": 592.703125,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 235.0625,
+          "right": 331.09375,
+          "top": 592.703125,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "width": 641,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 35,
+          "right": 131.03125,
+          "top": 592.796875,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 135.03125,
+          "right": 231.0625,
+          "top": 592.796875,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 235.0625,
+          "right": 331.09375,
+          "top": 592.796875,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "width": 650,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 35,
+          "right": 131.03125,
+          "top": 593.5625,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 135.03125,
+          "right": 231.0625,
+          "top": 593.5625,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 235.0625,
+          "right": 331.09375,
+          "top": 593.5625,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "width": 651,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 51,
+          "right": 147.03125,
+          "top": 534,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 151.03125,
+          "right": 247.0625,
+          "top": 534,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 251.0625,
+          "right": 347.09375,
+          "top": 534,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "bounds": [
+        {
+          "label": "全部 2000",
+          "left": 211,
+          "right": 307.03125,
+          "top": 591.34375,
+          "height": 44
+        },
+        {
+          "label": "未读 1000",
+          "left": 311.03125,
+          "right": 407.0625,
+          "top": 591.34375,
+          "height": 44
+        },
+        {
+          "label": "已读 1000",
+          "left": 411.0625,
+          "right": 507.09375,
+          "top": 591.34375,
+          "height": 44
+        }
+      ]
+    }
+  ],
+  "browserErrors": [],
+  "scope": "真实浏览器产品DOM/Storage边界异常注入；非物理配额耗尽/触摸/读屏"
+}

@@ -285,6 +285,15 @@ function renderEmptyState(visibleBooks) {
 function render() {
   const visibleBooks = getVisibleBooks();
   const readCount = books.filter((book) => book.read).length;
+  const counts = {
+    all: books.length,
+    unread: books.length - readCount,
+    read: readCount,
+  };
+  filterButtons.forEach((button) => {
+    button.querySelector(".filter-count").textContent =
+      counts[button.dataset.filter];
+  });
   list.replaceChildren(...visibleBooks.map(createBookItem));
   summary.innerHTML = `共 ${books.length} 本 · 已读 <strong>${readCount}</strong> 本`;
   renderEmptyState(visibleBooks);

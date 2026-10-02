@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "清空演示书单"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读 0"
+    },
+    {
+      "action": "visible",
+      "text": "全部 0"
+    },
+    {
+      "action": "visible",
+      "text": "未读 0"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

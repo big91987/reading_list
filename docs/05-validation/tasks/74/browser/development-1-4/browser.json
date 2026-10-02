@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "role": "button",
+      "name": "运行产品集成测试"
+    },
+    {
+      "action": "visible",
+      "text": "集成通过：28 项，浏览器错误：0"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "下载测试报告"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

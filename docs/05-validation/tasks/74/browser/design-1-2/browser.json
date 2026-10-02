@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "模拟本地保存失败"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "失败书"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "未能添加，请重试。"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《Dune》为已读"
+    },
+    {
+      "action": "visible",
+      "text": "未能保存阅读状态，请重试。"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《Dune》"
+    },
+    {
+      "action": "visible",
+      "text": "未能删除，请重试。"
+    },
+    {
+      "action": "visible",
+      "text": "全部 3"
+    },
+    {
+      "action": "visible",
+      "text": "未读 2"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "模拟本地保存失败"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "全部 4"
+    },
+    {
+      "action": "visible",
+      "text": "未读 3"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "全部 4"
+    },
+    {
+      "action": "visible",
+      "text": "未读 3"
+    },
+    {
+      "action": "visible",
+      "text": "已读 1"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "清空演示书单"
+    },
+    {
+      "action": "visible",
+      "text": "全部 0"
+    },
+    {
+      "action": "visible",
+      "text": "未读 0"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读 0"
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读 0"
+    },
+    {
+      "action": "visible",
+      "text": "全部 0"
+    },
+    {
+      "action": "visible",
+      "text": "未读 0"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "全部 0"
+    },
+    {
+      "action": "visible",
+      "text": "未读 0"
+    },
+    {
+      "action": "visible",
+      "text": "已读 0"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

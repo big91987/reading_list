@@ -1,0 +1,300 @@
+[
+  {
+    "action": "viewport",
+    "width": 1280
+  },
+  {
+    "action": "visible",
+    "text": "全部 0"
+  },
+  {
+    "action": "visible",
+    "text": "未读 0"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "A"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "B"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "C"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《A》为已读"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读 1"
+  },
+  {
+    "action": "visible",
+    "text": "A"
+  },
+  {
+    "action": "absent",
+    "text": "B"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "B"
+  },
+  {
+    "action": "visible",
+    "text": "C"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《B》为已读"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 1"
+  },
+  {
+    "action": "visible",
+    "text": "已读 2"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 1"
+  },
+  {
+    "action": "visible",
+    "text": "已读 2"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读 2"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《B》为已读"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "D"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "visible",
+    "text": "全部 4"
+  },
+  {
+    "action": "visible",
+    "text": "未读 3"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "全部 4"
+  },
+  {
+    "action": "visible",
+    "text": "未读 3"
+  },
+  {
+    "action": "visible",
+    "text": "已读 1"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《A》"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 3"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "全部 3"
+  },
+  {
+    "action": "visible",
+    "text": "未读 3"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《B》"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "全部 2"
+  },
+  {
+    "action": "visible",
+    "text": "未读 2"
+  },
+  {
+    "action": "visible",
+    "text": "已读 0"
+  }
+]

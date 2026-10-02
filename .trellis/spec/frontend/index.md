@@ -9,6 +9,6 @@
 ## Quality Check
 
 - Run the Owner's configured Prettier/ESLint verification plus syntax checks.
-- Run the unchanged reading-core journey and current feature browser plan through registered check.
+- Run the unchanged reading-core journey in `tests/browser/core.json` and current feature browser plan through registered check. The legacy `.harness/reading-core.json` remains a compatibility fallback only; do not modify protected execution controls.
 - For state/storage changes, run browser integration fixtures and assert complete persistent and in-memory snapshots on success and failure.
 - Record real browser events separately from synthetic composition and human assistive-technology evidence.

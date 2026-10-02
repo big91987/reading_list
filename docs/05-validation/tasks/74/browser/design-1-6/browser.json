@@ -1,0 +1,31 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重置演示数据"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "模拟本地保存失败"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《Dune》"
+    },
+    {
+      "action": "visible",
+      "text": "未能删除，请重试。"
+    }
+  ],
+  "errors": [],
+  "failure": "locator.waitFor: Error: strict mode violation: getByText('全部 3', { exact: true }) resolved to 2 elements:\n    1) <button type=\"button\" data-filter=\"all\" aria-pressed=\"true\" class=\"filter-button is-active\">…</button> aka getByRole('button', { name: '全部' })\n    2) <button type=\"button\" aria-pressed=\"true\" class=\"filter-button is-active\">…</button> aka getByLabel('样例书单').getByText('全部')\n\nCall log:\n  - waiting for getByText('全部 3', { exact: true }) to be visible\n",
+  "downloads": []
+}

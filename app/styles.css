@@ -187,16 +187,22 @@ button {
 }
 .filters {
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
   margin: 28px 0 18px;
   border-bottom: 1px solid var(--line);
 }
 .filter-button {
   position: relative;
+  min-height: 44px;
+  white-space: nowrap;
   border: 0;
   padding: 9px 15px 12px;
   color: var(--muted);
   background: transparent;
+}
+.filter-count {
+  font-variant-numeric: tabular-nums;
 }
 .filter-button::after {
   content: "";
