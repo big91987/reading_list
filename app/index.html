@@ -88,6 +88,16 @@
           </button>
         </div>
 
+        <div id="undo-panel" class="undo-panel" hidden>
+          <div class="undo-copy">
+            <p id="undo-message" role="status" aria-live="polite"></p>
+            <p class="undo-help">仅可撤销最近一次删除 · 刷新后失效</p>
+            <p id="undo-error" class="edit-error" role="alert"></p>
+          </div>
+          <button id="undo-button" type="button" class="text-button">
+            撤销删除
+          </button>
+        </div>
         <ul id="book-list" class="book-list" aria-label="书籍清单"></ul>
         <p
           id="operation-message"

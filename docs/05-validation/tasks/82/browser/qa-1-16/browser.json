@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ12"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ12》"
+    },
+    {
+      "action": "visible",
+      "text": "已删除《ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ12》。"
+    },
+    {
+      "action": "key",
+      "key": "Space"
+    },
+    {
+      "action": "visible",
+      "text": "已恢复《ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ12》。"
+    },
+    {
+      "action": "visible",
+      "text": "共 1 本 · 已读 0 本"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ12》"
+    },
+    {
+      "action": "viewport",
+      "width": 1280
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "已恢复《ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ12》。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ12》"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "visible",
+      "text": "撤销删除"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

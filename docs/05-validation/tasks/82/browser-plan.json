@@ -1,0 +1,341 @@
+[
+  {
+    "action": "viewport",
+    "width": 1280
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "顺序A"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "顺序B"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "顺序C"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《顺序B》为已读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《顺序B》"
+  },
+  {
+    "action": "visible",
+    "text": "已删除《顺序B》。"
+  },
+  {
+    "action": "visible",
+    "text": "仅可撤销最近一次删除 · 刷新后失效"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "顺序D"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《顺序B》"
+  },
+  {
+    "action": "visible",
+    "text": "共 4 本 · 已读 1 本"
+  },
+  {
+    "action": "absent",
+    "text": "撤销删除"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "顺序B"
+  },
+  {
+    "action": "absent",
+    "text": "顺序A"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《顺序B》"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《顺序B》"
+  },
+  {
+    "action": "visible",
+    "text": "已恢复《顺序B》。当前筛选下不可见，可切换筛选查看。"
+  },
+  {
+    "action": "visible",
+    "text": "顺序A"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "顺序B"
+  },
+  {
+    "action": "absent",
+    "text": "顺序A"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《顺序C》"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《顺序A》"
+  },
+  {
+    "action": "visible",
+    "text": "已删除《顺序A》。"
+  },
+  {
+    "action": "absent",
+    "text": "已删除《顺序C》。"
+  },
+  {
+    "action": "key",
+    "key": "Space"
+  },
+  {
+    "action": "visible",
+    "text": "已恢复《顺序A》。"
+  },
+  {
+    "action": "absent",
+    "text": "顺序C"
+  },
+  {
+    "action": "absent",
+    "text": "撤销删除"
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "顺序A改名"
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "已将书名保存为《顺序A改名》。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《顺序B》"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《顺序A改名》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "未保存草稿"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "待新增草稿"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《顺序B》"
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "已将书名保存为《未保存草稿》。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "visible",
+    "text": "已添加《待新增草稿》。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《顺序B》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "不该恢复的草稿"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《顺序B》"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《顺序B》"
+  },
+  {
+    "action": "visible",
+    "text": "已恢复《顺序B》。"
+  },
+  {
+    "action": "absent",
+    "text": "不该恢复的草稿"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《顺序D》"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": " "
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "visible",
+    "text": "请先写下书名。"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "顺序B"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "visible",
+    "text": "这本书已经在清单里了。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《顺序B》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": " "
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "请填写书名，不能只输入空格。"
+  },
+  {
+    "action": "key",
+    "key": "Escape"
+  },
+  {
+    "action": "click",
+    "role": "checkbox",
+    "name": "标记《顺序B》为已读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读"
+  },
+  {
+    "action": "visible",
+    "text": "已删除《顺序D》。"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "absent",
+    "text": "撤销删除"
+  },
+  {
+    "action": "absent",
+    "text": "顺序D"
+  },
+  {
+    "action": "visible",
+    "text": "共 3 本 · 已读 0 本"
+  }
+]

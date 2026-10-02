@@ -6,6 +6,7 @@
 
 - `app/index.html`、`app/app.js`、`app/styles.css` 为现有浏览器应用。
 - 支持添加书名、标记已读、全部/已读/未读筛选及删除。
+- Issue #82在现有静态产品加入常驻撤销最近一次成功删除：保持最后保存书名/read/完整序位，冲突及写入失败保留机会，不切换筛选，刷新失效。实现及证据见[产品验证](../05-validation/tasks/82/validation.md)；独立QA与人工验收尚待完成，未合并主线。
 - Issue #71 在原条目增加修改书名、保存/取消、全清单去重与存储失败重试；保留read、顺序和旧本地JSON格式。实际验收范围与人工缺口见 [任务验证](../05-validation/tasks/71/validation.md)，尚未合并主线。
 - 数据存于浏览器 localStorage，键为 `page-between-reading-list`；不存在服务端数据库或账号体系。
 - 空书名被拒绝；不区分大小写的重复书名被拒绝。
