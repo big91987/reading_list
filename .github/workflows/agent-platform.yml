@@ -11,12 +11,16 @@ on:
       after:
         description: Completed upstream stage (verify starts QA again after confirmed fixes)
         type: choice
-        options: [start, requirements, design, development, qa, verify, code_review, redirect, integrate]
+        options: [start, requirements, design, development, qa, verify, code_review, redirect, integrate, observe]
         default: start
       target_stage:
         description: Handoff destination (next or earlier stage; required for QA)
         type: choice
-        options: ['', requirements, design, development, qa, report]
+        options: ['', requirements, design, development, qa, report, review]
+        default: ''
+      message_id:
+        description: Existing input to observe; does not invoke an Agent
+        type: string
         default: ''
       result_file:
         description: Runner-local handoff receipt (matched against registration)
@@ -176,3 +180,24 @@ jobs:
           "$AGENT_PLATFORM_ROOT/.data/runner-venv/bin/python" \
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage integrate
+
+  observe:
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && github.event_name == 'workflow_dispatch' && inputs.after == 'observe'
+    runs-on: [self-hosted, macOS, ARM64, he-full]
+    timeout-minutes: 25
+    steps:
+      - name: Continue receiving the existing Agent result
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ inputs.issue }}
+          OBSERVE_STAGE: ${{ inputs.target_stage }}
+          OBSERVE_MESSAGE: ${{ inputs.message_id }}
+          AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
+        run: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          test -n "$AGENT_PLATFORM_ROOT"
+          "$AGENT_PLATFORM_ROOT/.data/runner-venv/bin/python" \
+            "$AGENT_PLATFORM_ROOT/examples/github/observe.py" \
+            --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" \
+            --stage "$OBSERVE_STAGE" --message-id "$OBSERVE_MESSAGE"
