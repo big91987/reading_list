@@ -215,6 +215,28 @@ button {
 .filter-button.is-active::after {
   background: var(--accent);
 }
+.filter-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  z-index: 2;
+  width: max-content;
+  padding: 6px 9px;
+  border-radius: 5px;
+  background: var(--ink);
+  color: var(--paper, #fff);
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: default;
+}
+@media (hover: hover) and (pointer: fine) {
+  .filter-button:hover:not(.tooltip-dismissed) .filter-tooltip {
+    display: block;
+  }
+}
 .book-list {
   margin: 0;
   padding: 0;

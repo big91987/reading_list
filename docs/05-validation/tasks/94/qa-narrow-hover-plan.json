@@ -1,0 +1,23 @@
+[
+  {"action":"viewport","width":320},
+  {"action":"fill","label":"书名","value":"窄屏验收书"},
+  {"action":"click","role":"button","name":"新增书籍"},
+  {"action":"pointer","x":0,"y":0},
+  {"action":"snapshot_storage"},
+  {"action":"snapshot_geometry","selector":".filters"},
+  {"action":"snapshot_geometry","selector":"#book-list"},
+  {"action":"hover","role":"button","name":"全部","duration_ms":1000},
+  {"action":"visible","text":"显示所有书籍"},
+  {"action":"hover","role":"button","name":"未读","duration_ms":1000},
+  {"action":"visible","text":"只显示未读书籍"},
+  {"action":"hover","role":"button","name":"已读","duration_ms":1000},
+  {"action":"visible","text":"只显示已读书籍"},
+  {"action":"hover","selector":"[data-filter=\"read\"] .filter-tooltip","duration_ms":2000},
+  {"action":"visible","text":"只显示已读书籍"},
+  {"action":"visible","selector":"[data-filter=\"all\"][aria-pressed=\"true\"]"},
+  {"action":"visible","text":"窄屏验收书"},
+  {"action":"unchanged_geometry","selector":".filters"},
+  {"action":"unchanged_geometry","selector":"#book-list"},
+  {"action":"unchanged_storage"},
+  {"action":"unchanged_storage_writes"}
+]

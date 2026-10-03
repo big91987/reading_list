@@ -1,0 +1,25 @@
+.....E..
+======================================================================
+ERROR: test_server_pins_assets_and_never_exposes_private_runtime (local_deploy_test.DeploymentTest.test_server_pins_assets_and_never_exposes_private_runtime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-94/tests/local_deploy_test.py", line 157, in test_server_pins_assets_and_never_exposes_private_runtime
+    server = self.d.server(self.runtime, port=0)
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-94/scripts/local_deploy.py", line 292, in server
+    return http.server.ThreadingHTTPServer(("127.0.0.1", port), Handler)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 457, in __init__
+    self.server_bind()
+    ~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/server.py", line 148, in server_bind
+    socketserver.TCPServer.server_bind(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.5/Frameworks/Python.framework/Versions/3.14/lib/python3.14/socketserver.py", line 478, in server_bind
+    self.socket.bind(self.server_address)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.690s
+
+FAILED (errors=1)

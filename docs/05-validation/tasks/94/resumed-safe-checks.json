@@ -1,0 +1,65 @@
+[
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "<platform>/examples/github/quality/node_modules/.bin/prettier",
+      "--check",
+      "--config",
+      "<platform>/examples/github/quality/prettier.json",
+      "app/**/*.{js,html,css}",
+      "tests/filter-tooltip.test.cjs",
+      "docs/05-validation/tasks/94/browser-*.json",
+      "docs/05-validation/tasks/94/audit-baseline.cjs",
+      "docs/05-validation/tasks/94/audit-evidence.cjs"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "<platform>/examples/github/quality/node_modules/.bin/eslint",
+      "--no-config-lookup",
+      "--config",
+      "<platform>/examples/github/quality/eslint.config.mjs",
+      "app/**/*.js"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "--check",
+      "app/app.js"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "--test",
+      "tests/filter-tooltip.test.cjs",
+      "tests/undo.test.cjs"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "docs/05-validation/tasks/94/audit-baseline.cjs"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "docs/05-validation/tasks/94/audit-evidence.cjs"
+    ],
+    "exit_code": 0
+  }
+]

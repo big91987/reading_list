@@ -392,6 +392,16 @@ filterButtons.forEach((button) => {
     updateFilterButtons();
     render();
   });
+  button.addEventListener("pointerleave", () => {
+    button.classList.remove("tooltip-dismissed");
+  });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+  filterButtons.forEach((button) => {
+    if (button.matches(":hover")) button.classList.add("tooltip-dismissed");
+  });
 });
 
 render();

@@ -1,0 +1,288 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "absent",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "absent",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "absent",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《活着》为已读"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": true
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "absent",
+      "text": "活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "absent",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": ""
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "absent",
+      "text": "活着"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Space"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "unchanged_storage"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

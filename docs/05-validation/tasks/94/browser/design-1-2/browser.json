@@ -1,0 +1,105 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "role": "button",
+      "name": "混合清单"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "visible",
+      "text": "真实指针进入：是 · 提示可见：是 · 入口：unread · 点击前筛选：all"
+    },
+    {
+      "action": "visible",
+      "text": "当前筛选：unread"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "absent",
+      "text": "活着"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "absent",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "absent",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "visible",
+      "text": "真实指针进入：是 · 提示可见：是 · 入口：all · 点击前筛选：unread"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "visible",
+      "text": "当前筛选：read"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "visible",
+      "text": "真实指针进入：是 · 提示可见：是 · 入口：read · 点击前筛选：all"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "visible",
+      "text": "横向溢出：否"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

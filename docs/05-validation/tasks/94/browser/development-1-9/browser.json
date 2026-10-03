@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "桌面提示观察"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

@@ -1,0 +1,468 @@
+{
+  "passed": true,
+  "finalPlanCount": 16,
+  "finalActionCount": 851,
+  "hostChecks": {
+    "file": "docs/05-validation/tasks/94/host-checks-before-resume/checks.json",
+    "passedCount": 8,
+    "sha256": "6128dbf3319b29e2d9b4e51ccfc7efe4293d4fb5f2e5cdf3fd9aec6ece51e2db",
+    "featurePlanAtHostRun": "docs/05-validation/tasks/94/browser-click-keyboard.json"
+  },
+  "sourceDigests": [
+    {
+      "file": "app/index.html",
+      "sha256": "1c1617cccf9777cb95a2ac40103007f0871d88e08e63131da0de6adcc3a71fbe"
+    },
+    {
+      "file": "app/styles.css",
+      "sha256": "c2f86c6e8d39a45ed6f5a94ee8b088bee343fec5462687674301e008f184145c"
+    },
+    {
+      "file": "app/app.js",
+      "sha256": "9898c75bb349fdee7e874df62ac37d9867e88d5cd68e286fefc95f7be82c0653"
+    }
+  ],
+  "history": {
+    "firstPassBrowserFailureRetained": true,
+    "firstPassEnvironmentFailureLogRetained": true
+  },
+  "limitations": [
+    "Touch result is Chromium hasTouch/isMobile emulation, not a physical phone",
+    "No Firefox/Safari or screen-reader certification",
+    "Host pre-resume gate tested the earlier click/keyboard feature plan; current primary hover plan is independently verified via official MCP and will be rechecked by Runner"
+  ],
+  "records": [
+    {
+      "plan": "docs/05-validation/tasks/94/browser-plan.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-10/browser.json",
+      "actionCount": 72,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 3,
+      "planSha256": "145a9678e2827c4ce5c762f64786a5c3992fcfacbf73458d404f4ec9b842b4c8",
+      "resultSha256": "479f4193bb0ba94f2a4aaf18966acaa41015d4bc5de7c893a150ad244052089f",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+          "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-unread.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-11/browser.json",
+      "actionCount": 72,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 3,
+      "planSha256": "4402eba11b032aafde6ed8bbb55a98c8b57a1f4b82f382974fde8fbed9a34de2",
+      "resultSha256": "69062cd672f636bc256588ab8a9bf81d0604b38c332bc5bfb5b5e9ccac568b64",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-11/screenshot.png",
+          "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-11/mobile.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-read.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-12/browser.json",
+      "actionCount": 72,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 3,
+      "planSha256": "dab63674599adf658aceed4643abed534edc72718791f3adb0d74f64138b0f5a",
+      "resultSha256": "82464e62ddb0b9d13b5682a7a720eb334713bbb1bcdc6b6627303519eed6f6f7",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-12/screenshot.png",
+          "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-12/mobile.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-touch.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-13/browser.json",
+      "actionCount": 46,
+      "passed": true,
+      "device": {
+        "hasTouch": true,
+        "isMobile": true,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 3,
+      "planSha256": "fa4850635802b7c97540e679edd54e23e665ba76add2581ae94818dc2d0b87b0",
+      "resultSha256": "5a8602c375f93c6b375bf8e26488a213a1e73c275fa7439e46764a0f93cd2dcf",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-13/screenshot.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-13/mobile.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-layout.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-14/browser.json",
+      "actionCount": 69,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 3,
+      "planSha256": "d52124ae509ce71265560b51ec9d115dd232c59121a8493a6ac00156a8434abb",
+      "resultSha256": "f65ecf252279ce0313ff29a9934f12210ff82251d661a25e0f16ff093180e4e8",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-14/screenshot.png",
+          "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+          "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-empty.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-15/browser.json",
+      "actionCount": 46,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 0,
+      "planSha256": "eab5e0e6fab74c3e669ab3fb2fc998d0022201888af1a501288bb6e750142301",
+      "resultSha256": "37f6809ab716b645c2d9304e309a7b52f7eca05f53b06fb87cde84844ba9217b",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-15/screenshot.png",
+          "sha256": "19e371730f39bfc89445185a0956d19a666c57febdd6ae33cda9401ac0d48788"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-15/mobile.png",
+          "sha256": "eeca55c056063f87fe49c82c0714a92573c1841731f6ca60909c225ab53ef3ae"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-read-empty.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-16/browser.json",
+      "actionCount": 48,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 1,
+      "planSha256": "770814142295653a22257a6cf083041cafaf5ed3a7950fb2e6fd6f139432c325",
+      "resultSha256": "ae97633297261945528466430c9438ead2579a53847e0e9d481235561bb8f0c0",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-16/screenshot.png",
+          "sha256": "c5e4a8549a29b2237977739a97af0e95c2fefbb02cb729649e43fbed9719cce5"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-16/mobile.png",
+          "sha256": "9a5ef3b194d81da4c7c15f1249b30ec382b408dacd08e3cfb32308495fc2d02b"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-unread-empty.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-17/browser.json",
+      "actionCount": 49,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 2,
+      "planSha256": "43c675584d6c6ef830b79b934c115dfe662bf273d465007d3420761d7a3550a3",
+      "resultSha256": "ed0922bb949b233dc5d8dd87f504dbd1fe24cabe85dee40c87fc256143ba6bdb",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-17/screenshot.png",
+          "sha256": "d88e2cf16b8531d3f0471bdbc02702c5e5b27d1e87d93ecadadb408a4c4836fb"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-17/mobile.png",
+          "sha256": "c428dfadfbea2d95c39eac91daa89ae8635cbbf127bd448c58dc2fb216cfd2f4"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-click-keyboard.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-18/browser.json",
+      "actionCount": 67,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 3,
+      "planSha256": "48e2cc73c2b4eb7490250c9fa67ee4df2ca1f7bed9853a35973bc49cfc1debc9",
+      "resultSha256": "1096069e6123415f4f102c2d74c103edb8f854f20fb078ce2ea055d811924a98",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-18/screenshot.png",
+          "sha256": "ae188162436888fbd48dee0345dcad8f3b9e85a0aaf96c6a99c7c14950a2d7b5"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-18/mobile.png",
+          "sha256": "bf3dde2d4c9f36b96524ffe26b8ee1032063dccd384d81effeceb221a1fffc02"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-button-geometry.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-19/browser.json",
+      "actionCount": 74,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 3,
+      "planSha256": "10c61d1051144825aeaf299e79a1bff8a73c51f10c7bbf526d0bf7bcc20f2d9a",
+      "resultSha256": "020b6431a554951dde49884b959d021cf831082537dd80a2dcb7c8977c4446b4",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-19/screenshot.png",
+          "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-19/mobile.png",
+          "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-editor.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-20/browser.json",
+      "actionCount": 21,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 1,
+      "planSha256": "c9176372b8d5852bb6ca590608d9ce0d7cc1e618de3bad6ba16028f28b75aace",
+      "resultSha256": "2163cd420226a609a85c797df9a508ff5f6d798687c1ad5ff31267ad907796d2",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-20/screenshot.png",
+          "sha256": "f8914084f7e97690e813b859f3be67c1e3cfc3814436fbc14a36064b538ac13d"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-20/mobile.png",
+          "sha256": "4b2472b6dddbe780e15c73e4da3777b99b85e2624c88b416ef2bf810b5d60c44"
+        }
+      ]
+    },
+    {
+      "plan": "tests/browser/core.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-21/browser.json",
+      "actionCount": 16,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 4,
+      "planSha256": "9d9c7424b90e7c06e62b870bc2e4b9e671624e26a59a18ce8fcad16ca227c76f",
+      "resultSha256": "54a4dbedc4c942bc4c0abff178343e24beaae4d738bfb152a1ca1debc7bf2638",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-21/screenshot.png",
+          "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-21/mobile.png",
+          "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-states.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-22/browser.json",
+      "actionCount": 26,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 5,
+      "planSha256": "c4efebc6d26b14ac9b578c0a3a8838af6754d25866bd4444407638a1580044d7",
+      "resultSha256": "791c99ae538c7e287cb0f94430048694918a5267579b81170c4860ff4f5a988b",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-22/screenshot.png",
+          "sha256": "4aab6eb435e0bef362b5e95370b48a0ddbf3a979e0a749a1043955ea61cfb512"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-22/mobile.png",
+          "sha256": "53bdb315a53bd4dd6f44a94688bf44dad8a1fb9f84deca3fc1528c57c1d8d1bb"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/82/browser-plan.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-23/browser.json",
+      "actionCount": 75,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 21,
+      "planSha256": "266b01dbf7dab7eaf48530ac79dc68fa3a2d85e0dd288e56a7ccae04939beaf7",
+      "resultSha256": "cf4272de9d506bbfd474fdd37a7f06807e4ae0913f87fad04f1e3d1c5c44e4a3",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-23/screenshot.png",
+          "sha256": "75a50fa0cfb0ea8b86ee795253f2295b0081da5e800909db62a141e8ad54f4a0"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-23/mobile.png",
+          "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/82/product-storage-failure-plan.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-24/browser.json",
+      "actionCount": 69,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 11,
+      "planSha256": "c1f733e8ef0d57172a1c6586a472d62340b85ce76965d82778585c69acabef6b",
+      "resultSha256": "b7c22a1dbd9830c3f5a5a050b129c5cac08da0e8ec1fc7f5af21d52fc1d4fb26",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-24/screenshot.png",
+          "sha256": "4ea985b809aab3092bd4756d8132a8caee5a4643a4af624d6c677bf7a16c3123"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-24/mobile.png",
+          "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/71/browser-keyboard-plan.json",
+      "result": "docs/05-validation/tasks/94/browser/development-1-25/browser.json",
+      "actionCount": 29,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "totalStorageWritesIncludingFixtureSetup": 2,
+      "planSha256": "d9734522a43321f3dedb0888ffa1a24571eacfb62643953c29c5ade14247b701",
+      "resultSha256": "3e683a1f74a7a8007bf77104eb40962bf9c82a1d129695db7a754008fcf4822e",
+      "images": [
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-25/screenshot.png",
+          "sha256": "8d86a8e427e56f76df69b0b7d01f98a7ae89def315073aabf080995b3b1a566f"
+        },
+        {
+          "file": "docs/05-validation/tasks/94/browser/development-1-25/mobile.png",
+          "sha256": "ef7c5d48b036d31e71d1febd7bc0b940b0b054b11a8b09fc849bba3552a12f7c"
+        }
+      ]
+    }
+  ]
+}

@@ -33,6 +33,7 @@ function openPage(saved = []) {
   }));
   const context = vm.createContext({
     document: {
+      addEventListener() {},
       querySelector(selector) {
         if (!elements.has(selector)) elements.set(selector, element());
         return elements.get(selector);

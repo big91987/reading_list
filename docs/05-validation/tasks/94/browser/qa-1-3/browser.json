@@ -1,0 +1,309 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《活着》为已读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "pointer",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "snapshot_geometry",
+      "selector": ".filters"
+    },
+    {
+      "action": "snapshot_geometry",
+      "selector": "#book-list"
+    },
+    {
+      "action": "snapshot_geometry",
+      "selector": ".list-panel"
+    },
+    {
+      "action": "hover",
+      "role": "button",
+      "name": "全部",
+      "duration_ms": 1000
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "visible",
+      "selector": "[data-filter=\"unread\"][aria-pressed=\"true\"]"
+    },
+    {
+      "action": "absent",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "absent",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "absent",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": ".filters"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": "#book-list"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": ".list-panel"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "hover",
+      "role": "button",
+      "name": "未读",
+      "duration_ms": 1000
+    },
+    {
+      "action": "visible",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "visible",
+      "selector": "[data-filter=\"unread\"][aria-pressed=\"true\"]"
+    },
+    {
+      "action": "absent",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "absent",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "absent",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": ".filters"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": "#book-list"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": ".list-panel"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "hover",
+      "role": "button",
+      "name": "已读",
+      "duration_ms": 1000
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "visible",
+      "selector": "[data-filter=\"unread\"][aria-pressed=\"true\"]"
+    },
+    {
+      "action": "absent",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "absent",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "absent",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": ".filters"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": "#book-list"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": ".list-panel"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "hover",
+      "selector": "[data-filter=\"read\"] .filter-tooltip",
+      "duration_ms": 2000
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": ".filters"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": "#book-list"
+    },
+    {
+      "action": "unchanged_geometry",
+      "selector": ".list-panel"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "absent",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "absent",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "pointer",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "action": "hover",
+      "role": "button",
+      "name": "已读",
+      "duration_ms": 1000
+    },
+    {
+      "action": "visible",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "pointer",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "action": "absent",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "absent",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "absent",
+      "text": "只显示已读书籍"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 3
+}
