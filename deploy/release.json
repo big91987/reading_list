@@ -1,6 +1,7 @@
 {
   "app_sha256": "689719186638479c6d838c66fa332883f33de46023f431e3fd60560970726a46",
+  "compatible_from": "b49e7b602eb244d4304bd1e3fd476372e4365e86",
   "data_change": "none",
-  "notes": "首次建立固定本机部署；当前 app 未修改。沿用 page-between-reading-list 存储键与 title/read 数据结构；现有扩展字段保留测试通过。",
+  "notes": "本次只修复部署审批门禁；app 字节和 localStorage 读写保持不变，与已部署 b49e7b6 版本兼容。",
   "migration_plan": ""
 }

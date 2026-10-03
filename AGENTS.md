@@ -78,4 +78,6 @@ Requirements and design must present their deliverables and obtain human confirm
 
 The independent `deploy-local.yml` workflow publishes merged `main` to the owner's local preview. Product changes to `app/` must update `deploy/release.json` after validation using `python3 scripts/local_deploy.py declare --impact <none|migration|destructive|unknown> --notes '<compatibility evidence>'`. This product release declaration is within ordinary product task scope.
 
+`compatible_from` records the commit whose existing data was validated (defaults to HEAD when declaring). For multiple unpublished commits, explicitly pass the actually validated deployed baseline with `--compatible-from <sha>`; never claim compatibility with an untested baseline. A baseline with different app contents from the deployed version requires review.
+
 Choose `none` only when existing stored data remains compatible and no data conversion or removal occurs. Do not mark a data change safe merely to bypass review. For migration/destructive changes, supply `--migration-plan deploy/<plan>.md` documenting backup, conversion, validation and recovery. Preserve original data and implement migration in the application before declaring it ready; deployment approval alone does not implement a migration. Missing/stale/unknown declarations require human deployment review. See `docs/local-deployment.md`.

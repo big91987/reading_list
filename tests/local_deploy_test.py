@@ -111,7 +111,9 @@ class DeploymentTest(unittest.TestCase):
         waiting = self.plan(second)
         (self.repo / "app/styles.css").write_text("body {color: blue}")
         third = self.commit()
-        self.d.activate(self.runtime, self.plan(third), health=lambda: True)
+        self.d.activate(
+            self.runtime, self.plan(third), approved=True, health=lambda: True
+        )
         with self.assertRaisesRegex(ValueError, "stale"):
             self.d.activate(self.runtime, waiting, health=lambda: True)
         self.assertEqual(self.d.current(self.runtime), third)
@@ -126,6 +128,23 @@ class DeploymentTest(unittest.TestCase):
         (self.repo / "app/app.js").write_text("const version = 3;")
         with self.assertRaisesRegex(ValueError, "requires a deploy/"):
             self.plan(self.commit(impact="destructive"))
+        self.assertEqual(self.d.current(self.runtime), first)
+
+    def test_safe_followup_cannot_hide_an_unreleased_migration(self):
+        first = self.commit()
+        self.d.activate(self.runtime, self.plan(first), health=lambda: True)
+        (self.repo / "app/app.js").write_text("const migration = true;")
+        migration = self.commit(impact="migration")
+        self.assertTrue(self.plan(migration)["requires_approval"])
+        (self.repo / "app/styles.css").write_text("body {color: blue}")
+        followup = self.commit()
+        plan = self.plan(followup)
+        self.assertTrue(
+            plan["requires_approval"],
+            "followup is compatible with an unreleased base, not the live version",
+        )
+        with self.assertRaisesRegex(ValueError, "approval"):
+            self.d.activate(self.runtime, plan, health=lambda: True)
         self.assertEqual(self.d.current(self.runtime), first)
 
     def test_server_pins_assets_and_never_exposes_private_runtime(self):
@@ -147,7 +166,12 @@ class DeploymentTest(unittest.TestCase):
             self.assertIn("no-store", response.headers["Cache-Control"])
         with urllib.request.urlopen(base + "/__deployment.json") as response:
             self.assertEqual(json.load(response)["sha"], first)
+        (self.repo / "app/app.js").write_text("const version = 2;")
+        pending = self.commit(impact="migration")
+        self.plan(pending)
         for path in [
+            f"/_releases/{pending}/",
+            f"/_releases/{pending}/app.js",
             "/../data/keep",
             "/_releases/../../data/keep",
             "/control/local_deploy.py",
@@ -155,6 +179,22 @@ class DeploymentTest(unittest.TestCase):
             with self.assertRaises(urllib.error.HTTPError) as raised:
                 urllib.request.urlopen(base + path)
             raised.exception.close()
+        (self.runtime / "published" / (first + ".json")).unlink()
+
+        def health_with_old_page_loading():
+            with urllib.request.urlopen(
+                base + f"/_releases/{first}/app.js"
+            ) as response:
+                return b"version = 1" in response.read()
+
+        self.d.activate(
+            self.runtime,
+            self.plan(pending),
+            approved=True,
+            health=health_with_old_page_loading,
+        )
+        with urllib.request.urlopen(base + f"/_releases/{first}/app.js") as response:
+            self.assertIn(b"version = 1", response.read())
 
 
 if __name__ == "__main__":
