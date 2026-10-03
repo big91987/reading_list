@@ -15,6 +15,9 @@ def main():
     parser.add_argument(
         "--root", type=Path, default=Path.home() / ".local/share/reading-list-preview"
     )
+    parser.add_argument(
+        "--git-proxy", help="Optional persistent HTTP proxy for repository fetches"
+    )
     args = parser.parse_args()
     root = args.root.expanduser().resolve()
     for name in ("controller", "logs", "plans", "releases", "data"):
@@ -24,11 +27,17 @@ def main():
         subprocess.run(
             [
                 "git",
+                *(["-c", "http.proxy=" + args.git_proxy] if args.git_proxy else []),
                 "clone",
                 "--no-checkout",
                 "https://github.com/big91987/reading_list.git",
                 str(repository),
             ],
+            check=True,
+        )
+    if args.git_proxy:
+        subprocess.run(
+            ["git", "-C", str(repository), "config", "http.proxy", args.git_proxy],
             check=True,
         )
     controller = root / "controller/local_deploy.py"

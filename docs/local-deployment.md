@@ -35,6 +35,8 @@ python3 scripts/local_deploy.py declare --impact none --notes '说明存储键�
 python3 scripts/install_local_preview.py
 ```
 
+如果主机访问 GitHub 需要代理，安装时传入 `--git-proxy <proxy-url>`，会保存到部署缓存仓库配置，后续 Runner fetch 复用同一配置；不把本机地址提交到 Git。
+
 默认持久目录为 `~/.local/share/reading-list-preview`。将打印的绝对目录配置为仓库 Actions variable `READING_LIST_DEPLOY_ROOT`。在发布 Workflow 前创建 GitHub Environment `local-data-review`，配置仓库 Owner 为 required reviewer，只允许 main。允许 Owner 审批自己发起的 Run；没有审批规则不能发布此 Workflow。
 
 运行布局：controller（已安装发布器）、repository（主线缓存）、releases（版本）、current/previous（版本指针）、plans（审批计划）、logs（服务日志）。不要放进 Runner checkout 或 Actions 清理目录。发布器升级需要审查后重新运行安装器；产品部署不会自动替换正在执行的发布器。
