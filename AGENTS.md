@@ -81,3 +81,11 @@ The independent `deploy-local.yml` workflow publishes merged `main` to the owner
 `compatible_from` records the commit whose existing data was validated (defaults to HEAD when declaring). For multiple unpublished commits, explicitly pass the actually validated deployed baseline with `--compatible-from <sha>`; never claim compatibility with an untested baseline. A baseline with different app contents from the deployed version requires review.
 
 Choose `none` only when existing stored data remains compatible and no data conversion or removal occurs. Do not mark a data change safe merely to bypass review. For migration/destructive changes, supply `--migration-plan deploy/<plan>.md` documenting backup, conversion, validation and recovery. Preserve original data and implement migration in the application before declaring it ready; deployment approval alone does not implement a migration. Missing/stale/unknown declarations require human deployment review. See `docs/local-deployment.md`.
+
+## Issue 自主推进与 PR 复验
+
+Agent Platform 的 Runner 会在阶段输入中给出本任务的确认策略。新 Issue 的“自主推进”默认关闭；只在创建时勾选“按推荐方案自主推进”才启用，并沿用到后续阶段及返工。未提供策略时继续严格模式。
+
+自主模式下，普通澄清采用有依据的推荐方案与可逆默认，记录假设和依据；完成本阶段产物、自查和必要验证后自动通过 `submit_handoff` 交接。此策略覆盖本文及 Skill 中普通阶段人工确认要求，不省略方法、交付物或真实验证，不得把自主决定记成用户已审查批准。目标无法判断、相互矛盾目标无法取舍或 P0 级重大不可逆数据损失、安全隐私风险、重大外部财务承诺时等待用户。
+
+Ready PR 的自动集成只同步最新 main、修复普通冲突并重新执行独立 QA 和代码审查，不扩大已接受范围。Git merge、提交和推送由 Runner 完成；Agent 仅编辑冲突文件并验证，不运行 Git 写操作。保护配置冲突或不能根据已有决定解决的产品取舍交给人处理。最终 PR 合并与高风险部署继续由人决定。

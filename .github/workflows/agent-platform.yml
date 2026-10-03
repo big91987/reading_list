@@ -2,8 +2,6 @@ name: Agent Platform pipeline
 on:
   issues:
     types: [opened]
-  pull_request:
-    types: [ready_for_review]
   workflow_dispatch:
     inputs:
       issue:
@@ -13,7 +11,7 @@ on:
       after:
         description: Completed upstream stage (verify starts QA again after confirmed fixes)
         type: choice
-        options: [start, requirements, design, development, qa, verify, code_review, redirect]
+        options: [start, requirements, design, development, qa, verify, code_review, redirect, integrate]
         default: start
       target_stage:
         description: Handoff destination (next or earlier stage; required for QA)
@@ -32,9 +30,11 @@ permissions:
   contents: write
   issues: write
   pull-requests: write
+  statuses: write
 concurrency:
   group: agent-platform-${{ github.repository }}-${{ github.event.issue.number || inputs.issue || github.event.pull_request.number }}
   cancel-in-progress: false
+  queue: max
 jobs:
   requirements:
     if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (((github.event_name == 'issues' || inputs.after == 'start') || (github.event_name == 'workflow_dispatch' && (inputs.after == 'design' || inputs.after == 'development' || inputs.after == 'qa') && inputs.target_stage == 'requirements')) || (github.event_name == 'workflow_dispatch' && inputs.after == 'redirect' && inputs.target_stage == 'requirements'))
@@ -118,7 +118,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage qa
   review:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && ((github.event_name == 'workflow_dispatch' && inputs.after == 'code_review') || (github.event_name == 'pull_request' && github.event.action == 'ready_for_review' && github.event.pull_request.head.repo.full_name == github.repository))
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && github.event_name == 'workflow_dispatch' && inputs.after == 'code_review'
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -158,3 +158,21 @@ jobs:
           "$AGENT_PLATFORM_ROOT/.data/runner-venv/bin/python" \
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage report
+  integrate:
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && github.event_name == 'workflow_dispatch' && inputs.after == 'integrate'
+    runs-on: [self-hosted, macOS, ARM64, he-full]
+    timeout-minutes: 25
+    steps:
+      - name: Sync main and resume independent verification
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ inputs.issue }}
+          AFTER_STAGE: integrate
+          AGENT_PLATFORM_ROOT: ${{ vars.AGENT_PLATFORM_ROOT }}
+        run: |
+          export PATH="/opt/homebrew/bin:$PATH"
+          test -n "$AGENT_PLATFORM_ROOT"
+          "$AGENT_PLATFORM_ROOT/.data/runner-venv/bin/python" \
+            "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
+            --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage integrate

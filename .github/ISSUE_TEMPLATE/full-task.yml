@@ -18,6 +18,14 @@ body:
     attributes:
       label: 约束与验收
       description: 兼容要求、环境限制、必须跑通的用户路径和已确认决定。
+  - type: checkboxes
+    id: autonomous
+    attributes:
+      label: 自主推进
+      description: 可选；不开启则保留阶段确认。开启后普通澄清按推荐方案、阶段自动交接；目标无法判断或 P0 风险时才询问。最终 PR 合并及高风险部署仍需人工决定。
+      options:
+        - label: 按推荐方案自主推进
+          required: false
   - type: markdown
     attributes:
       value: 拥有 write、maintain 或 admin 权限的用户提交后自动启动。外部用户的需求等待授权成员介入；后续直接评论即可提问或补充，无需命令和 ID。
