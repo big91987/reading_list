@@ -43,16 +43,24 @@ def fingerprint(path):
     return digest.hexdigest()
 
 
-def declare(repo, impact, notes, migration_plan=""):
+def declare(repo, impact, notes, migration_plan="", compatible_from=None):
     if (
         impact not in ("none", "migration", "destructive", "unknown")
         or not notes.strip()
     ):
         raise ValueError("explicit data impact and notes are required")
+    if compatible_from is None:
+        result = subprocess.run(
+            ["git", "-C", str(repo), "rev-parse", "--verify", "HEAD"],
+            capture_output=True,
+            text=True,
+        )
+        compatible_from = result.stdout.strip() if result.returncode == 0 else ""
     save(
         repo / "deploy/release.json",
         {
             "app_sha256": fingerprint(repo / "app"),
+            "compatible_from": compatible_from,
             "data_change": impact,
             "notes": notes,
             "migration_plan": migration_plan,
@@ -123,6 +131,20 @@ def prepare(root, repo, sha, force_review=False):
             reasons.append("数据影响：" + str(impact))
         if not declaration.get("notes", "").strip():
             reasons.append("没有数据兼容性说明。")
+        baseline = declaration.get("compatible_from", "")
+        if previous and previous != sha:
+            matches = False
+            if re.fullmatch(r"[0-9a-f]{40}", baseline):
+                try:
+                    matches = git(repo, "rev-parse", baseline + ":app") == git(
+                        repo, "rev-parse", previous + ":app"
+                    )
+                except subprocess.CalledProcessError:
+                    pass
+            if not matches:
+                reasons.append(
+                    "兼容性声明的基线与当前已部署 app 不一致或无法核实，需要检查完整数据变化。"
+                )
         migration_text = ""
         if impact in ("migration", "destructive"):
             migration = (source / declaration.get("migration_plan", "")).resolve()
@@ -161,6 +183,7 @@ def prepare(root, repo, sha, force_review=False):
             "requires_approval": bool(reasons),
             "reasons": reasons,
             "data_notes": declaration.get("notes", ""),
+            "compatible_from": baseline,
             "migration_plan": migration_text,
         }
 
@@ -186,6 +209,8 @@ def activate(root, plan, approved=False, health=None):
             return
         if old != plan["from_sha"]:
             raise ValueError("stale plan: current release changed; prepare again")
+        if old:
+            save(root / "published" / (old + ".json"), {"sha": old})
         point(root, "current", sha)
         try:
             if health is not None and not health():
@@ -198,6 +223,7 @@ def activate(root, plan, approved=False, health=None):
             raise
         if old:
             point(root, "previous", old)
+        save(root / "published" / (sha + ".json"), {"sha": sha})
         save(
             root / "deployed.json",
             {"sha": sha, "previous_sha": old, "deployed_at": time.time()},
@@ -225,6 +251,12 @@ def server(root, port=5533):
                 if relative.startswith("_releases/"):
                     _, version, *parts = relative.split("/")
                     if not re.fullmatch(r"[0-9a-f]{40}", version):
+                        self.send_error(404)
+                        return
+                    if (
+                        version != sha
+                        and not (root / "published" / (version + ".json")).is_file()
+                    ):
                         self.send_error(404)
                         return
                     sha, relative = version, "/".join(parts) or "index.html"
@@ -283,11 +315,21 @@ def main():
     parser.add_argument("--impact", default="none")
     parser.add_argument("--notes", default="")
     parser.add_argument("--migration-plan", default="")
+    parser.add_argument(
+        "--compatible-from",
+        help="Commit whose stored data was checked for compatibility; defaults to HEAD",
+    )
     parser.add_argument("--review", action="store_true")
     parser.add_argument("--approved", action="store_true")
     args = parser.parse_args()
     if args.command == "declare":
-        declare(args.repo.resolve(), args.impact, args.notes, args.migration_plan)
+        declare(
+            args.repo.resolve(),
+            args.impact,
+            args.notes,
+            args.migration_plan,
+            args.compatible_from,
+        )
     elif args.command == "serve":
         server(args.root.resolve()).serve_forever()
     else:
