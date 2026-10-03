@@ -72,3 +72,10 @@ The current trial is `.github/workflows/agent-platform.yml`. It starts a require
 When the invocation identifies an Agent Platform session, communicate in natural language. The old `next_state/message/artifacts` final JSON and folded Issue progress protocol above apply only to the legacy Harness, not this integration. Use the registered `submit_handoff` MCP tool to hand off confirmed requirement/design documents, or completed development evidence. Do not call GitHub directly or simulate a successful tool call in prose. The tool target is registered by the Runner for this workspace and stage. Same-stage replies resume this conversation; downstream stages get separate conversations sharing this task workspace.
 
 Requirements and design must present their deliverables and obtain human confirmation before handoff. Development should implement, check and fix autonomously, then hand back delivery through the tool. The Runner runs final checks and publishes a task branch and draft PR; it does not merge the feature. The platform itself has no software-development state machine.
+
+
+## Local preview release contract
+
+The independent `deploy-local.yml` workflow publishes merged `main` to the owner's local preview. Product changes to `app/` must update `deploy/release.json` after validation using `python3 scripts/local_deploy.py declare --impact <none|migration|destructive|unknown> --notes '<compatibility evidence>'`. This product release declaration is within ordinary product task scope.
+
+Choose `none` only when existing stored data remains compatible and no data conversion or removal occurs. Do not mark a data change safe merely to bypass review. For migration/destructive changes, supply `--migration-plan deploy/<plan>.md` documenting backup, conversion, validation and recovery. Preserve original data and implement migration in the application before declaring it ready; deployment approval alone does not implement a migration. Missing/stale/unknown declarations require human deployment review. See `docs/local-deployment.md`.

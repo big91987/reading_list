@@ -1,0 +1,6 @@
+{
+  "app_sha256": "689719186638479c6d838c66fa332883f33de46023f431e3fd60560970726a46",
+  "data_change": "none",
+  "notes": "首次建立固定本机部署；当前 app 未修改。沿用 page-between-reading-list 存储键与 title/read 数据结构；现有扩展字段保留测试通过。",
+  "migration_plan": ""
+}
