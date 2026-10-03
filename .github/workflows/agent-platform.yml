@@ -13,7 +13,7 @@ on:
       after:
         description: Completed upstream stage (verify starts QA again after confirmed fixes)
         type: choice
-        options: [start, requirements, design, development, qa, verify, code_review]
+        options: [start, requirements, design, development, qa, verify, code_review, redirect]
         default: start
       target_stage:
         description: Handoff destination (next or earlier stage; required for QA)
@@ -37,7 +37,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   requirements:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && ((github.event_name == 'issues' || inputs.after == 'start') || (github.event_name == 'workflow_dispatch' && (inputs.after == 'design' || inputs.after == 'development' || inputs.after == 'qa') && inputs.target_stage == 'requirements'))
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (((github.event_name == 'issues' || inputs.after == 'start') || (github.event_name == 'workflow_dispatch' && (inputs.after == 'design' || inputs.after == 'development' || inputs.after == 'qa') && inputs.target_stage == 'requirements')) || (github.event_name == 'workflow_dispatch' && inputs.after == 'redirect' && inputs.target_stage == 'requirements'))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -57,7 +57,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage requirements
   design:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && ((inputs.after == 'requirements' && (inputs.target_stage == '' || inputs.target_stage == 'design')) || (github.event_name == 'workflow_dispatch' && (inputs.after == 'development' || inputs.after == 'qa') && inputs.target_stage == 'design'))
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (((inputs.after == 'requirements' && (inputs.target_stage == '' || inputs.target_stage == 'design')) || (github.event_name == 'workflow_dispatch' && (inputs.after == 'development' || inputs.after == 'qa') && inputs.target_stage == 'design')) || (github.event_name == 'workflow_dispatch' && inputs.after == 'redirect' && inputs.target_stage == 'design'))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -77,7 +77,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage design
   development:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && ((inputs.after == 'design' && (inputs.target_stage == '' || inputs.target_stage == 'development')) || (github.event_name == 'workflow_dispatch' && (inputs.after == 'qa') && inputs.target_stage == 'development'))
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (((inputs.after == 'design' && (inputs.target_stage == '' || inputs.target_stage == 'development')) || (github.event_name == 'workflow_dispatch' && (inputs.after == 'qa') && inputs.target_stage == 'development')) || (github.event_name == 'workflow_dispatch' && inputs.after == 'redirect' && inputs.target_stage == 'development'))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
@@ -97,7 +97,7 @@ jobs:
             "$AGENT_PLATFORM_ROOT/examples/github/pipeline.py" \
             --config "$AGENT_PLATFORM_ROOT/.data/github-runner.json" --stage development
   qa:
-    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && (((inputs.after == 'development' && (inputs.target_stage == '' || inputs.target_stage == 'qa')) || inputs.after == 'verify'))
+    if: github.actor == github.repository_owner && github.triggering_actor == github.repository_owner && ((((inputs.after == 'development' && (inputs.target_stage == '' || inputs.target_stage == 'qa')) || inputs.after == 'verify')) || (github.event_name == 'workflow_dispatch' && inputs.after == 'redirect' && inputs.target_stage == 'qa'))
     runs-on: [self-hosted, macOS, ARM64, he-full]
     timeout-minutes: 25
     steps:
