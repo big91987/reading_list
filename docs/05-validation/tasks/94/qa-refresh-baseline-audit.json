@@ -1,0 +1,13 @@
+{
+  "baseline": "5a2b746bae10ba449c7e5cd72144a0e2717e8b3b",
+  "passed": true,
+  "assertions": [
+    "app.js only dismissal listeners; original business code byte-identical",
+    "styles.css only tooltip rules; original layout rules byte-identical",
+    "HTML only three spans after whitespace normalization",
+    "core plan byte-identical to owner regression plan"
+  ],
+  "limitations": [
+    "No browser geometry comparison or deployed-baseline observation"
+  ]
+}

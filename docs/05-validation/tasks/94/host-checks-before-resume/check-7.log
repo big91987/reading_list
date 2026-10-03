@@ -1,0 +1,19 @@
+.....127.0.0.1 - - [03/Oct/2026 20:07:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 20:07:20] "GET /__deployment.json HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 20:07:20] code 404, message Not Found
+127.0.0.1 - - [03/Oct/2026 20:07:20] "GET /_releases/162b51ec61509bfdadbb408a5f0da3a43f43187b/ HTTP/1.1" 404 -
+127.0.0.1 - - [03/Oct/2026 20:07:20] code 404, message Not Found
+127.0.0.1 - - [03/Oct/2026 20:07:20] "GET /_releases/162b51ec61509bfdadbb408a5f0da3a43f43187b/app.js HTTP/1.1" 404 -
+127.0.0.1 - - [03/Oct/2026 20:07:20] code 404, message Not Found
+127.0.0.1 - - [03/Oct/2026 20:07:20] "GET /../data/keep HTTP/1.1" 404 -
+127.0.0.1 - - [03/Oct/2026 20:07:20] code 404, message Not Found
+127.0.0.1 - - [03/Oct/2026 20:07:20] "GET /_releases/../../data/keep HTTP/1.1" 404 -
+127.0.0.1 - - [03/Oct/2026 20:07:20] code 404, message Not Found
+127.0.0.1 - - [03/Oct/2026 20:07:20] "GET /control/local_deploy.py HTTP/1.1" 404 -
+127.0.0.1 - - [03/Oct/2026 20:07:20] "GET /_releases/ef4b1805b1cf44edcaa4e63696d3aa9dcd26c795/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2026 20:07:20] "GET /_releases/ef4b1805b1cf44edcaa4e63696d3aa9dcd26c795/app.js HTTP/1.1" 200 -
+...
+----------------------------------------------------------------------
+Ran 8 tests in 4.082s
+
+OK

@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "role": "button",
+      "name": "混合清单"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "长安的荔枝（新版）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝（新版）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《长安的荔枝（新版）》"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝（新版）"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《长安的荔枝（新版）》"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝（新版）"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝（新版）"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": []
+}

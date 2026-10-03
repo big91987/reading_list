@@ -1,0 +1,106 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "键盘悬停兼容"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《键盘悬停兼容》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "未保存草稿"
+    },
+    {
+      "action": "pointer",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "hover",
+      "role": "button",
+      "name": "全部",
+      "duration_ms": 1000
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "visible",
+      "selector": ".edit-input:focus"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "absent",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "visible",
+      "text": "键盘悬停兼容"
+    },
+    {
+      "action": "absent",
+      "selector": ".edit-input"
+    },
+    {
+      "action": "visible",
+      "selector": "[data-filter=\"all\"][aria-pressed=\"true\"]"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "pointer",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "action": "hover",
+      "role": "button",
+      "name": "全部",
+      "duration_ms": 1000
+    },
+    {
+      "action": "visible",
+      "text": "显示所有书籍"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 1
+}

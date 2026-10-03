@@ -1,0 +1,556 @@
+{
+  "date": "2026-10-03",
+  "stage": "qa",
+  "round": "ready-pr-main-refresh",
+  "main_baseline": "5a2b746bae10ba449c7e5cd72144a0e2717e8b3b",
+  "tested_head": "3157aabc370a4fd7d214fd74256f4ff765aaf46c",
+  "main_ancestor_confirmed": true,
+  "main_changes": [
+    "M\t.github/ISSUE_TEMPLATE/full-task.yml",
+    "M\t.github/workflows/agent-platform.yml",
+    "A\t.github/workflows/pr-refresh.yml",
+    "M\tAGENTS.md",
+    "A\tdocs/autonomous-pipeline.md"
+  ],
+  "main_product_tests_deploy_changes": [],
+  "prior_task": "ffb1c524799618d305b0a851702bb6801b723ad7",
+  "accepted_product_and_design_unchanged": true,
+  "product_digests_match_historical_evidence": true,
+  "browser_runs": 16,
+  "actions": 846,
+  "passed": true,
+  "runs": [
+    {
+      "plan": "docs/05-validation/tasks/94/browser-plan.json",
+      "plan_sha256": "145a9678e2827c4ce5c762f64786a5c3992fcfacbf73458d404f4ec9b842b4c8",
+      "actions": 72,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 3,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-17/browser.json",
+          "sha256": "479f4193bb0ba94f2a4aaf18966acaa41015d4bc5de7c893a150ad244052089f"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-17/screenshot.png",
+          "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-17/mobile.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-read.json",
+      "plan_sha256": "dab63674599adf658aceed4643abed534edc72718791f3adb0d74f64138b0f5a",
+      "actions": 72,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 3,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-18/browser.json",
+          "sha256": "82464e62ddb0b9d13b5682a7a720eb334713bbb1bcdc6b6627303519eed6f6f7"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-18/screenshot.png",
+          "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-18/mobile.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-unread.json",
+      "plan_sha256": "4402eba11b032aafde6ed8bbb55a98c8b57a1f4b82f382974fde8fbed9a34de2",
+      "actions": 72,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 3,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-19/browser.json",
+          "sha256": "69062cd672f636bc256588ab8a9bf81d0604b38c332bc5bfb5b5e9ccac568b64"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-19/screenshot.png",
+          "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-19/mobile.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-touch.json",
+      "plan_sha256": "fa4850635802b7c97540e679edd54e23e665ba76add2581ae94818dc2d0b87b0",
+      "actions": 46,
+      "passed": true,
+      "device": {
+        "hasTouch": true,
+        "isMobile": true,
+        "viewport": {
+          "width": 390,
+          "height": 844
+        }
+      },
+      "total_storage_write_attempts": 3,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-20/browser.json",
+          "sha256": "5a8602c375f93c6b375bf8e26488a213a1e73c275fa7439e46764a0f93cd2dcf"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-20/screenshot.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-20/mobile.png",
+          "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-empty.json",
+      "plan_sha256": "eab5e0e6fab74c3e669ab3fb2fc998d0022201888af1a501288bb6e750142301",
+      "actions": 46,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 0,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-21/browser.json",
+          "sha256": "37f6809ab716b645c2d9304e309a7b52f7eca05f53b06fb87cde84844ba9217b"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-21/screenshot.png",
+          "sha256": "19e371730f39bfc89445185a0956d19a666c57febdd6ae33cda9401ac0d48788"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-21/mobile.png",
+          "sha256": "eeca55c056063f87fe49c82c0714a92573c1841731f6ca60909c225ab53ef3ae"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-read-empty.json",
+      "plan_sha256": "770814142295653a22257a6cf083041cafaf5ed3a7950fb2e6fd6f139432c325",
+      "actions": 48,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 1,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-22/browser.json",
+          "sha256": "ae97633297261945528466430c9438ead2579a53847e0e9d481235561bb8f0c0"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-22/screenshot.png",
+          "sha256": "c5e4a8549a29b2237977739a97af0e95c2fefbb02cb729649e43fbed9719cce5"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-22/mobile.png",
+          "sha256": "9a5ef3b194d81da4c7c15f1249b30ec382b408dacd08e3cfb32308495fc2d02b"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-unread-empty.json",
+      "plan_sha256": "43c675584d6c6ef830b79b934c115dfe662bf273d465007d3420761d7a3550a3",
+      "actions": 49,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 2,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-23/browser.json",
+          "sha256": "ed0922bb949b233dc5d8dd87f504dbd1fe24cabe85dee40c87fc256143ba6bdb"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-23/screenshot.png",
+          "sha256": "d88e2cf16b8531d3f0471bdbc02702c5e5b27d1e87d93ecadadb408a4c4836fb"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-23/mobile.png",
+          "sha256": "c428dfadfbea2d95c39eac91daa89ae8635cbbf127bd448c58dc2fb216cfd2f4"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-hover-editor.json",
+      "plan_sha256": "c9176372b8d5852bb6ca590608d9ce0d7cc1e618de3bad6ba16028f28b75aace",
+      "actions": 21,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 1,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-24/browser.json",
+          "sha256": "2163cd420226a609a85c797df9a508ff5f6d798687c1ad5ff31267ad907796d2"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-24/screenshot.png",
+          "sha256": "f8914084f7e97690e813b859f3be67c1e3cfc3814436fbc14a36064b538ac13d"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-24/mobile.png",
+          "sha256": "4b2472b6dddbe780e15c73e4da3777b99b85e2624c88b416ef2bf810b5d60c44"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-layout.json",
+      "plan_sha256": "d52124ae509ce71265560b51ec9d115dd232c59121a8493a6ac00156a8434abb",
+      "actions": 69,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 3,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-25/browser.json",
+          "sha256": "f65ecf252279ce0313ff29a9934f12210ff82251d661a25e0f16ff093180e4e8"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-25/screenshot.png",
+          "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-25/mobile.png",
+          "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-button-geometry.json",
+      "plan_sha256": "10c61d1051144825aeaf299e79a1bff8a73c51f10c7bbf526d0bf7bcc20f2d9a",
+      "actions": 74,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 3,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-26/browser.json",
+          "sha256": "020b6431a554951dde49884b959d021cf831082537dd80a2dcb7c8977c4446b4"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-26/screenshot.png",
+          "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-26/mobile.png",
+          "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/browser-click-keyboard.json",
+      "plan_sha256": "48e2cc73c2b4eb7490250c9fa67ee4df2ca1f7bed9853a35973bc49cfc1debc9",
+      "actions": 67,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 3,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-27/browser.json",
+          "sha256": "1096069e6123415f4f102c2d74c103edb8f854f20fb078ce2ea055d811924a98"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-27/screenshot.png",
+          "sha256": "ae188162436888fbd48dee0345dcad8f3b9e85a0aaf96c6a99c7c14950a2d7b5"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-27/mobile.png",
+          "sha256": "bf3dde2d4c9f36b96524ffe26b8ee1032063dccd384d81effeceb221a1fffc02"
+        }
+      ]
+    },
+    {
+      "plan": "tests/browser/core.json",
+      "plan_sha256": "9d9c7424b90e7c06e62b870bc2e4b9e671624e26a59a18ce8fcad16ca227c76f",
+      "actions": 16,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 4,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-28/browser.json",
+          "sha256": "54a4dbedc4c942bc4c0abff178343e24beaae4d738bfb152a1ca1debc7bf2638"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-28/screenshot.png",
+          "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-28/mobile.png",
+          "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/71/browser-keyboard-plan.json",
+      "plan_sha256": "d9734522a43321f3dedb0888ffa1a24571eacfb62643953c29c5ade14247b701",
+      "actions": 29,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 2,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-29/browser.json",
+          "sha256": "3e683a1f74a7a8007bf77104eb40962bf9c82a1d129695db7a754008fcf4822e"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-29/screenshot.png",
+          "sha256": "8d86a8e427e56f76df69b0b7d01f98a7ae89def315073aabf080995b3b1a566f"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-29/mobile.png",
+          "sha256": "ef7c5d48b036d31e71d1febd7bc0b940b0b054b11a8b09fc849bba3552a12f7c"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/82/browser-plan.json",
+      "plan_sha256": "266b01dbf7dab7eaf48530ac79dc68fa3a2d85e0dd288e56a7ccae04939beaf7",
+      "actions": 75,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 21,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-30/browser.json",
+          "sha256": "cf4272de9d506bbfd474fdd37a7f06807e4ae0913f87fad04f1e3d1c5c44e4a3"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-30/screenshot.png",
+          "sha256": "75a50fa0cfb0ea8b86ee795253f2295b0081da5e800909db62a141e8ad54f4a0"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-30/mobile.png",
+          "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/82/product-storage-failure-plan.json",
+      "plan_sha256": "c1f733e8ef0d57172a1c6586a472d62340b85ce76965d82778585c69acabef6b",
+      "actions": 69,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 11,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-31/browser.json",
+          "sha256": "b7c22a1dbd9830c3f5a5a050b129c5cac08da0e8ec1fc7f5af21d52fc1d4fb26"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-31/screenshot.png",
+          "sha256": "4ea985b809aab3092bd4756d8132a8caee5a4643a4af624d6c677bf7a16c3123"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-31/mobile.png",
+          "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8"
+        }
+      ]
+    },
+    {
+      "plan": "docs/05-validation/tasks/94/qa-narrow-hover-plan.json",
+      "plan_sha256": "9205c058836154f632537967e0ff17d5246dc6e664166bc26ce2d56531f46ccf",
+      "actions": 21,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "total_storage_write_attempts": 1,
+      "artifacts": [
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-32/browser.json",
+          "sha256": "95f5527f6efd98bdef210166f02ea90dc41004459e5ee4f05d63e15b2621afdb"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-32/screenshot.png",
+          "sha256": "17faa151751c9d4cb9bd048167f278f875bda0b43399b605854da2e0c425bf5c"
+        },
+        {
+          "path": "docs/05-validation/tasks/94/browser/qa-1-32/mobile.png",
+          "sha256": "fcd172ab8f750888a58fa6949eadb4189b698bc0d296c2d64e12cc99016ee97b"
+        }
+      ]
+    }
+  ],
+  "host_checks": {
+    "count": 8,
+    "all_exit_zero": true,
+    "artifacts": [
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/checks.json",
+        "sha256": "6128dbf3319b29e2d9b4e51ccfc7efe4293d4fb5f2e5cdf3fd9aec6ece51e2db"
+      },
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/check-0.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/check-1.log",
+        "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+      },
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/check-2.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/check-3.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/check-4.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/check-5.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/check-6.log",
+        "sha256": "b68373899981d1dd3e56b5caaa1ae1386e071b24259e554659cf4bce8fd1cd50"
+      },
+      {
+        "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/check-7.log",
+        "sha256": "f4b8e5231e800db15f4a1afb12fc8884d70e3e48afef797d972953a5c0c0ab5d"
+      }
+    ]
+  },
+  "baseline_audit": {
+    "path": "docs/05-validation/tasks/94/qa-refresh-baseline-audit.json",
+    "sha256": "a60c6c639f7c7efad6fd611499858c6732ce11c327ba48d5023cfc362ac3853d"
+  },
+  "unit_log": {
+    "path": "docs/05-validation/tasks/94/qa-refresh-unit-tests.log",
+    "sha256": "ae20edaff3c13ac1a338649ea3d42e95f6eb3a9fcbf450bab6fa27ce17b6fa07"
+  },
+  "product_snapshot": [
+    {
+      "path": "app/index.html",
+      "sha256": "1c1617cccf9777cb95a2ac40103007f0871d88e08e63131da0de6adcc3a71fbe"
+    },
+    {
+      "path": "app/styles.css",
+      "sha256": "c2f86c6e8d39a45ed6f5a94ee8b088bee343fec5462687674301e008f184145c"
+    },
+    {
+      "path": "app/app.js",
+      "sha256": "9898c75bb349fdee7e874df62ac37d9867e88d5cd68e286fefc95f7be82c0653"
+    },
+    {
+      "path": "deploy/release.json",
+      "sha256": "c9d1b37561fb857c6ad1d12362fd58170760d929ca456f650a31c40ac053ab65"
+    }
+  ]
+}

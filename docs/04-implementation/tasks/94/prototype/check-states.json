@@ -1,0 +1,158 @@
+[
+  {
+    "action": "click",
+    "role": "button",
+    "name": "空清单"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部"
+  },
+  {
+    "action": "visible",
+    "text": "显示所有书籍"
+  },
+  {
+    "action": "visible",
+    "text": "清单还是空的"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读"
+  },
+  {
+    "action": "visible",
+    "text": "只显示未读书籍"
+  },
+  {
+    "action": "visible",
+    "text": "清单还是空的"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "只显示已读书籍"
+  },
+  {
+    "action": "visible",
+    "text": "清单还是空的"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "仅已读清单"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部"
+  },
+  {
+    "action": "visible",
+    "text": "显示所有书籍"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读"
+  },
+  {
+    "action": "visible",
+    "text": "只显示未读书籍"
+  },
+  {
+    "action": "visible",
+    "text": "没有未读的书"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "只显示已读书籍"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "仅未读清单"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部"
+  },
+  {
+    "action": "visible",
+    "text": "显示所有书籍"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读"
+  },
+  {
+    "action": "visible",
+    "text": "只显示未读书籍"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "只显示已读书籍"
+  },
+  {
+    "action": "visible",
+    "text": "还没有读完的书"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "全部"
+  },
+  {
+    "action": "visible",
+    "text": "横向溢出：否"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "已读"
+  },
+  {
+    "action": "visible",
+    "text": "横向溢出：否"
+  }
+]

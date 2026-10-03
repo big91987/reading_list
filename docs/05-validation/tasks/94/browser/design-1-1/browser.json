@@ -1,0 +1,28 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "click",
+      "role": "button",
+      "name": "混合清单"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "只显示未读书籍"
+    },
+    {
+      "action": "reload"
+    }
+  ],
+  "errors": [],
+  "failure": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for getByText('只显示未读书籍', { exact: true }) to be visible\n    15 × locator resolved to hidden <span aria-hidden=\"true\" class=\"filter-tooltip\">只显示未读书籍</span>\n",
+  "downloads": []
+}

@@ -1,0 +1,96 @@
+[
+  {
+    "action": "click",
+    "role": "button",
+    "name": "混合清单"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": ""
+  },
+  {
+    "action": "key",
+    "key": "Tab"
+  },
+  {
+    "action": "key",
+    "key": "Tab"
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "当前筛选：all"
+  },
+  {
+    "action": "key",
+    "key": "Tab"
+  },
+  {
+    "action": "key",
+    "key": "Enter"
+  },
+  {
+    "action": "visible",
+    "text": "当前筛选：unread"
+  },
+  {
+    "action": "visible",
+    "text": "长安的荔枝"
+  },
+  {
+    "action": "absent",
+    "text": "活着"
+  },
+  {
+    "action": "key",
+    "key": "Tab"
+  },
+  {
+    "action": "key",
+    "key": "Space"
+  },
+  {
+    "action": "visible",
+    "text": "当前筛选：read"
+  },
+  {
+    "action": "visible",
+    "text": "活着"
+  },
+  {
+    "action": "absent",
+    "text": "长安的荔枝"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "当前筛选：all"
+  },
+  {
+    "action": "visible",
+    "text": "活着"
+  },
+  {
+    "action": "visible",
+    "text": "长安的荔枝"
+  },
+  {
+    "action": "unchanged_storage"
+  }
+]

@@ -1,7 +1,7 @@
 {
-  "app_sha256": "689719186638479c6d838c66fa332883f33de46023f431e3fd60560970726a46",
-  "compatible_from": "b49e7b602eb244d4304bd1e3fd476372e4365e86",
+  "app_sha256": "362234ca93e2e88e2b8c980e8edd4f0eedce768fc24f58d21602f4bdbcb32a49",
+  "compatible_from": "82ec5a7653d57939df276058b7cbf465bfe8c90c",
   "data_change": "none",
-  "notes": "本次只修复部署审批门禁；app 字节和 localStorage 读写保持不变，与已部署 b49e7b6 版本兼容。",
+  "notes": "Issue #94只增加静态筛选提示与内存退出监听，无数据转换/清空/键或字段变化。已验证仓库基线82ec5a7：业务JS剥离新监听后逐字一致；旧中文JSON及扩展字段单元通过；正式MCP纯hover/筛选/触屏模拟/reload原始存储与写调用次数保持。宿主机13项Node、8项部署Python和8项gate通过，本轮16份正式浏览器计划851动作通过，旧EPERM已解除。compatible_from为实际验证的仓库基线，不冒称当前部署版本；独立QA及最终合并/发布授权另行保留。",
   "migration_plan": ""
 }
