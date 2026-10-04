@@ -50,3 +50,33 @@ python3 full_harness/quality.py check
 ```
 
 普通发布失败会自动恢复 previous。需要回退产品时，在 GitHub revert 对应产品变更并合入 main，由同一发布流程处理；不要手动清空数据或绕过迁移审批。已经执行过迁移时，按该版本的恢复方案处理。
+
+
+## 连续合并时只推进最新版本
+
+同一环境采用 `cancel-in-progress: true`。新合并会取消旧部署的准备或等待审批任务，Actions 仍保留被取消记录。
+准备和激活前都核对最新 main；过期请求或已部署版本正常跳过。旧版本已切换完成时，继续部署最新版本，不倒退覆盖。
+激活步骤直接启动 Python，收到 SIGINT/SIGTERM 时恢复之前的版本和部署记录；文件锁防止同时切换。
+强制 SIGKILL 或主机断电不保证自动回滚。数据持久化目录及浏览器存储不被清空。
+
+需要迁移或破坏性变更时仍审批最新计划。兼容性按当前已部署版本到目标版本检查，不能靠跳过中间部署隐藏迁移。
+合并前 QA/Review 由分支保护控制，管理员绕过属于人工放行。本改动不增加重复产品 QA，也不把手动绕过记为 QA 通过；独立部署质量门禁尚未实现。
+
+升级时先将已验证的 `scripts/local_deploy.py` 同步到部署根目录的 `controller/local_deploy.py`（使用临时文件再原子替换），再启用新 Workflow。
+控制器兼容旧 Workflow；新 Workflow 依赖新增的 `deploy` 输出。更新控制器无需切换产品版本或清理数据。
+
+## 框架维护 PR 的验证入口
+
+框架和部署改动由维护者审查，不交给产品研发 Agent。`pipeline/refresh` 不再静默跳过未登记 PR：未验证时明确阻塞，配置缺失时不自动放行。
+
+维护者同步最新 main 后，在干净的 PR checkout 上运行平台 example 的正式入口：
+
+```sh
+GH_REPO=owner/repository PYTHONPATH=sdk/python:examples/github \
+  python3 examples/github/pr_refresh.py --config '<private-runner-json>' \
+  --maintenance-pr <pr-number> --workspace '<clean-pr-checkout>'
+```
+
+配置中的 `pipeline.maintenance.paths` 限定框架文件范围，`checks` 列出 argv 形式的工程检查。需要包含部署器回归以及相关 Workflow 的 YAML/bash 语法检查；主线、PR 提交或检查配置变化后必须重新验证。实际日志与凭证保存在宿主的私有 registry 下。此入口不会修改产品代码、不会启动 Agent、不会自动合并。
+
+同步来源：`agent_platform` 的 `examples/github/pr-refresh.yml` 与维护者验证工具，版本 `9c4ddbb`。先通过 `examples/github/install-tooling.sh` 升级宿主依赖，再同步 Workflow；源仓库该版本仍待维护者审查合并。新仓库的配置与完整升级说明见源仓库 `examples/github/README.md`。
