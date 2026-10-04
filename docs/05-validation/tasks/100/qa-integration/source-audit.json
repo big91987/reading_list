@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "records": 32,
+  "organisations": [
+    "中国作家网",
+    "福建省图书馆"
+  ],
+  "types": [
+    "历史社科",
+    "现当代文学",
+    "科普"
+  ],
+  "revision": "2369c13474e6bfcbdf114342101ed113693ed34214a817b3e7d1f5d243911355",
+  "samples": [
+    {
+      "title": "屯堡",
+      "sourceId": "writer",
+      "url": "https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html",
+      "organisation": "中国作家网",
+      "title_author_organisation_and_recommendation_checked": true,
+      "summary": "这是一部长篇小说作品；来源介绍提及科举、屯堡、军屯，可据这些内容线索了解本书。",
+      "snapshot": "source-writer.html.gz",
+      "decoded_utf8_sha256": "eee15baf5753e3ec8a17e520b41378932dad9490b5e0b37dd6c373106af41916"
+    },
+    {
+      "title": "梅西传",
+      "sourceId": "fjlib",
+      "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm",
+      "organisation": "福建省图书馆",
+      "title_author_organisation_and_recommendation_checked": true,
+      "summary": "介绍梅西个人经历与足球生涯的传记。",
+      "snapshot": "source-fjlib.html.gz",
+      "decoded_utf8_sha256": "0461b6da4876b4f2710507c70c4fc5fafdb6aa027631f44591847c1f3fbdc944"
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html",
+      "requestedAt": "2026-10-04T13:32:38.409355Z",
+      "startedMonotonic": 4134745.59387875,
+      "completedAt": "2026-10-04T13:32:38.929123Z",
+      "durationSeconds": 0.5197832905687392,
+      "status": 200,
+      "bytes": 56964,
+      "sha256": "eee15baf5753e3ec8a17e520b41378932dad9490b5e0b37dd6c373106af41916"
+    },
+    {
+      "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm",
+      "requestedAt": "2026-10-04T13:32:39.414596Z",
+      "startedMonotonic": 4134746.599113875,
+      "completedAt": "2026-10-04T13:32:40.057678Z",
+      "durationSeconds": 0.6430969997309148,
+      "status": 200,
+      "bytes": 31460,
+      "sha256": "0461b6da4876b4f2710507c70c4fc5fafdb6aa027631f44591847c1f3fbdc944"
+    }
+  ],
+  "permissionGranted": false,
+  "method": "QA reruns formal CLI in isolated temporary root, then rerequests one concrete recommendation page per organisation and checks title/author/organisation/recommendation wording independently of parser"
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "local_links": 60,
+  "evidence_hash_files": 114,
+  "existing_pr_text_not_changed": true,
+  "pr_sections_present": true,
+  "new_screenshots": "browser/qa-1-38/screenshot.png and mobile.png",
+  "delivery_scope": "Ready PR main synchronization and QA rerun only"
+}

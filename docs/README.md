@@ -15,7 +15,7 @@ Task paths are configured in `.harness/full.json`. Existing projects can point i
 
 ## 当前任务
 
-Issue #100当前为QA退回后development修复版本：[返工报告](05-validation/tasks/100/development-rework/README.md)记录QA-100-01/02原失败、发送边界限流/剩余预算修复、Python47/Node25、10份208动作真实浏览器、真源32条与8项共享门禁重新通过；待新的独立QA，不沿用下方首次开发或旧QA结论。原app/release/私人数据契约未改变，未安装、发布或合并。
+Issue #100当前为Ready PR同步主线b21c4a1后的独立QA：[最新QA报告](05-validation/tasks/100/qa.md)记录本轮Python50/Node25、10份209动作真实浏览器、32条真源采集、维护者可信宿主9项门禁与主线部署取消回滚/旧版本跳过复验。原两项缺陷按原方法再次复验通过；未扩大产品范围、安装正式任务或合并功能PR。本轮不使用旧扫描器、不裁剪历史证据，交付结果以新工具回执为准。下方开发/旧QA为历史记录，不作为本轮通过依据。
 
 - [Issue #100：书籍推荐、类型与简介](04-implementation/tasks/100/README.md)：[开发计划](04-implementation/tasks/100/implement.md)、[运行说明](04-implementation/tasks/100/operations.md)、[本轮产品验证](05-validation/tasks/100/validation.md)记录正式真源32条、Python37/Node25、7份真实浏览器计划173动作和8项Owner共享门禁通过；实际部署10c5e03旧新版往返与release声明完成。研发就绪，按自主策略交独立QA，以工具回执为准；未安装正式服务、发布或合并，不把模拟触屏/AX树称物理设备/读屏认证。
 - [Issue #97：页面版本号显示](04-implementation/tasks/97/README.md)：development本轮6份产品计划159动作、Node16/Python8与8项verify通过，原生200%/160 CSS px版本完整及AX验证、零写/恢复通过，兼容声明更新。见[当前产品验证](05-validation/tasks/97/validation.md)；Ready for independent QA，按自主策略自动交接以工具回执为准，不声称QA通过/语音实测/发布或合并。

@@ -1,0 +1,575 @@
+{
+  "scope": "Read-only hashes of copied rolling outputs and this integration round raw browser files; no compression, aliasing or deletion",
+  "files": [
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-0.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-1.log",
+      "bytes": 66,
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-3.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-5.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-6.log",
+      "bytes": 2263,
+      "sha256": "18ffe1adc67b02157f0c1dffff734c9d5f1612750b165be39871c59a62e9e432"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-7.log",
+      "bytes": 2299,
+      "sha256": "307fa6091b178d7669f67753d14ce70addf423ccd34d0b5f31f50e3d6a94b0b7"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/check-8.log",
+      "bytes": 99,
+      "sha256": "ea8f124fdf513bfe599e806b28127c19f9cf59df3680667e054bf492bbcecedf"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/checks.json",
+      "bytes": 1906,
+      "sha256": "9e3bd339467a8ac036fcb89fb67722e6a702da80678e343ed689159d1bc13728"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/existing/browser.json",
+      "bytes": 1587,
+      "sha256": "4dd75b7ba2d5b45a27ae333fe5d200aa3e3fcf07ad941fead3f38a94b458aa69"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/existing/mobile.png",
+      "bytes": 137351,
+      "sha256": "7886652c067ca35bdd6cf7f19b882760172650cf96bbc67e649fae323eb67b80"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/existing/screenshot.png",
+      "bytes": 199300,
+      "sha256": "ab0331d53b241aa8f89920fc06cc59af8a51fc4b171c16729143d96eba3e7a66"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/feature/accessibility-44.json",
+      "bytes": 177821,
+      "sha256": "009a1972994a3e81344d4ec5bd554b1e27691541b35027530cc594811de0e278"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/feature/accessibility-44.json.gz",
+      "bytes": 8686,
+      "sha256": "215ba9874e2171c3923bbf93d4e7528c91df4efe32438d49f66d7c1bf72b9179"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/feature/browser.json",
+      "bytes": 13319,
+      "sha256": "a265758011e651897ebc81f92057a5304818fe018b145eadcad4426a6dc53ab7"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/feature/mobile.png",
+      "bytes": 124427,
+      "sha256": "fcd40e3936545516dd50f7f2b0dec7fc470572b03c8d905529ecbb804fd11cd4"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/feature/screenshot.png",
+      "bytes": 124674,
+      "sha256": "dc025c1dd9cd8d45af934ad2686469e38abbb5e7b9e0fc9c3d72a4a7fabb8610"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-checks/feature/zoom-47.png",
+      "bytes": 124674,
+      "sha256": "dc025c1dd9cd8d45af934ad2686469e38abbb5e7b9e0fc9c3d72a4a7fabb8610"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-0.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-1.log",
+      "bytes": 66,
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-3.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-5.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-6.log",
+      "bytes": 2263,
+      "sha256": "79fd24c562b0953d941793d1f3065db27840af955377a50600c672eda9f20897"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-7.log",
+      "bytes": 2299,
+      "sha256": "c7423563cd9ed2cb4c6a0045745bed0391dfa57543f1daf864e51f69af1c9390"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/check-8.log",
+      "bytes": 99,
+      "sha256": "ea8f124fdf513bfe599e806b28127c19f9cf59df3680667e054bf492bbcecedf"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/checks.json",
+      "bytes": 1906,
+      "sha256": "9e3bd339467a8ac036fcb89fb67722e6a702da80678e343ed689159d1bc13728"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/existing/browser.json",
+      "bytes": 1587,
+      "sha256": "4dd75b7ba2d5b45a27ae333fe5d200aa3e3fcf07ad941fead3f38a94b458aa69"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/existing/mobile.png",
+      "bytes": 137351,
+      "sha256": "7886652c067ca35bdd6cf7f19b882760172650cf96bbc67e649fae323eb67b80"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/existing/screenshot.png",
+      "bytes": 199300,
+      "sha256": "ab0331d53b241aa8f89920fc06cc59af8a51fc4b171c16729143d96eba3e7a66"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/feature/accessibility-44.json",
+      "bytes": 177816,
+      "sha256": "a31724cb763df1e08d26065845d491523f237aa5adc8aafe6688446105ea6696"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/feature/accessibility-44.json.gz",
+      "bytes": 8686,
+      "sha256": "215ba9874e2171c3923bbf93d4e7528c91df4efe32438d49f66d7c1bf72b9179"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/feature/browser.json",
+      "bytes": 13319,
+      "sha256": "a265758011e651897ebc81f92057a5304818fe018b145eadcad4426a6dc53ab7"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/feature/mobile.png",
+      "bytes": 124427,
+      "sha256": "fcd40e3936545516dd50f7f2b0dec7fc470572b03c8d905529ecbb804fd11cd4"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/feature/screenshot.png",
+      "bytes": 124674,
+      "sha256": "dc025c1dd9cd8d45af934ad2686469e38abbb5e7b9e0fc9c3d72a4a7fabb8610"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/host-initial-checks/feature/zoom-47.png",
+      "bytes": 124674,
+      "sha256": "dc025c1dd9cd8d45af934ad2686469e38abbb5e7b9e0fc9c3d72a4a7fabb8610"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/check-0.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/check-1.log",
+      "bytes": 66,
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/check-2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/check-3.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/check-4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/check-5.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/check-6.log",
+      "bytes": 2264,
+      "sha256": "6c7f960050582bff598212e3ea97d2984a47fc6941b7885c451c8777c987ea7a"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/check-7.log",
+      "bytes": 2296,
+      "sha256": "d4233774b4bde8f80ce8028ed059875b719adc9c189173d22ff41dda70b5170f"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/checks.json",
+      "bytes": 1740,
+      "sha256": "22544cb51d4dc1f993707e11e735c17770e040a20ec9812550a969a99a745f0a"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/existing/browser.json",
+      "bytes": 1587,
+      "sha256": "4dd75b7ba2d5b45a27ae333fe5d200aa3e3fcf07ad941fead3f38a94b458aa69"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/feature/accessibility-44.json.gz",
+      "bytes": 8686,
+      "sha256": "215ba9874e2171c3923bbf93d4e7528c91df4efe32438d49f66d7c1bf72b9179"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-delivery-checks/feature/browser.json",
+      "bytes": 13319,
+      "sha256": "a265758011e651897ebc81f92057a5304818fe018b145eadcad4426a6dc53ab7"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-0.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-1.log",
+      "bytes": 66,
+      "sha256": "17aa973d3f004560237d9a95171210b0671deff23d61628eecf7322ff5938f20"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-2.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-3.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-4.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-5.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-6.log",
+      "bytes": 2267,
+      "sha256": "1055676a032bc8848ab34a0f3ea276c25e09017058f288de12cada21daed882f"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-7.log",
+      "bytes": 2296,
+      "sha256": "faf86e21ea0b63254bbf057f7be97ecc1088b86c1eaf514cc513aaa139791310"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/check-8.log",
+      "bytes": 99,
+      "sha256": "6c171950b9da003e9bb2497bd589b4a9d4e7eb29b811bc8d5637077ec949ecc6"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/checks.json",
+      "bytes": 1902,
+      "sha256": "374fa720754b19d92a5d5024d0bb406f38bd626a6ca94f1a948088e225c0d19f"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/existing/browser.json",
+      "bytes": 1587,
+      "sha256": "4dd75b7ba2d5b45a27ae333fe5d200aa3e3fcf07ad941fead3f38a94b458aa69"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/existing/mobile.png",
+      "bytes": 137351,
+      "sha256": "7886652c067ca35bdd6cf7f19b882760172650cf96bbc67e649fae323eb67b80"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/existing/screenshot.png",
+      "bytes": 199300,
+      "sha256": "ab0331d53b241aa8f89920fc06cc59af8a51fc4b171c16729143d96eba3e7a66"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/feature/accessibility-44.json",
+      "bytes": 177814,
+      "sha256": "c0117722454d4247fcb8e4a73a8b8c117d49a7c32daedbc57bfa5d30183ca26c"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/feature/accessibility-44.json.gz",
+      "bytes": 8709,
+      "sha256": "5e35a26d6fed94b7006a6db5c9a6b3dedaa8a8444ec4a1176ffa4cde10217bc7"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/feature/browser.json",
+      "bytes": 13319,
+      "sha256": "a265758011e651897ebc81f92057a5304818fe018b145eadcad4426a6dc53ab7"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/feature/mobile.png",
+      "bytes": 124427,
+      "sha256": "fcd40e3936545516dd50f7f2b0dec7fc470572b03c8d905529ecbb804fd11cd4"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/feature/screenshot.png",
+      "bytes": 124674,
+      "sha256": "dc025c1dd9cd8d45af934ad2686469e38abbb5e7b9e0fc9c3d72a4a7fabb8610"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/qa-integration/before-runner-checks/feature/zoom-47.png",
+      "bytes": 124674,
+      "sha256": "dc025c1dd9cd8d45af934ad2686469e38abbb5e7b9e0fc9c3d72a4a7fabb8610"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-31/accessibility-44.json",
+      "bytes": 177808,
+      "sha256": "dc4b2eb8eaf93339a4e32cacdafc0dc79f04ba50573833521af3788af312ae5d"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-31/browser.json",
+      "bytes": 13319,
+      "sha256": "a265758011e651897ebc81f92057a5304818fe018b145eadcad4426a6dc53ab7"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-31/executed-plan.json",
+      "bytes": 10686,
+      "sha256": "2bf44f9b355336b8b175468fae2d659b7c733bb18f885c33ea6f3dd4990a57af"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-31/mobile.png",
+      "bytes": 124427,
+      "sha256": "fcd40e3936545516dd50f7f2b0dec7fc470572b03c8d905529ecbb804fd11cd4"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-31/screenshot.png",
+      "bytes": 124674,
+      "sha256": "dc025c1dd9cd8d45af934ad2686469e38abbb5e7b9e0fc9c3d72a4a7fabb8610"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-31/zoom-47.png",
+      "bytes": 124674,
+      "sha256": "dc025c1dd9cd8d45af934ad2686469e38abbb5e7b9e0fc9c3d72a4a7fabb8610"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-32/browser.json",
+      "bytes": 13363,
+      "sha256": "2a8f56c8c1fb69dbf51a53e15d709060bcef37d33ce4ceacc3544bd3df1c699f"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-32/executed-plan.json",
+      "bytes": 10803,
+      "sha256": "c469349448d4d314bfd329670639b1817abc4af2b551c41cac6340f9b85cf420"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-32/mobile.png",
+      "bytes": 159094,
+      "sha256": "f91b496ba8229fe8c74322b5f4a2d766f27b7ebe4949e52a2170728015782f7f"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-32/screenshot.png",
+      "bytes": 223837,
+      "sha256": "f4002b6782f94a058514469a53cef068004c08eb59184bcc86039c138f90f7be"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-33/browser.json",
+      "bytes": 11297,
+      "sha256": "98218ca37dab90b023edd7aedf8ec6cb385746b11d32a11ede9976c46efdac5f"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-33/executed-plan.json",
+      "bytes": 9794,
+      "sha256": "ba7c89f63db261d962a66002b37e030fc4b1b64b5c88ec02b06fe30e5477afea"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-33/mobile.png",
+      "bytes": 203299,
+      "sha256": "8ca74b856bdeb454bf7d3c895fb4db3b9def76cf5e378fbc3b6ecfe6440d6b3e"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-33/screenshot.png",
+      "bytes": 271694,
+      "sha256": "c00d48354685b743a86ee3e139040e6d45c6ab6ed0174dbd8980bb6eab1f1b0e"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-34/accessibility-13.json",
+      "bytes": 174395,
+      "sha256": "9e873a57fced5502095d3ffb96df2a73c137fd208ce327355f89e1290818cb1d"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-34/browser.json",
+      "bytes": 7696,
+      "sha256": "42cc07d16bb63a249561553fa8e6bfa9d1de46095f6361b2bcc68094c52e25bb"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-34/executed-plan.json",
+      "bytes": 6262,
+      "sha256": "b1993256e199e996dfaf5f71c846bf821a5a59bc18dc298d8ba48547c6806565"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-34/mobile.png",
+      "bytes": 213895,
+      "sha256": "b384505ceb5c9dffae8a1ae63af9b98959f5ed4e4b13e6e61c98ede3d880bb73"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-34/screenshot.png",
+      "bytes": 205258,
+      "sha256": "42617d1b7a83e679f1bb6e2c49bb7ce6060f857ab78bd6cad650538cb35bde9e"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-35/browser.json",
+      "bytes": 7966,
+      "sha256": "810cd19680060e6a64853bd4c3f63257a4fd3dead41db8cda11c11dc1d03fb7b"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-35/executed-plan.json",
+      "bytes": 6184,
+      "sha256": "69f23b54945bae4ba0e511430123b84de0ada13df4e50edd9b65ab1f06e4e2d3"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-35/mobile.png",
+      "bytes": 185334,
+      "sha256": "d7368299b991a744e3a1ff4bd8f6767dc562039bea961ca9d5e4ea04fcc101f8"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-35/screenshot.png",
+      "bytes": 251302,
+      "sha256": "e0fe523bf74349f79765f01fd17838ab30447586b324a90771aba0b7d9c1b477"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-36/browser.json",
+      "bytes": 8359,
+      "sha256": "9665f801e44503e8bc57015b3ac5f25cfd4cef7625ddc80505c4b7858f5e5c4d"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-36/executed-plan.json",
+      "bytes": 6795,
+      "sha256": "52e51599f6cb057ae023a6a0f92dd31f02562a093802c354b21176603debab94"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-36/mobile.png",
+      "bytes": 127315,
+      "sha256": "7987188e0ecde40225b2da87ecdcefe5d5cbaaf7044caa6cd4bbd2b852d75584"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-36/screenshot.png",
+      "bytes": 188129,
+      "sha256": "048d5d3eac67ba0ae81bd5189bc33142e0d5c665217382e59fb668f927b3a19e"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-37/browser.json",
+      "bytes": 1587,
+      "sha256": "4dd75b7ba2d5b45a27ae333fe5d200aa3e3fcf07ad941fead3f38a94b458aa69"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-37/executed-plan.json",
+      "bytes": 1176,
+      "sha256": "df78a503f42ade11dafab06fd91265510eea1b5e7b4d906dedaf0837f70f0eb4"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-37/mobile.png",
+      "bytes": 137351,
+      "sha256": "7886652c067ca35bdd6cf7f19b882760172650cf96bbc67e649fae323eb67b80"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-37/screenshot.png",
+      "bytes": 199300,
+      "sha256": "ab0331d53b241aa8f89920fc06cc59af8a51fc4b171c16729143d96eba3e7a66"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-38/accessibility-8.json",
+      "bytes": 626500,
+      "sha256": "862992a1b68e4431bebee1457e5ea93bc8d53fef69b1c11c8f7f6f1f7c89cf52"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-38/browser.json",
+      "bytes": 31979,
+      "sha256": "13574a258fc67d7ebe3fa08f4026429e89ba20e8cc5b85f3eb69af5c136dd9e6"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-38/executed-plan.json",
+      "bytes": 29885,
+      "sha256": "bf6bedbdbace491db1c2a22cc19157a39dfc9eded36959a1bd4fa01295b3fd13"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-38/mobile.png",
+      "bytes": 161210,
+      "sha256": "1b7799fe423a7ce713aaa98165fa519791cd03ced20cdac3e38b2c35221d9921"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-38/screenshot.png",
+      "bytes": 219944,
+      "sha256": "386a18a19ec9b82924a0e97bb833743d2e1d6f9951c067b16156db57ca0315a6"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-39/accessibility-16.json",
+      "bytes": 169019,
+      "sha256": "21c6d0d1ee37cb684d8364c0c861b952ae98aa4aa026f6ee598aedb718f3c505"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-39/browser.json",
+      "bytes": 32784,
+      "sha256": "8686ce3417ce0e3e54f52a9da569b0208bbc7ec172ece00b94f5d2e9475e1dd7"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-39/executed-plan.json",
+      "bytes": 31380,
+      "sha256": "7ff9fc6ffda02051582c4fda3824d78a748dd058a14afa485b77c8d41d6a8218"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-39/mobile.png",
+      "bytes": 171559,
+      "sha256": "c75806e4a1115edc19ff0ad05df5dfcd5ef1979be8348a1f128e5411ddcf7068"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-39/screenshot.png",
+      "bytes": 151447,
+      "sha256": "4b6efe0aaf9338839d59e1996848dbc76139a9c4bf47f911895a375a6797b2be"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-40/browser.json",
+      "bytes": 8976,
+      "sha256": "dfdf668b000f9700c5483be5e2e60c4c86824fcbca669535ce0150ecae7f0089"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-40/executed-plan.json",
+      "bytes": 7796,
+      "sha256": "7f14a0f906869350da3eac7239e484664247fedd0922fb87e66ca172d1798eb4"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-40/mobile.png",
+      "bytes": 161912,
+      "sha256": "653b7c92983dc011792e1a251211348e7d143273fd12f4a1de22811455b548c2"
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-40/screenshot.png",
+      "bytes": 218552,
+      "sha256": "6c555718242d225cc21616b912cb768ae603541d34a22e4b6329ca34323fbb39"
+    }
+  ]
+}
