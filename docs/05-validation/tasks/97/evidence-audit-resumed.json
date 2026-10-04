@@ -1,0 +1,195 @@
+{
+  "baselineCommit": "4a54b10f8acad8f74a167693194c397b93db9adc",
+  "plans": [
+    {
+      "plan": "tests/browser/core.json",
+      "receipt": "docs/05-validation/tasks/97/browser/development-1-17/browser.json",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/97/browser-plan.json",
+      "receipt": "docs/05-validation/tasks/97/browser/development-1-18/browser.json",
+      "actions": 64,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/97/browser-touch.json",
+      "receipt": "docs/05-validation/tasks/97/browser/development-1-19/browser.json",
+      "actions": 20,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/97/browser-native-capabilities.json",
+      "receipt": "docs/05-validation/tasks/97/browser/development-1-20/browser.json",
+      "actions": 8,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/97/browser-layout-regression.json",
+      "receipt": "docs/05-validation/tasks/97/browser/development-1-21/browser.json",
+      "actions": 26,
+      "passed": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/97/browser-fixture.json",
+      "receipt": "docs/05-validation/tasks/97/browser/development-1-22/browser.json",
+      "actions": 25,
+      "passed": true
+    }
+  ],
+  "productActions": 159,
+  "originalNativeScriptUnchanged": true,
+  "corePlanUnchanged": true,
+  "accessibility": [
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-20/accessibility-4.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-20/accessibility-8.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-21/accessibility-11.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-21/accessibility-12.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-21/accessibility-17.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-21/accessibility-18.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-21/accessibility-22.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-21/accessibility-23.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-21/accessibility-6.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/development-1-21/accessibility-7.json",
+      "sameUnignoredParagraph": true,
+      "screenReaderAudioTested": false
+    }
+  ],
+  "nativeZooms": [
+    {
+      "action": "zoom",
+      "actual": 2,
+      "width": 720,
+      "height": 422,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "screenshot": "zoom-2.png"
+    },
+    {
+      "action": "zoom",
+      "actual": 2,
+      "width": 160,
+      "height": 422,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "screenshot": "zoom-6.png"
+    }
+  ],
+  "baselineComparisons": [
+    {
+      "viewport": 1440,
+      "productWidth": 1440,
+      "baselineWidth": 1440,
+      "existingBodyMinWidth": "320px",
+      "footerBounds": {
+        "left": 0,
+        "right": 1440
+      },
+      "nonOverlapping": true,
+      "storageUnchanged": true,
+      "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+    },
+    {
+      "viewport": 720,
+      "productWidth": 720,
+      "baselineWidth": 720,
+      "existingBodyMinWidth": "320px",
+      "footerBounds": {
+        "left": 0,
+        "right": 720
+      },
+      "nonOverlapping": true,
+      "storageUnchanged": true,
+      "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+    },
+    {
+      "viewport": 320,
+      "productWidth": 320,
+      "baselineWidth": 320,
+      "existingBodyMinWidth": "320px",
+      "footerBounds": {
+        "left": 0,
+        "right": 320
+      },
+      "nonOverlapping": true,
+      "storageUnchanged": true,
+      "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+    },
+    {
+      "viewport": 160,
+      "productWidth": 320,
+      "baselineWidth": 320,
+      "existingBodyMinWidth": "320px",
+      "footerBounds": {
+        "left": 0,
+        "right": 160
+      },
+      "nonOverlapping": true,
+      "storageUnchanged": true,
+      "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+    }
+  ],
+  "toolZeroWrites": {
+    "passed": true,
+    "writes": 0
+  },
+  "toolNewWriteNegative": {
+    "actualPassed": false,
+    "writes": 1,
+    "failure": "localStorage write attempts changed\n\n1 !== 0\n",
+    "expectedRejection": true
+  },
+  "source": {
+    "baseline": "4a54b10f8acad8f74a167693194c397b93db9adc",
+    "businessJsUnchanged": true,
+    "resourceReferencesUnchanged": true,
+    "hashes": {
+      "index.html": "8acb1bb16b864beaa92620f2cd131c415e3864f5348319cb5f2982f133000ef3",
+      "styles.css": "cb3ce1d040298193862d04cc971116c99bfb9684488626105fa36b082432fffe",
+      "app.js": "9898c75bb349fdee7e874df62ac37d9867e88d5cd68e286fefc95f7be82c0653"
+    }
+  },
+  "qualityGates": 8,
+  "relativeLinks": 161,
+  "archivedLinks": 9,
+  "archivedOriginalPaths": 116,
+  "currentReadiness": "Ready for independent QA; not QA, merge or deployment approval"
+}

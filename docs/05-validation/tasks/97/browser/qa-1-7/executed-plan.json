@@ -1,0 +1,98 @@
+[
+  {
+    "action": "click",
+    "role": "link",
+    "name": "研发产品快照诊断（非设计界面）"
+  },
+  {
+    "action": "visible",
+    "text": "版本唯一可见：是 · 版本完整：是 · 无横向溢出：是 · 页脚不遮挡：是 · 无版本焦点：是 · 原始数据保持：是 · 加载结果正确：是 · CSS模拟倍率：1"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "检查产品快照"
+  },
+  {
+    "action": "visible",
+    "text": "版本唯一可见：是 · 版本完整：是 · 无横向溢出：是 · 页脚不遮挡：是 · 无版本焦点：是 · 原始数据保持：是 · 加载结果正确：是 · CSS模拟倍率：1"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "unchanged_storage_writes"
+  },
+  {
+    "action": "viewport",
+    "width": 1440
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "CSS二倍模拟（非原生缩放）"
+  },
+  {
+    "action": "visible",
+    "text": "版本唯一可见：是 · 版本完整：是 · 无横向溢出：是 · 页脚不遮挡：是 · 无版本焦点：是 · 原始数据保持：是 · 加载结果正确：是 · CSS模拟倍率：2"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "unchanged_storage_writes"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "预置加载异常"
+  },
+  {
+    "action": "visible",
+    "text": "版本唯一可见：是 · 版本完整：是 · 无横向溢出：是 · 页脚不遮挡：是 · 无版本焦点：是 · 原始数据保持：是 · 加载结果正确：是 · CSS模拟倍率：1"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "检查产品快照"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "unchanged_storage_writes"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "恢复旧中文数据"
+  },
+  {
+    "action": "visible",
+    "text": "版本唯一可见：是 · 版本完整：是 · 无横向溢出：是 · 页脚不遮挡：是 · 无版本焦点：是 · 原始数据保持：是 · 加载结果正确：是 · CSS模拟倍率：1"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "检查产品快照"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "unchanged_storage_writes"
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "click",
+      "role": "button",
+      "name": "预置已读与未读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "200% CSS 缩放模拟"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "visible",
+      "text": "横向溢出：否 · 版本完整：是 · 页脚不遮挡：是 · 版本唯一：是 · 版本无焦点：是 · CSS模拟倍率：2"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 1
+}

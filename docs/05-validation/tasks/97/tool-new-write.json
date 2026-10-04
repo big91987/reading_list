@@ -1,0 +1,7 @@
+[
+  { "action": "snapshot_storage" },
+  { "action": "fill", "label": "书名", "value": "共享工具写入计数回归" },
+  { "action": "click", "role": "button", "name": "新增书籍" },
+  { "action": "visible", "text": "共享工具写入计数回归" },
+  { "action": "unchanged_storage_writes" }
+]

@@ -1,0 +1,804 @@
+{
+  "baseline": "4a54b10f8acad8f74a167693194c397b93db9adc",
+  "hashes": {
+    "index.html": "8acb1bb16b864beaa92620f2cd131c415e3864f5348319cb5f2982f133000ef3",
+    "styles.css": "cb3ce1d040298193862d04cc971116c99bfb9684488626105fa36b082432fffe",
+    "app.js": "9898c75bb349fdee7e874df62ac37d9867e88d5cd68e286fefc95f7be82c0653"
+  },
+  "businessJsUnchanged": true,
+  "corePlanUnchanged": true,
+  "snapshotsMatchProduct": true,
+  "resourceReferencesUnchanged": true,
+  "releaseValid": true,
+  "plans": [
+    {
+      "directory": "docs/05-validation/tasks/97/browser/qa-1-1",
+      "passed": true,
+      "actions": 16,
+      "storageWrites": 4,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "observations": []
+    },
+    {
+      "directory": "docs/05-validation/tasks/97/browser/qa-1-2",
+      "passed": true,
+      "actions": 64,
+      "storageWrites": 8,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "observations": []
+    },
+    {
+      "directory": "docs/05-validation/tasks/97/browser/qa-1-3",
+      "passed": true,
+      "actions": 20,
+      "storageWrites": 2,
+      "device": {
+        "hasTouch": true,
+        "isMobile": true,
+        "viewport": {
+          "width": 320,
+          "height": 844
+        }
+      },
+      "observations": []
+    },
+    {
+      "directory": "docs/05-validation/tasks/97/browser/qa-1-4",
+      "passed": true,
+      "actions": 26,
+      "storageWrites": 0,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "observations": [
+        {
+          "action": "zoom",
+          "actual": 1,
+          "width": 1440,
+          "height": 844,
+          "devicePixelRatio": 1,
+          "visualScale": 1,
+          "screenshot": "zoom-3.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+          "value": {
+            "viewport": 1440,
+            "devicePixelRatio": 1,
+            "text": "版本 0.1.0 rc2",
+            "textBounds": {
+              "left": 679.1875,
+              "right": 760.796875
+            },
+            "elementBounds": {
+              "left": 20,
+              "right": 1420
+            },
+            "documentWidth": 1440
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-baseline.js",
+          "value": {
+            "viewport": 1440,
+            "productWidth": 1440,
+            "baselineWidth": 1440,
+            "existingBodyMinWidth": "320px",
+            "footerBounds": {
+              "left": 0,
+              "right": 1440
+            },
+            "nonOverlapping": true,
+            "storageUnchanged": true,
+            "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+          }
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-6.json"
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-7.json"
+        },
+        {
+          "action": "zoom",
+          "actual": 2,
+          "width": 720,
+          "height": 422,
+          "devicePixelRatio": 2,
+          "visualScale": 1,
+          "screenshot": "zoom-8.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+          "value": {
+            "viewport": 720,
+            "devicePixelRatio": 2,
+            "text": "版本 0.1.0 rc2",
+            "textBounds": {
+              "left": 319.1953125,
+              "right": 400.796875
+            },
+            "elementBounds": {
+              "left": 20,
+              "right": 700
+            },
+            "documentWidth": 720
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-baseline.js",
+          "value": {
+            "viewport": 720,
+            "productWidth": 720,
+            "baselineWidth": 720,
+            "existingBodyMinWidth": "320px",
+            "footerBounds": {
+              "left": 0,
+              "right": 720
+            },
+            "nonOverlapping": true,
+            "storageUnchanged": true,
+            "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+          }
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-11.json"
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-12.json"
+        },
+        {
+          "action": "zoom",
+          "actual": 1,
+          "width": 320,
+          "height": 844,
+          "devicePixelRatio": 1,
+          "visualScale": 1,
+          "screenshot": "zoom-14.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+          "value": {
+            "viewport": 320,
+            "devicePixelRatio": 1,
+            "text": "版本 0.1.0 rc2",
+            "textBounds": {
+              "left": 119.1875,
+              "right": 200.796875
+            },
+            "elementBounds": {
+              "left": 20,
+              "right": 300
+            },
+            "documentWidth": 320
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-baseline.js",
+          "value": {
+            "viewport": 320,
+            "productWidth": 320,
+            "baselineWidth": 320,
+            "existingBodyMinWidth": "320px",
+            "footerBounds": {
+              "left": 0,
+              "right": 320
+            },
+            "nonOverlapping": true,
+            "storageUnchanged": true,
+            "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+          }
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-17.json"
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-18.json"
+        },
+        {
+          "action": "zoom",
+          "actual": 2,
+          "width": 160,
+          "height": 422,
+          "devicePixelRatio": 2,
+          "visualScale": 1,
+          "screenshot": "zoom-19.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+          "value": {
+            "viewport": 160,
+            "devicePixelRatio": 2,
+            "text": "版本 0.1.0 rc2",
+            "textBounds": {
+              "left": 39.1953125,
+              "right": 120.796875
+            },
+            "elementBounds": {
+              "left": 20,
+              "right": 140
+            },
+            "documentWidth": 320
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-baseline.js",
+          "value": {
+            "viewport": 160,
+            "productWidth": 320,
+            "baselineWidth": 320,
+            "existingBodyMinWidth": "320px",
+            "footerBounds": {
+              "left": 0,
+              "right": 160
+            },
+            "nonOverlapping": true,
+            "storageUnchanged": true,
+            "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+          }
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-22.json"
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-23.json"
+        }
+      ]
+    },
+    {
+      "directory": "docs/05-validation/tasks/97/browser/qa-1-5",
+      "passed": true,
+      "actions": 36,
+      "storageWrites": 3,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "observations": [
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-seed.js",
+          "value": {
+            "seededBooks": 30,
+            "rawLength": 3570
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+          "value": {
+            "text": "版本 0.1.0 rc2",
+            "viewport": {
+              "width": 1440,
+              "height": 1000
+            },
+            "bounds": {
+              "left": 679.1875,
+              "right": 760.796875,
+              "top": 945.34375,
+              "bottom": 965.34375
+            },
+            "resources": [
+              {
+                "name": "/styles.css",
+                "type": "link"
+              },
+              {
+                "name": "/app.js",
+                "type": "script"
+              }
+            ],
+            "renderedBooks": 30
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+          "value": {
+            "text": "版本 0.1.0 rc2",
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "bounds": {
+              "left": 119.1875,
+              "right": 200.796875,
+              "top": 788.703125,
+              "bottom": 808.703125
+            },
+            "resources": [
+              {
+                "name": "/styles.css",
+                "type": "link"
+              },
+              {
+                "name": "/app.js",
+                "type": "script"
+              }
+            ],
+            "renderedBooks": 30
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-corrupt.js",
+          "value": {
+            "injected": "invalid JSON in isolated browser context"
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-seed.js",
+          "value": {
+            "seededBooks": 30,
+            "rawLength": 3570
+          }
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+          "value": {
+            "text": "版本 0.1.0 rc2",
+            "viewport": {
+              "width": 1440,
+              "height": 844
+            },
+            "bounds": {
+              "left": 679.1875,
+              "right": 760.796875,
+              "top": 789.34375,
+              "bottom": 809.34375
+            },
+            "resources": [
+              {
+                "name": "/styles.css",
+                "type": "link"
+              },
+              {
+                "name": "/app.js",
+                "type": "script"
+              }
+            ],
+            "renderedBooks": 30
+          }
+        }
+      ]
+    },
+    {
+      "directory": "docs/05-validation/tasks/97/browser/qa-1-6",
+      "passed": true,
+      "actions": 8,
+      "storageWrites": 0,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "observations": [
+        {
+          "action": "zoom",
+          "actual": 2,
+          "width": 720,
+          "height": 422,
+          "devicePixelRatio": 2,
+          "visualScale": 1,
+          "screenshot": "zoom-2.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+          "value": {
+            "viewport": 720,
+            "devicePixelRatio": 2,
+            "text": "版本 0.1.0 rc2",
+            "textBounds": {
+              "left": 319.1953125,
+              "right": 400.796875
+            },
+            "elementBounds": {
+              "left": 20,
+              "right": 700
+            },
+            "documentWidth": 720
+          }
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-4.json"
+        },
+        {
+          "action": "zoom",
+          "actual": 2,
+          "width": 160,
+          "height": 422,
+          "devicePixelRatio": 2,
+          "visualScale": 1,
+          "screenshot": "zoom-6.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+          "value": {
+            "viewport": 160,
+            "devicePixelRatio": 2,
+            "text": "版本 0.1.0 rc2",
+            "textBounds": {
+              "left": 39.1953125,
+              "right": 120.796875
+            },
+            "elementBounds": {
+              "left": 20,
+              "right": 140
+            },
+            "documentWidth": 320
+          }
+        },
+        {
+          "action": "accessibility",
+          "file": "accessibility-8.json"
+        }
+      ]
+    },
+    {
+      "directory": "docs/05-validation/tasks/97/browser/qa-1-7",
+      "passed": true,
+      "actions": 25,
+      "storageWrites": 3,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "observations": []
+    },
+    {
+      "directory": "docs/05-validation/tasks/97/browser/qa-1-8",
+      "passed": true,
+      "actions": 10,
+      "storageWrites": 0,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      },
+      "observations": [
+        {
+          "action": "zoom",
+          "actual": 1,
+          "width": 1440,
+          "height": 844,
+          "devicePixelRatio": 1,
+          "visualScale": 1,
+          "screenshot": "zoom-2.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+          "value": {
+            "text": "版本 0.1.0 rc2",
+            "viewport": {
+              "width": 1440,
+              "height": 844
+            },
+            "bounds": {
+              "left": 679.1875,
+              "right": 760.796875,
+              "top": 789.34375,
+              "bottom": 809.34375
+            },
+            "resources": [
+              {
+                "name": "/styles.css",
+                "type": "link"
+              },
+              {
+                "name": "/app.js",
+                "type": "script"
+              },
+              {
+                "name": "/favicon.ico",
+                "type": "other"
+              }
+            ],
+            "renderedBooks": 0
+          }
+        },
+        {
+          "action": "zoom",
+          "actual": 2,
+          "width": 720,
+          "height": 422,
+          "devicePixelRatio": 2,
+          "visualScale": 1,
+          "screenshot": "zoom-4.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+          "value": {
+            "text": "版本 0.1.0 rc2",
+            "viewport": {
+              "width": 720,
+              "height": 422
+            },
+            "bounds": {
+              "left": 319.1953125,
+              "right": 400.796875,
+              "top": 367.5546875,
+              "bottom": 387.5546875
+            },
+            "resources": [
+              {
+                "name": "/styles.css",
+                "type": "link"
+              },
+              {
+                "name": "/app.js",
+                "type": "script"
+              },
+              {
+                "name": "/favicon.ico",
+                "type": "other"
+              }
+            ],
+            "renderedBooks": 0
+          }
+        },
+        {
+          "action": "zoom",
+          "actual": 1,
+          "width": 320,
+          "height": 844,
+          "devicePixelRatio": 1,
+          "visualScale": 1,
+          "screenshot": "zoom-7.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+          "value": {
+            "text": "版本 0.1.0 rc2",
+            "viewport": {
+              "width": 320,
+              "height": 844
+            },
+            "bounds": {
+              "left": 119.1875,
+              "right": 200.796875,
+              "top": 788.703125,
+              "bottom": 808.703125
+            },
+            "resources": [
+              {
+                "name": "/styles.css",
+                "type": "link"
+              },
+              {
+                "name": "/app.js",
+                "type": "script"
+              },
+              {
+                "name": "/favicon.ico",
+                "type": "other"
+              }
+            ],
+            "renderedBooks": 0
+          }
+        },
+        {
+          "action": "zoom",
+          "actual": 2,
+          "width": 160,
+          "height": 422,
+          "devicePixelRatio": 2,
+          "visualScale": 1,
+          "screenshot": "zoom-9.png"
+        },
+        {
+          "action": "page_script",
+          "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+          "value": {
+            "text": "版本 0.1.0 rc2",
+            "viewport": {
+              "width": 160,
+              "height": 422
+            },
+            "bounds": {
+              "left": 39.1953125,
+              "right": 120.796875,
+              "top": 367.71875,
+              "bottom": 387.71875
+            },
+            "resources": [
+              {
+                "name": "/styles.css",
+                "type": "link"
+              },
+              {
+                "name": "/app.js",
+                "type": "script"
+              },
+              {
+                "name": "/favicon.ico",
+                "type": "other"
+              }
+            ],
+            "renderedBooks": 0
+          }
+        }
+      ]
+    }
+  ],
+  "totalActions": 205,
+  "ax": [
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-4/accessibility-11.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-4/accessibility-12.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-4/accessibility-17.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-4/accessibility-18.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-4/accessibility-22.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-4/accessibility-23.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-4/accessibility-6.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-4/accessibility-7.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-6/accessibility-4.json",
+      "labelAndValueInSameParagraph": true
+    },
+    {
+      "file": "docs/05-validation/tasks/97/browser/qa-1-6/accessibility-8.json",
+      "labelAndValueInSameParagraph": true
+    }
+  ],
+  "gates": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "<platform>/examples/github/quality/node_modules/.bin/prettier",
+        "--check",
+        "--config",
+        "<platform>/examples/github/quality/prettier.json",
+        "app/**/*.{js,html,css}"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "<platform>/examples/github/quality/node_modules/.bin/eslint",
+        "--no-config-lookup",
+        "--config",
+        "<platform>/examples/github/quality/eslint.config.mjs",
+        "app/**/*.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "<workspace>/app/app.js"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "<browser-tooling>/full_harness/browser/check.cjs",
+        "<workspace>/app",
+        "<workspace>/docs/05-validation/tasks/97/delivery-checks/existing",
+        "<workspace>/tests/browser/core.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "<browser-tooling>/full_harness/browser/check.cjs",
+        "<workspace>/app",
+        "<workspace>/docs/05-validation/tasks/97/delivery-checks/feature",
+        "<workspace>/docs/05-validation/tasks/97/browser-plan.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "<workspace>/tests/filter-tooltip.test.cjs",
+        "<workspace>/tests/undo.test.cjs",
+        "<workspace>/tests/version.test.cjs"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "<platform>/.data/runner-venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "local_deploy_test.py"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

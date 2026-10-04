@@ -1,0 +1,22 @@
+[
+  { "action": "device", "touch": true, "width": 320 },
+  { "action": "visible", "text": "版本 0.1.0 rc2" },
+  { "action": "fill", "label": "书名", "value": "触屏书籍" },
+  { "action": "tap", "role": "button", "name": "新增书籍" },
+  { "action": "visible", "text": "触屏书籍" },
+  { "action": "tap", "role": "checkbox", "name": "标记《触屏书籍》为已读" },
+  { "action": "snapshot_storage" },
+  { "action": "tap", "role": "button", "name": "未读" },
+  { "action": "visible", "text": "没有未读的书" },
+  { "action": "visible", "text": "版本 0.1.0 rc2" },
+  { "action": "tap", "role": "button", "name": "已读" },
+  { "action": "visible", "text": "触屏书籍" },
+  { "action": "visible", "text": "版本 0.1.0 rc2" },
+  { "action": "unchanged_storage" },
+  { "action": "unchanged_storage_writes" },
+  { "action": "reload" },
+  { "action": "visible", "text": "触屏书籍" },
+  { "action": "visible", "text": "版本 0.1.0 rc2" },
+  { "action": "unchanged_storage" },
+  { "action": "unchanged_storage_writes" }
+]

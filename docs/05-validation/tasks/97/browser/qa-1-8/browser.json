@@ -1,0 +1,227 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1440
+    },
+    {
+      "action": "zoom",
+      "factor": 1
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "source": "() => {\n  const version = document.querySelector(\".app-version\");\n  if (document.querySelectorAll(\"#app-version\").length !== 1 || version.textContent.trim() !== \"版本 0.1.0 rc2\") throw Error(\"Incorrect or repeated version\");\n  version.scrollIntoView({ block: \"center\" });\n  const range = document.createRange();\n  range.selectNodeContents(version);\n  const bounds = range.getBoundingClientRect();\n  if (bounds.left < 0 || bounds.right > innerWidth || bounds.top < 0 || bounds.bottom > innerHeight) throw Error(\"Version cannot be fully read after scrolling\");\n  const center = document.elementFromPoint((bounds.left + bounds.right) / 2, (bounds.top + bounds.bottom) / 2);\n  if (!center || !version.contains(center)) throw Error(\"Version is obscured\");\n  const resources = performance.getEntriesByType(\"resource\").map((entry) => ({ name: new URL(entry.name).pathname, type: entry.initiatorType }));\n  if (resources.some((entry) => [\"fetch\", \"xmlhttprequest\"].includes(entry.type))) throw Error(\"Unexpected runtime API request\");\n  return { text: version.textContent.trim(), viewport: { width: innerWidth, height: innerHeight }, bounds: { left: bounds.left, right: bounds.right, top: bounds.top, bottom: bounds.bottom }, resources, renderedBooks: document.querySelectorAll(\".book-item\").length };\n}\n"
+    },
+    {
+      "action": "zoom",
+      "factor": 2
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "source": "() => {\n  const version = document.querySelector(\".app-version\");\n  if (document.querySelectorAll(\"#app-version\").length !== 1 || version.textContent.trim() !== \"版本 0.1.0 rc2\") throw Error(\"Incorrect or repeated version\");\n  version.scrollIntoView({ block: \"center\" });\n  const range = document.createRange();\n  range.selectNodeContents(version);\n  const bounds = range.getBoundingClientRect();\n  if (bounds.left < 0 || bounds.right > innerWidth || bounds.top < 0 || bounds.bottom > innerHeight) throw Error(\"Version cannot be fully read after scrolling\");\n  const center = document.elementFromPoint((bounds.left + bounds.right) / 2, (bounds.top + bounds.bottom) / 2);\n  if (!center || !version.contains(center)) throw Error(\"Version is obscured\");\n  const resources = performance.getEntriesByType(\"resource\").map((entry) => ({ name: new URL(entry.name).pathname, type: entry.initiatorType }));\n  if (resources.some((entry) => [\"fetch\", \"xmlhttprequest\"].includes(entry.type))) throw Error(\"Unexpected runtime API request\");\n  return { text: version.textContent.trim(), viewport: { width: innerWidth, height: innerHeight }, bounds: { left: bounds.left, right: bounds.right, top: bounds.top, bottom: bounds.bottom }, resources, renderedBooks: document.querySelectorAll(\".book-item\").length };\n}\n"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "zoom",
+      "factor": 1
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "source": "() => {\n  const version = document.querySelector(\".app-version\");\n  if (document.querySelectorAll(\"#app-version\").length !== 1 || version.textContent.trim() !== \"版本 0.1.0 rc2\") throw Error(\"Incorrect or repeated version\");\n  version.scrollIntoView({ block: \"center\" });\n  const range = document.createRange();\n  range.selectNodeContents(version);\n  const bounds = range.getBoundingClientRect();\n  if (bounds.left < 0 || bounds.right > innerWidth || bounds.top < 0 || bounds.bottom > innerHeight) throw Error(\"Version cannot be fully read after scrolling\");\n  const center = document.elementFromPoint((bounds.left + bounds.right) / 2, (bounds.top + bounds.bottom) / 2);\n  if (!center || !version.contains(center)) throw Error(\"Version is obscured\");\n  const resources = performance.getEntriesByType(\"resource\").map((entry) => ({ name: new URL(entry.name).pathname, type: entry.initiatorType }));\n  if (resources.some((entry) => [\"fetch\", \"xmlhttprequest\"].includes(entry.type))) throw Error(\"Unexpected runtime API request\");\n  return { text: version.textContent.trim(), viewport: { width: innerWidth, height: innerHeight }, bounds: { left: bounds.left, right: bounds.right, top: bounds.top, bottom: bounds.bottom }, resources, renderedBooks: document.querySelectorAll(\".book-item\").length };\n}\n"
+    },
+    {
+      "action": "zoom",
+      "factor": 2
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "source": "() => {\n  const version = document.querySelector(\".app-version\");\n  if (document.querySelectorAll(\"#app-version\").length !== 1 || version.textContent.trim() !== \"版本 0.1.0 rc2\") throw Error(\"Incorrect or repeated version\");\n  version.scrollIntoView({ block: \"center\" });\n  const range = document.createRange();\n  range.selectNodeContents(version);\n  const bounds = range.getBoundingClientRect();\n  if (bounds.left < 0 || bounds.right > innerWidth || bounds.top < 0 || bounds.bottom > innerHeight) throw Error(\"Version cannot be fully read after scrolling\");\n  const center = document.elementFromPoint((bounds.left + bounds.right) / 2, (bounds.top + bounds.bottom) / 2);\n  if (!center || !version.contains(center)) throw Error(\"Version is obscured\");\n  const resources = performance.getEntriesByType(\"resource\").map((entry) => ({ name: new URL(entry.name).pathname, type: entry.initiatorType }));\n  if (resources.some((entry) => [\"fetch\", \"xmlhttprequest\"].includes(entry.type))) throw Error(\"Unexpected runtime API request\");\n  return { text: version.textContent.trim(), viewport: { width: innerWidth, height: innerHeight }, bounds: { left: bounds.left, right: bounds.right, top: bounds.top, bottom: bounds.bottom }, resources, renderedBooks: document.querySelectorAll(\".book-item\").length };\n}\n"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 0,
+  "observations": [
+    {
+      "action": "zoom",
+      "actual": 1,
+      "width": 1440,
+      "height": 844,
+      "devicePixelRatio": 1,
+      "visualScale": 1,
+      "screenshot": "zoom-2.png"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "value": {
+        "text": "版本 0.1.0 rc2",
+        "viewport": {
+          "width": 1440,
+          "height": 844
+        },
+        "bounds": {
+          "left": 679.1875,
+          "right": 760.796875,
+          "top": 789.34375,
+          "bottom": 809.34375
+        },
+        "resources": [
+          {
+            "name": "/styles.css",
+            "type": "link"
+          },
+          {
+            "name": "/app.js",
+            "type": "script"
+          },
+          {
+            "name": "/favicon.ico",
+            "type": "other"
+          }
+        ],
+        "renderedBooks": 0
+      }
+    },
+    {
+      "action": "zoom",
+      "actual": 2,
+      "width": 720,
+      "height": 422,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "screenshot": "zoom-4.png"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "value": {
+        "text": "版本 0.1.0 rc2",
+        "viewport": {
+          "width": 720,
+          "height": 422
+        },
+        "bounds": {
+          "left": 319.1953125,
+          "right": 400.796875,
+          "top": 367.5546875,
+          "bottom": 387.5546875
+        },
+        "resources": [
+          {
+            "name": "/styles.css",
+            "type": "link"
+          },
+          {
+            "name": "/app.js",
+            "type": "script"
+          },
+          {
+            "name": "/favicon.ico",
+            "type": "other"
+          }
+        ],
+        "renderedBooks": 0
+      }
+    },
+    {
+      "action": "zoom",
+      "actual": 1,
+      "width": 320,
+      "height": 844,
+      "devicePixelRatio": 1,
+      "visualScale": 1,
+      "screenshot": "zoom-7.png"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "value": {
+        "text": "版本 0.1.0 rc2",
+        "viewport": {
+          "width": 320,
+          "height": 844
+        },
+        "bounds": {
+          "left": 119.1875,
+          "right": 200.796875,
+          "top": 788.703125,
+          "bottom": 808.703125
+        },
+        "resources": [
+          {
+            "name": "/styles.css",
+            "type": "link"
+          },
+          {
+            "name": "/app.js",
+            "type": "script"
+          },
+          {
+            "name": "/favicon.ico",
+            "type": "other"
+          }
+        ],
+        "renderedBooks": 0
+      }
+    },
+    {
+      "action": "zoom",
+      "actual": 2,
+      "width": 160,
+      "height": 422,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "screenshot": "zoom-9.png"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "value": {
+        "text": "版本 0.1.0 rc2",
+        "viewport": {
+          "width": 160,
+          "height": 422
+        },
+        "bounds": {
+          "left": 39.1953125,
+          "right": 120.796875,
+          "top": 367.71875,
+          "bottom": 387.71875
+        },
+        "resources": [
+          {
+            "name": "/styles.css",
+            "type": "link"
+          },
+          {
+            "name": "/app.js",
+            "type": "script"
+          },
+          {
+            "name": "/favicon.ico",
+            "type": "other"
+          }
+        ],
+        "renderedBooks": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    }
+  ],
+  "errors": [],
+  "failure": "Unsupported key",
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 0
+}

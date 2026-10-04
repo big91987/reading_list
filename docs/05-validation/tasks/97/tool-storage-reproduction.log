@@ -1,0 +1,1 @@
+Reproduced shared-tool argument error even with zero writes; the expected three-argument equality succeeds.

@@ -1,0 +1,36 @@
+[
+  {
+    "action": "viewport",
+    "width": 1440
+  },
+  {
+    "action": "zoom",
+    "factor": 2
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+    "source": "() => {\n  const element = document.querySelector('.app-version');\n  if (!element || element.textContent.trim() !== '版本 0.1.0 rc2') throw Error('Version text differs');\n  element.scrollIntoView({block:'center'});\n  const range=document.createRange(); range.selectNodeContents(element);\n  const rect=range.getBoundingClientRect();\n  const bounds=element.getBoundingClientRect();\n  if(rect.left < 0 || rect.right > innerWidth || element.scrollWidth > element.clientWidth) throw Error('Version is horizontally clipped');\n  if(element.closest('[tabindex]') || element.querySelector('[tabindex],button,a,input')) throw Error('Version introduces focus target');\n  return {viewport:innerWidth, devicePixelRatio, text:element.textContent.trim(), textBounds:{left:rect.left,right:rect.right}, elementBounds:{left:bounds.left,right:bounds.right}, documentWidth:document.documentElement.scrollWidth};\n}"
+  },
+  {
+    "action": "accessibility",
+    "contains": "0.1.0 rc2"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  },
+  {
+    "action": "zoom",
+    "factor": 2
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+    "source": "() => {\n  const element = document.querySelector('.app-version');\n  if (!element || element.textContent.trim() !== '版本 0.1.0 rc2') throw Error('Version text differs');\n  element.scrollIntoView({block:'center'});\n  const range=document.createRange(); range.selectNodeContents(element);\n  const rect=range.getBoundingClientRect();\n  const bounds=element.getBoundingClientRect();\n  if(rect.left < 0 || rect.right > innerWidth || element.scrollWidth > element.clientWidth) throw Error('Version is horizontally clipped');\n  if(element.closest('[tabindex]') || element.querySelector('[tabindex],button,a,input')) throw Error('Version introduces focus target');\n  return {viewport:innerWidth, devicePixelRatio, text:element.textContent.trim(), textBounds:{left:rect.left,right:rect.right}, elementBounds:{left:bounds.left,right:bounds.right}, documentWidth:document.documentElement.scrollWidth};\n}"
+  },
+  {
+    "action": "accessibility",
+    "contains": "0.1.0 rc2"
+  }
+]

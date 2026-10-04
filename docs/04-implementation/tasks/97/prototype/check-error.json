@@ -1,0 +1,11 @@
+[
+  { "action": "click", "role": "button", "name": "预置已读与未读" },
+  { "action": "snapshot_storage" },
+  { "action": "storage_write_failure", "enabled": true },
+  { "action": "fill", "label": "书名", "value": "写入错误演示" },
+  { "action": "click", "role": "button", "name": "新增书籍" },
+  { "action": "visible", "text": "未能添加，请重试。" },
+  { "action": "visible", "text": "版本 0.1.0 rc2" },
+  { "action": "unchanged_storage" },
+  { "action": "storage_write_failure", "enabled": false }
+]

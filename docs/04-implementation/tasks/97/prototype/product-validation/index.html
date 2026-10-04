@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Issue 97 产品快照诊断（不交付产品）</title>
+  <style>
+    body { margin: 0; font: 14px/1.5 sans-serif; }
+    button { margin: 4px; }
+    #report { overflow-wrap: anywhere; margin: 4px; }
+    iframe { display: block; width: 100%; height: 1600px; border: 0; }
+  </style>
+  <button id="measure">检查产品快照</button>
+  <button id="invalid">预置加载异常</button>
+  <button id="restore">恢复旧中文数据</button>
+  <button id="double">CSS二倍模拟（非原生缩放）</button>
+  <p id="report" role="status"></p>
+  <iframe id="product" title="实际产品字节快照"></iframe>
+  <script src="audit.js"></script>
+</html>

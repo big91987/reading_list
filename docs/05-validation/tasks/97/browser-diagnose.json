@@ -1,0 +1,5 @@
+[
+  { "action": "viewport", "width": 320 },
+  { "action": "zoom", "factor": 2 },
+  { "action": "page_script", "script": "docs/05-validation/tasks/97/browser-scripts/diagnose-version-layout.js" }
+]

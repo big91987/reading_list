@@ -1,0 +1,120 @@
+{
+  "format": "identical-original-png-alias-v1",
+  "aliases": {
+    "browser/development-1-17/mobile.png": {
+      "retained": "browser/qa-1-1/mobile.png",
+      "sha256": "01285d397c7477037b7a826e93ce67b34b4e6e9345835910d93ff9a6b162ebf8",
+      "bytes": 103577
+    },
+    "browser/development-1-17/screenshot.png": {
+      "retained": "browser/qa-1-1/screenshot.png",
+      "sha256": "846b97e46dbc32aaf819863263efbf622946be9c58013e198ae89dda0c0b8be4",
+      "bytes": 165216
+    },
+    "browser/development-1-18/mobile.png": {
+      "retained": "browser/qa-1-2/mobile.png",
+      "sha256": "9d655a179536273cba96e8f78f57200f906fb944f279e0d1df097024c288e984",
+      "bytes": 116324
+    },
+    "browser/development-1-18/screenshot.png": {
+      "retained": "browser/qa-1-2/screenshot.png",
+      "sha256": "d2fb5052a1b401ef5568285aa7d3e4974d6566fee3ee735d16f468e8bc63fffb",
+      "bytes": 176996
+    },
+    "browser/development-1-19/mobile.png": {
+      "retained": "browser/qa-1-3/mobile.png",
+      "sha256": "2128c101a6946be8cad8de5ff76b9e2cd2a209cacea6ee1686980a053c88486f",
+      "bytes": 92463
+    },
+    "browser/development-1-19/screenshot.png": {
+      "retained": "browser/qa-1-3/screenshot.png",
+      "sha256": "ae891ba4ac78da66dec35be51f1cd11da922ba040b5cbee5472c89252435e5ba",
+      "bytes": 85466
+    },
+    "browser/qa-1-6/mobile.png": {
+      "retained": "browser/qa-1-4/mobile.png",
+      "sha256": "6ceb90ea3280003201020048e026a6fef8406b2596c1b6f6ffa43261f49a9b79",
+      "bytes": 86560
+    },
+    "browser/development-1-20/mobile.png": {
+      "retained": "browser/qa-1-4/mobile.png",
+      "sha256": "6ceb90ea3280003201020048e026a6fef8406b2596c1b6f6ffa43261f49a9b79",
+      "bytes": 86560
+    },
+    "browser/development-1-21/mobile.png": {
+      "retained": "browser/qa-1-4/mobile.png",
+      "sha256": "6ceb90ea3280003201020048e026a6fef8406b2596c1b6f6ffa43261f49a9b79",
+      "bytes": 86560
+    },
+    "browser/qa-1-4/zoom-19.png": {
+      "retained": "browser/qa-1-4/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    "browser/qa-1-6/screenshot.png": {
+      "retained": "browser/qa-1-4/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    "browser/qa-1-6/zoom-6.png": {
+      "retained": "browser/qa-1-4/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    "browser/development-1-20/screenshot.png": {
+      "retained": "browser/qa-1-4/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    "browser/development-1-20/zoom-6.png": {
+      "retained": "browser/qa-1-4/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    "browser/development-1-21/screenshot.png": {
+      "retained": "browser/qa-1-4/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    "browser/development-1-21/zoom-19.png": {
+      "retained": "browser/qa-1-4/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    "browser/development-1-21/zoom-14.png": {
+      "retained": "browser/qa-1-4/zoom-14.png",
+      "sha256": "211caaf0fceb834d384958f471b761733d64b83ba6d6e8d1fe120ec5fb1bb197",
+      "bytes": 82608
+    },
+    "browser/development-1-21/zoom-3.png": {
+      "retained": "browser/qa-1-4/zoom-3.png",
+      "sha256": "931e521a627dd2fbcad5d3a6ac09be597d7ec850e00114aa955c0427e0ec74c4",
+      "bytes": 141068
+    },
+    "browser/qa-1-6/zoom-2.png": {
+      "retained": "browser/qa-1-4/zoom-8.png",
+      "sha256": "41f42fbafd00c4014b508ea6e97acd04ea03fede94325bcf68def15c14625437",
+      "bytes": 142133
+    },
+    "browser/development-1-20/zoom-2.png": {
+      "retained": "browser/qa-1-4/zoom-8.png",
+      "sha256": "41f42fbafd00c4014b508ea6e97acd04ea03fede94325bcf68def15c14625437",
+      "bytes": 142133
+    },
+    "browser/development-1-21/zoom-8.png": {
+      "retained": "browser/qa-1-4/zoom-8.png",
+      "sha256": "41f42fbafd00c4014b508ea6e97acd04ea03fede94325bcf68def15c14625437",
+      "bytes": 142133
+    },
+    "browser/development-1-22/mobile.png": {
+      "retained": "browser/qa-1-7/mobile.png",
+      "sha256": "99aa0d7c5ef403a38e14ff32b7194b447f3b449e480505d4c2cce5ae90aa9ba2",
+      "bytes": 121664
+    },
+    "browser/development-1-22/screenshot.png": {
+      "retained": "browser/qa-1-7/screenshot.png",
+      "sha256": "f977db2bd62d7a52313395f14932f0e835d9e65831a74ad76a338ef952db44ba",
+      "bytes": 188353
+    }
+  }
+}

@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform/examples/github/verify.py", line 198, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhaojiuzhou/work/agent_platform/examples/github/verify.py", line 193, in main
+    verify(config, workspace, args.issue, args.evidence_name)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhaojiuzhou/work/agent_platform/examples/github/verify.py", line 119, in verify
+    raise RuntimeError(
+    ...<4 lines>...
+    )
+RuntimeError: Check failed: node /Users/zhaojiuzhou/work/agent_platform/.data/browser-tooling-94/full_harness/browser/check.cjs /Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-97/app /Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-97/docs/05-validation/tasks/97/delivery-checks/existing /Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-97/tests/browser/core.json
+listen EPERM: operation not permitted 127.0.0.1
+

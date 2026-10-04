@@ -1,0 +1,12 @@
+[
+  { "action": "viewport", "width": 1440 },
+  { "action": "zoom", "factor": 1 },
+  { "action": "page_script", "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js" },
+  { "action": "zoom", "factor": 2 },
+  { "action": "page_script", "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js" },
+  { "action": "viewport", "width": 320 },
+  { "action": "zoom", "factor": 1 },
+  { "action": "page_script", "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js" },
+  { "action": "zoom", "factor": 2 },
+  { "action": "page_script", "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js" }
+]

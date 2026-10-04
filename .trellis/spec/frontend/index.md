@@ -5,6 +5,7 @@
 - Read [book-state.md](book-state.md) before changing list writes, editing, rendering or focus restoration.
 - Read [filter-tooltips.md](filter-tooltips.md) before changing filter explanations or pointer dismissal.
 - Read the active task's approved PRD, prototype, HLD/contracts and LLD; this spec does not override them.
+- Read [page-version.md](page-version.md) when maintaining the footer version declaration.
 - Use native DOM and the existing static app. Do not add test data or fault controls to the product.
 
 ## Quality Check
