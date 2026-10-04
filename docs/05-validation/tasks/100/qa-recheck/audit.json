@@ -1,0 +1,74 @@
+{
+  "audit_passed": true,
+  "qa_release_passed": true,
+  "deployed_sha": "10c5e03d04bad026524e20476efd124db7e3a907",
+  "private_user_data_read": false,
+  "release_fingerprint": "667ea5862390a3c71765dd746272fdb1318a2ad26f2f79320c4104ce55a0809d",
+  "core_bytes_unchanged": true,
+  "protected_paths_unchanged": true,
+  "python_tests": 47,
+  "node_tests": 25,
+  "shared_gates": 8,
+  "browser": [
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-11",
+      "actions": 48,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-12",
+      "actions": 14,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-13",
+      "actions": 39,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-14",
+      "actions": 13,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-15",
+      "actions": 20,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-16",
+      "actions": 23,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-17",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-18",
+      "actions": 9,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-19",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-20",
+      "actions": 11,
+      "passed": true
+    }
+  ],
+  "browser_actions": 209,
+  "real_catalogue_revision": "9150416b92af67bda5d32fd2611c3868eed70c882086aaccd3d38f5898f3a38b",
+  "actual_send_gaps_seconds": [
+    1.0105924997478724,
+    1.0034342920407653,
+    1.0104125831276178,
+    1.006604707799852
+  ],
+  "historical_and_current_evidence_bytes_verified": true,
+  "prior_defects_closed_by_new_independent_reproduction": true
+}

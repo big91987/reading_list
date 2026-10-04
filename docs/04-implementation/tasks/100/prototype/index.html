@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>页间 · 推荐设计原型</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">READING NOTES · 读有所记</p>
+        <h1>页间</h1>
+        <p class="subtitle">先了解一本书，再把它收进来。</p>
+        <p class="prototype-note">Issue #100 交互原型 · 非上线产品 · 使用独立演示存储，不读取你的真实书单</p>
+      </header>
+      <nav aria-label="书籍页面">
+        <button id="recommend-tab" aria-pressed="true">发现推荐</button>
+        <button id="list-tab" aria-pressed="false">我的书单</button>
+      </nav>
+      <p id="message" role="status" aria-live="polite"></p>
+      <section id="recommendations" aria-labelledby="recommend-heading">
+        <div class="section-title">
+          <div><p class="eyebrow">来自官方公开荐书栏目</p><h2 id="recommend-heading">下一本，想读什么？</h2></div>
+          <button id="retry">重新读取目录</button>
+        </div>
+        <p class="help">不按个人兴趣排序，不自动加入书单。简介为本产品事实性概述，分类与来源原门类分开标注。</p>
+        <p id="catalogue-status" role="status" aria-live="polite"></p>
+        <label for="type-filter">推荐类型</label>
+        <select id="type-filter">
+          <option>全部类型</option><option>古典文学</option><option>仙侠</option><option>现当代文学</option><option>历史社科</option><option>科普</option><option>其他</option>
+        </select>
+        <p id="recommend-count"></p>
+        <div id="recommend-list" class="cards"></div>
+        <p id="recommend-empty" class="empty" hidden></p>
+      </section>
+      <section id="books" hidden aria-labelledby="books-heading">
+        <h2 id="books-heading">我的阅读清单</h2>
+        <form id="add-form" class="panel" novalidate>
+          <h3>添加一本书</h3>
+          <label for="new-title">新增书名</label><input id="new-title" maxlength="80" required autocomplete="off" />
+          <label for="new-types">新增类型（可多选）</label>
+          <select id="new-types" multiple size="3"><option>古典文学</option><option>仙侠</option><option>现当代文学</option><option>历史社科</option><option>科普</option><option>其他</option></select>
+          <label for="new-summary">新增简介（可留空）</label><textarea id="new-summary" maxlength="600" rows="2"></textarea>
+          <button class="primary" type="submit">新增书籍</button>
+          <p id="add-error" role="alert"></p>
+        </form>
+        <div class="filters" role="group" aria-label="阅读状态">
+          <button data-filter="all" aria-pressed="true">全部书籍</button><button data-filter="unread" aria-pressed="false">未读书籍</button><button data-filter="read" aria-pressed="false">已读书籍</button>
+        </div>
+        <div id="undo-panel" class="panel" hidden><p id="undo-message"></p><button id="undo">撤销删除</button><p class="help">仅最近一次 · 刷新后失效</p></div>
+        <p id="book-count" aria-live="polite"></p>
+        <div id="book-list" class="cards"></div>
+      </section>
+      <details class="scenario-panel">
+        <summary>原型场景控制（仅演示，不是生产运维入口）</summary>
+        <label for="scenario">目录场景</label>
+        <select id="scenario"><option value="ok">正常目录</option><option value="loading">加载中</option><option value="empty">有效空目录</option><option value="stale">过期缓存</option><option value="partial">部分来源失败</option><option value="failed-cache">全失败但有缓存</option><option value="failed-none">全失败且无缓存</option></select>
+        <p class="help">正常内容取自真实两源PoC的6条，简介已重新撰写。旧书示例及“同名示例”歧义候选是明确标记的测试数据。场景切换只改变展示，不运行采集、不写私人书单。</p>
+      </details>
+    </main>
+    <footer>一本一本，慢慢读完。 · 原型</footer>
+    <script src="prototype.js"></script>
+  </body>
+</html>

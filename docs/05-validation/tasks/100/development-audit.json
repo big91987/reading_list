@@ -1,0 +1,14 @@
+{
+  "localMarkdownFiles": 7,
+  "localLinksChecked": 86,
+  "missingLinks": [],
+  "baselineFilesHashAndLength": true,
+  "releaseFingerprintMatches": true,
+  "protectedPathsUnchanged": true,
+  "corePlanByteIdenticalToHEAD": true,
+  "requirementsPreserved": "11R/12AC",
+  "previewHTTP": {
+    "status": 200,
+    "records": 32
+  }
+}

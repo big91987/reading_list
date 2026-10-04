@@ -1,0 +1,214 @@
+[
+  {
+    "action": "visible",
+    "text": "下一本，想读什么？"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js",
+    "source": "() => {\n  const catalogue = {\"coverage\":\"ready\",\"generatedAt\":\"2026-10-04T08:41:39.623270Z\",\"records\":[{\"author\":\"冉正万\",\"edition\":null,\"id\":\"b9b00396df2dc73bdf9c57298e66c8ad8f4047bf19a77513350b0c2d42896e66\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"中国作家网\",\"publishedAt\":null,\"recommendationStatus\":\"文学好书入围书单\",\"sourceId\":\"writer\",\"sourceType\":\"长篇小说\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html\"}],\"publisher\":null,\"summary\":\"这是一部长篇小说作品；来源介绍提及科举、屯堡、军屯，可据这些内容线索了解本书。\",\"summaryOrigin\":{\"evidenceSourceId\":\"writer\",\"method\":\"factual-template-v1\"},\"title\":\"屯堡\",\"types\":[\"现当代文学\"]},{\"author\":\"[阿根廷] 塞尔吉奥·莱文斯基\",\"edition\":null,\"id\":\"64b49cf17f736a7d0c658aaf0ebf0bec9040ce3c979f848a7f87b71872e8ad07\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"K837.835.47/22\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm\"}],\"publisher\":\"作家出版社\",\"summary\":\"介绍梅西个人经历与足球生涯的传记。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"梅西传\",\"types\":[\"历史社科\"]},{\"author\":\"汤海鹏\",\"edition\":null,\"id\":\"11e215b18771537c66cca74e8853b60b3fef21b395cc8419d92b049df9c57959\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"B84-49/1200\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481272.htm\"}],\"publisher\":\"北京联合出版公司\",\"summary\":\"借助精神分析客体关系理论与案例，介绍不同人格特质和咨询中的理解方式。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"人格的健全：读懂自己和身边的人\",\"types\":[\"科普\"]}],\"schemaVersion\":1,\"sources\":[{\"errorCode\":null,\"id\":\"writer\",\"lastAttemptAt\":\"2026-10-04T08:41:35.120966Z\",\"lastSuccessAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"中国作家网\",\"status\":\"ok\"},{\"errorCode\":null,\"id\":\"fjlib\",\"lastAttemptAt\":\"2026-10-04T08:41:35.120966Z\",\"lastSuccessAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"福建省图书馆\",\"status\":\"ok\"}],\"status\":\"ok\",\"revision\":\"2d45a3a1744acb7e42f1538e82ef31e0603b41edee50a711ee32e52193c4a305\"};\n  localStorage.setItem(\"page-between-recommendations-v1\", JSON.stringify(catalogue));\n  localStorage.setItem(\"page-between-reading-list\", '[ { \"title\": \"梅西传\", \"read\": true, \"unknown\": {\"nested\":[7]} }, {\"title\":\"没有匹配的旧书\",\"read\":false} ]');\n  return {publicRecords: catalogue.records.length, fixture: \"actual collector 3-record subset, isolated private legacy values\"};\n}\n"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "书籍推荐"
+  },
+  {
+    "action": "visible",
+    "role": "heading",
+    "name": "梅西传",
+    "exact": true
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-cache-status.js",
+    "source": "() => {\n  const status = document.querySelector(\"#recommend-status\").textContent;\n  if (!status.includes(\"推荐更新失败，显示上次缓存。\") || !status.includes(\"中国作家网\") || !status.includes(\"福建省图书馆\")) throw new Error(`Missing failure/cache/source status: ${status}`);\n  return { cachedAfterHTTPFailure: true, status };\n}\n"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《梅西传》到书单"
+  },
+  {
+    "action": "visible",
+    "text": "这本书已在书单中，原状态和信息未改变。"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《屯堡》到书单"
+  },
+  {
+    "action": "visible",
+    "text": "未能加入，书单未改变；若其他标签页有修改，请刷新后重试。"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《屯堡》到书单"
+  },
+  {
+    "action": "visible",
+    "text": "已将《屯堡》加入书单。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "我的书单"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "查看《梅西传》补全建议"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "确认采用《梅西传》[阿根廷] 塞尔吉奥·莱文斯基的推荐信息"
+  },
+  {
+    "action": "visible",
+    "text": "已采用候选的空缺信息；已有内容保留。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "编辑《梅西传》信息"
+  },
+  {
+    "action": "fill",
+    "label": "简介（最多600字）",
+    "value": "这是我自己写的简介。"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存信息"
+  },
+  {
+    "action": "visible",
+    "text": "未能保存信息，原值未变、草稿仍保留；请重试或刷新处理其他标签页冲突。"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存信息"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-saved.js",
+    "source": "() => {\n  const saved = JSON.parse(localStorage.getItem(\"page-between-reading-list\"));\n  const target = saved.find((book) => book.title === \"梅西传\");\n  if (target.bookInfo.summary !== \"这是我自己写的简介。\" || target.bookInfo.fieldOrigins.summary !== \"manual\" || target.read !== true || target.unknown.nested[0] !== 7) throw new Error(\"Saved metadata or legacy values differ\");\n  if (target.bookInfo.catalogueLink.verification !== \"verified\") throw new Error(\"Missing adopted origin\");\n  if (!saved.some((book) => book.title === \"屯堡\" && book.read === false)) throw new Error(\"Recommendation not saved unread\");\n  return { summaryOrigin: \"manual\", legacyPreserved: true, addedUnread: true };\n}\n"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "这是我自己写的简介。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《梅西传》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "我的梅西传"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存",
+    "exact": true
+  },
+  {
+    "action": "visible",
+    "text": "来源关联待核对，改名后原信息保留。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《我的梅西传》"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《我的梅西传》"
+  },
+  {
+    "action": "visible",
+    "text": "未能保存恢复结果，书籍尚未恢复。撤销机会仍保留，请重试。"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《我的梅西传》"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-restored.js",
+    "source": "() => {\n  const saved = JSON.parse(localStorage.getItem(\"page-between-reading-list\"));\n  const target = saved[0];\n  if (target.title !== \"我的梅西传\" || target.read !== true || target.unknown.nested[0] !== 7 || target.bookInfo.summary !== \"这是我自己写的简介。\") throw new Error(\"Undo did not restore full object and index\");\n  if (target.bookInfo.catalogueLink.verification !== \"needs_review\" || target.bookInfo.catalogueLink.titleAtAdoption !== \"梅西传\") throw new Error(\"Rename origin state differs\");\n  return { completeUndo: true, originalIndex: 0, renamedOriginPreserved: true };\n}\n"
+  },
+  {
+    "action": "accessibility",
+    "contains": "编辑《我的梅西传》信息"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-layout.js",
+    "source": "() => {\n  const visible = [...document.querySelectorAll(\"h1,h2,h3,p,button,input,textarea,select\")].filter((node) => node.getClientRects().length);\n  const overflow = visible.filter((node) => { const rectangle = node.getBoundingClientRect(); return rectangle.left < -1 || rectangle.right > innerWidth + 1; }).map((node) => node.textContent.slice(0, 60));\n  if (document.documentElement.scrollWidth > innerWidth + 1 || overflow.length) throw new Error(`Horizontal overflow: ${JSON.stringify(overflow)}`);\n  return { width: innerWidth, scrollWidth: document.documentElement.scrollWidth, devicePixelRatio, overflow };\n}\n"
+  },
+  {
+    "action": "zoom",
+    "factor": 2
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-layout.js",
+    "source": "() => {\n  const visible = [...document.querySelectorAll(\"h1,h2,h3,p,button,input,textarea,select\")].filter((node) => node.getClientRects().length);\n  const overflow = visible.filter((node) => { const rectangle = node.getBoundingClientRect(); return rectangle.left < -1 || rectangle.right > innerWidth + 1; }).map((node) => node.textContent.slice(0, 60));\n  if (document.documentElement.scrollWidth > innerWidth + 1 || overflow.length) throw new Error(`Horizontal overflow: ${JSON.stringify(overflow)}`);\n  return { width: innerWidth, scrollWidth: document.documentElement.scrollWidth, devicePixelRatio, overflow };\n}\n"
+  }
+]

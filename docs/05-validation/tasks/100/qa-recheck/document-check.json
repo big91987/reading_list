@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "local_links": 102,
+  "pr_sections": true,
+  "source_branch": "codex/issue-100-platform",
+  "note": "GitHub links point to current task branch; Runner must publish new artifacts before remote access"
+}

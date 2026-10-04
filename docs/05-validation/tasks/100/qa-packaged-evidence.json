@@ -1,0 +1,30 @@
+{
+  "scope": "Exact gzip packaging of large QA AX tree; shared gate screenshots restored by independent verify re-use their existing immutable aliases; no receipt changes",
+  "gzip": {
+    "path": "docs/05-validation/tasks/100/browser/qa-1-8/accessibility-8.json",
+    "archive": "docs/05-validation/tasks/100/browser/qa-1-8/accessibility-8.json.gz",
+    "sha256": "9c08340184fdf7361410553565e3942a08e4f9abdd74c69d5eaa99d41a5aaca7",
+    "bytes": 626491
+  },
+  "existingAliasesReused": [],
+  "gzipFiles": [
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-1/accessibility-44.json",
+      "archive": "docs/05-validation/tasks/100/browser/qa-1-1/accessibility-44.json.gz",
+      "sha256": "693a19669b7df80a6f52a11ba70c73b80f3c38445a12c01421905f02fd91896c",
+      "bytes": 177829
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-4/accessibility-13.json",
+      "archive": "docs/05-validation/tasks/100/browser/qa-1-4/accessibility-13.json.gz",
+      "sha256": "3c8da7463638a7cc82331820f39d23d106d91f2e2dda9511a36aeba0923a7d07",
+      "bytes": 174415
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-9/accessibility-16.json",
+      "archive": "docs/05-validation/tasks/100/browser/qa-1-9/accessibility-16.json.gz",
+      "sha256": "22dbb60acba03414497c167c61a31feb28c837df8bd7f4a7acad8751717159d3",
+      "bytes": 169019
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+[
+  {
+    "action": "visible",
+    "text": "下一本，想读什么？"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "书籍推荐"
+  },
+  {
+    "action": "visible",
+    "role": "heading",
+    "name": "梅西传",
+    "exact": true
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-cache-status.js"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《梅西传》到书单"
+  },
+  {
+    "action": "visible",
+    "text": "这本书已在书单中，原状态和信息未改变。"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《屯堡》到书单"
+  },
+  {
+    "action": "visible",
+    "text": "未能加入，书单未改变；若其他标签页有修改，请刷新后重试。"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《屯堡》到书单"
+  },
+  {
+    "action": "visible",
+    "text": "已将《屯堡》加入书单。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "我的书单"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "查看《梅西传》补全建议"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "确认采用《梅西传》[阿根廷] 塞尔吉奥·莱文斯基的推荐信息"
+  },
+  {
+    "action": "visible",
+    "text": "已采用候选的空缺信息；已有内容保留。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "编辑《梅西传》信息"
+  },
+  {
+    "action": "fill",
+    "label": "简介（最多600字）",
+    "value": "这是我自己写的简介。"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存信息"
+  },
+  {
+    "action": "visible",
+    "text": "未能保存信息，原值未变、草稿仍保留；请重试或刷新处理其他标签页冲突。"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存信息"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-saved.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "这是我自己写的简介。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "修改《梅西传》书名"
+  },
+  {
+    "action": "fill",
+    "label": "修改书名",
+    "value": "我的梅西传"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存",
+    "exact": true
+  },
+  {
+    "action": "visible",
+    "text": "来源关联待核对，改名后原信息保留。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《我的梅西传》"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《我的梅西传》"
+  },
+  {
+    "action": "visible",
+    "text": "未能保存恢复结果，书籍尚未恢复。撤销机会仍保留，请重试。"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除《我的梅西传》"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-restored.js"
+  },
+  {
+    "action": "accessibility",
+    "contains": "编辑《我的梅西传》信息"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-layout.js"
+  },
+  {
+    "action": "zoom",
+    "factor": 2
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-layout.js"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "attempt": 1,
+  "outcome": "failed",
+  "exit_code": 1,
+  "stage": "parsing second Fujian library recommendation",
+  "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481273.htm",
+  "error": "ValueError: Library record missing required metadata or intro",
+  "cause": "Intro exists in the article body outside p elements; parser only examined p elements",
+  "snapshot": "../source-poc/response-07.html.gz",
+  "network_failure": false,
+  "partial_responses": 7,
+  "headers_and_request_timestamps_recorded": false,
+  "note": "Partial raw responses retained; first implementation only wrote manifest on full success. No success claimed.",
+  "snapshot_deduplication": "Byte-identical responses shared with successful run; original hashes in snapshots.json; no failure outcome changed",
+  "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+}

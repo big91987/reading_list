@@ -1,0 +1,67 @@
+[
+  {
+    "action": "click",
+    "role": "button",
+    "name": "书籍推荐"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-no-cache.js",
+    "source": "async () => {\n  await new Promise((resolve) => setTimeout(resolve, 100));\n  if (!document.querySelector(\"#recommend-status\").textContent.includes(\"推荐加载失败；我的书单仍可使用，请重试。\")) throw new Error(\"No-cache failure not distinct\");\n  if (localStorage.getItem(\"page-between-reading-list\") !== null) throw new Error(\"Viewing failure created private list\");\n  return {failureWithoutCache:true, privateKeyAbsent:true};\n}\n"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js",
+    "source": "() => {\n  const catalogue = {\"generatedAt\":\"2026-10-04T08:02:10.626490Z\",\"records\":[{\"author\":\"冉正万\",\"edition\":null,\"id\":\"b9b00396df2dc73bdf9c57298e66c8ad8f4047bf19a77513350b0c2d42896e66\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"中国作家网\",\"publishedAt\":null,\"recommendationStatus\":\"文学好书入围书单\",\"sourceId\":\"writer\",\"sourceType\":\"长篇小说\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html\"}],\"publisher\":null,\"summary\":\"冉正万的长篇小说作品，入围中国作家网文学好书书单。\",\"summaryOrigin\":{\"evidenceSourceId\":\"writer\",\"method\":\"factual-template-v1\"},\"title\":\"屯堡\",\"types\":[\"现当代文学\"]},{\"author\":\"[阿根廷] 塞尔吉奥·莱文斯基\",\"edition\":null,\"id\":\"64b49cf17f736a7d0c658aaf0ebf0bec9040ce3c979f848a7f87b71872e8ad07\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"K837.835.47/22\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm\"}],\"publisher\":\"作家出版社\",\"summary\":\"介绍梅西个人经历与足球生涯的传记。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"梅西传\",\"types\":[\"历史社科\"]},{\"author\":\"汤海鹏\",\"edition\":null,\"id\":\"11e215b18771537c66cca74e8853b60b3fef21b395cc8419d92b049df9c57959\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"B84-49/1200\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481272.htm\"}],\"publisher\":\"北京联合出版公司\",\"summary\":\"借助精神分析客体关系理论与案例，介绍不同人格特质和咨询中的理解方式。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"人格的健全：读懂自己和身边的人\",\"types\":[\"科普\"]}],\"schemaVersion\":1,\"sources\":[{\"errorCode\":null,\"id\":\"writer\",\"lastAttemptAt\":\"2026-10-04T08:02:06.297703Z\",\"lastSuccessAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"中国作家网\",\"status\":\"ok\"},{\"errorCode\":null,\"id\":\"fjlib\",\"lastAttemptAt\":\"2026-10-04T08:02:06.297703Z\",\"lastSuccessAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"status\":\"ok\"}],\"status\":\"ok\",\"revision\":\"e154a227ce6d0cb5a8c6c1eb8949608e840601e5d5c4af2088c5243845794e15\"};\n  localStorage.setItem(\"page-between-recommendations-v1\", JSON.stringify(catalogue));\n  localStorage.setItem(\"page-between-reading-list\", '[ { \"title\": \"梅西传\", \"read\": true, \"unknown\": {\"nested\":[7]} }, {\"title\":\"没有匹配的旧书\",\"read\":false} ]');\n  return {publicRecords: catalogue.records.length, fixture: \"actual collector 3-record subset, isolated private legacy values\"};\n}\n"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "书籍推荐"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-network.js",
+    "source": "async () => {\n  const privateBefore = localStorage.getItem(\"page-between-reading-list\");\n  const cacheBefore = JSON.parse(localStorage.getItem(\"page-between-recommendations-v1\"));\n  const originalFetch = window.fetch;\n  const calls = [];\n  const sign = async (value) => {\n    const canonical = (input) => Array.isArray(input) ? `[${input.map(canonical).join(\",\")}]` : input && typeof input === \"object\" ? `{${Object.keys(input).sort().map((key) => `${JSON.stringify(key)}:${canonical(input[key])}`).join(\",\")}}` : JSON.stringify(input);\n    delete value.revision;\n    const bytes = await crypto.subtle.digest(\"SHA-256\", new TextEncoder().encode(canonical(value)));\n    value.revision = [...new Uint8Array(bytes)].map((byte) => byte.toString(16).padStart(2, \"0\")).join(\"\");\n    return value;\n  };\n  const read = async (value, status = 200) => {\n    window.fetch = async (url, options) => {\n      calls.push({url, credentials: options.credentials});\n      return new Response(typeof value === \"string\" ? value : JSON.stringify(value), {status, headers: {\"Content-Type\":\"application/json\"}});\n    };\n    document.querySelector(\"#recommend-retry\").click();\n    await new Promise((resolve) => setTimeout(resolve, 100));\n    return document.querySelector(\"#recommend-status\").textContent;\n  };\n  const assert = (condition, message) => { if (!condition) throw new Error(message); };\n  try {\n    const empty = await sign({...structuredClone(cacheBefore), records: []});\n    assert((await read(empty)).includes(\"当前推荐目录为空。\"), \"Valid empty confused with failure\");\n    const partial = structuredClone(cacheBefore);\n    partial.status = \"partial\";\n    partial.sources[1].status = \"failed\";\n    partial.sources[1].errorCode = \"network\";\n    partial.sources[1].lastSuccessAt = \"2026-09-01T00:00:00Z\";\n    await sign(partial);\n    const status = await read(partial);\n    assert(status.includes(\"部分来源失败\") && status.includes(\"目录已过期\"), \"Partial/stale states not composable\");\n    const prior = localStorage.getItem(\"page-between-recommendations-v1\");\n    assert((await read({...partial,schemaVersion:2})).includes(\"推荐更新失败，显示上次缓存。\"), \"Unsupported version not rejected\");\n    assert(localStorage.getItem(\"page-between-recommendations-v1\") === prior, \"Bad schema overwrote cache\");\n    assert((await read(\"x\".repeat(1048577))).includes(\"推荐更新失败\"), \"Oversize not rejected\");\n    assert(localStorage.getItem(\"page-between-recommendations-v1\") === prior, \"Oversize overwrote cache\");\n    const malicious = structuredClone(cacheBefore);\n    malicious.records[0].origins[0].url = \"javascript:alert(1)\";\n    await sign(malicious);\n    await read(malicious);\n    assert(localStorage.getItem(\"page-between-recommendations-v1\") === prior, \"Unsafe origin accepted\");\n    const safeText = structuredClone(cacheBefore);\n    safeText.records[0].summary = '<img src=x onerror=\"window.__executed=true\">测试文本';\n    await sign(safeText);\n    await read(safeText);\n    assert(!document.querySelector(\"#recommend-records img\") && !window.__executed, \"HTML interpreted\");\n    assert(document.querySelector(\"#recommend-records\").textContent.includes(\"<img src=x\"), \"Safe text missing\");\n    await read(await sign(structuredClone(cacheBefore)));\n    assert(calls.every((call) => call.url === \"/__recommendations/catalogue.json\" && call.credentials === \"omit\"), \"Request carried private data or used relative route\");\n    assert(localStorage.getItem(\"page-between-reading-list\") === privateBefore, \"Network/display wrote private list\");\n    return {validEmpty:true, partialAndStale:true, unsupportedAndOversizeRejected:true, unsafeOriginRejected:true, HTMLIsText:true, privateZeroWrite:true, requests:calls};\n  } finally { window.fetch = originalFetch; }\n}\n"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-cache-failure.js",
+    "source": "async () => {\n  const privateBefore = localStorage.getItem(\"page-between-reading-list\");\n  const publicBefore = localStorage.getItem(\"page-between-recommendations-v1\");\n  const originalFetch = window.fetch;\n  try {\n    window.fetch = async () => new Response(publicBefore, {status:200,headers:{\"Content-Type\":\"application/json\"}});\n    document.querySelector(\"#recommend-retry\").click();\n    await new Promise((resolve) => setTimeout(resolve, 100));\n    if (!document.querySelector(\"#recommend-status\").textContent.includes(\"推荐缓存未保存，书单仍可使用。\")) throw new Error(\"Missing cache write failure message\");\n    if (localStorage.getItem(\"page-between-reading-list\") !== privateBefore || localStorage.getItem(\"page-between-recommendations-v1\") !== publicBefore) throw new Error(\"Cache failure corrupted storage\");\n    return {cacheFailureVisible:true, bothOriginalsIntact:true};\n  } finally { window.fetch = originalFetch; }\n}\n"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-type-empty.js",
+    "source": "() => {\n  const privateBefore = localStorage.getItem(\"page-between-reading-list\");\n  const filter = document.querySelector(\"#recommend-type\");\n  for (const kind of [\"古典文学\", \"仙侠\"]) {\n    filter.value = kind;\n    filter.dispatchEvent(new Event(\"change\", {bubbles:true}));\n    if (document.querySelectorAll(\".recommend-card\").length || !document.querySelector(\"#recommend-records\").textContent.includes(\"这个类型暂无推荐。\")) throw new Error(`${kind} is not an honest empty state`);\n  }\n  if (localStorage.getItem(\"page-between-reading-list\") !== privateBefore) throw new Error(\"Type browsing wrote private list\");\n  return {classicsEmpty:true, xianxiaEmpty:true, noPrivateWrite:true};\n}\n"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "我的书单"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "网络故障仍可添加"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "visible",
+    "text": "网络故障仍可添加"
+  }
+]

@@ -1,0 +1,15 @@
+/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/docs/05-validation/tasks/100/qa-recheck/evidence.cjs:47
+    if (bytes.length !== entry.bytes || digest(bytes) !== entry.sha256) throw new Error("Evidence changed");
+                                                                        ^
+
+Error: Evidence changed
+    at Object.<anonymous> (/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/docs/05-validation/tasks/100/qa-recheck/evidence.cjs:47:79)
+    at Module._compile (node:internal/modules/cjs/loader:1829:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1969:10)
+    at Module.load (node:internal/modules/cjs/loader:1552:32)
+    at Module._load (node:internal/modules/cjs/loader:1354:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v26.0.0

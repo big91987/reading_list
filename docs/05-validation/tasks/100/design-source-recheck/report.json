@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-04T07:30:27.313655+00:00",
+  "requests": [
+    {
+      "requested_at": "2026-10-04T07:30:23.616324+00:00",
+      "url": "https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html",
+      "final_url": "https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html",
+      "status": 200,
+      "content_type": "text/html",
+      "encoding": "utf-8",
+      "bytes": 56964,
+      "sha256": "eee15baf5753e3ec8a17e520b41378932dad9490b5e0b37dd6c373106af41916",
+      "snapshot": "response-0.html.gz",
+      "parsed_count": 30
+    },
+    {
+      "requested_at": "2026-10-04T07:30:24.727468+00:00",
+      "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm",
+      "final_url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm",
+      "status": 200,
+      "content_type": "text/html",
+      "encoding": "utf-8",
+      "bytes": 31460,
+      "sha256": "0461b6da4876b4f2710507c70c4fc5fafdb6aa027631f44591847c1f3fbdc944",
+      "snapshot": "response-30.html.gz",
+      "parsed_count": 1
+    },
+    {
+      "requested_at": "2026-10-04T07:30:25.893756+00:00",
+      "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481272.htm",
+      "final_url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481272.htm",
+      "status": 200,
+      "content_type": "text/html",
+      "encoding": "utf-8",
+      "bytes": 32893,
+      "sha256": "27c75f661f3bce54fa37b401be698d87485fde67883335795e32fe92ee5d162d",
+      "snapshot": "response-32.html.gz",
+      "parsed_count": 1
+    }
+  ],
+  "source_count": 2,
+  "sources": [
+    "中国作家网",
+    "福建省图书馆"
+  ],
+  "basic_types": [
+    "历史社科",
+    "现当代文学",
+    "科普"
+  ],
+  "parsed_records": 32,
+  "passed": true,
+  "scope": "Selected source identity and parsing recheck, not production collection/scheduling or publication permission",
+  "permission_granted": false
+}

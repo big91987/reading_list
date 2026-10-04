@@ -1,0 +1,78 @@
+test_failed_health_restores_old_release (local_deploy_test.DeploymentTest.test_failed_health_restores_old_release) ... ok
+test_invalid_javascript_and_missing_migration_plan_keep_live_release (local_deploy_test.DeploymentTest.test_invalid_javascript_and_missing_migration_plan_keep_live_release) ... ok
+test_migration_and_undeclared_changes_wait_without_touching_live (local_deploy_test.DeploymentTest.test_migration_and_undeclared_changes_wait_without_touching_live) ... ok
+test_safe_followup_cannot_hide_an_unreleased_migration (local_deploy_test.DeploymentTest.test_safe_followup_cannot_hide_an_unreleased_migration) ... ok
+test_safe_release_switch_keeps_data_and_previous_version (local_deploy_test.DeploymentTest.test_safe_release_switch_keeps_data_and_previous_version) ... ok
+test_server_pins_assets_and_never_exposes_private_runtime (local_deploy_test.DeploymentTest.test_server_pins_assets_and_never_exposes_private_runtime) ... 127.0.0.1 - - [04/Oct/2026 20:47:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 20:47:17] "GET /__deployment.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 20:47:17] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 20:47:17] "GET /_releases/5b40acef17726634054cd77d5ac6928168f1d537/ HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 20:47:17] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 20:47:17] "GET /_releases/5b40acef17726634054cd77d5ac6928168f1d537/app.js HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 20:47:17] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 20:47:17] "GET /../data/keep HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 20:47:17] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 20:47:17] "GET /_releases/../../data/keep HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 20:47:17] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 20:47:17] "GET /control/local_deploy.py HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 20:47:17] "GET /_releases/690c7758cd362378eafb0e361a22c7be282ebeef/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 20:47:17] "GET /_releases/690c7758cd362378eafb0e361a22c7be282ebeef/app.js HTTP/1.1" 200 -
+ok
+test_stale_plan_cannot_overwrite_a_newer_deployment (local_deploy_test.DeploymentTest.test_stale_plan_cannot_overwrite_a_newer_deployment) ... ok
+test_tampered_release_cannot_replace_current (local_deploy_test.DeploymentTest.test_tampered_release_cannot_replace_current) ... ok
+test_atomic_replace_interruption_preserves_original (recommendations_test.CollectorTest.test_atomic_replace_interruption_preserves_original) ... ok
+test_budget_failure_preserves_snapshots_reports_due_and_releases_lock (recommendations_test.CollectorTest.test_budget_failure_preserves_snapshots_reports_due_and_releases_lock) ... ok
+test_due_clock_login_recovery_and_no_catchup_loop (recommendations_test.CollectorTest.test_due_clock_login_recovery_and_no_catchup_loop) ... ok
+test_factual_library_rule_rejects_unproven_claim (recommendations_test.CollectorTest.test_factual_library_rule_rejects_unproven_claim) ... ok
+test_first_all_failure_no_catalogue (recommendations_test.CollectorTest.test_first_all_failure_no_catalogue) ... ok
+test_identity_preserves_edition_and_uncertainty (recommendations_test.CollectorTest.test_identity_preserves_edition_and_uncertainty) ... ok
+test_initially_disabled_and_init_is_idempotent (recommendations_test.CollectorTest.test_initially_disabled_and_init_is_idempotent) ... ok
+test_later_all_failure_keeps_records (recommendations_test.CollectorTest.test_later_all_failure_keeps_records) ... ok
+test_lock_busy_emits_no_requests (recommendations_test.CollectorTest.test_lock_busy_emits_no_requests) ... ok
+test_missing_intro_fails_entire_writer_page (recommendations_test.CollectorTest.test_missing_intro_fails_entire_writer_page) ... ok
+test_multisource_merge_and_remove_switches_summary_evidence (recommendations_test.CollectorTest.test_multisource_merge_and_remove_switches_summary_evidence) ... ok
+test_partial_retains_last_success_and_hour_backoff (recommendations_test.CollectorTest.test_partial_retains_last_success_and_hour_backoff) ... ok
+test_plist_uses_hourly_tick_and_run_at_load (recommendations_test.CollectorTest.test_plist_uses_hourly_tick_and_run_at_load) ... ok
+test_policy_pauses_source_and_keeps_old (recommendations_test.CollectorTest.test_policy_pauses_source_and_keeps_old) ... ok
+test_private_dns_is_rejected_without_connection (recommendations_test.CollectorTest.test_private_dns_is_rejected_without_connection) ... ok
+test_reenable_after_legitimate_source_exit_and_pause_keeps_due_time (recommendations_test.CollectorTest.test_reenable_after_legitimate_source_exit_and_pause_keeps_due_time) ... ok
+test_removed_source_never_reappears_and_enable_is_rejected (recommendations_test.CollectorTest.test_removed_source_never_reappears_and_enable_is_rejected) ... ok
+test_report_failure_does_not_rollback_published_catalogue (recommendations_test.CollectorTest.test_report_failure_does_not_rollback_published_catalogue) ... ok
+test_schema_tampering_and_unsafe_origin_are_rejected (recommendations_test.CollectorTest.test_schema_tampering_and_unsafe_origin_are_rejected) ... ok
+test_state_restores_due_from_published_envelope (recommendations_test.CollectorTest.test_state_restores_due_from_published_envelope) ... ok
+test_two_sources_three_types_and_no_full_reviews (recommendations_test.CollectorTest.test_two_sources_three_types_and_no_full_reviews) ... ok
+test_uninstall_cli_preserves_data_and_only_removes_own_worker (recommendations_test.CollectorTest.test_uninstall_cli_preserves_data_and_only_removes_own_worker) ... ok
+test_url_allowlist_rejects_protocol_host_port_traversal (recommendations_test.CollectorTest.test_url_allowlist_rejects_protocol_host_port_traversal) ... ok
+test_missing_then_absolute_readonly_route_without_app_release (recommendations_test.RouteTest.test_missing_then_absolute_readonly_route_without_app_release) ... 127.0.0.1 - - [04/Oct/2026 20:47:18] code 503, message Service Unavailable
+127.0.0.1 - - [04/Oct/2026 20:47:18] "GET /__recommendations/catalogue.json HTTP/1.1" 503 -
+127.0.0.1 - - [04/Oct/2026 20:47:18] "GET /__recommendations/catalogue.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 20:47:18] "HEAD /__recommendations/catalogue.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 20:47:18] code 405, message Method Not Allowed
+127.0.0.1 - - [04/Oct/2026 20:47:18] "POST /__recommendations/catalogue.json HTTP/1.1" 405 -
+127.0.0.1 - - [04/Oct/2026 20:47:18] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 20:47:18] "GET /__recommendations/config.json HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 20:47:18] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 20:47:18] "GET /__recommendations/reports/x HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 20:47:18] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 20:47:18] "GET /__recommendations/%2e%2e/config.json HTTP/1.1" 404 -
+ok
+test_deadline_after_each_preparation_stops_next_io (recommendations_test.TransportBoundaryTest.test_deadline_after_each_preparation_stops_next_io) ... ok
+test_deadline_crossed_in_wait_never_sends (recommendations_test.TransportBoundaryTest.test_deadline_crossed_in_wait_never_sends) ... ok
+test_read_crossing_deadline_fails_without_retry (recommendations_test.TransportBoundaryTest.test_read_crossing_deadline_fails_without_retry) ... ok
+test_report_separates_dispatch_from_response_completion (recommendations_test.TransportBoundaryTest.test_report_separates_dispatch_from_response_completion) ... ok
+test_retry_and_redirect_keep_dispatch_spacing (recommendations_test.TransportBoundaryTest.test_retry_and_redirect_keep_dispatch_spacing) ... ok
+test_slow_dns_and_tls_limit_actual_dispatch_starts (recommendations_test.TransportBoundaryTest.test_slow_dns_and_tls_limit_actual_dispatch_starts) ... ok
+test_stalled_dns_and_read_are_bounded_by_wall_deadline (recommendations_test.TransportBoundaryTest.test_stalled_dns_and_read_are_bounded_by_wall_deadline) ... ok
+test_subsecond_remaining_is_not_floored_to_one (recommendations_test.TransportBoundaryTest.test_subsecond_remaining_is_not_floored_to_one) ... ok
+test_timeout_interrupts_underlying_socket_during_tls_and_read (recommendations_test.TransportBoundaryTest.test_timeout_interrupts_underlying_socket_during_tls_and_read) ... ok
+test_external_redirect_rejected_before_connection (recommendations_test.TransportTest.test_external_redirect_rejected_before_connection) ... ok
+test_oversized_body_rejected (recommendations_test.TransportTest.test_oversized_body_rejected) ... ok
+test_page_budget_deadline_and_redirect_budget_do_not_request (recommendations_test.TransportTest.test_page_budget_deadline_and_redirect_budget_do_not_request) ... ok
+test_policy_status_stops_without_retry (recommendations_test.TransportTest.test_policy_status_stops_without_retry) ... ok
+test_requests_are_fixed_public_get_without_private_fields (recommendations_test.TransportTest.test_requests_are_fixed_public_get_without_private_fields) ... ok
+test_timeout_and_server_failure_retry_only_once (recommendations_test.TransportTest.test_timeout_and_server_failure_retry_only_once) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 5.125s
+
+OK

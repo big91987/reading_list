@@ -1,0 +1,31 @@
+.....127.0.0.1 - - [04/Oct/2026 17:01:10] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 17:01:10] "GET /__deployment.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 17:01:10] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 17:01:10] "GET /_releases/38c290abb5468a77832008f24a12b98cf6a26c41/ HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 17:01:10] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 17:01:10] "GET /_releases/38c290abb5468a77832008f24a12b98cf6a26c41/app.js HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 17:01:10] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 17:01:10] "GET /../data/keep HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 17:01:10] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 17:01:10] "GET /_releases/../../data/keep HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 17:01:10] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 17:01:10] "GET /control/local_deploy.py HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 17:01:10] "GET /_releases/33c9e8bcf37908615de76e694307e8a3dcd5488d/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 17:01:10] "GET /_releases/33c9e8bcf37908615de76e694307e8a3dcd5488d/app.js HTTP/1.1" 200 -
+.........................127.0.0.1 - - [04/Oct/2026 17:01:11] code 503, message Service Unavailable
+127.0.0.1 - - [04/Oct/2026 17:01:11] "GET /__recommendations/catalogue.json HTTP/1.1" 503 -
+127.0.0.1 - - [04/Oct/2026 17:01:11] "GET /__recommendations/catalogue.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 17:01:11] "HEAD /__recommendations/catalogue.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 17:01:11] code 405, message Method Not Allowed
+127.0.0.1 - - [04/Oct/2026 17:01:11] "POST /__recommendations/catalogue.json HTTP/1.1" 405 -
+127.0.0.1 - - [04/Oct/2026 17:01:11] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 17:01:11] "GET /__recommendations/config.json HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 17:01:11] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 17:01:11] "GET /__recommendations/reports/x HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 17:01:11] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 17:01:11] "GET /__recommendations/%2e%2e/config.json HTTP/1.1" 404 -
+.......
+----------------------------------------------------------------------
+Ran 37 tests in 4.394s
+
+OK

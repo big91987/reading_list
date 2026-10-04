@@ -1,0 +1,52 @@
+Python quality: format --check
+unformatted: File would be reformatted
+  --> docs/05-validation/tasks/100/qa-recheck/wall-budget.py:11:47
+   |
+10 | ROOT = Path(__file__).resolve().parents[5]
+   - spec = importlib.util.spec_from_file_location("qa_wall_product", ROOT / "scripts/recommendations.py")
+11 + spec = importlib.util.spec_from_file_location(
+12 +     "qa_wall_product", ROOT / "scripts/recommendations.py"
+13 + )
+14 | product = importlib.util.module_from_spec(spec)
+--------------------------------------------------------------------------------
+48 |         stack.enter_context(patch.object(product.socket, "create_connection", connect))
+   -         stack.enter_context(patch.object(product.http.client, "HTTPSConnection", Connection))
+49 +         stack.enter_context(
+50 +             patch.object(product.http.client, "HTTPSConnection", Connection)
+51 +         )
+52 |         transport = product.Transport()
+--------------------------------------------------------------------------------
+70 |             assert closed.wait(0.5)
+   -         return {"stage": stage, "budget_seconds": 0.08, "elapsed_seconds": elapsed, "failure": code, "calls_at_return": calls_at_return, "calls_after_late_result": calls, "late_socket_closed": closed.is_set(), "passed": True}
+71 +         return {
+72 +             "stage": stage,
+73 +             "budget_seconds": 0.08,
+74 +             "elapsed_seconds": elapsed,
+75 +             "failure": code,
+76 +             "calls_at_return": calls_at_return,
+77 +             "calls_after_late_result": calls,
+78 +             "late_socket_closed": closed.is_set(),
+79 +             "passed": True,
+80 +         }
+81 |
+82 |
+83 | if __name__ == "__main__":
+84 |     results = [probe("dns"), probe("connect")]
+   -     print(json.dumps({"passed": True, "external_network_used": False, "method": "Real wall-clock bounded waits; release blocked operation only after fetch returns, then assert no late DNS continuation and late socket cleanup", "results": results}, ensure_ascii=False, indent=2))
+85 +     print(
+86 +         json.dumps(
+87 +             {
+88 +                 "passed": True,
+89 +                 "external_network_used": False,
+90 +                 "method": "Real wall-clock bounded waits; release blocked operation only after fetch returns, then assert no late DNS continuation and late socket cleanup",
+91 +                 "results": results,
+92 +             },
+93 +             ensure_ascii=False,
+94 +             indent=2,
+95 +         )
+96 +     )
+   |
+
+1 file would be reformatted, 18 files already formatted
+Python quality: check
+All checks passed!

@@ -1,0 +1,17 @@
+......................127.0.0.1 - - [04/Oct/2026 18:41:07] code 503, message Service Unavailable
+127.0.0.1 - - [04/Oct/2026 18:41:07] "GET /__recommendations/catalogue.json HTTP/1.1" 503 -
+127.0.0.1 - - [04/Oct/2026 18:41:07] "GET /__recommendations/catalogue.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 18:41:07] "HEAD /__recommendations/catalogue.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 18:41:07] code 405, message Method Not Allowed
+127.0.0.1 - - [04/Oct/2026 18:41:07] "POST /__recommendations/catalogue.json HTTP/1.1" 405 -
+127.0.0.1 - - [04/Oct/2026 18:41:07] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 18:41:07] "GET /__recommendations/config.json HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 18:41:07] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 18:41:07] "GET /__recommendations/reports/x HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 18:41:07] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 18:41:07] "GET /__recommendations/%2e%2e/config.json HTTP/1.1" 404 -
+...............
+----------------------------------------------------------------------
+Ran 37 tests in 0.918s
+
+OK

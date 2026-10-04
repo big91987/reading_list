@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/docs/05-validation/tasks/100/qa-refresh/audit.py", line 157, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/docs/05-validation/tasks/100/qa-refresh/audit.py", line 86, in main
+    assert "All checks passed" in (CURRENT / "quality-final.log").read_text()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

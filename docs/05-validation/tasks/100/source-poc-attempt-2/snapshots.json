@@ -1,0 +1,66 @@
+[
+  {
+    "original_filename": "response-01.html",
+    "snapshot": "../source-poc/response-01.html.gz",
+    "bytes": 155,
+    "sha256": "8d09637d75658b8566c69f745ea1cae7b70dd09b49d2642ed8f8e753af591c84",
+    "deduplicated_identical_bytes": true,
+    "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+  },
+  {
+    "original_filename": "response-02.html",
+    "snapshot": "../source-poc/response-02.html.gz",
+    "bytes": 146,
+    "sha256": "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0",
+    "deduplicated_identical_bytes": true,
+    "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+  },
+  {
+    "original_filename": "response-03.html",
+    "snapshot": "../source-poc/response-03.html.gz",
+    "bytes": 35019,
+    "sha256": "a7fcf9b13b072a1b834deadd56b612d9cbf571a194ff07d10b92aa4d44a6e92a",
+    "deduplicated_identical_bytes": true,
+    "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+  },
+  {
+    "original_filename": "response-04.html",
+    "snapshot": "../source-poc/response-04.html.gz",
+    "bytes": 56964,
+    "sha256": "eee15baf5753e3ec8a17e520b41378932dad9490b5e0b37dd6c373106af41916",
+    "deduplicated_identical_bytes": true,
+    "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+  },
+  {
+    "original_filename": "response-05.html",
+    "snapshot": "../source-poc/response-05.html.gz",
+    "bytes": 171527,
+    "sha256": "4cd299b985b6cb7f99a276ae82a6ad9b8b565768e97626ce80044b4d26375cfc",
+    "deduplicated_identical_bytes": true,
+    "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+  },
+  {
+    "original_filename": "response-06.html",
+    "snapshot": "../source-poc/response-06.html.gz",
+    "bytes": 31460,
+    "sha256": "0461b6da4876b4f2710507c70c4fc5fafdb6aa027631f44591847c1f3fbdc944",
+    "deduplicated_identical_bytes": true,
+    "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+  },
+  {
+    "original_filename": "response-07.html",
+    "snapshot": "../source-poc/response-07.html.gz",
+    "bytes": 31123,
+    "sha256": "0dda87788322389afb1ee559c6c0f83b9ccaeae9d262401b906dc02ee90c6d9a",
+    "deduplicated_identical_bytes": true,
+    "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+  },
+  {
+    "original_filename": "response-08.html",
+    "snapshot": "../source-poc/response-08.html.gz",
+    "bytes": 32893,
+    "sha256": "27c75f661f3bce54fa37b401be698d87485fde67883335795e32fe92ee5d162d",
+    "deduplicated_identical_bytes": true,
+    "snapshot_encoding": "gzip; original response bytes and hashes unchanged"
+  }
+]

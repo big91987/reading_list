@@ -1,0 +1,86 @@
+[
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "编辑《梅西传》信息"
+  },
+  {
+    "action": "fill",
+    "label": "简介（最多600字）",
+    "value": "冲突时保留的草稿"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-external-write.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "其他标签页的新书"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-invalid-seed.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "不能覆写异常原值"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "新增书籍"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "visible",
+    "text": "书单原值异常或已在其他标签页改变，请先备份并刷新后重试。"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-backup-restore.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "visible",
+    "text": "备份恢复中文书"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "unchanged_storage"
+  }
+]

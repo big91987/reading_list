@@ -1,0 +1,187 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "visible",
+      "role": "heading",
+      "name": "梅西传"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": true
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "加入《低智商犯罪》书单"
+    },
+    {
+      "action": "visible",
+      "text": "未能加入《低智商犯罪》，书单未改变，请重试。"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": false
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "我的书单"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《梅西传》为已读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读书籍"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "发现推荐"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "加入《梅西传》书单"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "我的书单"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "查看《梅西传》补全建议"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": true
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "确认采用[阿根廷] 塞尔吉奥·莱文斯基的候选"
+    },
+    {
+      "action": "visible",
+      "text": "未能采用建议，原信息未改变，所选候选仍可重试。"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": false
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "确认采用[阿根廷] 塞尔吉奥·莱文斯基的候选"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/failure-and-isolation.js",
+      "source": "() => {\n  const books = JSON.parse(localStorage.getItem('issue-100-prototype-books'));\n  const matched = books.find((book) => book.title === '梅西传');\n  if (!matched.bookInfo?.summary || matched.bookInfo.catalogueLink.verification !== 'verified') throw new Error('Single candidate was not adopted');\n  const select = document.querySelector('#scenario');\n  select.value = 'failed-none';\n  select.dispatchEvent(new Event('change', { bubbles: true }));\n  return { candidateAdopted: true, nextScenario: 'failed-none' };\n}\n"
+    },
+    {
+      "action": "fill",
+      "label": "新增书名",
+      "value": "推荐故障时仍可添加的书"
+    },
+    {
+      "action": "fill",
+      "label": "新增简介（可留空）",
+      "value": "这条信息由用户手动填写。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "role": "heading",
+      "name": "推荐故障时仍可添加的书"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "发现推荐"
+    },
+    {
+      "action": "visible",
+      "text": "推荐暂不可用 · 没有可用缓存，请重试，仍可使用我的书单。",
+      "selector": "#catalogue-status"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "重新读取目录"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+      "source": "() => {\n  const page = document.documentElement;\n  if (page.scrollWidth > window.innerWidth + 1) throw new Error(`Horizontal overflow: ${page.scrollWidth}/${window.innerWidth}`);\n  const hiddenParents = (node) => node.closest('[hidden]') || node.getClientRects().length === 0;\n  const controls = [...document.querySelectorAll('button, input, textarea, select, a')].filter((node) => !hiddenParents(node));\n  for (const control of controls) {\n    const bounds = control.getBoundingClientRect();\n    if (bounds.left < -1 || bounds.right > window.innerWidth + 1) throw new Error(`Control outside viewport: ${control.textContent}`);\n    if (control.tagName === 'BUTTON' && bounds.height < 43) throw new Error('Button touch target too short');\n  }\n  return { width: window.innerWidth, scrollWidth: page.scrollWidth, visibleControls: controls.length, noOverflow: true };\n}\n"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 3,
+  "observations": [
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/failure-and-isolation.js",
+      "value": {
+        "candidateAdopted": true,
+        "nextScenario": "failed-none"
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+      "value": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "visibleControls": 17,
+        "noOverflow": true
+      }
+    }
+  ]
+}

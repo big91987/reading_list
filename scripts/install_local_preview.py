@@ -10,6 +10,22 @@ import sys
 from pathlib import Path
 
 
+def recommendations_plist(root, python=sys.executable):
+    return {
+        "Label": "com.reading-list.recommendations",
+        "ProgramArguments": [
+            python,
+            str(root / "controller/recommendations.py"),
+            "tick",
+            "--root",
+            str(root),
+        ],
+        "RunAtLoad": True,
+        "StartInterval": 3600,
+        "WorkingDirectory": str(root),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -17,6 +33,11 @@ def main():
     )
     parser.add_argument(
         "--git-proxy", help="Optional persistent HTTP proxy for repository fetches"
+    )
+    parser.add_argument(
+        "--recommendations",
+        action="store_true",
+        help="Owner-reviewed collector and hourly tick installation; does not enable collection",
     )
     args = parser.parse_args()
     root = args.root.expanduser().resolve()
@@ -42,6 +63,10 @@ def main():
         )
     controller = root / "controller/local_deploy.py"
     shutil.copyfile(Path(__file__).with_name("local_deploy.py"), controller)
+    shutil.copyfile(
+        Path(__file__).with_name("recommendations.py"),
+        root / "controller/recommendations.py",
+    )
     label = "com.reading-list.preview"
     plist = Path.home() / "Library/LaunchAgents" / (label + ".plist")
     plist.parent.mkdir(parents=True, exist_ok=True)
@@ -64,6 +89,20 @@ def main():
     domain = f"gui/{os.getuid()}"
     subprocess.run(["launchctl", "bootout", domain + "/" + label], capture_output=True)
     subprocess.run(["launchctl", "bootstrap", domain, str(plist)], check=True)
+    if args.recommendations:
+        worker = root / "controller/recommendations.py"
+        subprocess.run(
+            [sys.executable, str(worker), "init", "--root", str(root)], check=True
+        )
+        worker_plist = plist.with_name("com.reading-list.recommendations.plist")
+        worker_plist.write_bytes(plistlib.dumps(recommendations_plist(root)))
+        subprocess.run(
+            ["launchctl", "bootout", domain + "/com.reading-list.recommendations"],
+            capture_output=True,
+        )
+        subprocess.run(
+            ["launchctl", "bootstrap", domain, str(worker_plist)], check=True
+        )
     print(
         "Service installed on http://127.0.0.1:5533; no release is changed by installation."
     )

@@ -1,0 +1,167 @@
+{
+  "audit_passed": true,
+  "qa_release_passed": false,
+  "reason": "Two controlled Transport boundary failures are not waived by passing shared gates",
+  "deployed_sha": "10c5e03d04bad026524e20476efd124db7e3a907",
+  "deployed_baseline_files": {
+    "app.js": {
+      "sha256": "9898c75bb349fdee7e874df62ac37d9867e88d5cd68e286fefc95f7be82c0653",
+      "bytes": 12945
+    },
+    "index.html": {
+      "sha256": "8acb1bb16b864beaa92620f2cd131c415e3864f5348319cb5f2982f133000ef3",
+      "bytes": 4162
+    },
+    "styles.css": {
+      "sha256": "cb3ce1d040298193862d04cc971116c99bfb9684488626105fa36b082432fffe",
+      "bytes": 8747
+    }
+  },
+  "private_user_data_read": false,
+  "release_fingerprint": "667ea5862390a3c71765dd746272fdb1318a2ad26f2f79320c4104ce55a0809d",
+  "release_compatibility_sha": "10c5e03d04bad026524e20476efd124db7e3a907",
+  "browser": [
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-1",
+      "passed": true,
+      "actions": 48,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-10",
+      "passed": true,
+      "actions": 11,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-2",
+      "passed": true,
+      "actions": 14,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-3",
+      "passed": true,
+      "actions": 39,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-4",
+      "passed": true,
+      "actions": 13,
+      "device": {
+        "hasTouch": true,
+        "isMobile": true,
+        "viewport": {
+          "width": 320,
+          "height": 844
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-5",
+      "passed": true,
+      "actions": 20,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-6",
+      "passed": true,
+      "actions": 23,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-7",
+      "passed": true,
+      "actions": 16,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-8",
+      "passed": true,
+      "actions": 8,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/qa-1-9",
+      "passed": true,
+      "actions": 16,
+      "device": {
+        "hasTouch": true,
+        "isMobile": true,
+        "viewport": {
+          "width": 320,
+          "height": 844
+        }
+      }
+    }
+  ],
+  "browser_actions": 208,
+  "core_bytes_unchanged": true,
+  "protected_paths_unchanged": true,
+  "evidence_aliases_and_gzip_bytes_verified": true,
+  "product_sha256": {
+    "app/app.js": "b5fc85bc800e719fcc7699787b33905995b5c67249558184ed5fc5c1fe64a944",
+    "app/index.html": "daacd7760867687007b7384b4167a5903a6eaa7b757e6c9421d8a3105cfda4a2",
+    "app/styles.css": "53e1ee1cbbebfa28e0c2a7ccf3a91a8f279fcd9bab908e058e37cf43ec6e61f2",
+    "scripts/recommendations.py": "daca590eee8a6c57d364fb8b06d1dd2f12fab7b3a4276b8fb8874b47b1dea841",
+    "scripts/local_deploy.py": "fe05d2019c5a484977c73d4f81b3cdcef0ead63b4fd1b7ac4174cfe569a21672",
+    "scripts/install_local_preview.py": "d59cb07ce3262624eea6f42506da0118449ed66f2fe653aa782f851222da3848"
+  }
+}

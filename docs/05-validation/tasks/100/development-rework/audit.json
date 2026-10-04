@@ -1,0 +1,23 @@
+{
+  "browserActions": 208,
+  "coreByteIdentical": true,
+  "protectedPathsUnchanged": true,
+  "baselineHashesMatch": true,
+  "releaseFingerprintMatches": true,
+  "previewHTTP": {
+    "status": 200,
+    "records": 32,
+    "port": 5535
+  },
+  "actualDispatchGapsSeconds": [
+    1.0056487913243473,
+    1.0026557496748865,
+    1.0056173340417445,
+    1.0055865002796054
+  ],
+  "newRealRunExitCode": 0,
+  "localMarkdownFiles": 7,
+  "localLinksChecked": 120,
+  "developmentAXGzip": 9,
+  "newPNGExactAliases": 21
+}

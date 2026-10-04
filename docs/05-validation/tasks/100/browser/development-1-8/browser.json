@@ -1,0 +1,59 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js",
+      "source": "() => {\n  const catalogue = {\"generatedAt\":\"2026-10-04T08:02:10.626490Z\",\"records\":[{\"author\":\"冉正万\",\"edition\":null,\"id\":\"b9b00396df2dc73bdf9c57298e66c8ad8f4047bf19a77513350b0c2d42896e66\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"中国作家网\",\"publishedAt\":null,\"recommendationStatus\":\"文学好书入围书单\",\"sourceId\":\"writer\",\"sourceType\":\"长篇小说\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html\"}],\"publisher\":null,\"summary\":\"冉正万的长篇小说作品，入围中国作家网文学好书书单。\",\"summaryOrigin\":{\"evidenceSourceId\":\"writer\",\"method\":\"factual-template-v1\"},\"title\":\"屯堡\",\"types\":[\"现当代文学\"]},{\"author\":\"[阿根廷] 塞尔吉奥·莱文斯基\",\"edition\":null,\"id\":\"64b49cf17f736a7d0c658aaf0ebf0bec9040ce3c979f848a7f87b71872e8ad07\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"K837.835.47/22\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm\"}],\"publisher\":\"作家出版社\",\"summary\":\"介绍梅西个人经历与足球生涯的传记。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"梅西传\",\"types\":[\"历史社科\"]},{\"author\":\"汤海鹏\",\"edition\":null,\"id\":\"11e215b18771537c66cca74e8853b60b3fef21b395cc8419d92b049df9c57959\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"B84-49/1200\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481272.htm\"}],\"publisher\":\"北京联合出版公司\",\"summary\":\"借助精神分析客体关系理论与案例，介绍不同人格特质和咨询中的理解方式。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"人格的健全：读懂自己和身边的人\",\"types\":[\"科普\"]}],\"schemaVersion\":1,\"sources\":[{\"errorCode\":null,\"id\":\"writer\",\"lastAttemptAt\":\"2026-10-04T08:02:06.297703Z\",\"lastSuccessAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"中国作家网\",\"status\":\"ok\"},{\"errorCode\":null,\"id\":\"fjlib\",\"lastAttemptAt\":\"2026-10-04T08:02:06.297703Z\",\"lastSuccessAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"status\":\"ok\"}],\"status\":\"ok\",\"revision\":\"e154a227ce6d0cb5a8c6c1eb8949608e840601e5d5c4af2088c5243845794e15\"};\n  localStorage.setItem(\"page-between-recommendations-v1\", JSON.stringify(catalogue));\n  localStorage.setItem(\"page-between-reading-list\", '[ { \"title\": \"梅西传\", \"read\": true, \"unknown\": {\"nested\":[7]} }, {\"title\":\"没有匹配的旧书\",\"read\":false} ]');\n  return {publicRecords: catalogue.records.length, fixture: \"actual collector 3-record subset, isolated private legacy values\"};\n}\n"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-keyboard-focus.js",
+      "source": "() => {\n  document.querySelector(\"#recommend-tab\").focus();\n  return {focus:document.activeElement.id};\n}\n"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "ArrowDown"
+    }
+  ],
+  "errors": [],
+  "failure": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for getByText('这个类型暂无推荐。', { exact: true }) to be visible\n",
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 2,
+  "observations": [
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js",
+      "value": {
+        "publicRecords": 3,
+        "fixture": "actual collector 3-record subset, isolated private legacy values"
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-keyboard-focus.js",
+      "value": {
+        "focus": "recommend-tab"
+      }
+    }
+  ]
+}

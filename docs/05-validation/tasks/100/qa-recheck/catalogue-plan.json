@@ -1,0 +1,36 @@
+[
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/qa-recheck-full-seed.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "书籍推荐"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/qa-filter-audit.js"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-layout.js"
+  },
+  {
+    "action": "accessibility",
+    "contains": "查看来源原页"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/qa-recheck-showcase.js"
+  }
+]

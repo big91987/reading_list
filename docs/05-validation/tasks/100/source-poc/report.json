@@ -1,0 +1,29 @@
+{
+  "completed_at": "2026-10-04T06:46:38.214965+00:00",
+  "content_acquisition_and_parsing": "passed",
+  "record_count": 34,
+  "source_counts": {
+    "中国作家网": 30,
+    "福建省图书馆": 4
+  },
+  "nonempty_product_types": [
+    "历史社科",
+    "现当代文学",
+    "科普"
+  ],
+  "source_genres": [
+    "中短篇小说",
+    "散文/随笔",
+    "理论评论",
+    "科幻",
+    "长篇小说",
+    "非虚构/纪实"
+  ],
+  "all_records_have_title_author_intro_source_url": true,
+  "request_count": 11,
+  "private_booklist_used_or_sent": false,
+  "product_acceptance_passed": false,
+  "scheduled_runtime_tested": false,
+  "distribution_or_production_deployment_tested": false,
+  "policy_scope": "No blanket crawl/republication permission inferred. Original short factual summaries and links only in future product; no full source review or cover republication. NLC excluded pending permission."
+}

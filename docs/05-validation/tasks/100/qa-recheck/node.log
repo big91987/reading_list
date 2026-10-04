@@ -1,0 +1,33 @@
+✔ Escape只抑制悬停入口，重复幂等，离开后复位，不消费键盘事件 (2.767625ms)
+✔ 三种选中范围×三入口提示事件不改筛选、书籍、扩展字段或存储 (1.161083ms)
+✔ Escape不替换既有编辑取消且悬停抑制不重绘列表 (0.433417ms)
+✔ 静态提示契约、布局增量及原点击业务逻辑保持（非浏览器可见性测试） (0.479708ms)
+✔ old raw JSON loads without rewriting and preserves unknown fields (2.719125ms)
+✔ foreign tag writes are not overwritten and local draft remains (0.510417ms)
+✔ malformed originals are never replaced with empty successes (0.921833ms)
+✔ deep deletion snapshot and failed undo retain the entire metadata object (0.528042ms)
+✔ rename preserves a snapshot but marks only its origin association for review (0.764667ms)
+✔ catalogue snapshots and unsupported metadata namespaces are separated (0.45375ms)
+✔ schema and revision validation reject invalid public responses (6.285792ms)
+✔ actual deployed 10c5e03 baseline preserves new metadata on read/delete/undo roundtrip (1.288542ms)
+✔ actual old rename preserves full snapshot and new UI detects origin mismatch without a load write (1.123292ms)
+✔ 完整序位恢复，新增不会改变位置或丢失旧字段 (2.90725ms)
+✔ 仅最近一次成功删除可恢复，不复活已删邻居 (0.934666ms)
+✔ 原序位越界内部候选守卫追加末尾（非UI旅程） (0.467875ms)
+✔ 缺失目标删除与无机会撤销不产生写入 (0.363792ms)
+✔ 隐藏及大小写冲突不写入，改名后重试保持原状态 (0.439666ms)
+✔ 失败删除保留之前机会和编辑对象引用 (0.386417ms)
+✔ 失败撤销不改内存/存储/筛选/草稿，重试只恢复一次 (0.527834ms)
+✔ 删除编辑中的书恢复最后保存版本与旧扩展字段 (0.398542ms)
+✔ 旧JSON重复/长名/扩展字段沿用加载，刷新无撤销机会 (1.142208ms)
+✔ version is a single static accessible text declaration (1.444208ms)
+✔ version uses readable muted styling in normal document flow (0.252458ms)
+✔ footer stays inside the layout viewport at native browser zoom (0.132292ms)
+ℹ tests 25
+ℹ suites 0
+ℹ pass 25
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.780042
