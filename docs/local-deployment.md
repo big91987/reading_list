@@ -64,3 +64,19 @@ python3 full_harness/quality.py check
 
 升级时先将已验证的 `scripts/local_deploy.py` 同步到部署根目录的 `controller/local_deploy.py`（使用临时文件再原子替换），再启用新 Workflow。
 控制器兼容旧 Workflow；新 Workflow 依赖新增的 `deploy` 输出。更新控制器无需切换产品版本或清理数据。
+
+## 框架维护 PR 的验证入口
+
+框架和部署改动由维护者审查，不交给产品研发 Agent。`pipeline/refresh` 不再静默跳过未登记 PR：未验证时明确阻塞，配置缺失时不自动放行。
+
+维护者同步最新 main 后，在干净的 PR checkout 上运行平台 example 的正式入口：
+
+```sh
+GH_REPO=owner/repository PYTHONPATH=sdk/python:examples/github \
+  python3 examples/github/pr_refresh.py --config '<private-runner-json>' \
+  --maintenance-pr <pr-number> --workspace '<clean-pr-checkout>'
+```
+
+配置中的 `pipeline.maintenance.paths` 限定框架文件范围，`checks` 列出 argv 形式的工程检查。需要包含部署器回归以及相关 Workflow 的 YAML/bash 语法检查；主线、PR 提交或检查配置变化后必须重新验证。实际日志与凭证保存在宿主的私有 registry 下。此入口不会修改产品代码、不会启动 Agent、不会自动合并。
+
+同步来源：`agent_platform` 的 `examples/github/pr-refresh.yml` 与维护者验证工具，版本 `9c4ddbb`。先通过 `examples/github/install-tooling.sh` 升级宿主依赖，再同步 Workflow；源仓库该版本仍待维护者审查合并。新仓库的配置与完整升级说明见源仓库 `examples/github/README.md`。
