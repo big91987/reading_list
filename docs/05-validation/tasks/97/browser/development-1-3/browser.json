@@ -1,0 +1,53 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "device",
+      "touch": true,
+      "width": 320
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "触屏书籍"
+    },
+    {
+      "action": "tap",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "触屏书籍"
+    },
+    {
+      "action": "tap",
+      "role": "checkbox",
+      "name": "标记《触屏书籍》为已读"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "tap",
+      "role": "button",
+      "name": "未读"
+    }
+  ],
+  "errors": [],
+  "failure": "locator.waitFor: Timeout 5000ms exceeded.\nCall log:\n  - waiting for getByText('暂时没有未读书籍', { exact: true }) to be visible\n",
+  "downloads": [],
+  "device": {
+    "hasTouch": true,
+    "isMobile": true,
+    "viewport": {
+      "width": 320,
+      "height": 844
+    }
+  },
+  "storageWrites": 2
+}

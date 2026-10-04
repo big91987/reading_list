@@ -1,0 +1,10 @@
+{
+  "baseline": "4a54b10f8acad8f74a167693194c397b93db9adc",
+  "businessJsUnchanged": true,
+  "resourceReferencesUnchanged": true,
+  "hashes": {
+    "index.html": "8acb1bb16b864beaa92620f2cd131c415e3864f5348319cb5f2982f133000ef3",
+    "styles.css": "cb3ce1d040298193862d04cc971116c99bfb9684488626105fa36b082432fffe",
+    "app.js": "9898c75bb349fdee7e874df62ac37d9867e88d5cd68e286fefc95f7be82c0653"
+  }
+}

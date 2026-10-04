@@ -1,0 +1,264 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-seed.js",
+      "source": "() => {\n  const books = Array.from({ length: 30 }, (_, index) => ({\n    title: index === 0 ? \"旧中文已读书\" : index === 1 ? \"旧中文未读书\" : `旧书第${index + 1}本`,\n    read: index % 2 === 0,\n    extension: { retained: true, ordinal: index },\n  }));\n  const raw = JSON.stringify(books, null, 2);\n  localStorage.setItem(\"page-between-reading-list\", raw);\n  return { seededBooks: books.length, rawLength: raw.length };\n}\n"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "旧中文已读书"
+    },
+    {
+      "action": "visible",
+      "text": "旧中文未读书"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "source": "() => {\n  const version = document.querySelector(\".app-version\");\n  if (document.querySelectorAll(\"#app-version\").length !== 1 || version.textContent.trim() !== \"版本 0.1.0 rc2\") throw Error(\"Incorrect or repeated version\");\n  version.scrollIntoView({ block: \"center\" });\n  const range = document.createRange();\n  range.selectNodeContents(version);\n  const bounds = range.getBoundingClientRect();\n  if (bounds.left < 0 || bounds.right > innerWidth || bounds.top < 0 || bounds.bottom > innerHeight) throw Error(\"Version cannot be fully read after scrolling\");\n  const center = document.elementFromPoint((bounds.left + bounds.right) / 2, (bounds.top + bounds.bottom) / 2);\n  if (!center || !version.contains(center)) throw Error(\"Version is obscured\");\n  const resources = performance.getEntriesByType(\"resource\").map((entry) => ({ name: new URL(entry.name).pathname, type: entry.initiatorType }));\n  if (resources.some((entry) => [\"fetch\", \"xmlhttprequest\"].includes(entry.type))) throw Error(\"Unexpected runtime API request\");\n  return { text: version.textContent.trim(), viewport: { width: innerWidth, height: innerHeight }, bounds: { left: bounds.left, right: bounds.right, top: bounds.top, bottom: bounds.bottom }, resources, renderedBooks: document.querySelectorAll(\".book-item\").length };\n}\n"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "旧中文已读书"
+    },
+    {
+      "action": "absent",
+      "text": "旧中文未读书"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "旧中文未读书"
+    },
+    {
+      "action": "absent",
+      "text": "旧中文已读书"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "source": "() => {\n  const version = document.querySelector(\".app-version\");\n  if (document.querySelectorAll(\"#app-version\").length !== 1 || version.textContent.trim() !== \"版本 0.1.0 rc2\") throw Error(\"Incorrect or repeated version\");\n  version.scrollIntoView({ block: \"center\" });\n  const range = document.createRange();\n  range.selectNodeContents(version);\n  const bounds = range.getBoundingClientRect();\n  if (bounds.left < 0 || bounds.right > innerWidth || bounds.top < 0 || bounds.bottom > innerHeight) throw Error(\"Version cannot be fully read after scrolling\");\n  const center = document.elementFromPoint((bounds.left + bounds.right) / 2, (bounds.top + bounds.bottom) / 2);\n  if (!center || !version.contains(center)) throw Error(\"Version is obscured\");\n  const resources = performance.getEntriesByType(\"resource\").map((entry) => ({ name: new URL(entry.name).pathname, type: entry.initiatorType }));\n  if (resources.some((entry) => [\"fetch\", \"xmlhttprequest\"].includes(entry.type))) throw Error(\"Unexpected runtime API request\");\n  return { text: version.textContent.trim(), viewport: { width: innerWidth, height: innerHeight }, bounds: { left: bounds.left, right: bounds.right, top: bounds.top, bottom: bounds.bottom }, resources, renderedBooks: document.querySelectorAll(\".book-item\").length };\n}\n"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-corrupt.js",
+      "source": "() => {\n  localStorage.setItem(\"page-between-reading-list\", \"{invalid old data\");\n  return { injected: \"invalid JSON in isolated browser context\" };\n}\n"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-seed.js",
+      "source": "() => {\n  const books = Array.from({ length: 30 }, (_, index) => ({\n    title: index === 0 ? \"旧中文已读书\" : index === 1 ? \"旧中文未读书\" : `旧书第${index + 1}本`,\n    read: index % 2 === 0,\n    extension: { retained: true, ordinal: index },\n  }));\n  const raw = JSON.stringify(books, null, 2);\n  localStorage.setItem(\"page-between-reading-list\", raw);\n  return { seededBooks: books.length, rawLength: raw.length };\n}\n"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "旧中文已读书"
+    },
+    {
+      "action": "visible",
+      "text": "旧中文未读书"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "viewport",
+      "width": 1440
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "source": "() => {\n  const version = document.querySelector(\".app-version\");\n  if (document.querySelectorAll(\"#app-version\").length !== 1 || version.textContent.trim() !== \"版本 0.1.0 rc2\") throw Error(\"Incorrect or repeated version\");\n  version.scrollIntoView({ block: \"center\" });\n  const range = document.createRange();\n  range.selectNodeContents(version);\n  const bounds = range.getBoundingClientRect();\n  if (bounds.left < 0 || bounds.right > innerWidth || bounds.top < 0 || bounds.bottom > innerHeight) throw Error(\"Version cannot be fully read after scrolling\");\n  const center = document.elementFromPoint((bounds.left + bounds.right) / 2, (bounds.top + bounds.bottom) / 2);\n  if (!center || !version.contains(center)) throw Error(\"Version is obscured\");\n  const resources = performance.getEntriesByType(\"resource\").map((entry) => ({ name: new URL(entry.name).pathname, type: entry.initiatorType }));\n  if (resources.some((entry) => [\"fetch\", \"xmlhttprequest\"].includes(entry.type))) throw Error(\"Unexpected runtime API request\");\n  return { text: version.textContent.trim(), viewport: { width: innerWidth, height: innerHeight }, bounds: { left: bounds.left, right: bounds.right, top: bounds.top, bottom: bounds.bottom }, resources, renderedBooks: document.querySelectorAll(\".book-item\").length };\n}\n"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 3,
+  "observations": [
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-seed.js",
+      "value": {
+        "seededBooks": 30,
+        "rawLength": 3570
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "value": {
+        "text": "版本 0.1.0 rc2",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "bounds": {
+          "left": 679.1875,
+          "right": 760.796875,
+          "top": 945.34375,
+          "bottom": 965.34375
+        },
+        "resources": [
+          {
+            "name": "/styles.css",
+            "type": "link"
+          },
+          {
+            "name": "/app.js",
+            "type": "script"
+          }
+        ],
+        "renderedBooks": 30
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "value": {
+        "text": "版本 0.1.0 rc2",
+        "viewport": {
+          "width": 320,
+          "height": 844
+        },
+        "bounds": {
+          "left": 119.1875,
+          "right": 200.796875,
+          "top": 788.703125,
+          "bottom": 808.703125
+        },
+        "resources": [
+          {
+            "name": "/styles.css",
+            "type": "link"
+          },
+          {
+            "name": "/app.js",
+            "type": "script"
+          }
+        ],
+        "renderedBooks": 30
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-corrupt.js",
+      "value": {
+        "injected": "invalid JSON in isolated browser context"
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-seed.js",
+      "value": {
+        "seededBooks": 30,
+        "rawLength": 3570
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/qa-inspect.js",
+      "value": {
+        "text": "版本 0.1.0 rc2",
+        "viewport": {
+          "width": 1440,
+          "height": 844
+        },
+        "bounds": {
+          "left": 679.1875,
+          "right": 760.796875,
+          "top": 789.34375,
+          "bottom": 809.34375
+        },
+        "resources": [
+          {
+            "name": "/styles.css",
+            "type": "link"
+          },
+          {
+            "name": "/app.js",
+            "type": "script"
+          }
+        ],
+        "renderedBooks": 30
+      }
+    }
+  ]
+}

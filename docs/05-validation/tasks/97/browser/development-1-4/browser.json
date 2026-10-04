@@ -1,0 +1,246 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "visible",
+      "text": "一本一本，慢慢读完。"
+    },
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "长安的荔枝"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《活着》为已读"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "absent",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "未读"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "absent",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": true
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "保存失败书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "未能添加，请重试。"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": false
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "保存失败书籍"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "修改《长安的荔枝》书名"
+    },
+    {
+      "action": "fill",
+      "label": "修改书名",
+      "value": "长安的荔枝修订"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "长安的荔枝修订"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《活着》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "撤销删除《活着》"
+    },
+    {
+      "action": "visible",
+      "text": "活着"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "删除《活着》"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "visible",
+      "text": "一本一本，慢慢读完。"
+    },
+    {
+      "action": "pointer",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "已读"
+    }
+  ],
+  "errors": [],
+  "failure": "Unsupported key",
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 8
+}

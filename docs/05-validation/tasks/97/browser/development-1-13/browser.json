@@ -1,0 +1,84 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "viewport",
+      "width": 1440
+    },
+    {
+      "action": "zoom",
+      "factor": 1
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+      "source": "() => {\n  const element = document.querySelector('.app-version');\n  if (!element || element.textContent.trim() !== '版本 0.1.0 rc2') throw Error('Version text differs');\n  element.scrollIntoView({block:'center'});\n  const range=document.createRange(); range.selectNodeContents(element);\n  const rect=range.getBoundingClientRect();\n  const bounds=element.getBoundingClientRect();\n  if(rect.left < 0 || rect.right > innerWidth || element.scrollWidth > element.clientWidth) throw Error('Version is horizontally clipped');\n  if(element.closest('[tabindex]') || element.querySelector('[tabindex],button,a,input')) throw Error('Version introduces focus target');\n  return {viewport:innerWidth, devicePixelRatio, text:element.textContent.trim(), textBounds:{left:rect.left,right:rect.right}, elementBounds:{left:bounds.left,right:bounds.right}, documentWidth:document.documentElement.scrollWidth};\n}"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/version-baseline.js",
+      "source": "() => {\n  const footer = document.querySelector(\"footer\");\n  const version = document.querySelector(\".app-version\");\n  const main = document.querySelector(\"main\");\n  const footerBounds = footer.getBoundingClientRect();\n  const versionBounds = version.getBoundingClientRect();\n  const mainBounds = main.getBoundingClientRect();\n  const productWidth = document.documentElement.scrollWidth;\n  const beforeStorage = localStorage.getItem(\"page-between-reading-list\");\n  if (document.querySelectorAll(\"#app-version\").length !== 1) {\n    throw new Error(\"Version declaration is not unique\");\n  }\n  if (footerBounds.left < 0 || footerBounds.right > innerWidth) {\n    throw new Error(\"Footer exceeds the layout viewport\");\n  }\n  if (footerBounds.top < mainBounds.bottom || versionBounds.top < mainBounds.bottom) {\n    throw new Error(\"Version overlaps the reading list\");\n  }\n  if (version.closest(\"[hidden],[aria-hidden='true']\") || getComputedStyle(version).visibility !== \"visible\") {\n    throw new Error(\"Version is hidden\");\n  }\n  const originalChildren = [...footer.childNodes];\n  const previousStyle = footer.getAttribute(\"style\");\n  let baselineWidth;\n  try {\n    footer.textContent = \"一本一本，慢慢读完。\";\n    footer.style.maxWidth = \"none\";\n    baselineWidth = document.documentElement.scrollWidth;\n  } finally {\n    footer.replaceChildren(...originalChildren);\n    if (previousStyle === null) footer.removeAttribute(\"style\");\n    else footer.setAttribute(\"style\", previousStyle);\n  }\n  if (productWidth > baselineWidth) {\n    throw new Error(\"Version introduces additional horizontal overflow\");\n  }\n  if (localStorage.getItem(\"page-between-reading-list\") !== beforeStorage) {\n    throw new Error(\"Layout validation changed reading-list data\");\n  }\n  return {\n    viewport: innerWidth,\n    productWidth,\n    baselineWidth,\n    existingBodyMinWidth: getComputedStyle(document.body).minWidth,\n    footerBounds: { left: footerBounds.left, right: footerBounds.right },\n    nonOverlapping: true,\n    storageUnchanged: true,\n    baselineMethod: \"Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS\",\n  };\n}\n"
+    }
+  ],
+  "errors": [],
+  "failure": "Accessible text not found: 版本 0.1.0 rc2",
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 0,
+  "observations": [
+    {
+      "action": "zoom",
+      "actual": 1,
+      "width": 1440,
+      "height": 844,
+      "devicePixelRatio": 1,
+      "visualScale": 1,
+      "screenshot": "zoom-3.png"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+      "value": {
+        "viewport": 1440,
+        "devicePixelRatio": 1,
+        "text": "版本 0.1.0 rc2",
+        "textBounds": {
+          "left": 679.1875,
+          "right": 760.796875
+        },
+        "elementBounds": {
+          "left": 20,
+          "right": 1420
+        },
+        "documentWidth": 1440
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/version-baseline.js",
+      "value": {
+        "viewport": 1440,
+        "productWidth": 1440,
+        "baselineWidth": 1440,
+        "existingBodyMinWidth": "320px",
+        "footerBounds": {
+          "left": 0,
+          "right": 1440
+        },
+        "nonOverlapping": true,
+        "storageUnchanged": true,
+        "baselineMethod": "Temporarily restore HEAD footer markup and remove the new max-width; retain unchanged body/main/business JS"
+      }
+    }
+  ]
+}

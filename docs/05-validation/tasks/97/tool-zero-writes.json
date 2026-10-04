@@ -1,0 +1,7 @@
+[
+  { "action": "snapshot_storage" },
+  { "action": "reload" },
+  { "action": "visible", "text": "版本 0.1.0 rc2" },
+  { "action": "unchanged_storage" },
+  { "action": "unchanged_storage_writes" }
+]

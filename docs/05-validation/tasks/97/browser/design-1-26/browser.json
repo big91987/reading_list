@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "visible",
+      "text": "清单还是空的"
+    },
+    {
+      "action": "visible",
+      "text": "一本一本，慢慢读完。"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "unchanged_storage_writes"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 0,
+  "observations": []
+}

@@ -1,0 +1,115 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "viewport",
+      "width": 1440
+    },
+    {
+      "action": "zoom",
+      "factor": 2
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+      "source": "() => {\n  const element = document.querySelector('.app-version');\n  if (!element || element.textContent.trim() !== '版本 0.1.0 rc2') throw Error('Version text differs');\n  element.scrollIntoView({block:'center'});\n  const range=document.createRange(); range.selectNodeContents(element);\n  const rect=range.getBoundingClientRect();\n  const bounds=element.getBoundingClientRect();\n  if(rect.left < 0 || rect.right > innerWidth || element.scrollWidth > element.clientWidth) throw Error('Version is horizontally clipped');\n  if(element.closest('[tabindex]') || element.querySelector('[tabindex],button,a,input')) throw Error('Version introduces focus target');\n  return {viewport:innerWidth, devicePixelRatio, text:element.textContent.trim(), textBounds:{left:rect.left,right:rect.right}, elementBounds:{left:bounds.left,right:bounds.right}, documentWidth:document.documentElement.scrollWidth};\n}"
+    },
+    {
+      "action": "accessibility",
+      "contains": "0.1.0 rc2"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "zoom",
+      "factor": 2
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+      "source": "() => {\n  const element = document.querySelector('.app-version');\n  if (!element || element.textContent.trim() !== '版本 0.1.0 rc2') throw Error('Version text differs');\n  element.scrollIntoView({block:'center'});\n  const range=document.createRange(); range.selectNodeContents(element);\n  const rect=range.getBoundingClientRect();\n  const bounds=element.getBoundingClientRect();\n  if(rect.left < 0 || rect.right > innerWidth || element.scrollWidth > element.clientWidth) throw Error('Version is horizontally clipped');\n  if(element.closest('[tabindex]') || element.querySelector('[tabindex],button,a,input')) throw Error('Version introduces focus target');\n  return {viewport:innerWidth, devicePixelRatio, text:element.textContent.trim(), textBounds:{left:rect.left,right:rect.right}, elementBounds:{left:bounds.left,right:bounds.right}, documentWidth:document.documentElement.scrollWidth};\n}"
+    },
+    {
+      "action": "accessibility",
+      "contains": "0.1.0 rc2"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 0,
+  "observations": [
+    {
+      "action": "zoom",
+      "actual": 2,
+      "width": 720,
+      "height": 422,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "screenshot": "zoom-2.png"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+      "value": {
+        "viewport": 720,
+        "devicePixelRatio": 2,
+        "text": "版本 0.1.0 rc2",
+        "textBounds": {
+          "left": 319.1953125,
+          "right": 400.796875
+        },
+        "elementBounds": {
+          "left": 20,
+          "right": 700
+        },
+        "documentWidth": 720
+      }
+    },
+    {
+      "action": "accessibility",
+      "file": "accessibility-4.json"
+    },
+    {
+      "action": "zoom",
+      "actual": 2,
+      "width": 160,
+      "height": 422,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "screenshot": "zoom-6.png"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/97/browser-scripts/version-layout.js",
+      "value": {
+        "viewport": 160,
+        "devicePixelRatio": 2,
+        "text": "版本 0.1.0 rc2",
+        "textBounds": {
+          "left": 39.1953125,
+          "right": 120.796875
+        },
+        "elementBounds": {
+          "left": 20,
+          "right": 140
+        },
+        "documentWidth": 320
+      }
+    },
+    {
+      "action": "accessibility",
+      "file": "accessibility-8.json"
+    }
+  ]
+}

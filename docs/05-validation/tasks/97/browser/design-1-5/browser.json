@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "device",
+      "touch": true,
+      "width": 320
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "触屏书籍"
+    },
+    {
+      "action": "key",
+      "key": "Tab"
+    },
+    {
+      "action": "key",
+      "key": "Enter"
+    },
+    {
+      "action": "visible",
+      "text": "触屏书籍"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "tap",
+      "role": "button",
+      "name": "已读"
+    },
+    {
+      "action": "visible",
+      "text": "还没有读完的书"
+    },
+    {
+      "action": "visible",
+      "text": "版本 0.1.0 rc2"
+    },
+    {
+      "action": "tap",
+      "role": "button",
+      "name": "全部"
+    },
+    {
+      "action": "visible",
+      "text": "触屏书籍"
+    },
+    {
+      "action": "visible",
+      "text": "横向溢出：否 · 版本完整：是 · 页脚不遮挡：是 · 版本唯一：是 · 版本无焦点：是 · CSS模拟倍率：1"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": true,
+    "isMobile": true,
+    "viewport": {
+      "width": 320,
+      "height": 844
+    }
+  },
+  "storageWrites": 1
+}

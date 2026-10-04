@@ -1,0 +1,15 @@
+[
+  {
+    "action": "viewport",
+    "width": 320
+  },
+  {
+    "action": "zoom",
+    "factor": 2
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/97/browser-scripts/diagnose-version-layout.js",
+    "source": "() => {\n  const footer = document.querySelector(\"footer\");\n  const version = document.querySelector(\".app-version\");\n  const range = document.createRange();\n  range.selectNodeContents(version);\n  const measure = () => ({\n    viewport: innerWidth,\n    bodyMinWidth: getComputedStyle(document.body).minWidth,\n    bodyWidth: document.body.getBoundingClientRect().width,\n    footerWidth: footer.getBoundingClientRect().width,\n    versionLeft: range.getBoundingClientRect().left,\n    versionRight: range.getBoundingClientRect().right,\n    documentWidth: document.documentElement.scrollWidth,\n  });\n  const before = measure();\n  const previousStyle = footer.getAttribute(\"style\");\n  try {\n    footer.style.maxWidth = \"100vw\";\n    const candidate = measure();\n    if (candidate.versionLeft < 0 || candidate.versionRight > innerWidth) {\n      throw new Error(\"Viewport-bounded footer does not resolve version overflow\");\n    }\n    return { before, candidate };\n  } finally {\n    if (previousStyle === null) footer.removeAttribute(\"style\");\n    else footer.setAttribute(\"style\", previousStyle);\n  }\n}\n"
+  }
+]

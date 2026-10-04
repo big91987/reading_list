@@ -1,7 +1,7 @@
 {
-  "app_sha256": "362234ca93e2e88e2b8c980e8edd4f0eedce768fc24f58d21602f4bdbcb32a49",
-  "compatible_from": "82ec5a7653d57939df276058b7cbf465bfe8c90c",
+  "app_sha256": "f9b6b63b8fd26e04995697ce500cfef8389b80adb2810d3e99a571dbbaeb570f",
+  "compatible_from": "4a54b10f8acad8f74a167693194c397b93db9adc",
   "data_change": "none",
-  "notes": "Issue #94只增加静态筛选提示与内存退出监听，无数据转换/清空/键或字段变化。已验证仓库基线82ec5a7：业务JS剥离新监听后逐字一致；旧中文JSON及扩展字段单元通过；正式MCP纯hover/筛选/触屏模拟/reload原始存储与写调用次数保持。宿主机13项Node、8项部署Python和8项gate通过，本轮16份正式浏览器计划851动作通过，旧EPERM已解除。compatible_from为实际验证的仓库基线，不冒称当前部署版本；独立QA及最终合并/发布授权另行保留。",
+  "notes": "Issue #97静态页脚显示版本0.1.0 rc2，footer max-width:100vw保持原生200%/160 CSS px下版本完整；无业务JS、API、存储键字段或资源引用变化，无数据转换/删除。当前研发重新通过6份产品浏览器计划159动作（development-1-17～22），覆盖主线/改名/删除撤销/键盘/touch/错误恢复/原样native与四组layout/AX；旧中文JSON含空白和扩展字段、异常加载及恢复、只读区间原始值及零写通过。当前Node16项、部署Python8项、完整宿主verify8项通过；零写正向通过，新增写负向正常失败，公共断言依赖已解除。app.js与仓库HEAD4a54b10逐字节相同，compatible_from为本次实际验证仓库基线，不冒称线上部署基线。AX为树证据非读屏语音；独立QA、最终合并与发布仍待各自授权/验收。",
   "migration_plan": ""
 }

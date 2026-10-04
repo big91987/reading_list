@@ -1,0 +1,81 @@
+[
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "<platform>/examples/github/quality/node_modules/.bin/prettier",
+      "--check",
+      "--config",
+      "<platform>/examples/github/quality/prettier.json",
+      "app/**/*.{js,html,css}"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "<platform>/examples/github/quality/node_modules/.bin/eslint",
+      "--no-config-lookup",
+      "--config",
+      "<platform>/examples/github/quality/eslint.config.mjs",
+      "app/**/*.js"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "--check",
+      "<workspace>/app/app.js"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "<browser-tooling>/full_harness/browser/check.cjs",
+      "<workspace>/app",
+      "<workspace>/docs/05-validation/tasks/97/runner-checks/existing",
+      "<workspace>/tests/browser/core.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "<browser-tooling>/full_harness/browser/check.cjs",
+      "<workspace>/app",
+      "<workspace>/docs/05-validation/tasks/97/runner-checks/feature",
+      "<workspace>/docs/05-validation/tasks/97/browser-plan.json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "node",
+      "--test",
+      "<workspace>/tests/filter-tooltip.test.cjs",
+      "<workspace>/tests/undo.test.cjs",
+      "<workspace>/tests/version.test.cjs"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "<platform>/.data/runner-venv/bin/python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "local_deploy_test.py"
+    ],
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "fill",
+      "label": "书名",
+      "value": "共享工具写入计数回归"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "新增书籍"
+    },
+    {
+      "action": "visible",
+      "text": "共享工具写入计数回归"
+    }
+  ],
+  "errors": [],
+  "failure": "localStorage write attempts changed\n\n1 !== 0\n",
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 1,
+  "observations": []
+}

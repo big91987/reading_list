@@ -1,0 +1,21 @@
+{
+  "links": 55,
+  "snapshotHashesVerified": 3,
+  "coreUnchanged": true,
+  "originalLayoutScriptUnchanged": true,
+  "nativePlanPassed": true,
+  "ax": [
+    {
+      "filename": "docs/05-validation/tasks/97/browser/development-1-12/accessibility-4.json",
+      "label": "版本 ",
+      "value": "0.1.0 rc2",
+      "commonParagraph": "77"
+    },
+    {
+      "filename": "docs/05-validation/tasks/97/browser/development-1-12/accessibility-8.json",
+      "label": "版本 ",
+      "value": "0.1.0 rc2",
+      "commonParagraph": "77"
+    }
+  ]
+}
