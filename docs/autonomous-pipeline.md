@@ -11,3 +11,5 @@
 验证过程中 main 再次更新，会在本轮交付或审查结束时重新同步，旧结果不能放行新代码。Runner 不 rebase 或 force push，不覆盖未登记的本地修改。不明工作区状态、保护配置冲突、工具故障保留现场并报告；修复环境后可重跑失败的 Run。正常过程无需手动触发。手动恢复入口为 Agent Platform pipeline 的 `after=integrate`，填写原 Issue 编号。
 
 合并后仍由独立本地部署流程更新预览，数据迁移或破坏性部署审批规则不变。
+
+阶段 Agent 的执行时间超过单次 Runner 等待窗口时，由 `after=observe` 的后续 Run 接续等待同一个 conversation/message，不再次调用 Agent。结果按输入 ID 去重回贴原 Issue；撤回、替换或已进入新轮次的旧输入不会回写。执行失败会明确报告，不能因 Runner 等待结束而声称阶段完成。
