@@ -1,0 +1,212 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js",
+      "source": "() => {\n  const catalogue = {\"generatedAt\":\"2026-10-04T08:02:10.626490Z\",\"records\":[{\"author\":\"冉正万\",\"edition\":null,\"id\":\"b9b00396df2dc73bdf9c57298e66c8ad8f4047bf19a77513350b0c2d42896e66\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"中国作家网\",\"publishedAt\":null,\"recommendationStatus\":\"文学好书入围书单\",\"sourceId\":\"writer\",\"sourceType\":\"长篇小说\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html\"}],\"publisher\":null,\"summary\":\"冉正万的长篇小说作品，入围中国作家网文学好书书单。\",\"summaryOrigin\":{\"evidenceSourceId\":\"writer\",\"method\":\"factual-template-v1\"},\"title\":\"屯堡\",\"types\":[\"现当代文学\"]},{\"author\":\"[阿根廷] 塞尔吉奥·莱文斯基\",\"edition\":null,\"id\":\"64b49cf17f736a7d0c658aaf0ebf0bec9040ce3c979f848a7f87b71872e8ad07\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"K837.835.47/22\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm\"}],\"publisher\":\"作家出版社\",\"summary\":\"介绍梅西个人经历与足球生涯的传记。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"梅西传\",\"types\":[\"历史社科\"]},{\"author\":\"汤海鹏\",\"edition\":null,\"id\":\"11e215b18771537c66cca74e8853b60b3fef21b395cc8419d92b049df9c57959\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"B84-49/1200\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481272.htm\"}],\"publisher\":\"北京联合出版公司\",\"summary\":\"借助精神分析客体关系理论与案例，介绍不同人格特质和咨询中的理解方式。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"人格的健全：读懂自己和身边的人\",\"types\":[\"科普\"]}],\"schemaVersion\":1,\"sources\":[{\"errorCode\":null,\"id\":\"writer\",\"lastAttemptAt\":\"2026-10-04T08:02:06.297703Z\",\"lastSuccessAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"中国作家网\",\"status\":\"ok\"},{\"errorCode\":null,\"id\":\"fjlib\",\"lastAttemptAt\":\"2026-10-04T08:02:06.297703Z\",\"lastSuccessAt\":\"2026-10-04T08:02:06.297703Z\",\"organisation\":\"福建省图书馆\",\"status\":\"ok\"}],\"status\":\"ok\",\"revision\":\"e154a227ce6d0cb5a8c6c1eb8949608e840601e5d5c4af2088c5243845794e15\"};\n  localStorage.setItem(\"page-between-recommendations-v1\", JSON.stringify(catalogue));\n  localStorage.setItem(\"page-between-reading-list\", '[ { \"title\": \"梅西传\", \"read\": true, \"unknown\": {\"nested\":[7]} }, {\"title\":\"没有匹配的旧书\",\"read\":false} ]');\n  return {publicRecords: catalogue.records.length, fixture: \"actual collector 3-record subset, isolated private legacy values\"};\n}\n"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-candidates-seed.js",
+      "source": "async () => {\n  const value = JSON.parse(localStorage.getItem(\"page-between-recommendations-v1\"));\n  const base = value.records.find((record) => record.title === \"梅西传\");\n  value.records = [\n    {...structuredClone(base),id:\"a\".repeat(64),title:\"歧义书\",author:\"作者甲\",edition:\"第一版\",summary:\"第一候选的测试简介\"},\n    {...structuredClone(base),id:\"b\".repeat(64),title:\"歧义书\",author:\"作者乙\",edition:\"第二版\",summary:\"第二候选的测试简介\"},\n    {...structuredClone(base),id:\"c\".repeat(64),title:\"完整人工书\",author:\"作者甲\",edition:\"第一版\",summary:\"候选不能覆盖人工简介\"}\n  ];\n  const canonical = (input) => Array.isArray(input) ? `[${input.map(canonical).join(\",\")}]` : input && typeof input === \"object\" ? `{${Object.keys(input).sort().map((key) => `${JSON.stringify(key)}:${canonical(input[key])}`).join(\",\")}}` : JSON.stringify(input);\n  delete value.revision;\n  const bytes = await crypto.subtle.digest(\"SHA-256\", new TextEncoder().encode(canonical(value)));\n  value.revision = [...new Uint8Array(bytes)].map((byte) => byte.toString(16).padStart(2,\"0\")).join(\"\");\n  localStorage.setItem(\"page-between-recommendations-v1\", JSON.stringify(value));\n  const privateBooks = [\n    {title:\"歧义书\",read:false,unknown:{order:7}},\n    {title:\"没有候选\",read:true},\n    {title:\"完整人工书\",read:false,bookInfo:{schemaVersion:1,types:[\"古典文学\"],summary:\"人工简介保留\",author:\"人工作者\",edition:\"人工版次\",extra:{keep:9},fieldOrigins:{types:\"manual\",summary:\"manual\",author:\"manual\",edition:\"manual\"}}},\n    {title:\"命名空间冲突\",read:false,bookInfo:null}\n  ];\n  localStorage.setItem(\"page-between-reading-list\", JSON.stringify(privateBooks));\n  return {fixture:\"isolated synthetic ambiguous editions and manual legacy values\",candidateCount:2};\n}\n"
+    },
+    {
+      "action": "reload"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "查看《没有候选》补全建议"
+    },
+    {
+      "action": "visible",
+      "text": "没有匹配的补全建议，可手动编辑信息。"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "拒绝并关闭建议"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "查看《歧义书》补全建议"
+    },
+    {
+      "action": "visible",
+      "text": "找到2个候选，请核对作者、出版社和版次后确认；保留已有信息，仅更新来源关联和空缺。"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "拒绝并关闭建议"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "查看《完整人工书》补全建议"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "确认采用《完整人工书》作者甲的推荐信息"
+    },
+    {
+      "action": "visible",
+      "text": "没有可补的空缺，书单未改变。"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "拒绝并关闭建议"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "编辑《命名空间冲突》信息"
+    },
+    {
+      "action": "visible",
+      "text": "已有bookInfo字段不兼容，不能覆盖；请导出备份后处理。"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "查看《歧义书》补全建议"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": true
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "确认采用《歧义书》作者乙的推荐信息"
+    },
+    {
+      "action": "visible",
+      "text": "未能采用，原值和候选仍保留，请重试。"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "storage_write_failure",
+      "enabled": false
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "确认采用《歧义书》作者乙的推荐信息"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-candidates-assert.js",
+      "source": "() => {\n  const saved = JSON.parse(localStorage.getItem(\"page-between-reading-list\"));\n  if (saved[0].bookInfo.author !== \"作者乙\" || saved[0].bookInfo.edition !== \"第二版\" || saved[0].unknown.order !== 7 || saved[0].read !== false) throw new Error(\"Wrong selected identity or legacy mutation\");\n  const manual = saved.find((book) => book.title === \"完整人工书\").bookInfo;\n  if (manual.summary !== \"人工简介保留\" || manual.author !== \"人工作者\" || manual.edition !== \"人工版次\" || manual.extra.keep !== 9 || manual.types[0] !== \"古典文学\") throw new Error(\"Manual fields overwritten\");\n  if (saved[3].bookInfo !== null) throw new Error(\"Conflicting namespace overwritten\");\n  const focus = document.activeElement.getAttribute(\"aria-label\");\n  if (focus !== \"查看《歧义书》补全建议\") throw new Error(`Suggestion close focus differs: ${focus}`);\n  return {selectedSecondEdition:true,manualFieldsIntact:true,unknownFieldsIntact:true,conflictingNullIntact:true,focus};\n}\n"
+    },
+    {
+      "action": "snapshot_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "编辑《完整人工书》信息"
+    },
+    {
+      "action": "fill",
+      "label": "简介（最多600字）",
+      "value": "不会保存的草稿"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "unchanged_storage"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "编辑《完整人工书》信息"
+    },
+    {
+      "action": "fill",
+      "label": "简介（最多600字）",
+      "value": "保持草稿后修改阅读状态"
+    },
+    {
+      "action": "click",
+      "role": "checkbox",
+      "name": "标记《完整人工书》为已读"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "保存信息"
+    },
+    {
+      "action": "visible",
+      "text": "保持草稿后修改阅读状态"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 7,
+  "observations": [
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js",
+      "value": {
+        "publicRecords": 3,
+        "fixture": "actual collector 3-record subset, isolated private legacy values"
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-candidates-seed.js",
+      "value": {
+        "fixture": "isolated synthetic ambiguous editions and manual legacy values",
+        "candidateCount": 2
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/product-candidates-assert.js",
+      "value": {
+        "selectedSecondEdition": true,
+        "manualFieldsIntact": true,
+        "unknownFieldsIntact": true,
+        "conflictingNullIntact": true,
+        "focus": "查看《歧义书》补全建议"
+      }
+    }
+  ]
+}

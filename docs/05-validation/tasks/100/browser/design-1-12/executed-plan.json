@@ -1,0 +1,43 @@
+[
+  {
+    "action": "visible",
+    "role": "heading",
+    "name": "梅西传"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/security-seed.js",
+    "source": "() => {\n  const origin = { organisation: '<img src=x onerror=alert(1)>', recommendationStatus: '恶意内容测试', sourceType: '其他', url: 'javascript:alert(1)', publishedAt: null, collectedAt: '2026-10-04T00:00:00Z' };\n  localStorage.setItem('page-between-reading-list', '[{\"title\":\"真实书单隔离标记\",\"read\":true}]');\n  localStorage.setItem('issue-100-prototype-books', JSON.stringify([{ title: '<script>alert(1)</script>', read: true, extension: { untouched: true }, bookInfo: { schemaVersion: 1, types: ['其他'], summary: '<img src=x onerror=alert(1)>', catalogueLink: { verification: 'verified', origins: [origin] } } }]));\n  return { seeded: true, note: 'This tool fixture writes before snapshot; application must not touch actual product key' };\n}\n"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "我的书单"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/security-assert.js",
+    "source": "() => {\n  const container = document.querySelector('#book-list');\n  if (!container.textContent.includes('<script>alert(1)</script>') || !container.textContent.includes('<img src=x onerror=alert(1)>')) throw new Error('External strings not shown as safe text');\n  if (container.querySelector('script, img, a[href^=\"javascript:\"]')) throw new Error('External data rendered executable DOM');\n  if (!container.textContent.includes('来源链接不可用')) throw new Error('Unsafe URL not rejected');\n  if (localStorage.getItem('page-between-reading-list') !== '[{\"title\":\"真实书单隔离标记\",\"read\":true}]') throw new Error('Real product storage changed');\n  return { textOnly: true, unsafeLinkRejected: true, actualProductKeyUnchanged: true };\n}\n"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "unchanged_storage_writes"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+    "source": "() => {\n  const page = document.documentElement;\n  if (page.scrollWidth > window.innerWidth + 1) throw new Error(`Horizontal overflow: ${page.scrollWidth}/${window.innerWidth}`);\n  const hiddenParents = (node) => node.closest('[hidden]') || node.getClientRects().length === 0;\n  const controls = [...document.querySelectorAll('button, input, textarea, select, a')].filter((node) => !hiddenParents(node));\n  for (const control of controls) {\n    const bounds = control.getBoundingClientRect();\n    if (bounds.left < -1 || bounds.right > window.innerWidth + 1) throw new Error(`Control outside viewport: ${control.textContent}`);\n    if (control.tagName === 'BUTTON' && bounds.height < 43) throw new Error('Button touch target too short');\n  }\n  return { width: window.innerWidth, scrollWidth: page.scrollWidth, visibleControls: controls.length, noOverflow: true };\n}\n"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "purpose": "Reachability only, not collection or content permission proof",
+  "results": [
+    {
+      "url": "https://www.nlc.cn/web/index.shtml",
+      "status": 200,
+      "bytes": 70374
+    },
+    {
+      "url": "https://www.chinawriter.com.cn/",
+      "status": 200,
+      "bytes": 59328
+    }
+  ]
+}

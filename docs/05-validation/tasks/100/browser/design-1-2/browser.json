@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "performed": [
+    {
+      "action": "visible",
+      "text": "下一本，想读什么？"
+    }
+  ],
+  "errors": [],
+  "failure": "locator.waitFor: Error: strict mode violation: getByText('梅西传', { exact: true }) resolved to 2 elements:\n    1) <h3>梅西传</h3> aka getByRole('heading', { name: '梅西传' })\n    2) <h3>梅西传</h3> aka getByLabel('我的阅读清单').getByText('梅西传')\n\nCall log:\n  - waiting for getByText('梅西传', { exact: true }) to be visible\n",
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 0,
+  "observations": []
+}

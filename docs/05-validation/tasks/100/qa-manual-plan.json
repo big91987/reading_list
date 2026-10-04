@@ -1,0 +1,68 @@
+[
+  {
+    "action": "device",
+    "touch": true,
+    "width": 320
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/qa-full-seed.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "QA手动新增仙侠书"
+  },
+  {
+    "action": "click",
+    "selector": "#new-types input[value=\"古典文学\"]"
+  },
+  {
+    "action": "click",
+    "selector": "#new-types input[value=\"仙侠\"]"
+  },
+  {
+    "action": "fill",
+    "label": "简介",
+    "exact": true,
+    "value": "这是QA手动新增的简介。"
+  },
+  {
+    "action": "tap",
+    "selector": ".add-panel button[type=\"submit\"]"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "tap",
+    "selector": "[aria-label='编辑《长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名长中文旧书名尾尾》信息']"
+  },
+  {
+    "action": "fill",
+    "label": "简介（最多600字）",
+    "value": "长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。长中文简介。"
+  },
+  {
+    "action": "tap",
+    "selector": ".information-form button[type=\"submit\"]"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/qa-manual-audit.js"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-layout.js"
+  },
+  {
+    "action": "accessibility",
+    "contains": "QA手动新增仙侠书"
+  }
+]

@@ -6,6 +6,7 @@
 - Read [filter-tooltips.md](filter-tooltips.md) before changing filter explanations or pointer dismissal.
 - Read the active task's approved PRD, prototype, HLD/contracts and LLD; this spec does not override them.
 - Read [page-version.md](page-version.md) when maintaining the footer version declaration.
+- Read [recommendations.md](recommendations.md) for public cache, metadata namespace and concurrent private commits.
 - Use native DOM and the existing static app. Do not add test data or fault controls to the product.
 
 ## Quality Check

@@ -1,0 +1,59 @@
+[
+  {
+    "action": "device",
+    "touch": true,
+    "width": 320
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js",
+    "source": "() => {\n  const catalogue = {\"coverage\":\"ready\",\"generatedAt\":\"2026-10-04T08:41:39.623270Z\",\"records\":[{\"author\":\"冉正万\",\"edition\":null,\"id\":\"b9b00396df2dc73bdf9c57298e66c8ad8f4047bf19a77513350b0c2d42896e66\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"中国作家网\",\"publishedAt\":null,\"recommendationStatus\":\"文学好书入围书单\",\"sourceId\":\"writer\",\"sourceType\":\"长篇小说\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html\"}],\"publisher\":null,\"summary\":\"这是一部长篇小说作品；来源介绍提及科举、屯堡、军屯，可据这些内容线索了解本书。\",\"summaryOrigin\":{\"evidenceSourceId\":\"writer\",\"method\":\"factual-template-v1\"},\"title\":\"屯堡\",\"types\":[\"现当代文学\"]},{\"author\":\"[阿根廷] 塞尔吉奥·莱文斯基\",\"edition\":null,\"id\":\"64b49cf17f736a7d0c658aaf0ebf0bec9040ce3c979f848a7f87b71872e8ad07\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"K837.835.47/22\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm\"}],\"publisher\":\"作家出版社\",\"summary\":\"介绍梅西个人经历与足球生涯的传记。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"梅西传\",\"types\":[\"历史社科\"]},{\"author\":\"汤海鹏\",\"edition\":null,\"id\":\"11e215b18771537c66cca74e8853b60b3fef21b395cc8419d92b049df9c57959\",\"origins\":[{\"collectedAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"福建省图书馆\",\"publishedAt\":null,\"recommendationStatus\":\"新书推荐栏目\",\"sourceId\":\"fjlib\",\"sourceType\":\"B84-49/1200\",\"typeOrigin\":\"本产品映射\",\"url\":\"https://www.fjlib.net/zy/xstj/202609/t20260917_481272.htm\"}],\"publisher\":\"北京联合出版公司\",\"summary\":\"借助精神分析客体关系理论与案例，介绍不同人格特质和咨询中的理解方式。\",\"summaryOrigin\":{\"evidenceSourceId\":\"fjlib\",\"method\":\"factual-template-v1\"},\"title\":\"人格的健全：读懂自己和身边的人\",\"types\":[\"科普\"]}],\"schemaVersion\":1,\"sources\":[{\"errorCode\":null,\"id\":\"writer\",\"lastAttemptAt\":\"2026-10-04T08:41:35.120966Z\",\"lastSuccessAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"中国作家网\",\"status\":\"ok\"},{\"errorCode\":null,\"id\":\"fjlib\",\"lastAttemptAt\":\"2026-10-04T08:41:35.120966Z\",\"lastSuccessAt\":\"2026-10-04T08:41:35.120966Z\",\"organisation\":\"福建省图书馆\",\"status\":\"ok\"}],\"status\":\"ok\",\"revision\":\"2d45a3a1744acb7e42f1538e82ef31e0603b41edee50a711ee32e52193c4a305\"};\n  localStorage.setItem(\"page-between-recommendations-v1\", JSON.stringify(catalogue));\n  localStorage.setItem(\"page-between-reading-list\", '[ { \"title\": \"梅西传\", \"read\": true, \"unknown\": {\"nested\":[7]} }, {\"title\":\"没有匹配的旧书\",\"read\":false} ]');\n  return {publicRecords: catalogue.records.length, fixture: \"actual collector 3-record subset, isolated private legacy values\"};\n}\n"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/touch-proof.js",
+    "source": "() => {\n  if (navigator.maxTouchPoints < 1) throw new Error('Not a touch-capable context');\n  return { maxTouchPoints: navigator.maxTouchPoints, width: window.innerWidth };\n}\n"
+  },
+  {
+    "action": "tap",
+    "selector": "#recommend-tab"
+  },
+  {
+    "action": "tap",
+    "selector": "[aria-label='加入《屯堡》到书单']"
+  },
+  {
+    "action": "tap",
+    "selector": "#list-tab"
+  },
+  {
+    "action": "tap",
+    "selector": "[aria-label='编辑《屯堡》信息']"
+  },
+  {
+    "action": "fill",
+    "label": "简介（最多600字）",
+    "value": "长中文简介用于验证触屏小视口中的完整阅读和编辑能力，不应横向溢出或遮挡保存、取消、阅读状态与删除等操作。长中文简介用于验证触屏小视口中的完整阅读和编辑能力，不应横向溢出或遮挡保存、取消、阅读状态与删除等操作。"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-layout.js",
+    "source": "() => {\n  const visible = [...document.querySelectorAll(\"h1,h2,h3,p,button,input,textarea,select\")].filter((node) => node.getClientRects().length);\n  const overflow = visible.filter((node) => { const rectangle = node.getBoundingClientRect(); return rectangle.left < -1 || rectangle.right > innerWidth + 1; }).map((node) => node.textContent.slice(0, 60));\n  if (document.documentElement.scrollWidth > innerWidth + 1 || overflow.length) throw new Error(`Horizontal overflow: ${JSON.stringify(overflow)}`);\n  return { width: innerWidth, scrollWidth: document.documentElement.scrollWidth, devicePixelRatio, overflow };\n}\n"
+  },
+  {
+    "action": "tap",
+    "selector": ".information-form button[type=submit]"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-layout.js",
+    "source": "() => {\n  const visible = [...document.querySelectorAll(\"h1,h2,h3,p,button,input,textarea,select\")].filter((node) => node.getClientRects().length);\n  const overflow = visible.filter((node) => { const rectangle = node.getBoundingClientRect(); return rectangle.left < -1 || rectangle.right > innerWidth + 1; }).map((node) => node.textContent.slice(0, 60));\n  if (document.documentElement.scrollWidth > innerWidth + 1 || overflow.length) throw new Error(`Horizontal overflow: ${JSON.stringify(overflow)}`);\n  return { width: innerWidth, scrollWidth: document.documentElement.scrollWidth, devicePixelRatio, overflow };\n}\n"
+  },
+  {
+    "action": "accessibility",
+    "contains": "编辑《屯堡》信息"
+  }
+]

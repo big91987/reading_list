@@ -1,0 +1,178 @@
+{
+  "audit_passed": true,
+  "qa_release_passed": true,
+  "ready_pr_integration_only": true,
+  "head": "4e50635f011aa1e4899d90462fa634267d72a7c7",
+  "main_baseline": "b21c4a1c8875a727adc5eab7af90a8bc70b9ac3e",
+  "previous_feature_head": "3f93282a7e6d084bb370079ac227b7ac88da9cea",
+  "synchronized_changes": [
+    ".github/ISSUE_TEMPLATE/full-task.yml",
+    ".github/workflows/agent-network.yml",
+    ".github/workflows/deploy-local.yml",
+    ".github/workflows/pr-refresh.yml",
+    "docs/local-deployment.md",
+    "scripts/local_deploy.py",
+    "tests/local_deploy_test.py"
+  ],
+  "unchanged_product_scope": [
+    "app",
+    "scripts/recommendations.py",
+    "scripts/install_local_preview.py",
+    "tests/recommendations_test.py",
+    "tests/recommendations.test.cjs",
+    "deploy/release.json",
+    "docs/04-implementation/tasks/100/prd.md",
+    "docs/01-architecture/tasks/100"
+  ],
+  "qa_product_and_protected_diff_empty": true,
+  "python_tests": 50,
+  "node_tests": 25,
+  "trusted_host_checks": 9,
+  "browser": [
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-31",
+      "actions": 48,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-32",
+      "actions": 14,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-33",
+      "actions": 39,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-34",
+      "actions": 13,
+      "passed": true,
+      "device": {
+        "hasTouch": true,
+        "isMobile": true,
+        "viewport": {
+          "width": 320,
+          "height": 844
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-35",
+      "actions": 20,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-36",
+      "actions": 23,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-37",
+      "actions": 16,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-38",
+      "actions": 9,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-39",
+      "actions": 16,
+      "passed": true,
+      "device": {
+        "hasTouch": true,
+        "isMobile": true,
+        "viewport": {
+          "width": 320,
+          "height": 844
+        }
+      }
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-40",
+      "actions": 11,
+      "passed": true,
+      "device": {
+        "hasTouch": false,
+        "isMobile": false,
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        }
+      }
+    }
+  ],
+  "browser_actions": 209,
+  "real_catalogue_revision": "2369c13474e6bfcbdf114342101ed113693ed34214a817b3e7d1f5d243911355",
+  "actual_send_gaps_seconds": [
+    1.482208208180964,
+    2.3390044579282403,
+    1.0009728749282658,
+    1.000289499759674
+  ],
+  "deployed_sha": "10c5e03d04bad026524e20476efd124db7e3a907",
+  "release_fingerprint": "667ea5862390a3c71765dd746272fdb1318a2ad26f2f79320c4104ce55a0809d",
+  "private_user_data_read": false,
+  "current_browser_evidence_kept_raw": true,
+  "old_scanner_used": false,
+  "historical_evidence_repacked": false,
+  "prior_missing_ax_not_claimed_recovered": true
+}

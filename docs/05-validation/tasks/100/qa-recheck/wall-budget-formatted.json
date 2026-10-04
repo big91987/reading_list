@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "external_network_used": false,
+  "method": "Real wall-clock bounded waits; release blocked operation only after fetch returns, then assert no late DNS continuation and late socket cleanup",
+  "results": [
+    {
+      "stage": "dns",
+      "budget_seconds": 0.08,
+      "elapsed_seconds": 0.0859404169023037,
+      "failure": "size_limit",
+      "calls_at_return": [
+        "dns"
+      ],
+      "calls_after_late_result": [
+        "dns"
+      ],
+      "late_socket_closed": false,
+      "passed": true
+    },
+    {
+      "stage": "connect",
+      "budget_seconds": 0.08,
+      "elapsed_seconds": 0.09024925017729402,
+      "failure": "size_limit",
+      "calls_at_return": [
+        "dns",
+        "connect"
+      ],
+      "calls_after_late_result": [
+        "dns",
+        "connect"
+      ],
+      "late_socket_closed": true,
+      "passed": true
+    }
+  ]
+}

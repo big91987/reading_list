@@ -1,0 +1,21 @@
+{
+  "deployed_sha": "10c5e03d04bad026524e20476efd124db7e3a907",
+  "source": "Owner local deployed.json and immutable release directory; read-only snapshot, not repository HEAD inference",
+  "files": {
+    "app.js": {
+      "sha256": "9898c75bb349fdee7e874df62ac37d9867e88d5cd68e286fefc95f7be82c0653",
+      "bytes": 12945
+    },
+    "index.html": {
+      "sha256": "8acb1bb16b864beaa92620f2cd131c415e3864f5348319cb5f2982f133000ef3",
+      "bytes": 4162
+    },
+    "styles.css": {
+      "sha256": "cb3ce1d040298193862d04cc971116c99bfb9684488626105fa36b082432fffe",
+      "bytes": 8747
+    }
+  },
+  "private_user_data_read": false,
+  "baseline_snapshot": "compatibility/baseline",
+  "checks": "Node actual old/new load/read/rename/delete/undo roundtrip plus new-product real browser old JSON zero-write/backup restore"
+}

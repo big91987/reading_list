@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform/examples/github/verify.py", line 197, in <module>
+    main()
+    ~~~~^^
+  File "/Users/zhaojiuzhou/work/agent_platform/examples/github/verify.py", line 192, in main
+    verify(config, workspace, args.issue, args.evidence_name)
+    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhaojiuzhou/work/agent_platform/examples/github/verify.py", line 118, in verify
+    raise RuntimeError(
+    ...<4 lines>...
+    )
+RuntimeError: Check failed: node /Users/zhaojiuzhou/work/agent_platform/examples/github/tooling/full_harness/browser/check.cjs /Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/app /Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/docs/05-validation/tasks/100/delivery-checks/existing /Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/browser/core.json
+pid=97561][err] [1004/170752.710792:FATAL:base/apple/mach_port_rendezvous_mac.cc:155] Check failed: kr == KERN_SUCCESS. bootstrap_check_in org.chromium.Chromium.MachPortRendezvousServer.97561: Permission denied (1100)
+Call log:
+[2m  - <launching> /Users/zhaojiuzhou/Library/Caches/ms-playwright/chromium_headless_shell-1208/chrome-headless-shell-mac-arm64/chrome-headless-shell --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,BoundaryEventDispatchTracksNodeRemoval,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate,RenderDocument,OptimizationHints --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --disable-infobars --disable-search-engine-choice-screen --disable-sync --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/var/folders/mq/3c_sh33x2nnfv97ywmhgychr0000gn/T/playwright_chromiumdev_profile-GbQeQg --remote-debugging-pipe --no-startup-window[22m
+[2m  - <launched> pid=97561[22m
+[2m  - [pid=97561][err] [1004/170752.691511:ERROR:base/power_monitor/thermal_state_observer_mac.mm:140] ThermalStateObserverMac unable to register to power notifications. Result: 9[22m
+[2m  - [pid=97561][err] [1004/170752.703657:ERROR:net/dns/dns_config_service_posix.cc:138] DNS config watch failed to start.[22m
+[2m  - [pid=97561][err] [1004/170752.710792:FATAL:base/apple/mach_port_rendezvous_mac.cc:155] Check failed: kr == KERN_SUCCESS. bootstrap_check_in org.chromium.Chromium.MachPortRendezvousServer.97561: Permission denied (1100)[22m
+[2m  - [pid=97561] <gracefully close start>[22m
+[2m  - [pid=97561] <kill>[22m
+[2m  - [pid=97561] <will force kill>[22m
+[2m  - [pid=97561] exception while trying to kill process: Error: kill EPERM[22m
+[2m  - [pid=97561] <process did exit: exitCode=null, signal=SIGTRAP>[22m
+[2m  - [pid=97561] starting temporary directories cleanup[22m
+[2m  - [pid=97561] finished temporary directories cleanup[22m
+[2m  - [pid=97561] <gracefully close end>[22m
+
+

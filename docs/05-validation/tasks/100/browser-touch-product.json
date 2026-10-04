@@ -1,0 +1,15 @@
+[
+  {"action":"device","touch":true,"width":320},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-seed.js"},
+  {"action":"reload"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/touch-proof.js"},
+  {"action":"tap","selector":"#recommend-tab"},
+  {"action":"tap","selector":"[aria-label='加入《屯堡》到书单']"},
+  {"action":"tap","selector":"#list-tab"},
+  {"action":"tap","selector":"[aria-label='编辑《屯堡》信息']"},
+  {"action":"fill","label":"简介（最多600字）","value":"长中文简介用于验证触屏小视口中的完整阅读和编辑能力，不应横向溢出或遮挡保存、取消、阅读状态与删除等操作。长中文简介用于验证触屏小视口中的完整阅读和编辑能力，不应横向溢出或遮挡保存、取消、阅读状态与删除等操作。"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-layout.js"},
+  {"action":"tap","selector":".information-form button[type=submit]"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-layout.js"},
+  {"action":"accessibility","contains":"编辑《屯堡》信息"}
+]

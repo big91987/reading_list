@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "local_links": 154,
+  "pr_sections": true,
+  "source_branch": "codex/issue-100-platform",
+  "note": "Current QA references fresh evidence; old shared AX limitation explicitly disclosed; GitHub branch files require Runner publication"
+}

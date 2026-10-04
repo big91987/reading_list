@@ -1,0 +1,9 @@
+test_advisory_lock_excludes_parallel_holder_and_releases (__main__.RuntimeMechanismTests.test_advisory_lock_excludes_parallel_holder_and_releases) ... ok
+test_plist_round_trip_preserves_tick_and_non_destructive_install_scope (__main__.RuntimeMechanismTests.test_plist_round_trip_preserves_tick_and_non_destructive_install_scope) ... ok
+test_staged_interruption_preserves_old_then_replace_publishes_whole (__main__.RuntimeMechanismTests.test_staged_interruption_preserves_old_then_replace_publishes_whole) ... ok
+test_version_base_does_not_capture_absolute_catalogue_path (__main__.RuntimeMechanismTests.test_version_base_does_not_capture_absolute_catalogue_path) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+OK

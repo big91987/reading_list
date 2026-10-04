@@ -1,0 +1,16 @@
+[
+  {"action":"click","role":"button","name":"书籍推荐"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-no-cache.js"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-seed.js"},
+  {"action":"reload"},
+  {"action":"click","role":"button","name":"书籍推荐"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-network.js"},
+  {"action":"storage_write_failure","enabled":true},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-cache-failure.js"},
+  {"action":"storage_write_failure","enabled":false},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-type-empty.js"},
+  {"action":"click","role":"button","name":"我的书单"},
+  {"action":"fill","label":"书名","value":"网络故障仍可添加"},
+  {"action":"click","role":"button","name":"新增书籍"},
+  {"action":"visible","text":"网络故障仍可添加"}
+]

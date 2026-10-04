@@ -1,7 +1,7 @@
 {
-  "app_sha256": "f9b6b63b8fd26e04995697ce500cfef8389b80adb2810d3e99a571dbbaeb570f",
-  "compatible_from": "4a54b10f8acad8f74a167693194c397b93db9adc",
+  "app_sha256": "667ea5862390a3c71765dd746272fdb1318a2ad26f2f79320c4104ce55a0809d",
+  "compatible_from": "10c5e03d04bad026524e20476efd124db7e3a907",
   "data_change": "none",
-  "notes": "Issue #97静态页脚显示版本0.1.0 rc2，footer max-width:100vw保持原生200%/160 CSS px下版本完整；无业务JS、API、存储键字段或资源引用变化，无数据转换/删除。当前研发重新通过6份产品浏览器计划159动作（development-1-17～22），覆盖主线/改名/删除撤销/键盘/touch/错误恢复/原样native与四组layout/AX；旧中文JSON含空白和扩展字段、异常加载及恢复、只读区间原始值及零写通过。当前Node16项、部署Python8项、完整宿主verify8项通过；零写正向通过，新增写负向正常失败，公共断言依赖已解除。app.js与仓库HEAD4a54b10逐字节相同，compatible_from为本次实际验证仓库基线，不冒称线上部署基线。AX为树证据非读屏语音；独立QA、最终合并与发布仍待各自授权/验收。",
+  "notes": "Issue100: actual deployed immutable app baseline hash verified; Node tests execute old/new load, rename, delete/undo roundtrip preserving bookInfo and unknown fields; legacy raw loading and browser backup/restore remain zero-write. No startup migration or data removal. Recommendation catalogue is independent public data; controller/collector launchd installation requires separate explicit Owner review and is not performed by app release.",
   "migration_plan": ""
 }

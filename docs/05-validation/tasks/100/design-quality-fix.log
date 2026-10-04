@@ -1,0 +1,8 @@
+Python quality: check --fix
+Found 4 errors (4 fixed, 0 remaining).
+Python quality: format
+4 files reformatted, 6 files left unchanged
+Python quality: format --check
+10 files already formatted
+Python quality: check
+All checks passed!

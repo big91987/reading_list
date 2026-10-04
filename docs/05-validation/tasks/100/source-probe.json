@@ -1,0 +1,15 @@
+{
+  "purpose": "Reachability only, not collection or content permission proof",
+  "results": [
+    {
+      "url": "https://www.nlc.cn/web/index.shtml",
+      "error_type": "URLError",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "url": "https://www.chinawriter.com.cn/",
+      "error_type": "URLError",
+      "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ]
+}

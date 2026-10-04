@@ -1,0 +1,23 @@
+[
+  {
+    "action": "visible",
+    "text": "页间"
+  },
+  {
+    "action": "zoom",
+    "factor": 2
+  },
+  {
+    "action": "accessibility",
+    "contains": "页间"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/capability.js",
+    "source": "() => {\n  const title = document.querySelector('h1');\n  if (!title || !title.textContent.includes('页间')) throw new Error('Existing product heading missing');\n  return { heading: title.textContent, width: window.innerWidth, note: 'Capability probe only; not recommendation acceptance' };\n}\n"
+  },
+  {
+    "action": "viewport",
+    "width": 320
+  }
+]

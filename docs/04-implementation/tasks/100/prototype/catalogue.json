@@ -1,0 +1,123 @@
+{
+  "scope": "prototype subset, original factual summaries; not production catalogue",
+  "records": [
+    {
+      "id": "prototype-0",
+      "title": "屯堡",
+      "author": "冉正万",
+      "types": [
+        "现当代文学"
+      ],
+      "summary": "以明代贵州屯堡为背景，围绕士子迁徙、军屯生活与办学经历展开，呈现不同群体间的交往。",
+      "origins": [
+        {
+          "organisation": "中国作家网",
+          "recommendationStatus": "文学好书入围书单",
+          "sourceType": "长篇小说",
+          "url": "https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html",
+          "publishedAt": null,
+          "collectedAt": "2026-10-04T06:46:28.093023+00:00"
+        }
+      ]
+    },
+    {
+      "id": "prototype-24",
+      "title": "羽蛇的天空",
+      "author": "宝树",
+      "types": [
+        "现当代文学"
+      ],
+      "summary": "一部将末日想象、战争与文明变迁交织在一起的科幻作品，以跨越时间的发现串联故事。",
+      "origins": [
+        {
+          "organisation": "中国作家网",
+          "recommendationStatus": "文学好书入围书单",
+          "sourceType": "科幻",
+          "url": "https://www.chinawriter.com.cn/n1/2026/0902/c459748-40791254.html",
+          "publishedAt": null,
+          "collectedAt": "2026-10-04T06:46:28.093023+00:00"
+        }
+      ]
+    },
+    {
+      "id": "prototype-30",
+      "title": "梅西传",
+      "author": "[阿根廷] 塞尔吉奥·莱文斯基",
+      "publisher": "作家出版社",
+      "types": [
+        "历史社科"
+      ],
+      "summary": "从成长经历到球场生涯，这部传记记录梅西面对的挑战与关键选择，适合想了解人物经历的读者。",
+      "origins": [
+        {
+          "organisation": "福建省图书馆",
+          "recommendationStatus": "新书推荐栏目",
+          "sourceType": "K837.835.47/22",
+          "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481274.htm",
+          "publishedAt": null,
+          "collectedAt": "2026-10-04T06:46:30.458619+00:00"
+        }
+      ]
+    },
+    {
+      "id": "prototype-31",
+      "title": "大国消费：中国增长的新引擎",
+      "author": "芦哲",
+      "publisher": "中信出版集团股份有限公司",
+      "types": [
+        "历史社科"
+      ],
+      "summary": "从人口和家庭收支等角度讨论消费与经济增长，并关注近年出现的新消费现象。",
+      "origins": [
+        {
+          "organisation": "福建省图书馆",
+          "recommendationStatus": "新书推荐栏目",
+          "sourceType": "F126.1/244",
+          "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481273.htm",
+          "publishedAt": null,
+          "collectedAt": "2026-10-04T06:46:31.650042+00:00"
+        }
+      ]
+    },
+    {
+      "id": "prototype-32",
+      "title": "人格的健全：读懂自己和身边的人",
+      "author": "汤海鹏",
+      "publisher": "北京联合出版公司",
+      "types": [
+        "科普"
+      ],
+      "summary": "通过咨询案例介绍不同人格特质及其人际关系表现，为理解自己与他人提供心理学视角。",
+      "origins": [
+        {
+          "organisation": "福建省图书馆",
+          "recommendationStatus": "新书推荐栏目",
+          "sourceType": "B84-49/1200",
+          "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481272.htm",
+          "publishedAt": null,
+          "collectedAt": "2026-10-04T06:46:32.847423+00:00"
+        }
+      ]
+    },
+    {
+      "id": "prototype-33",
+      "title": "低智商犯罪",
+      "author": "紫金陈",
+      "publisher": "天津人民出版社",
+      "types": [
+        "现当代文学"
+      ],
+      "summary": "两个盗贼、利益交错的人物与一名警官卷入错综的事件，故事结合犯罪谜局与喜剧性误会。",
+      "origins": [
+        {
+          "organisation": "福建省图书馆",
+          "recommendationStatus": "新书推荐栏目",
+          "sourceType": "I247.56/2435=2",
+          "url": "https://www.fjlib.net/zy/xstj/202609/t20260917_481271.htm",
+          "publishedAt": null,
+          "collectedAt": "2026-10-04T06:46:34.038822+00:00"
+        }
+      ]
+    }
+  ]
+}

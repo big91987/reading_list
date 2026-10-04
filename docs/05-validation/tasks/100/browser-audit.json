@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "plan": "docs/05-validation/tasks/100/browser-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-13/browser.json",
+      "passed": true,
+      "actions": 48,
+      "errors": [],
+      "planAndScriptBytesMatch": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/100/browser-network.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-14/browser.json",
+      "passed": true,
+      "actions": 14,
+      "errors": [],
+      "planAndScriptBytesMatch": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/100/browser-candidates.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-15/browser.json",
+      "passed": true,
+      "actions": 39,
+      "errors": [],
+      "planAndScriptBytesMatch": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/100/browser-touch-product.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-16/browser.json",
+      "passed": true,
+      "actions": 13,
+      "errors": [],
+      "planAndScriptBytesMatch": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/100/browser-keyboard-product.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-17/browser.json",
+      "passed": true,
+      "actions": 20,
+      "errors": [],
+      "planAndScriptBytesMatch": true
+    },
+    {
+      "plan": "docs/05-validation/tasks/100/browser-storage.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-18/browser.json",
+      "passed": true,
+      "actions": 23,
+      "errors": [],
+      "planAndScriptBytesMatch": true
+    },
+    {
+      "plan": "tests/browser/core.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-19/browser.json",
+      "passed": true,
+      "actions": 16,
+      "errors": [],
+      "planAndScriptBytesMatch": true
+    }
+  ],
+  "totalActions": 173
+}

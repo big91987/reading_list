@@ -1,0 +1,48 @@
+[
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/product-seed.js"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/qa-dedup-seed.js"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "未读",
+    "exact": true
+  },
+  {
+    "action": "absent",
+    "text": "mIxEd",
+    "exact": true
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "书籍推荐"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《MIXED》到书单"
+  },
+  {
+    "action": "visible",
+    "text": "这本书已在书单中，原状态和信息未改变。"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/qa-refresh-manual.js"
+  }
+]

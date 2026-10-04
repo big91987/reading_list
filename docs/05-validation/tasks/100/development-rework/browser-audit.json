@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "plan": "qa-main-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-21/browser.json",
+      "actions": 48,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "qa-network-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-22/browser.json",
+      "actions": 14,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "qa-candidates-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-23/browser.json",
+      "actions": 39,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "qa-touch-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-24/browser.json",
+      "actions": 13,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "qa-keyboard-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-25/browser.json",
+      "actions": 20,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "qa-storage-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-26/browser.json",
+      "actions": 23,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "core",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-27/browser.json",
+      "actions": 16,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "qa-catalogue-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-28/browser.json",
+      "actions": 8,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "qa-manual-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-29/browser.json",
+      "actions": 16,
+      "passed": true,
+      "scriptBytesMatch": true
+    },
+    {
+      "plan": "qa-dedup-plan.json",
+      "receipt": "docs/05-validation/tasks/100/browser/development-1-30/browser.json",
+      "actions": 11,
+      "passed": true,
+      "scriptBytesMatch": true
+    }
+  ],
+  "totalActions": 208
+}

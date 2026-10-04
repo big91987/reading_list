@@ -1,0 +1,203 @@
+[
+  {
+    "action": "visible",
+    "text": "下一本，想读什么？"
+  },
+  {
+    "action": "visible",
+    "text": "梅西传"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/select-classic.js",
+    "source": "() => {\n  const select = document.querySelector('#type-filter');\n  select.value = '仙侠';\n  select.dispatchEvent(new Event('change', { bubbles: true }));\n  if (!document.querySelector('#recommend-empty').textContent.includes('暂无仙侠推荐')) throw new Error('Missing honest type empty state');\n  select.value = '全部类型';\n  select.dispatchEvent(new Event('change', { bubbles: true }));\n  return { typeEmptyState: true, restored: true };\n}\n"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/catalogue-states.js",
+    "source": "() => {\n  const storageBefore = localStorage.getItem('issue-100-prototype-books');\n  const scenario = document.querySelector('#scenario');\n  const expected = { loading: '加载中', empty: '读取成功', stale: '已过期', partial: '部分来源失败', 'failed-cache': '显示最后成功缓存', 'failed-none': '没有可用缓存', ok: '2个官方组织' };\n  const observed = [];\n  for (const [value, text] of Object.entries(expected)) {\n    scenario.value = value;\n    scenario.dispatchEvent(new Event('change', { bubbles: true }));\n    if (!document.querySelector('#catalogue-status').textContent.includes(text)) throw new Error(`Status missing: ${value}`);\n    const count = document.querySelectorAll('#recommend-list article').length;\n    if (count !== (['loading', 'empty', 'failed-none'].includes(value) ? 0 : 6)) throw new Error(`Wrong records for ${value}`);\n    observed.push({ value, count });\n  }\n  if (localStorage.getItem('issue-100-prototype-books') !== storageBefore) throw new Error('Scenario changed private list');\n  return { observed, privateStorageUnchanged: true, note: 'UI scenario checks, not collector/backend proof' };\n}\n"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《梅西传》书单"
+  },
+  {
+    "action": "visible",
+    "text": "《梅西传》已在书单，原信息与阅读状态未改变。"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "加入《低智商犯罪》书单"
+  },
+  {
+    "action": "visible",
+    "text": "已将《低智商犯罪》加入书单，默认未读。"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "我的书单"
+  },
+  {
+    "action": "visible",
+    "text": "低智商犯罪"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "编辑《梅西传》信息"
+  },
+  {
+    "action": "fill",
+    "label": "简介",
+    "value": "这是我自己写的简介。"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/edit-types.js",
+    "source": "() => {\n  const select = document.querySelector('#edit-types');\n  for (const option of select.options) option.selected = option.value === '仙侠' || option.value === '古典文学';\n  select.dispatchEvent(new Event('change', { bubbles: true }));\n  return { selected: [...select.selectedOptions].map((option) => option.value) };\n}\n"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存信息"
+  },
+  {
+    "action": "visible",
+    "text": "未能保存，原信息未改变，草稿仍保留，请重试。"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存信息"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/assert-saved.js",
+    "source": "() => {\n  const books = JSON.parse(localStorage.getItem('issue-100-prototype-books'));\n  const book = books.find((entry) => entry.title === '梅西传');\n  if (!book || book.bookInfo.summary !== '这是我自己写的简介。' || !book.bookInfo.types.includes('仙侠')) throw new Error('Metadata did not persist');\n  if (book.read !== false) throw new Error('Edit changed read state');\n  return { summarySaved: true, types: book.bookInfo.types, read: book.read };\n}\n"
+  },
+  {
+    "action": "reload"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "我的书单"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/candidate-assertions.js",
+    "source": "() => {\n  const clickNamed = (name) => {\n    const button = [...document.querySelectorAll('#book-list button')].find((node) => node.getAttribute('aria-label') === name || node.textContent === name);\n    if (!button) throw new Error(`Missing ${name}`);\n    button.click();\n  };\n  const before = localStorage.getItem('issue-100-prototype-books');\n  clickNamed('查看《同名示例》补全建议');\n  if (document.querySelectorAll('#book-list .candidate').length !== 2) throw new Error('Ambiguous candidates missing');\n  if (localStorage.getItem('issue-100-prototype-books') !== before) throw new Error('View silently saved candidate');\n  clickNamed('关闭建议');\n  if (localStorage.getItem('issue-100-prototype-books') !== before) throw new Error('Reject candidate wrote storage');\n  clickNamed('查看《旧书示例》补全建议');\n  if (!document.querySelector('#book-list').textContent.includes('没有匹配候选')) throw new Error('No match state missing');\n  clickNamed('关闭建议');\n  clickNamed('查看《梅西传》补全建议');\n  clickNamed('确认采用[阿根廷] 塞尔吉奥·莱文斯基的候选');\n  const books = JSON.parse(localStorage.getItem('issue-100-prototype-books'));\n  const book = books.find((entry) => entry.title === '梅西传');\n  if (book.bookInfo.summary !== '这是我自己写的简介。' || !book.bookInfo.types.includes('仙侠')) throw new Error('Candidate overwrote manual information');\n  const adoptedBefore = localStorage.getItem('issue-100-prototype-books');\n  clickNamed('查看《梅西传》补全建议');\n  clickNamed('确认采用[阿根廷] 塞尔吉奥·莱文斯基的候选');\n  if (localStorage.getItem('issue-100-prototype-books') !== adoptedBefore) throw new Error('No gaps should be no-op');\n  clickNamed('关闭建议');\n  return { ambiguous: 2, viewAndRejectNoWrite: true, noMatch: true, manualPreserved: true, noGapsNoWrite: true };\n}\n"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "编辑《梅西传》信息"
+  },
+  {
+    "action": "fill",
+    "label": "书名",
+    "value": "梅西传（我的版本）"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "保存信息"
+  },
+  {
+    "action": "visible",
+    "text": "来源关联待核对：已改名，原信息保留，请核对候选。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "查看《梅西传（我的版本）》补全建议"
+  },
+  {
+    "action": "visible",
+    "text": "没有匹配候选，可手动编辑信息。"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "关闭建议"
+  },
+  {
+    "action": "snapshot_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "编辑《梅西传（我的版本）》信息"
+  },
+  {
+    "action": "fill",
+    "label": "简介",
+    "value": "不应该保存的草稿"
+  },
+  {
+    "action": "key",
+    "key": "Escape"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "删除《梅西传（我的版本）》"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": true
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除"
+  },
+  {
+    "action": "visible",
+    "text": "未能恢复，撤销机会仍保留，请重试。"
+  },
+  {
+    "action": "storage_write_failure",
+    "enabled": false
+  },
+  {
+    "action": "click",
+    "role": "button",
+    "name": "撤销删除"
+  },
+  {
+    "action": "unchanged_storage"
+  },
+  {
+    "action": "page_script",
+    "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+    "source": "() => {\n  const page = document.documentElement;\n  if (page.scrollWidth > window.innerWidth + 1) throw new Error(`Horizontal overflow: ${page.scrollWidth}/${window.innerWidth}`);\n  const hiddenParents = (node) => node.closest('[hidden]') || node.getClientRects().length === 0;\n  const controls = [...document.querySelectorAll('button, input, textarea, select, a')].filter((node) => !hiddenParents(node));\n  for (const control of controls) {\n    const bounds = control.getBoundingClientRect();\n    if (bounds.left < -1 || bounds.right > window.innerWidth + 1) throw new Error(`Control outside viewport: ${control.textContent}`);\n    if (control.tagName === 'BUTTON' && bounds.height < 43) throw new Error('Button touch target too short');\n  }\n  return { width: window.innerWidth, scrollWidth: page.scrollWidth, visibleControls: controls.length, noOverflow: true };\n}\n"
+  },
+  {
+    "action": "accessibility",
+    "contains": "梅西传（我的版本）"
+  }
+]

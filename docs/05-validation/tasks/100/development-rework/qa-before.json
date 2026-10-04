@@ -1,0 +1,46 @@
+{
+  "method": "Execute unchanged product Transport with controlled DNS/clock/socket boundaries; HTTP request() records actual dispatch time, not response-completion requestedAt",
+  "requirement": "HLD section 5: minimum 1-second request spacing and maximum 5-minute round; Trellis backend repeats these limits",
+  "spacing": {
+    "dns_delay_seconds": 2.0,
+    "deadline": 400.0,
+    "http_request_starts": [
+      {
+        "time": 102.0,
+        "method": "GET",
+        "path": "/n1/2026/0902/c459748-40791254.html"
+      },
+      {
+        "time": 102.0,
+        "method": "GET",
+        "path": "/n1/2026/0902/c459748-40791254.html"
+      }
+    ],
+    "sleeps": [
+      0,
+      0
+    ],
+    "failure": null,
+    "external_network_used": false,
+    "actual_gap_seconds": 0.0,
+    "passed": false
+  },
+  "deadline": {
+    "dns_delay_seconds": 301.0,
+    "deadline": 400.0,
+    "http_request_starts": [
+      {
+        "time": 401.0,
+        "method": "GET",
+        "path": "/n1/2026/0902/c459748-40791254.html"
+      }
+    ],
+    "sleeps": [
+      0
+    ],
+    "failure": "size_limit",
+    "external_network_used": false,
+    "passed": false
+  },
+  "passed": false
+}

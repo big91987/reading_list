@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/full_harness/quality.py", line 69, in <module>
+    raise SystemExit(run(Path.cwd(), args.mode))
+                     ~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/full_harness/quality.py", line 36, in run
+    names = python_files(root)
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/full_harness/quality.py", line 18, in python_files
+    for name in files(root)
+                ~~~~~^^^^^^
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/full_harness/common.py", line 70, in files
+    raise ValueError("Workspace exceeds import limit")
+ValueError: Workspace exceeds import limit

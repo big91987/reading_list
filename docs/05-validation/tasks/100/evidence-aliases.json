@@ -1,0 +1,1211 @@
+{
+  "scope": "byte-identical historical design screenshot aliases; all unique bytes retained; receipts untouched",
+  "files": [
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-17/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-10/mobile.png",
+      "sha256": "0af6dbd9c1e46aaffcf0ed130608e82b1527a55f6e9bd74f26d2d80a1aeabb07",
+      "bytes": 187124
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-17/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-10/screenshot.png",
+      "sha256": "295cb15341159c97c7c39e26c8af76bf9f1d412668b2d1b56f3dbec4b932a719",
+      "bytes": 243791
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-18/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-11/mobile.png",
+      "sha256": "bcad91d754871cfaed98b09953d717e1abc48756a1691c7766c1db0cd8b21ba3",
+      "bytes": 140416
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-18/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-11/screenshot.png",
+      "sha256": "e6c1412d5ad146a5e4201d1b346dd690b191e8ffec41af6f4894506a92805de3",
+      "bytes": 132594
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-2/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-12/mobile.png",
+      "sha256": "1d678951c3cef4a82e3fc66e63ca0728b5f9596b76856f6620a8371a3300971c",
+      "bytes": 151813
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-2/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-12/screenshot.png",
+      "sha256": "e553f2d63982259b5423788fbda542f65fa5fea771a4784e0baa2af445d6cb5d",
+      "bytes": 208124
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-13/mobile.png",
+      "sha256": "75292de8688c162decd8c7b3eeb13c6cace652167d867b5a94515620bfd81035",
+      "bytes": 174863
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-4/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-13/screenshot.png",
+      "sha256": "983b215d829625004d22becfe05ca904764617df358c457afd4aa9cbfc03ce84",
+      "bytes": 169462
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-5/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-14/mobile.png",
+      "sha256": "6710c04d88fa7ef59c59d8bb071a9e96c826d65f0c8bdc2990390f4218da9d78",
+      "bytes": 150380
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-5/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-14/screenshot.png",
+      "sha256": "38c18cc89592fb66b09f4b1d949aac45b46fd13478d005ae835044057fae30b7",
+      "bytes": 141996
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-8/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-15/mobile.png",
+      "sha256": "f4df5e75c5d6b80dd9729aa9071fa0654e2abf971b6f470e540384353d61480a",
+      "bytes": 155171
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-8/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-15/screenshot.png",
+      "sha256": "47764f25c01bc58ce038b9d83238f1aec8482425df46b65f8037918ceabdd176",
+      "bytes": 148650
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-9/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-16/mobile.png",
+      "sha256": "ee554baa5e6e145938741dee030961bfddb234342a5937f603583d23bbf4d47e",
+      "bytes": 144606
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/design-1-9/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/design-1-16/screenshot.png",
+      "sha256": "37955f9f26c6c213fe5e5c96b00a96ee9be5506e375ea0ca63ddc7e4b849de71",
+      "bytes": 138147
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/design-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/design-1-1/mobile.png",
+      "sha256": "0e1c3c3001913fe7521c9ffaa4050fccfce3a6bf77f82ca6199755c78e86e9c5",
+      "bytes": 109463
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/design-1-4/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/design-1-1/screenshot.png",
+      "sha256": "42068278a9ece98364e5f907999a999c4cab9c7a1ecf8d565d319bddb24db56e",
+      "bytes": 174144
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-11/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-11/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-12/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-12/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-13/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-13/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-14/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-18/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/mobile.png",
+      "sha256": "bf3dde2d4c9f36b96524ffe26b8ee1032063dccd384d81effeceb221a1fffc02",
+      "bytes": 91520
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-18/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/screenshot.png",
+      "sha256": "ae188162436888fbd48dee0345dcad8f3b9e85a0aaf96c6a99c7c14950a2d7b5",
+      "bytes": 84543
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-19/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-19/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-21/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-21/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/mobile.png",
+      "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e",
+      "bytes": 100831
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-4/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/screenshot.png",
+      "sha256": "75a50fa0cfb0ea8b86ee795253f2295b0081da5e800909db62a141e8ad54f4a0",
+      "bytes": 155630
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-5/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-25/mobile.png",
+      "sha256": "ef7c5d48b036d31e71d1febd7bc0b940b0b054b11a8b09fc849bba3552a12f7c",
+      "bytes": 101679
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-5/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-25/screenshot.png",
+      "sha256": "8d86a8e427e56f76df69b0b7d01f98a7ae89def315073aabf080995b3b1a566f",
+      "bytes": 153479
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-6/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/mobile.png",
+      "sha256": "bf3dde2d4c9f36b96524ffe26b8ee1032063dccd384d81effeceb221a1fffc02",
+      "bytes": 91520
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-6/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/screenshot.png",
+      "sha256": "ae188162436888fbd48dee0345dcad8f3b9e85a0aaf96c6a99c7c14950a2d7b5",
+      "bytes": 84543
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-7/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-22/mobile.png",
+      "sha256": "53bdb315a53bd4dd6f44a94688bf44dad8a1fb9f84deca3fc1528c57c1d8d1bb",
+      "bytes": 90432
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-7/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-22/screenshot.png",
+      "sha256": "4aab6eb435e0bef362b5e95370b48a0ddbf3a979e0a749a1043955ea61cfb512",
+      "bytes": 152207
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-8/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/mobile.png",
+      "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8",
+      "bytes": 96181
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/development-1-8/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/screenshot.png",
+      "sha256": "4ea985b809aab3092bd4756d8132a8caee5a4643a4af624d6c677bf7a16c3123",
+      "bytes": 147194
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-1/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-1/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-10/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-10/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-11/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/mobile.png",
+      "sha256": "bf3dde2d4c9f36b96524ffe26b8ee1032063dccd384d81effeceb221a1fffc02",
+      "bytes": 91520
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-11/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/screenshot.png",
+      "sha256": "ae188162436888fbd48dee0345dcad8f3b9e85a0aaf96c6a99c7c14950a2d7b5",
+      "bytes": 84543
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-12/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-12/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-13/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-25/mobile.png",
+      "sha256": "ef7c5d48b036d31e71d1febd7bc0b940b0b054b11a8b09fc849bba3552a12f7c",
+      "bytes": 101679
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-13/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-25/screenshot.png",
+      "sha256": "8d86a8e427e56f76df69b0b7d01f98a7ae89def315073aabf080995b3b1a566f",
+      "bytes": 153479
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-14/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/mobile.png",
+      "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e",
+      "bytes": 100831
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-14/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/screenshot.png",
+      "sha256": "75a50fa0cfb0ea8b86ee795253f2295b0081da5e800909db62a141e8ad54f4a0",
+      "bytes": 155630
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-15/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/mobile.png",
+      "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8",
+      "bytes": 96181
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-15/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/screenshot.png",
+      "sha256": "4ea985b809aab3092bd4756d8132a8caee5a4643a4af624d6c677bf7a16c3123",
+      "bytes": 147194
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-17/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-17/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-18/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-18/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-19/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-19/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-2/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-2/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-20/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-20/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-21/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-15/mobile.png",
+      "sha256": "eeca55c056063f87fe49c82c0714a92573c1841731f6ca60909c225ab53ef3ae",
+      "bytes": 94343
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-21/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-15/screenshot.png",
+      "sha256": "19e371730f39bfc89445185a0956d19a666c57febdd6ae33cda9401ac0d48788",
+      "bytes": 155753
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-22/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-16/mobile.png",
+      "sha256": "9a5ef3b194d81da4c7c15f1249b30ec382b408dacd08e3cfb32308495fc2d02b",
+      "bytes": 99036
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-22/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-16/screenshot.png",
+      "sha256": "c5e4a8549a29b2237977739a97af0e95c2fefbb02cb729649e43fbed9719cce5",
+      "bytes": 160763
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-23/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-17/mobile.png",
+      "sha256": "c428dfadfbea2d95c39eac91daa89ae8635cbbf127bd448c58dc2fb216cfd2f4",
+      "bytes": 98476
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-23/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-17/screenshot.png",
+      "sha256": "d88e2cf16b8531d3f0471bdbc02702c5e5b27d1e87d93ecadadb408a4c4836fb",
+      "bytes": 160071
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-24/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-20/mobile.png",
+      "sha256": "4b2472b6dddbe780e15c73e4da3777b99b85e2624c88b416ef2bf810b5d60c44",
+      "bytes": 97026
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-24/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-20/screenshot.png",
+      "sha256": "f8914084f7e97690e813b859f3be67c1e3cfc3814436fbc14a36064b538ac13d",
+      "bytes": 162124
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-25/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-25/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-26/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-26/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-27/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/mobile.png",
+      "sha256": "bf3dde2d4c9f36b96524ffe26b8ee1032063dccd384d81effeceb221a1fffc02",
+      "bytes": 91520
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-27/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/screenshot.png",
+      "sha256": "ae188162436888fbd48dee0345dcad8f3b9e85a0aaf96c6a99c7c14950a2d7b5",
+      "bytes": 84543
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-28/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-28/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-29/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-25/mobile.png",
+      "sha256": "ef7c5d48b036d31e71d1febd7bc0b940b0b054b11a8b09fc849bba3552a12f7c",
+      "bytes": 101679
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-29/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-25/screenshot.png",
+      "sha256": "8d86a8e427e56f76df69b0b7d01f98a7ae89def315073aabf080995b3b1a566f",
+      "bytes": 153479
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-3/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-3/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-30/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/mobile.png",
+      "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e",
+      "bytes": 100831
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-30/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/screenshot.png",
+      "sha256": "75a50fa0cfb0ea8b86ee795253f2295b0081da5e800909db62a141e8ad54f4a0",
+      "bytes": 155630
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-31/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/mobile.png",
+      "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8",
+      "bytes": 96181
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-31/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/screenshot.png",
+      "sha256": "4ea985b809aab3092bd4756d8132a8caee5a4643a4af624d6c677bf7a16c3123",
+      "bytes": 147194
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-32/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/qa-1-16/mobile.png",
+      "sha256": "fcd172ab8f750888a58fa6949eadb4189b698bc0d296c2d64e12cc99016ee97b",
+      "bytes": 96705
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-32/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/qa-1-16/screenshot.png",
+      "sha256": "17faa151751c9d4cb9bd048167f278f875bda0b43399b605854da2e0c425bf5c",
+      "bytes": 89279
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-4/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-5/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-15/mobile.png",
+      "sha256": "eeca55c056063f87fe49c82c0714a92573c1841731f6ca60909c225ab53ef3ae",
+      "bytes": 94343
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-5/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-15/screenshot.png",
+      "sha256": "19e371730f39bfc89445185a0956d19a666c57febdd6ae33cda9401ac0d48788",
+      "bytes": 155753
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-6/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-16/mobile.png",
+      "sha256": "9a5ef3b194d81da4c7c15f1249b30ec382b408dacd08e3cfb32308495fc2d02b",
+      "bytes": 99036
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-6/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-16/screenshot.png",
+      "sha256": "c5e4a8549a29b2237977739a97af0e95c2fefbb02cb729649e43fbed9719cce5",
+      "bytes": 160763
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-7/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-17/mobile.png",
+      "sha256": "c428dfadfbea2d95c39eac91daa89ae8635cbbf127bd448c58dc2fb216cfd2f4",
+      "bytes": 98476
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-7/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-17/screenshot.png",
+      "sha256": "d88e2cf16b8531d3f0471bdbc02702c5e5b27d1e87d93ecadadb408a4c4836fb",
+      "bytes": 160071
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-8/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-20/mobile.png",
+      "sha256": "4b2472b6dddbe780e15c73e4da3777b99b85e2624c88b416ef2bf810b5d60c44",
+      "bytes": 97026
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-8/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-20/screenshot.png",
+      "sha256": "f8914084f7e97690e813b859f3be67c1e3cfc3814436fbc14a36064b538ac13d",
+      "bytes": 162124
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-9/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/94/browser/qa-1-9/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-14/mobile.png",
+      "sha256": "55222c4e1694455b378601b24187468b748e99fe2c81ef304f7fc72af79d9cec",
+      "bytes": 97999
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/design-1-11/zoom-16.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-11/screenshot.png",
+      "sha256": "7794ac5d8c99f43941faf9b9788bfb25253e99d8bc9d270a8f69b4b24a325ed6",
+      "bytes": 277729
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/design-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-10/mobile.png",
+      "sha256": "301c48010180abf41f9219bbd43ea998ed8b6079bcae9f266c991e0c0050bc62",
+      "bytes": 191051
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/design-1-4/screenshot.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-10/screenshot.png",
+      "sha256": "136c6f76f8a1418f79ba668f621d325a7eb4a348ca5dc49f8ad9c5dfb9088452",
+      "bytes": 245760
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/design-1-5/zoom-16.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-5/screenshot.png",
+      "sha256": "5ceb269860d109774ebd5599d9f58b8271468b66868c31eb0fcfa00f5b5cd9c6",
+      "bytes": 271047
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/design-1-6/mobile.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-12/mobile.png",
+      "sha256": "66cf4293f1d6e974a04632f1aa3abbe2c65786b7ffff4621373128fce85acb88",
+      "bytes": 107799
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/design-1-6/screenshot.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-12/screenshot.png",
+      "sha256": "e9bef1fd217c5ab4513849aa3ab65dd27ff237d0247411c768a6c46ab7b6b651",
+      "bytes": 108967
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/design-1-9/mobile.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-3/mobile.png",
+      "sha256": "fc0005fea15f9a7fef279e0cecbc3a54f73658a12c68e777827238002c6fcaa1",
+      "bytes": 206177
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/design-1-9/screenshot.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-3/screenshot.png",
+      "sha256": "76b4614557038ca0f92e5d3cc2d6c1288d72d5af71fcec3411f99e36f8b82d01",
+      "bytes": 227628
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/development-1-2/zoom-47.png",
+      "canonical": "docs/05-validation/tasks/100/browser/development-1-2/screenshot.png",
+      "sha256": "07e9d416e8e13d0a1a256d5d4a1aad9b64de35f68ee8e483e47265c32f17b669",
+      "bytes": 147616
+    },
+    {
+      "path": "docs/05-validation/tasks/100/browser/development-1-3/zoom-47.png",
+      "canonical": "docs/05-validation/tasks/100/browser/development-1-3/screenshot.png",
+      "sha256": "87385b7ace4c2cb1302bcafdd4da7463389e3565ce15a941856fb27a8655c4a1",
+      "bytes": 121617
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/development-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-25/mobile.png",
+      "sha256": "ef7c5d48b036d31e71d1febd7bc0b940b0b054b11a8b09fc849bba3552a12f7c",
+      "bytes": 101679
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/development-1-4/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-25/screenshot.png",
+      "sha256": "8d86a8e427e56f76df69b0b7d01f98a7ae89def315073aabf080995b3b1a566f",
+      "bytes": 153479
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/development-1-7/mobile.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-5/mobile.png",
+      "sha256": "2bca43235ec231e20660d63d32bd4ea389c28c3859686518870d224d6ef23e51",
+      "bytes": 447129
+    },
+    {
+      "path": "docs/05-validation/tasks/71/browser/development-1-7/screenshot.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-5/screenshot.png",
+      "sha256": "edac13c41261b28a5d3a3a6303521198137d5d739b2cc5f907747b8d4a451be8",
+      "bytes": 417452
+    },
+    {
+      "path": "docs/05-validation/tasks/71/delivery-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-6/mobile.png",
+      "sha256": "d0293adad77a6b5e3b88159f00abc85afae8c1a357c0d063cc73601ea3c134fd",
+      "bytes": 93102
+    },
+    {
+      "path": "docs/05-validation/tasks/71/delivery-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-6/screenshot.png",
+      "sha256": "b1cddd4ff62e24760f6af3dccbe738558a1ddc7404ca688b3fe3223b66445f7a",
+      "bytes": 155449
+    },
+    {
+      "path": "docs/05-validation/tasks/71/delivery-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-3/mobile.png",
+      "sha256": "3b355640a5f5b058a840723f84cd57c57849695a107e344090fb56741739834c",
+      "bytes": 118010
+    },
+    {
+      "path": "docs/05-validation/tasks/71/delivery-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-3/screenshot.png",
+      "sha256": "21b7536c7d4534d46dc8071570d833120518a90ac5c0da5b9544986faa0f4642",
+      "bytes": 107063
+    },
+    {
+      "path": "docs/05-validation/tasks/71/runner-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-6/mobile.png",
+      "sha256": "d0293adad77a6b5e3b88159f00abc85afae8c1a357c0d063cc73601ea3c134fd",
+      "bytes": 93102
+    },
+    {
+      "path": "docs/05-validation/tasks/71/runner-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-6/screenshot.png",
+      "sha256": "b1cddd4ff62e24760f6af3dccbe738558a1ddc7404ca688b3fe3223b66445f7a",
+      "bytes": 155449
+    },
+    {
+      "path": "docs/05-validation/tasks/71/runner-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-3/mobile.png",
+      "sha256": "3b355640a5f5b058a840723f84cd57c57849695a107e344090fb56741739834c",
+      "bytes": 118010
+    },
+    {
+      "path": "docs/05-validation/tasks/71/runner-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/71/browser/development-1-3/screenshot.png",
+      "sha256": "21b7536c7d4534d46dc8071570d833120518a90ac5c0da5b9544986faa0f4642",
+      "bytes": 107063
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-12/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-11/mobile.png",
+      "sha256": "b7d85fa4a7538c349865238e4ca059ee1de683475e94f576a95e194761d64e2f",
+      "bytes": 114043
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-15/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/mobile.png",
+      "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8",
+      "bytes": 96181
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-2/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/mobile.png",
+      "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8",
+      "bytes": 96181
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-2/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/screenshot.png",
+      "sha256": "4ea985b809aab3092bd4756d8132a8caee5a4643a4af624d6c677bf7a16c3123",
+      "bytes": 147194
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-3/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/mobile.png",
+      "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e",
+      "bytes": 100831
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-10/mobile.png",
+      "sha256": "9cac9445d11ed97374bed342911c0dbca63cfccfe404920580995bd588920a9a",
+      "bytes": 139304
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-6/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-14/mobile.png",
+      "sha256": "f4aabdbbbb36b24a85c93036679faf913a95dec03f902fcedc23aae855469ef2",
+      "bytes": 103813
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-7/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-13/mobile.png",
+      "sha256": "a9b13bccaa31bba94ba33de3cbd71fd179987509936557c3ad246cf0dc8335d5",
+      "bytes": 115100
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-9/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/development-1-9/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-1/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-1/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-10/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-10/mobile.png",
+      "sha256": "9cac9445d11ed97374bed342911c0dbca63cfccfe404920580995bd588920a9a",
+      "bytes": 139304
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-10/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-10/screenshot.png",
+      "sha256": "e1e5bc3dbec227c851600bae3fe67e7a44bc9208e3a3959f4e4bcc8f00706e28",
+      "bytes": 193358
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-11/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-11/mobile.png",
+      "sha256": "b7d85fa4a7538c349865238e4ca059ee1de683475e94f576a95e194761d64e2f",
+      "bytes": 114043
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-11/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-12/screenshot.png",
+      "sha256": "40e557aa002ce34033e722256fbf9ecb09987b38912eb5b9b495b4109cd88d97",
+      "bytes": 165992
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-12/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-11/mobile.png",
+      "sha256": "b7d85fa4a7538c349865238e4ca059ee1de683475e94f576a95e194761d64e2f",
+      "bytes": 114043
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-12/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-11/screenshot.png",
+      "sha256": "2714e6b42b054b5d32a019e56eb08bc85d841c3b8485274dade9abf8a68d98c3",
+      "bytes": 107012
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-13/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-13/mobile.png",
+      "sha256": "a9b13bccaa31bba94ba33de3cbd71fd179987509936557c3ad246cf0dc8335d5",
+      "bytes": 115100
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-13/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-13/screenshot.png",
+      "sha256": "74015763cf0ebc75033a7588b0747d94bc5c2547540010cd3c1fce028174429a",
+      "bytes": 168564
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-14/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-13/mobile.png",
+      "sha256": "a9b13bccaa31bba94ba33de3cbd71fd179987509936557c3ad246cf0dc8335d5",
+      "bytes": 115100
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-14/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-7/screenshot.png",
+      "sha256": "b588bae995073a2db3d1be20f3e0b3aa701cd5dc773e2d82f5cb4d65605ea4e4",
+      "bytes": 107810
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-15/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/mobile.png",
+      "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8",
+      "bytes": 96181
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-15/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-15/screenshot.png",
+      "sha256": "5477a469380b6e6196fc1613dc87efed2bdf4c4caa2e757f15b779f6793d35f2",
+      "bytes": 89140
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-2/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/mobile.png",
+      "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e",
+      "bytes": 100831
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-2/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-3/screenshot.png",
+      "sha256": "2e7d1ad093dae497e1d5cf72c1a27354a0a432e2987d1cc9f3e232842a8f3dfa",
+      "bytes": 152998
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-3/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-8/mobile.png",
+      "sha256": "e8378a70786f7c89d2ec8b6ade396b355a27f562832ab4ef27dc62d2032767fc",
+      "bytes": 139302
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-3/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-8/screenshot.png",
+      "sha256": "54208e02d8238f384fd7493bb66f06cacdae97b44990a40b301a8afd428b8bc2",
+      "bytes": 132427
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/mobile.png",
+      "sha256": "af955cf7f3f473a4a7b39f8a0044213d169eda2389f3acdeedfcaff2c4913ee8",
+      "bytes": 96181
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-4/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-24/screenshot.png",
+      "sha256": "4ea985b809aab3092bd4756d8132a8caee5a4643a4af624d6c677bf7a16c3123",
+      "bytes": 147194
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-8/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-14/mobile.png",
+      "sha256": "f4aabdbbbb36b24a85c93036679faf913a95dec03f902fcedc23aae855469ef2",
+      "bytes": 103813
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-8/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-14/screenshot.png",
+      "sha256": "89488647e32f2531eff857ea4f9a4052a6809bb29b3a9a6d232c111c13a0ea12",
+      "bytes": 156022
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-9/mobile.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-14/mobile.png",
+      "sha256": "f4aabdbbbb36b24a85c93036679faf913a95dec03f902fcedc23aae855469ef2",
+      "bytes": 103813
+    },
+    {
+      "path": "docs/05-validation/tasks/82/browser/qa-1-9/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-6/screenshot.png",
+      "sha256": "04194eb1379b35d4b989e0601fe29e4792f820fd896e2aca00a2f1a7dc7081f6",
+      "bytes": 96426
+    },
+    {
+      "path": "docs/05-validation/tasks/82/delivery-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/82/delivery-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/82/delivery-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/mobile.png",
+      "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e",
+      "bytes": 100831
+    },
+    {
+      "path": "docs/05-validation/tasks/82/delivery-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-3/screenshot.png",
+      "sha256": "2e7d1ad093dae497e1d5cf72c1a27354a0a432e2987d1cc9f3e232842a8f3dfa",
+      "bytes": 152998
+    },
+    {
+      "path": "docs/05-validation/tasks/82/runner-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/82/runner-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/82/runner-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-23/mobile.png",
+      "sha256": "abfb1bab90024c7a7480511da8213a107428713ff138d557fa1d4fa00c02029e",
+      "bytes": 100831
+    },
+    {
+      "path": "docs/05-validation/tasks/82/runner-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/82/browser/development-1-3/screenshot.png",
+      "sha256": "2e7d1ad093dae497e1d5cf72c1a27354a0a432e2987d1cc9f3e232842a8f3dfa",
+      "bytes": 152998
+    },
+    {
+      "path": "docs/05-validation/tasks/94/delivery-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/94/delivery-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/94/delivery-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/delivery-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/host-checks-before-resume/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/94/host-checks-before-resume/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/94/host-checks-before-resume/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/mobile.png",
+      "sha256": "bf3dde2d4c9f36b96524ffe26b8ee1032063dccd384d81effeceb221a1fffc02",
+      "bytes": 91520
+    },
+    {
+      "path": "docs/05-validation/tasks/94/host-checks-before-resume/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-1/screenshot.png",
+      "sha256": "ae188162436888fbd48dee0345dcad8f3b9e85a0aaf96c6a99c7c14950a2d7b5",
+      "bytes": 84543
+    },
+    {
+      "path": "docs/05-validation/tasks/94/qa-host-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/94/qa-host-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/94/qa-host-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/qa-host-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/qa-refresh-host-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/94/runner-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/mobile.png",
+      "sha256": "425765b9bddf000b8f96a2f4118d657b584aa05bf79ae1030d251c014d2698bc",
+      "bytes": 101541
+    },
+    {
+      "path": "docs/05-validation/tasks/94/runner-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-2/screenshot.png",
+      "sha256": "6c38b8240a4dcc520cdf446c6c28a445a6ac265017fb56d186c43a1aa293a24a",
+      "bytes": 163271
+    },
+    {
+      "path": "docs/05-validation/tasks/94/runner-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/mobile.png",
+      "sha256": "370013b13702114146ad2919bd035f8a7349aa013bcbc89fe0b6978569617227",
+      "bytes": 94850
+    },
+    {
+      "path": "docs/05-validation/tasks/94/runner-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/94/browser/development-1-10/screenshot.png",
+      "sha256": "03cc23a1df5a505ebac02dea798f30bb020fdd8910c7d8627024a1d0e4481bff",
+      "bytes": 156466
+    },
+    {
+      "path": "docs/05-validation/tasks/97/browser/qa-1-4/mobile.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-1/mobile.png",
+      "sha256": "6ceb90ea3280003201020048e026a6fef8406b2596c1b6f6ffa43261f49a9b79",
+      "bytes": 86560
+    },
+    {
+      "path": "docs/05-validation/tasks/97/browser/qa-1-4/screenshot.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-1/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    {
+      "path": "docs/05-validation/tasks/97/browser/qa-1-8/mobile.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-1/mobile.png",
+      "sha256": "6ceb90ea3280003201020048e026a6fef8406b2596c1b6f6ffa43261f49a9b79",
+      "bytes": 86560
+    },
+    {
+      "path": "docs/05-validation/tasks/97/browser/qa-1-8/screenshot.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-1/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    {
+      "path": "docs/05-validation/tasks/97/browser/qa-1-8/zoom-2.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-4/zoom-3.png",
+      "sha256": "931e521a627dd2fbcad5d3a6ac09be597d7ec850e00114aa955c0427e0ec74c4",
+      "bytes": 141068
+    },
+    {
+      "path": "docs/05-validation/tasks/97/browser/qa-1-8/zoom-4.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-4/zoom-8.png",
+      "sha256": "41f42fbafd00c4014b508ea6e97acd04ea03fede94325bcf68def15c14625437",
+      "bytes": 142133
+    },
+    {
+      "path": "docs/05-validation/tasks/97/browser/qa-1-8/zoom-7.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-4/zoom-14.png",
+      "sha256": "211caaf0fceb834d384958f471b761733d64b83ba6d6e8d1fe120ec5fb1bb197",
+      "bytes": 82608
+    },
+    {
+      "path": "docs/05-validation/tasks/97/browser/qa-1-8/zoom-9.png",
+      "canonical": "docs/05-validation/tasks/100/browser/design-1-1/screenshot.png",
+      "sha256": "5d2711dd476d64f05a3abaa01448995939c27a6adb057b14359e401d4f803dd4",
+      "bytes": 86712
+    },
+    {
+      "path": "docs/05-validation/tasks/97/delivery-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-1/mobile.png",
+      "sha256": "01285d397c7477037b7a826e93ce67b34b4e6e9345835910d93ff9a6b162ebf8",
+      "bytes": 103577
+    },
+    {
+      "path": "docs/05-validation/tasks/97/delivery-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-1/screenshot.png",
+      "sha256": "846b97e46dbc32aaf819863263efbf622946be9c58013e198ae89dda0c0b8be4",
+      "bytes": 165216
+    },
+    {
+      "path": "docs/05-validation/tasks/97/delivery-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-2/mobile.png",
+      "sha256": "9d655a179536273cba96e8f78f57200f906fb944f279e0d1df097024c288e984",
+      "bytes": 116324
+    },
+    {
+      "path": "docs/05-validation/tasks/97/delivery-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-2/screenshot.png",
+      "sha256": "d2fb5052a1b401ef5568285aa7d3e4974d6566fee3ee735d16f468e8bc63fffb",
+      "bytes": 176996
+    },
+    {
+      "path": "docs/05-validation/tasks/97/runner-checks/existing/mobile.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-1/mobile.png",
+      "sha256": "01285d397c7477037b7a826e93ce67b34b4e6e9345835910d93ff9a6b162ebf8",
+      "bytes": 103577
+    },
+    {
+      "path": "docs/05-validation/tasks/97/runner-checks/existing/screenshot.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-1/screenshot.png",
+      "sha256": "846b97e46dbc32aaf819863263efbf622946be9c58013e198ae89dda0c0b8be4",
+      "bytes": 165216
+    },
+    {
+      "path": "docs/05-validation/tasks/97/runner-checks/feature/mobile.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-2/mobile.png",
+      "sha256": "9d655a179536273cba96e8f78f57200f906fb944f279e0d1df097024c288e984",
+      "bytes": 116324
+    },
+    {
+      "path": "docs/05-validation/tasks/97/runner-checks/feature/screenshot.png",
+      "canonical": "docs/05-validation/tasks/97/browser/qa-1-2/screenshot.png",
+      "sha256": "d2fb5052a1b401ef5568285aa7d3e4974d6566fee3ee735d16f468e8bc63fffb",
+      "bytes": 176996
+    }
+  ]
+}

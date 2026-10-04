@@ -1,0 +1,12 @@
+[
+  {"action":"visible","role":"heading","name":"梅西传"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/security-seed.js"},
+  {"action":"reload"},
+  {"action":"snapshot_storage"},
+  {"action":"click","role":"button","name":"我的书单"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/security-assert.js"},
+  {"action":"unchanged_storage"},
+  {"action":"unchanged_storage_writes"},
+  {"action":"viewport","width":320},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/layout.js"}
+]

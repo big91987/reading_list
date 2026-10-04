@@ -1,0 +1,22 @@
+[
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-seed.js"},
+  {"action":"reload"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-keyboard-focus.js"},
+  {"action":"key","key":"Enter"},
+  {"action":"key","key":"Tab"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-keyboard-type.js"},
+  {"action":"key","key":"Tab"},
+  {"action":"key","key":"Tab"},
+  {"action":"key","key":"Tab"},
+  {"action":"key","key":"Enter"},
+  {"action":"visible","text":"已将《屯堡》加入书单。"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-keyboard-list.js"},
+  {"action":"key","key":"Enter"},
+  {"action":"snapshot_storage"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-keyboard-edit.js"},
+  {"action":"key","key":"Enter"},
+  {"action":"fill","label":"简介（最多600字）","value":"键盘未保存草稿"},
+  {"action":"key","key":"Escape"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/product-keyboard-assert.js"},
+  {"action":"unchanged_storage"}
+]

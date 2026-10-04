@@ -16,9 +16,13 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   min-height: 100vh;
   color: var(--ink);
   background:
@@ -488,4 +492,100 @@ footer {
     scroll-behavior: auto !important;
     transition: none !important;
   }
+}
+.view-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.recommend-card,
+.book-information,
+.information-form,
+.suggestion-panel {
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.recommend-card {
+  padding: 16px;
+  margin-block: 14px;
+  border: 1px solid #d9cdbc;
+  border-radius: 12px;
+}
+.book-information {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+.information-form label,
+.information-form textarea,
+.information-form input:not([type="checkbox"]),
+#new-summary {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+#new-types,
+.information-form fieldset {
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block: 12px;
+}
+.information-form fieldset label {
+  width: auto;
+}
+textarea {
+  font: inherit;
+  padding: 10px;
+  border: 1px solid #d9cdbc;
+  border-radius: 8px;
+}
+
+#new-types input,
+.information-form input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+}
+
+@media (max-width: 240px) {
+  .page-shell {
+    width: calc(100% - 16px);
+  }
+  .hero,
+  .add-panel,
+  .list-panel {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .title-row {
+    flex-direction: column;
+    align-items: start;
+  }
+  .book-mark {
+    display: none;
+  }
+  .add-panel,
+  .list-panel,
+  .recommend-card {
+    padding: 10px;
+  }
+  .filters {
+    flex-direction: column;
+  }
+  .book-item {
+    gap: 8px;
+  }
+  .view-tabs {
+    gap: 4px;
+  }
+}
+.information-form button,
+.book-information button,
+.view-tabs button,
+#recommend-panel button {
+  margin: 4px;
+  min-height: 40px;
+  white-space: normal;
+  max-width: 100%;
 }

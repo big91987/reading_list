@@ -1,0 +1,148 @@
+......................127.0.0.1 - - [04/Oct/2026 18:37:44] code 503, message Service Unavailable
+127.0.0.1 - - [04/Oct/2026 18:37:44] "GET /__recommendations/catalogue.json HTTP/1.1" 503 -
+127.0.0.1 - - [04/Oct/2026 18:37:44] "GET /__recommendations/catalogue.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 18:37:44] "HEAD /__recommendations/catalogue.json HTTP/1.1" 200 -
+127.0.0.1 - - [04/Oct/2026 18:37:44] code 405, message Method Not Allowed
+127.0.0.1 - - [04/Oct/2026 18:37:44] "POST /__recommendations/catalogue.json HTTP/1.1" 405 -
+127.0.0.1 - - [04/Oct/2026 18:37:44] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 18:37:44] "GET /__recommendations/config.json HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 18:37:44] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 18:37:44] "GET /__recommendations/reports/x HTTP/1.1" 404 -
+127.0.0.1 - - [04/Oct/2026 18:37:44] code 404, message Not Found
+127.0.0.1 - - [04/Oct/2026 18:37:44] "GET /__recommendations/%2e%2e/config.json HTTP/1.1" 404 -
+.FFFFFF.FFFFFFFF......
+======================================================================
+FAIL: test_deadline_after_each_preparation_stops_next_io (recommendations_test.TransportBoundaryTest.test_deadline_after_each_preparation_stops_next_io) (stage='dns')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 631, in test_deadline_after_each_preparation_stops_next_io
+    self.assertFalse(any(event["phase"] == forbidden for event in events))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_deadline_after_each_preparation_stops_next_io (recommendations_test.TransportBoundaryTest.test_deadline_after_each_preparation_stops_next_io) (stage='connect')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 631, in test_deadline_after_each_preparation_stops_next_io
+    self.assertFalse(any(event["phase"] == forbidden for event in events))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_deadline_after_each_preparation_stops_next_io (recommendations_test.TransportBoundaryTest.test_deadline_after_each_preparation_stops_next_io) (stage='tls')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 631, in test_deadline_after_each_preparation_stops_next_io
+    self.assertFalse(any(event["phase"] == forbidden for event in events))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_deadline_after_each_preparation_stops_next_io (recommendations_test.TransportBoundaryTest.test_deadline_after_each_preparation_stops_next_io) (stage='request')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 631, in test_deadline_after_each_preparation_stops_next_io
+    self.assertFalse(any(event["phase"] == forbidden for event in events))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_deadline_after_each_preparation_stops_next_io (recommendations_test.TransportBoundaryTest.test_deadline_after_each_preparation_stops_next_io) (stage='headers')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 631, in test_deadline_after_each_preparation_stops_next_io
+    self.assertFalse(any(event["phase"] == forbidden for event in events))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_deadline_crossed_in_wait_never_sends (recommendations_test.TransportBoundaryTest.test_deadline_crossed_in_wait_never_sends)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 639, in test_deadline_crossed_in_wait_never_sends
+    self.assertEqual(sum(event["phase"] == "request" for event in events), 1)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 1
+
+======================================================================
+FAIL: test_report_separates_dispatch_from_response_completion (recommendations_test.TransportBoundaryTest.test_report_separates_dispatch_from_response_completion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 659, in test_report_separates_dispatch_from_response_completion
+    self.assertEqual(report["requestedAt"], product.stamp(100))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '1970-01-01T00:01:42Z' != '1970-01-01T00:01:40Z'
+- 1970-01-01T00:01:42Z
+?                   ^
++ 1970-01-01T00:01:40Z
+?                   ^
+
+
+======================================================================
+FAIL: test_retry_and_redirect_keep_dispatch_spacing (recommendations_test.TransportBoundaryTest.test_retry_and_redirect_keep_dispatch_spacing) (status=503)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 623, in test_retry_and_redirect_keep_dispatch_spacing
+    self.assertGreaterEqual(starts[1] - starts[0], 1)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 not greater than or equal to 1
+
+======================================================================
+FAIL: test_retry_and_redirect_keep_dispatch_spacing (recommendations_test.TransportBoundaryTest.test_retry_and_redirect_keep_dispatch_spacing) (status=302)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 623, in test_retry_and_redirect_keep_dispatch_spacing
+    self.assertGreaterEqual(starts[1] - starts[0], 1)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 not greater than or equal to 1
+
+======================================================================
+FAIL: test_slow_dns_and_tls_limit_actual_dispatch_starts (recommendations_test.TransportBoundaryTest.test_slow_dns_and_tls_limit_actual_dispatch_starts) (stage='dns')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 614, in test_slow_dns_and_tls_limit_actual_dispatch_starts
+    self.assertGreaterEqual(starts[1] - starts[0], 1)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 not greater than or equal to 1
+
+======================================================================
+FAIL: test_slow_dns_and_tls_limit_actual_dispatch_starts (recommendations_test.TransportBoundaryTest.test_slow_dns_and_tls_limit_actual_dispatch_starts) (stage='tls')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 614, in test_slow_dns_and_tls_limit_actual_dispatch_starts
+    self.assertGreaterEqual(starts[1] - starts[0], 1)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0.0 not greater than or equal to 1
+
+======================================================================
+FAIL: test_stalled_dns_and_read_are_bounded_by_wall_deadline (recommendations_test.TransportBoundaryTest.test_stalled_dns_and_read_are_bounded_by_wall_deadline) (stage='dns')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 682, in test_stalled_dns_and_read_are_bounded_by_wall_deadline
+    self.assertTrue(finished.wait(0.5), "Blocked I/O outlived the round budget")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Blocked I/O outlived the round budget
+
+======================================================================
+FAIL: test_stalled_dns_and_read_are_bounded_by_wall_deadline (recommendations_test.TransportBoundaryTest.test_stalled_dns_and_read_are_bounded_by_wall_deadline) (stage='read')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 682, in test_stalled_dns_and_read_are_bounded_by_wall_deadline
+    self.assertTrue(finished.wait(0.5), "Blocked I/O outlived the round budget")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Blocked I/O outlived the round budget
+
+======================================================================
+FAIL: test_subsecond_remaining_is_not_floored_to_one (recommendations_test.TransportBoundaryTest.test_subsecond_remaining_is_not_floored_to_one)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/zhaojiuzhou/work/agent_platform_workspaces/product-pipeline/issue-100/tests/recommendations_test.py", line 653, in test_subsecond_remaining_is_not_floored_to_one
+    self.assertLessEqual(timeout, 0.25)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+AssertionError: 1 not less than or equal to 0.25
+
+----------------------------------------------------------------------
+Ran 37 tests in 1.827s
+
+FAILED (failures=14)

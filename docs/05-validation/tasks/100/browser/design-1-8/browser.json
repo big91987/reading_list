@@ -1,0 +1,130 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "visible",
+      "role": "heading",
+      "name": "梅西传"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+      "source": "() => {\n  const page = document.documentElement;\n  if (page.scrollWidth > window.innerWidth + 1) throw new Error(`Horizontal overflow: ${page.scrollWidth}/${window.innerWidth}`);\n  const hiddenParents = (node) => node.closest('[hidden]') || node.getClientRects().length === 0;\n  const controls = [...document.querySelectorAll('button, input, textarea, select, a')].filter((node) => !hiddenParents(node));\n  for (const control of controls) {\n    const bounds = control.getBoundingClientRect();\n    if (bounds.left < -1 || bounds.right > window.innerWidth + 1) throw new Error(`Control outside viewport: ${control.textContent}`);\n    if (control.tagName === 'BUTTON' && bounds.height < 43) throw new Error('Button touch target too short');\n  }\n  return { width: window.innerWidth, scrollWidth: page.scrollWidth, visibleControls: controls.length, noOverflow: true };\n}\n"
+    },
+    {
+      "action": "zoom",
+      "factor": 2
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+      "source": "() => {\n  const page = document.documentElement;\n  if (page.scrollWidth > window.innerWidth + 1) throw new Error(`Horizontal overflow: ${page.scrollWidth}/${window.innerWidth}`);\n  const hiddenParents = (node) => node.closest('[hidden]') || node.getClientRects().length === 0;\n  const controls = [...document.querySelectorAll('button, input, textarea, select, a')].filter((node) => !hiddenParents(node));\n  for (const control of controls) {\n    const bounds = control.getBoundingClientRect();\n    if (bounds.left < -1 || bounds.right > window.innerWidth + 1) throw new Error(`Control outside viewport: ${control.textContent}`);\n    if (control.tagName === 'BUTTON' && bounds.height < 43) throw new Error('Button touch target too short');\n  }\n  return { width: window.innerWidth, scrollWidth: page.scrollWidth, visibleControls: controls.length, noOverflow: true };\n}\n"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "我的书单"
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "编辑《梅西传》信息"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+      "source": "() => {\n  const page = document.documentElement;\n  if (page.scrollWidth > window.innerWidth + 1) throw new Error(`Horizontal overflow: ${page.scrollWidth}/${window.innerWidth}`);\n  const hiddenParents = (node) => node.closest('[hidden]') || node.getClientRects().length === 0;\n  const controls = [...document.querySelectorAll('button, input, textarea, select, a')].filter((node) => !hiddenParents(node));\n  for (const control of controls) {\n    const bounds = control.getBoundingClientRect();\n    if (bounds.left < -1 || bounds.right > window.innerWidth + 1) throw new Error(`Control outside viewport: ${control.textContent}`);\n    if (control.tagName === 'BUTTON' && bounds.height < 43) throw new Error('Button touch target too short');\n  }\n  return { width: window.innerWidth, scrollWidth: page.scrollWidth, visibleControls: controls.length, noOverflow: true };\n}\n"
+    },
+    {
+      "action": "key",
+      "key": "Escape"
+    },
+    {
+      "action": "accessibility",
+      "contains": "编辑《梅西传》信息"
+    },
+    {
+      "action": "zoom",
+      "factor": 1
+    },
+    {
+      "action": "viewport",
+      "width": 1440
+    },
+    {
+      "action": "click",
+      "role": "button",
+      "name": "发现推荐"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 0,
+  "observations": [
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+      "value": {
+        "width": 320,
+        "scrollWidth": 320,
+        "visibleControls": 17,
+        "noOverflow": true
+      }
+    },
+    {
+      "action": "zoom",
+      "actual": 2,
+      "width": 160,
+      "height": 422,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "screenshot": "zoom-4.png"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+      "value": {
+        "width": 160,
+        "scrollWidth": 160,
+        "visibleControls": 17,
+        "noOverflow": true
+      }
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/layout.js",
+      "value": {
+        "width": 160,
+        "scrollWidth": 160,
+        "visibleControls": 24,
+        "noOverflow": true
+      }
+    },
+    {
+      "action": "accessibility",
+      "file": "accessibility-10.json"
+    },
+    {
+      "action": "zoom",
+      "actual": 1,
+      "width": 320,
+      "height": 844,
+      "devicePixelRatio": 1,
+      "visualScale": 1,
+      "screenshot": "zoom-11.png"
+    }
+  ]
+}

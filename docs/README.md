@@ -15,12 +15,17 @@ Task paths are configured in `.harness/full.json`. Existing projects can point i
 
 ## 当前任务
 
+Issue #100当前为Ready PR同步主线b21c4a1后的独立QA：[最新QA报告](05-validation/tasks/100/qa.md)记录本轮Python50/Node25、10份209动作真实浏览器、32条真源采集、维护者可信宿主9项门禁与主线部署取消回滚/旧版本跳过复验。原两项缺陷按原方法再次复验通过；未扩大产品范围、安装正式任务或合并功能PR。本轮不使用旧扫描器、不裁剪历史证据，交付结果以新工具回执为准。下方开发/旧QA为历史记录，不作为本轮通过依据。
+
+- [Issue #100：书籍推荐、类型与简介](04-implementation/tasks/100/README.md)：[开发计划](04-implementation/tasks/100/implement.md)、[运行说明](04-implementation/tasks/100/operations.md)、[本轮产品验证](05-validation/tasks/100/validation.md)记录正式真源32条、Python37/Node25、7份真实浏览器计划173动作和8项Owner共享门禁通过；实际部署10c5e03旧新版往返与release声明完成。研发就绪，按自主策略交独立QA，以工具回执为准；未安装正式服务、发布或合并，不把模拟触屏/AX树称物理设备/读屏认证。
 - [Issue #97：页面版本号显示](04-implementation/tasks/97/README.md)：development本轮6份产品计划159动作、Node16/Python8与8项verify通过，原生200%/160 CSS px版本完整及AX验证、零写/恢复通过，兼容声明更新。见[当前产品验证](05-validation/tasks/97/validation.md)；Ready for independent QA，按自主策略自动交接以工具回执为准，不声称QA通过/语音实测/发布或合并。
 - [Issue #94：筛选按钮增加简短悬停提示](04-implementation/tasks/94/README.md)：产品已实现，宿主机8项gate（13项Node、8项Python）通过，本轮正式MCP16份计划851动作通过；[实施计划](04-implementation/tasks/94/implement.md)、[LLD](01-architecture/tasks/94/lld.md)、[验证报告](05-validation/tasks/94/validation.md)记录纯hover矩阵/浮层/Escape、独立Chromium触屏模拟、几何与零新增写。旧EPERM已解除、历史失败保留；Ready for independent QA，自动交接以工具回执为准，不宣称QA通过/物理手机/跨引擎认证或发布。
 - [Issue #82：撤销最近一次删除](04-implementation/tasks/82/README.md)：批准设计已实现于app；[实施计划](04-implementation/tasks/82/implement.md)、[产品验证](05-validation/tasks/82/validation.md)记录12份最终计划/517动作、9项单元和格式/lint证据。窄屏长名溢出已修复；共享verify整条命令受沙箱监听EPERM限制，注册check相同计划通过。人工IME/朗读及Runner完整复验待补；用户已检查产品并授权独立QA，交接结果以工具回执为准，仅QA验收，未发布/合并，不预设QA结论。
 - [Issue #71：修改已有书籍的书名](04-implementation/tasks/71/README.md)：需求与设计已获批准；[实施计划](04-implementation/tasks/71/implement.md)与[产品验证](05-validation/tasks/71/validation.md)已形成，产品实现和自动功能证据通过；用户授权立即交接待审查草稿PR/流水线验证，Runner执行正式复验与发布任务分支/草稿PR，AC-12仍Partial/待人工验收，不声称完整验收或合并，执行结果以工具回执为准。
 
 See [full workflow](harness-full.md).
+
+历史浏览器截图存储：为本轮真实check解除工作区导入上限，上游101项加开发100项，共201个字节相同PNG路径按[可恢复别名清单](05-validation/tasks/100/evidence-aliases.json)归档，独有原字节、hash与回执保留；旧索引引用原路径时读取canonical，详见[恢复说明](05-validation/tasks/100/evidence-archive.md)。不影响旧验收结论。
 
 
 ## 阶段产物入口

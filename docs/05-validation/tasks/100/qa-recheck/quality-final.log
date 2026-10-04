@@ -1,0 +1,4 @@
+Python quality: format --check
+19 files already formatted
+Python quality: check
+All checks passed!

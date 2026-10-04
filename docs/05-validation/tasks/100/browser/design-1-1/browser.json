@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "performed": [
+    {
+      "action": "visible",
+      "text": "页间"
+    },
+    {
+      "action": "zoom",
+      "factor": 2
+    },
+    {
+      "action": "accessibility",
+      "contains": "页间"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/capability.js",
+      "source": "() => {\n  const title = document.querySelector('h1');\n  if (!title || !title.textContent.includes('页间')) throw new Error('Existing product heading missing');\n  return { heading: title.textContent, width: window.innerWidth, note: 'Capability probe only; not recommendation acceptance' };\n}\n"
+    },
+    {
+      "action": "viewport",
+      "width": 320
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "downloads": [],
+  "device": {
+    "hasTouch": false,
+    "isMobile": false,
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    }
+  },
+  "storageWrites": 0,
+  "observations": [
+    {
+      "action": "zoom",
+      "actual": 2,
+      "width": 720,
+      "height": 500,
+      "devicePixelRatio": 2,
+      "visualScale": 1,
+      "screenshot": "zoom-2.png"
+    },
+    {
+      "action": "accessibility",
+      "file": "accessibility-3.json"
+    },
+    {
+      "action": "page_script",
+      "script": "docs/05-validation/tasks/100/browser-scripts/capability.js",
+      "value": {
+        "heading": "页间",
+        "width": 720,
+        "note": "Capability probe only; not recommendation acceptance"
+      }
+    }
+  ]
+}

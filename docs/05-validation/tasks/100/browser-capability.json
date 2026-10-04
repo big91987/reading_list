@@ -1,0 +1,7 @@
+[
+  {"action":"visible","text":"页间"},
+  {"action":"zoom","factor":2},
+  {"action":"accessibility","contains":"页间"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/capability.js"},
+  {"action":"viewport","width":320}
+]

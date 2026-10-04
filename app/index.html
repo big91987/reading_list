@@ -20,6 +20,36 @@
         </div>
       </header>
 
+      <nav class="view-tabs" aria-label="书架视图">
+        <button id="list-tab" type="button" aria-pressed="true">
+          我的书单
+        </button>
+        <button id="recommend-tab" type="button" aria-pressed="false">
+          书籍推荐
+        </button>
+      </nav>
+      <section
+        id="recommend-panel"
+        class="list-panel"
+        hidden
+        aria-labelledby="recommend-heading"
+      >
+        <h2 id="recommend-heading">官方来源 · 书籍推荐</h2>
+        <p>
+          简介为本产品原创事实短概述，类型为本产品映射；不代表来源官方分类。
+        </p>
+        <label for="recommend-type">推荐类型</label>
+        <select id="recommend-type">
+          <option value="">全部类型</option>
+        </select>
+        <button id="recommend-retry" type="button">重试读取目录</button>
+        <p id="recommend-status" role="status" aria-live="polite">
+          正在加载推荐目录。
+        </p>
+        <p id="recommend-message" role="status" aria-live="polite"></p>
+        <div id="recommend-records"></div>
+      </section>
+
       <section class="add-panel" aria-labelledby="add-heading">
         <div>
           <p class="section-kicker">添加一本书</p>
@@ -39,6 +69,13 @@
             />
             <button class="primary-button" type="submit">新增书籍</button>
           </div>
+          <fieldset id="new-types"><legend>类型（最多3个）</legend></fieldset>
+          <label for="new-summary">简介</label>
+          <textarea
+            id="new-summary"
+            rows="3"
+            placeholder="可选，最多600字"
+          ></textarea>
           <p
             id="form-message"
             class="form-message"

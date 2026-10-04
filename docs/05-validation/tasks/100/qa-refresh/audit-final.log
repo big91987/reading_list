@@ -1,0 +1,81 @@
+{
+  "audit_passed": true,
+  "qa_release_passed": true,
+  "deployed_sha": "10c5e03d04bad026524e20476efd124db7e3a907",
+  "private_user_data_read": false,
+  "release_fingerprint": "667ea5862390a3c71765dd746272fdb1318a2ad26f2f79320c4104ce55a0809d",
+  "core_bytes_unchanged": true,
+  "protected_paths_unchanged": true,
+  "python_tests": 47,
+  "node_tests": 25,
+  "shared_gates": 8,
+  "browser": [
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-21",
+      "actions": 48,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-22",
+      "actions": 14,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-23",
+      "actions": 39,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-24",
+      "actions": 13,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-25",
+      "actions": 20,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-26",
+      "actions": 23,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-27",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-28",
+      "actions": 9,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-29",
+      "actions": 16,
+      "passed": true
+    },
+    {
+      "directory": "docs/05-validation/tasks/100/browser/qa-1-30",
+      "actions": 11,
+      "passed": true
+    }
+  ],
+  "browser_actions": 209,
+  "real_catalogue_revision": "e7adefcdad7ee023468407ab8ffd140c323eaf0dff842b5050fc93c1d71f0c43",
+  "actual_send_gaps_seconds": [
+    1.4055488747544587,
+    1.0429560421034694,
+    1.010847541037947,
+    1.0102117089554667
+  ],
+  "current_and_listed_historical_evidence_bytes_verified": true,
+  "previous_round_shared_ax_rolled_over": {
+    "path": "docs/05-validation/tasks/100/delivery-checks/feature/accessibility-44.json.gz",
+    "previous_expected_sha256": "80ef60a1a478181cabade9b16fbfb1692329a32cc0f7d5e5aa3129486fcb9bff",
+    "current_sha256": "bf4f5a787f0b646a455424a6a8291de03715fed2352184bd6bea968893741ba7",
+    "previous_bytes_recoverable": false,
+    "current_required_ax_verified_independently": true
+  },
+  "prior_defects_closed_by_new_independent_reproduction": true
+}

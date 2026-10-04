@@ -1,0 +1,20 @@
+[
+  {"action":"visible","role":"heading","name":"梅西传"},
+  {"action":"click","role":"button","name":"我的书单"},
+  {"action":"click","role":"button","name":"编辑《梅西传》信息"},
+  {"action":"fill","label":"简介","value":"键盘取消测试"},
+  {"action":"key","key":"Escape"},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/focus.js"},
+  {"action":"key","key":"Enter"},
+  {"action":"fill","label":"书名","value":"键盘保存示例"},
+  {"action":"key","key":"Enter"},
+  {"action":"visible","role":"heading","name":"键盘保存示例"},
+  {"action":"key","key":"Tab"},
+  {"action":"key","key":"Enter"},
+  {"action":"visible","text":"没有匹配候选，可手动编辑信息。"},
+  {"action":"key","key":"Escape"},
+  {"action":"click","role":"button","name":"发现推荐"},
+  {"action":"zoom","factor":2},
+  {"action":"page_script","script":"docs/05-validation/tasks/100/browser-scripts/layout.js"},
+  {"action":"accessibility","contains":"下一本，想读什么？"}
+]
